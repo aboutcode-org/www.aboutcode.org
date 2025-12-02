@@ -1,2 +1,2 @@
 # www.aboutcode.org
-Staging, issue content tidbits for AboutCode.org
+Repository for the AboutCode public website - based on Docusaurus.
