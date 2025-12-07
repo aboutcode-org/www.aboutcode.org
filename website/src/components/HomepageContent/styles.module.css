@@ -1,0 +1,218 @@
+/* Hero full-width */
+.fullHero {
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding: 2rem 2rem 2rem 2rem;
+    background-size: cover;
+    background-blend-mode: overlay;
+    color: #000000;
+}
+
+/* Outer wrapper keeps some spacing from the page edges */
+.purlGridWrapper {
+    display: flex;
+    /* centers the inner container */
+    justify-content: center;
+    padding: 1rem 1rem;
+}
+
+/* Constrain gradient to this container only */
+.purlGridContainer {
+    /* matches grid max-width */
+    max-width: 1200px;
+    background: #f7f7f7;
+    border-radius: 8px;
+    padding: 0.5rem 0.5rem;
+    box-shadow: inset 0 20px 40px -20px rgba(0, 0, 0, 0.05);
+}
+
+/* Container for the grid */
+.purlGrid {
+    display: flex;
+    flex-wrap: wrap;
+    /* centers each row, including the last */
+    justify-content: center;
+    gap: 0rem;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+.twoColumn {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+    padding-top: 1rem;
+    margin-top: 0;
+    border-radius: 10px;
+    /* 2025-11-05 Wednesday 14:48:46.   */
+    /* box-shadow: 0 0 6px #0000001a; */
+    border: solid 1px #e0e0e0;
+    background-color: #f8f8f8;
+}
+
+.column h2 {
+    margin-bottom: 1rem;
+}
+
+.card {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Handle dark mode for the card */
+.card {
+    background-color: var(--ifm-background-surface-color);
+    color: var(--ifm-font-color-base);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 6px #0000001a;
+}
+
+.packageCell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 1rem;
+    background: #fff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Each card / cell */
+.packageCell {
+    flex: 0 1 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    background: #ffffff;
+    border: 1px solid #e0e6ef;
+    border-radius: 12px;
+    padding: 0.5rem !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease,
+        border-color 0.2s ease;
+    color: #1a3e7a;
+}
+
+.packageCell:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.packageCell:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+    border-color: #3366cc;
+}
+
+/* Text label */
+.packageCell span {
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    color: #1a3e7a;
+}
+
+.packageLogo {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    margin-bottom: 0.5rem;
+}
+
+/* Logo image inside the card */
+.packageLogo {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 0.75rem;
+    border-radius: 8px;
+}
+
+/* Enlarge the tiny Arch Linux logo (defined in website/src/components/HomepageContent/index.js). */
+.packageLogo.alpm {
+    width: 64px;
+    height: 64px;
+}
+
+/* 2025-11-05 Wednesday 09:36:17.  For the intro. */
+.introContainer {
+    /* max-width: 1200px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  padding: 2rem;
+
+  margin: 2rem auto;
+  background-color: #e8e8e8; */
+
+    display: grid;
+    /* grid-template-columns: 1fr 1fr; */
+    /* gap: 2rem; */
+    max-width: 1200px;
+    margin: 3rem auto;
+    margin: 2rem auto;
+    margin: .5rem auto;
+    margin: 1rem auto .5rem auto;
+    /* padding: 0 2rem; */
+    padding-top: 1rem;
+    /* margin-top: 0; */
+    border-radius: 10px;
+
+    background-color: #00ccff;
+}
+
+/* 2025-11-22 Saturday 10:12:48.  In place of using .introContainer for text-only blocks, use a div like this. */
+.sectionIntro {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 0;
+  padding: 0.5rem 0;
+
+  /* background-color: #ffffcc; */
+  line-height: 1.4rem;
+}
+
+.sectionHeader {
+    display: flex;
+    /* justify-content: center; */
+
+    /* background-color: #ffcccc; */
+    padding: 0px 0px 0px 0px;
+    /* padding: 1rem 2rem; */
+}
+
+.sectionHeader h1 {
+    margin-bottom: 0px;
+    color: #000000;
+}
+
+.sectionHeader h2 {
+    margin-bottom: 0px;
+    color: #336699;
+    color: #992600;
+}
+
+/* 2025-11-22 Saturday 12:29:30.   */
+/* .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+} */
+
+/* styles.module.css */
+.sectionContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}

@@ -5,7 +5,7 @@
  */
 
 /* You can override the default Infima variables here. */
-:root {
+/* :root {
   --ifm-color-primary: #2e8555;
   --ifm-color-primary-dark: #29784c;
   --ifm-color-primary-darker: #277148;
@@ -15,10 +15,10 @@
   --ifm-color-primary-lightest: #3cad6e;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-}
+} */
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
+/* [data-theme='dark'] {
   --ifm-color-primary: #25c2a0;
   --ifm-color-primary-dark: #21af90;
   --ifm-color-primary-darker: #1fa588;
@@ -27,4 +27,68 @@
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+} */
+
+/* 2025-12-03 Wednesday 18:01:47.  From packageurl.org. */
+.navbar__brand {
+    margin-right: 0px;
+}
+
+.navbar__logo {
+    margin-right: 0;
+}
+
+
+/* Consolidate navbar and sidebar CSS. */
+.navbar--dark {
+    --ifm-navbar-background-color: #375298;
+}
+/* NAVBAR (full width) */
+.navbar {
+  background-color: #375298;
+}
+.navbar .navbar__link {
+  color: #ffffff;
+  font-weight: 400;
+}
+.navbar .navbar__link:hover,
+.navbar .navbar__link--active {
+  color: #ffffff !important;
+  text-decoration: underline;
+}
+
+
+/* DOCS SIDEBAR (desktop view) */
+.theme-doc-sidebar-menu .menu__link {
+  color: #000000;
+}
+.theme-doc-sidebar-menu .menu__link:hover,
+.theme-doc-sidebar-menu .menu__link--active {
+  color: #3366cc;
+}
+
+
+/* MOBILE NAV MENU */
+@media (max-width: 996px) {
+  .menu__link {
+    color: #ffffff;
+    background-color: #375298;
+    font-weight: 400;
+  }
+  .menu__link:hover,
+  .menu__link--active {
+    color: #ffffff;
+    text-decoration: underline;
+    background-color: #000000;
+    background-color: #375298;
+  }
+
+  /* sidebar */
+  .theme-doc-sidebar-menu .menu__link {
+    color: #ffffff;
+  }
+  .theme-doc-sidebar-menu .menu__link:hover,
+  .theme-doc-sidebar-menu .menu__link--active {
+    color: #ffffff;
+  }
 }

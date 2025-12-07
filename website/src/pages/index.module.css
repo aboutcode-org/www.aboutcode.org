@@ -21,3 +21,9 @@
   align-items: center;
   justify-content: center;
 }
+
+/* 2025-12-07 Sunday 13:58:07. */
+.container {
+    background-color: #e8e8e8 !important;
+    background: #ffffcc !important;
+}
