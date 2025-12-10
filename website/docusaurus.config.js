@@ -12,7 +12,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 const config = {
     title: 'AboutCode.org',
     tagline: '[Tagline . . . ?]',
-    favicon: 'img/favicon-test.ico',
+    favicon: 'img/nexB_icon.png',
 
     markdown: {
         format: 'detect', // Auto-detects: .md = plain Markdown (CommonMark), .mdx = MDX
@@ -62,8 +62,15 @@ const config = {
                     sidebarPath: './sidebars.js',
                     // Please change this to your repo.
                     // Remove this to remove the "edit this page" links.
-                    editUrl:
-                        'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+                    // editUrl:
+                    //     'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+                    editUrl: ({ docPath }) => {
+                        // TODO We can include a map here as in packageurl.org.
+                        // Otherwise, provide a default (so “Edit this page” still works)
+                        // return `https://github.com/aboutcode/www.aboutcode.org/blob/main/website/docs/${docPath}`;
+                        // fork:
+                        return `https://github.com/johnmhoran/www.aboutcode.org/blob/main/website/docs/${docPath}`;
+                    },
                 },
                 blog: {
                     showReadingTime: true,
@@ -96,16 +103,11 @@ const config = {
             //     respectPrefersColorScheme: true,
             // },
             navbar: {
-                // title: 'My Site',
-                // logo: {
-                //     alt: 'My Site Logo',
-                //     src: 'img/logo.svg',
-                // },
                 logo: {
                     alt: 'www.aboutcode.org Logo',
-                    src: 'img/no_logo_placeholder.svg',
+                    src: 'img/AboutCode-logo-stackedv3.png',
                 },
-                style: "dark",
+                style: 'dark',
                 items: [
                     { to: '/', label: 'Home', position: 'left', exact: true },
                     {
@@ -138,16 +140,15 @@ const config = {
                         position: 'left',
                         label: 'About',
                     },
-                    // {
-                    //     type: 'docSidebar',
-                    //     sidebarId: 'tutorialSidebar',
-                    //     position: 'left',
-                    //     label: 'Tutorial',
-                    // },
                     { to: '/blog', label: 'Blog', position: 'left' },
                     {
-                        href: 'https://github.com/facebook/docusaurus',
+                        href: 'https://github.com/aboutcode-org',
                         label: 'GitHub',
+                        position: 'right',
+                    },
+                    {
+                        href: 'https://join.slack.com/t/aboutcode-org/shared_invite/zt-1paqwxccw-IuafuiAvYJFkTqGaZsC1og',
+                        label: 'Slack',
                         position: 'right',
                     },
                 ],
@@ -156,46 +157,33 @@ const config = {
                 style: 'dark',
                 links: [
                     {
-                        title: 'Docs',
-                        items: [
-                            {
-                                label: 'Tutorial',
-                                to: '/docs/intro',
-                            },
-                        ],
+                        html: `<img src="/www.aboutcode.org/img/AboutCode.svg" alt="My Company" width="150"/>`,
                     },
+
                     {
-                        title: 'Community',
-                        items: [
-                            {
-                                label: 'Stack Overflow',
-                                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-                            },
-                            {
-                                label: 'Discord',
-                                href: 'https://discordapp.com/invite/docusaurus',
-                            },
-                            {
-                                label: 'X',
-                                href: 'https://x.com/docusaurus',
-                            },
-                        ],
+                        html: `<a href="https://github.com/aboutcode-org" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><img src="/www.aboutcode.org/img/github-mark-white.svg" alt="" width="20" height="20"></a>`,
                     },
+
                     {
-                        title: 'More',
-                        items: [
-                            {
-                                label: 'Blog',
-                                to: '/blog',
-                            },
-                            {
-                                label: 'GitHub',
-                                href: 'https://github.com/facebook/docusaurus',
-                            },
-                        ],
+                        html: `<a href="https://www.linkedin.com/company/aboutcode/?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_companies%3BrQlfT6M0S1qSDpQjt52CiQ%3D%3D" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><img src="/www.aboutcode.org/img/brand-inlogo-download-fg-dsk-v01-2x.png" alt="" width="20" height="20"></a>`,
                     },
+
+                    {
+                        html: `<a href="https://join.slack.com/t/aboutcode-org/shared_invite/zt-1paqwxccw-IuafuiAvYJFkTqGaZsC1og" target="_blank" rel="noopener noreferrer" aria-label="Slack"><img src="/www.aboutcode.org/img/slack-logo.svg" alt="" width="20" height="20"></a>`,
+                    },
+
+                    {
+                        html: `<a href="https://app.gitter.im/#/room/#aboutcode-org_discuss:gitter.im" target="_blank" rel="noopener noreferrer" aria-label="Gitter"><img src="/www.aboutcode.org/img/gitter.svg" alt="" width="20" height="20"></a>`,
+                    },
+
+                    {
+                        html: `<a href="mailto:hello@aboutcode.org" target="_blank" rel="noopener noreferrer" aria-label="Email"><img src="/www.aboutcode.org/img/email-svgrepo-com.svg" alt="" width="25" height="20"></a>`,
+                    },
+
+                    { label: 'Privacy Policy', to: '/about' },
+                    { label: 'Terms of Service', to: '/terms' },
                 ],
-                copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+                copyright: `Copyright AboutCode Foundation ASBL. &nbsp; All rights reserved. &nbsp; Built with Docusaurus.`,
             },
             prism: {
                 theme: prismThemes.github,
