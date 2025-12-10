@@ -92,3 +92,20 @@
     color: #ffffff;
   }
 }
+
+/* 2025-12-09 Tuesday 15:11:09.  Remove opacity/transition -- makes the colors too dim. */
+.footerLogoLink_BH7S {
+    /* opacity: 0.5; */
+    opacity: 1.0;
+}
+
+/* Remove the dots between items in the footer links list -- links: []. */
+/* Nothing I tried has worked yet, except my cheat -- make the dots the same color as the footer background.  ;-). */
+.footer__link-separator {
+    color: #323846;
+}
+
+.footer__links {
+    margin-bottom: 1rem;
+    font-size: 14px;
+}
