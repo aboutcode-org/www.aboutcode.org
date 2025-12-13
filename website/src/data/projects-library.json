@@ -1,0 +1,93 @@
+[
+    {
+        "group": "Library",
+        "name": "ag-gen-code-search",
+        "description": "Open source tools to find code that may have been generated using LLMs and GPT tools.",
+        "repository_url": "https://github.com/aboutcode-org/ai-gen-code-search",
+        "documentation_url": "https://ai-gen-code-search.readthedocs.io/en/latest/",
+        "package_download_url": ["https://pypi.org/project/samecode/"],
+        "service_url": "n/a",
+        "language": "Python",
+        "license": "n/a",
+        "platform": "n/a",
+        "comments": "n/a"
+    },
+    {
+        "group": "Library",
+        "name": "commoncode",
+        "description": "Set of common functions and utilities for handling various things like paths, dates, files and hashes.",
+        "repository_url": "https://github.com/aboutcode-org/commoncode",
+        "documentation_url": "n/a",
+        "package_download_url": ["https://pypi.org/project/commoncode/"],
+        "service_url": "n/a",
+        "language": "Python",
+        "license": "Apache-2.0",
+        "platform": "n/a",
+        "comments": "n/a"
+    },
+    {
+        "group": "Library",
+        "name": "some-project",
+        "description": "n/a",
+        "repository_url": "n/a",
+        "documentation_url": "n/a",
+        "package_download_url": ["n/a"],
+        "service_url": "n/a",
+        "language": "n/a",
+        "license": "n/a",
+        "platform": "n/a",
+        "comments": "n/a"
+    },
+    {
+        "group": "Library",
+        "name": "some-project",
+        "description": "n/a",
+        "repository_url": "n/a",
+        "documentation_url": "n/a",
+        "package_download_url": ["n/a"],
+        "service_url": "n/a",
+        "language": "n/a",
+        "license": "n/a",
+        "platform": "n/a",
+        "comments": "n/a"
+    },
+    {
+        "group": "Library",
+        "name": "some-project",
+        "description": "n/a",
+        "repository_url": "n/a",
+        "documentation_url": "n/a",
+        "package_download_url": ["n/a"],
+        "service_url": "n/a",
+        "language": "n/a",
+        "license": "n/a",
+        "platform": "n/a",
+        "comments": "n/a"
+    },
+    {
+        "group": "Library",
+        "name": "some-project",
+        "description": "n/a",
+        "repository_url": "n/a",
+        "documentation_url": "n/a",
+        "package_download_url": ["n/a"],
+        "service_url": "n/a",
+        "language": "n/a",
+        "license": "n/a",
+        "platform": "n/a",
+        "comments": "n/a"
+    },
+    {
+        "group": "Library",
+        "name": "some-project",
+        "description": "n/a",
+        "repository_url": "n/a",
+        "documentation_url": "n/a",
+        "package_download_url": ["n/a"],
+        "service_url": "n/a",
+        "language": "n/a",
+        "license": "n/a",
+        "platform": "n/a",
+        "comments": "n/a"
+    }
+]

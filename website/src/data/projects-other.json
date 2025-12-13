@@ -1,0 +1,41 @@
+[
+    {
+        "group": "Other",
+        "name": "packageurl-python",
+        "description": "Tool to Inspect and resolve .NET and NuGet package dependencies like dotnet and nuget do. Fetch manifests data.",
+        "repository_url": "https://github.com/aboutcode-org/packageurl-python",
+        "documentation_url": "n/a",
+        "package_download_url": ["https://pypi.org/project/packageurl-python/"],
+        "service_url": "n/a",
+        "language": "Python",
+        "license": "Apache-2.0",
+        "platform": "n/a",
+        "comments": "n/a"
+    },
+    {
+        "group": "Other",
+        "name": "univers",
+        "description": "Python package to parse and compare all package versions and package version ranges. Parse and compare all the package versions and all the ranges. From debian, npm, pypi, ruby and more. Process all the version range specs and expressions.",
+        "repository_url": "https://github.com/aboutcode-org/univers",
+        "documentation_url": "n/a",
+        "package_download_url": ["https://pypi.org/project/univers/"],
+        "service_url": "n/a",
+        "language": "Python",
+        "license": "Apache-2.0",
+        "platform": "n/a",
+        "comments": "n/a"
+    },
+    {
+        "group": "Other",
+        "name": "some-project",
+        "description": "n/a",
+        "repository_url": "n/a",
+        "documentation_url": "n/a",
+        "package_download_url": ["n/a"],
+        "service_url": "n/a",
+        "language": "n/a",
+        "license": "n/a",
+        "platform": "n/a",
+        "comments": "n/a"
+    }
+]

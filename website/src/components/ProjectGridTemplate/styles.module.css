@@ -1,3 +1,4 @@
+/* 2025-12-11 Thursday 15:47:22.From original ProjectGrid */
 /* Grid layout (reuse existing) */
 .projectGridWrapper {
     margin: 2rem auto;
@@ -12,11 +13,33 @@
     border: 0;
 }
 
+.projectGridWrapper01 {
+    /* margin: 0.5rem auto; */
+    padding: 1rem;
+    background-color: #ffffff;
+    border: 0;
+
+    padding: 0rem;
+}
+
 .projectGridContainer {
     max-width: 1200px;
     width: 100%;
     /* Center the projectgrid on the page. */
     margin: 0 auto;
+}
+
+.projectGridContainer01 {
+    max-width: 1200px;
+    width: 100%;
+    /* Center the projectgrid on the page. */
+    margin: 0 auto;
+
+    padding: 1rem;
+    background-color: #f5f5f5;
+    border-radius: 12px;
+    border: solid 1px #b8b8b8;
+    border: 0;
 }
 
  /* NEW: Replace flexbox with a proper grid */
@@ -392,8 +415,10 @@ display: list-item !important;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    /* -webkit-line-clamp: 2; */
-    /* line-clamp: 2; */
+
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+
     -webkit-box-orient: vertical;
     /* line-height: 1.4em; */
     /* height: 2.8em; */
@@ -422,7 +447,7 @@ display: list-item !important;
 }
 
 /* Tooltip arrow */
-/* .tooltip::after {
+.tooltip::after {
     content: '';
     position: absolute;
     top: 100%;
@@ -431,17 +456,21 @@ display: list-item !important;
     border-width: 6px;
     border-style: solid;
     border-color: rgba(40, 40, 40, 0.95) transparent transparent transparent;
-} */
+}
 
-/* .tooltip {
+.tooltip {
     position: absolute;
     bottom: 100%;
     left: 50%;
     transform: translateX(-50%);
-    background: var(--ifm-background-surface-color);
-    color: var(--ifm-font-color-base);
+    /* background: var(--ifm-background-surface-color); */
+    /* color: var(--ifm-font-color-base); */
+
+    background: #f5f5f5;
+    color: #000000;
     border: 1px solid var(--ifm-color-emphasis-200);
-    border: solid 1px #0066ff;
+    border: solid 2px #000000;
+
     padding: 8px 10px;
     border-radius: 6px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
@@ -456,17 +485,20 @@ display: list-item !important;
     font-size: 0.9rem;
     font-size: 14px;
     font-size: 15px;
+    font-size: 16px;
     line-height: 1.5;
     line-height: 1.25em;
     font-size: 0.9rem;
+    font-size: 1.0rem;
 
     overflow-wrap: break-word;
     word-break: normal;
-} */
+}
 
-/* .projectDescriptionWrapper:hover .tooltip {
+/* 2025-12-12 Friday 14:41:19.Remember to uncomment this if you're turning tooltips back on! */
+.projectDescriptionWrapper:hover .tooltip {
     opacity: 1;
-} */
+}
 
 .packageDownloadWrapper {
     position: relative;
@@ -718,4 +750,70 @@ the modal when the link is clicked from inside an open modal. */
   word-wrap: break-word;     /* old name, still works */
   overflow-wrap: break-word; /* modern standard */
   word-break: break-all;     /* fallback for very stubborn strings */
+}
+
+
+/* 2025-12-11 Thursday 16:32:13. */
+/* .sectionHeader h1 {
+    margin-bottom: 0px;
+    color: #000000;
+}
+
+.sectionHeader h2 {
+    margin-bottom: 0px;
+    color: #336699;
+    color: #992600;
+} */
+
+
+
+/* 2025-12-11 Thursday 17:12:30. */
+/* .gridSection {
+    margin-bottom: 3rem;
+}
+
+.sectionTitle {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--ifm-heading-color);
+    border-bottom: 2px solid var(--ifm-color-emphasis-300);
+    padding-bottom: 0.5rem;
+} */
+
+.sectionTitle h2 {
+    color: #992600;
+    /* color: #f49c1f; */
+    margin-top: 20px;
+    /* margin-top: 40px; */
+
+    margin-bottom: 20px;
+    /* margin-bottom: 10px; */
+}
+/* 2025-12-11 Thursday 18:08:34.Above replaces this below. */
+/* .projectGridWrapper01 h2 {
+    margin-bottom: 0px;
+    color: #336699;
+    color: #992600;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+} */
+
+/* Optional: Add spacing between last grid and next section title */
+/* .gridSection:not(:last-child) {
+    margin-bottom: 4rem;
+} */
+
+.sectionIntro {
+    margin-bottom: 20px;
+}
+
+/* 2025-12-12 Friday 14:03:35.  Add tooltips to the ProjectGridTemplate.  See above */
+
+/* 2025-12-12 Friday 18:07:06.  This is the grid container -- adding a separator between bottom of grid and following section. */
+
+.gridSection {
+    border-bottom: solid 1px #000000;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
 }
