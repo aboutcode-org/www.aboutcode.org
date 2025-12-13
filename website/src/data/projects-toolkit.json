@@ -1,0 +1,41 @@
+[
+    {
+        "group": "toolkit",
+        "name": "aboutcode-toolkit",
+        "description": "Set of command line tools to document the provenance of your code and generate attribution notices. aboutcode-toolkit uses small yaml files to document code provenance inside a codebase.",
+        "repository_url": "https://github.com/aboutcode-org/aboutcode-toolkit",
+        "documentation_url": "https://aboutcode.readthedocs.io/projects/aboutcode-toolkit/en/latest/",
+        "package_download_url": ["https://pypi.org/project/aboutcode-toolkit/", "https://pypi.org/project/attributecode/"],
+        "service_url": "n/a",
+        "language": "Python",
+        "license": "Apache-2.0",
+        "platform": "n/a",
+        "comments": "n/a"
+    },
+    {
+        "group": "toolkit",
+        "name": "some-project",
+        "description": "n/a",
+        "repository_url": "n/a",
+        "documentation_url": "n/a",
+        "package_download_url": ["n/a"],
+        "service_url": "n/a",
+        "language": "n/a",
+        "license": "n/a",
+        "platform": "n/a",
+        "comments": "n/a"
+    },
+    {
+        "group": "toolkit",
+        "name": "some-project",
+        "description": "n/a",
+        "repository_url": "n/a",
+        "documentation_url": "n/a",
+        "package_download_url": ["n/a"],
+        "service_url": "n/a",
+        "language": "n/a",
+        "license": "n/a",
+        "platform": "n/a",
+        "comments": "n/a"
+    }
+]

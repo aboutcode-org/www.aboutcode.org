@@ -1,15 +1,14 @@
 // 2025-11-22 Saturday 09:58:08.  From ToolGrid
 import React, { useState, useEffect } from 'react';
 import styles from './styles.module.css';
-import projects from '@site/src/data/projects-v02.json';
+// import projects from '@site/src/data/projects-v02.json';
 import projects_library from '@site/src/data/projects-library.json';
 import projects_main from '@site/src/data/projects-main.json';
 
 export default function ProjectGrid() {
     const [message, setMessage] = useState(null);
     const [selectedProject, setSelectedProject] = useState(null);
-    // 2025-12-11 Thursday 18:04:12.No longer used right?
-    // const [activeTab, setActiveTab] = useState('overview');
+    const [activeTab, setActiveTab] = useState('overview');
     // Monitor open modal -- state prevents display of main-page alert
     const [isModalOpen, setIsModalOpen] = useState(false);
     const openModal = (project) => {
@@ -23,8 +22,7 @@ export default function ProjectGrid() {
         function handleKeyDown(event) {
             if (event.key === 'Escape') {
                 setSelectedProject(null);
-                // 2025-12-11 Thursday 18:04:12.No longer used right?
-                // setActiveTab('overview');
+                setActiveTab('overview');
             }
         }
         if (selectedProject) {
@@ -37,8 +35,7 @@ export default function ProjectGrid() {
 
     const closeModal = () => {
         setSelectedProject(null);
-        // 2025-12-11 Thursday 18:04:12.No longer used right?
-        // setActiveTab('overview');
+        setActiveTab('overview');
     };
 
     return (
@@ -126,8 +123,6 @@ export default function ProjectGrid() {
                 {/* ^ end of projectGrid */}
             </div>
             {/* ^ end of projectGridContainer */}
-            {/* </div>? */}
-            {/* ))} */}
 
             {/* Popup message */}
             {/* Don't display this message if the modal is open. */}

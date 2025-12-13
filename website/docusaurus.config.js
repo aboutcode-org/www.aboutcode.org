@@ -180,7 +180,7 @@ const config = {
                         html: `<a href="mailto:hello@aboutcode.org" target="_blank" rel="noopener noreferrer" aria-label="Email"><img src="/www.aboutcode.org/img/email-svgrepo-com.svg" alt="" width="25" height="20"></a>`,
                     },
 
-                    { label: 'Privacy Policy', to: '/about' },
+                    { label: 'Privacy Policy', to: '/privacy' },
                     { label: 'Terms of Service', to: '/terms' },
                 ],
                 copyright: `Copyright AboutCode Foundation ASBL. &nbsp; All rights reserved. &nbsp; Built with Docusaurus.`,

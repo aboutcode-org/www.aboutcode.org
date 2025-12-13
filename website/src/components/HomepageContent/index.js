@@ -4,8 +4,13 @@ import HomeInfo from './HomeInfo.mdx';
 // import GeneralInfo from '@site/src/components/GeneralInfo';
 // import SpecGrid from '@site/src/components/SpecGrid';
 // import ToolGrid from '@site/src/components/ToolGrid';
-import ProjectGrid from '@site/src/components/ProjectGrid';
+// import ProjectGrid from '@site/src/components/ProjectGrid';
 import SupporterGrid from '@site/src/components/SupporterGrid';
+
+import ProjectGridTemplate from '@site/src/components/ProjectGridTemplate';
+// import projects from '@site/src/data/projects-v02.json';
+// import projects_library from '@site/src/data/projects-library.json';
+// import projects_main from '@site/src/data/projects-main.json';
 
 import styles from './styles.module.css';
 
@@ -48,6 +53,36 @@ export default function HomepageContent() {
                 <div className={styles.sectionIntro}>[to come]</div>
             </section>
 
+            {/* <section className={styles.sectionContainer}>
+                <div
+                    className={styles.sectionHeader}
+                    style={{ marginBottom: '15px', marginTop: '15px' }}
+                >
+                    <h1>AboutCode Projects Overview</h1>
+                </div>
+                <div className={styles.sectionHeader}>
+                    <h2>Main</h2>
+                </div>
+                <div className={styles.sectionIntro}>[intro]</div>
+                <ProjectGrid />
+            </section>
+
+
+
+            <section className={styles.sectionContainer}>
+                <div className={styles.sectionHeader}>
+                    <h2>Library</h2>
+                </div>
+                <div
+                    className={styles.sectionIntro}
+                >
+                    [intro]
+                </div>
+                <ProjectGrid />
+            </section> */}
+
+
+
             <section className={styles.sectionContainer}>
                 <div
                     className={styles.sectionHeader}
@@ -56,11 +91,17 @@ export default function HomepageContent() {
                     <h1>AboutCode Projects Overview</h1>
                 </div>
                 {/* <div className={styles.sectionHeader}>
-                    <h2>[sub-category?]</h2>
+                    <h2>ProjectGridTemplate</h2>
                 </div> */}
-                <div className={styles.sectionIntro}>[intro]</div>
-                <ProjectGrid />
+                <div
+                    className={styles.sectionIntro}
+                >
+                    [intro]
+                </div>
+                <ProjectGridTemplate />
             </section>
+
+
 
             <section className={styles.sectionContainer}>
                 <div

@@ -1,0 +1,41 @@
+[
+    {
+        "group": "x",
+        "name": "some-project",
+        "description": "",
+        "repository_url": "",
+        "documentation_url": "",
+        "package_download_url": [""],
+        "service_url": "",
+        "language": "",
+        "license": "",
+        "platform": "",
+        "comments": "n/a"
+    },
+    {
+        "group": "x",
+        "name": "some-project",
+        "description": "",
+        "repository_url": "",
+        "documentation_url": "",
+        "package_download_url": [""],
+        "service_url": "",
+        "language": "",
+        "license": "",
+        "platform": "",
+        "comments": "n/a"
+    },
+    {
+        "group": "x",
+        "name": "some-project",
+        "description": "",
+        "repository_url": "",
+        "documentation_url": "",
+        "package_download_url": [""],
+        "service_url": "",
+        "language": "",
+        "license": "",
+        "platform": "",
+        "comments": "n/a"
+    }
+]

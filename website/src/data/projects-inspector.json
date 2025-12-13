@@ -1,0 +1,41 @@
+[
+    {
+        "group": "inspector",
+        "name": "android-inspector",
+        "description": "Library of utilities to introspect source and binary Android apps and Android device firmware.",
+        "repository_url": "https://github.com/aboutcode-org/android-inspector",
+        "documentation_url": "n/a",
+        "package_download_url": ["n/a"],
+        "service_url": "n/a",
+        "language": "Python",
+        "license": "Apache-2.0",
+        "platform": "n/a",
+        "comments": "n/a"
+    },
+    {
+        "group": "inspector",
+        "name": "binary-inspector",
+        "description": "Utility to extract symbols from various kinds of binaries, i.e. ELF, Mach-O, WinPE and other binary formats.",
+        "repository_url": "https://github.com/aboutcode-org/binary-inspector",
+        "documentation_url": "n/a",
+        "package_download_url": ["https://pypi.org/project/binary-inspector/"],
+        "service_url": "n/a",
+        "language": "Python",
+        "license": "Apache-2.0",
+        "platform": "n/a",
+        "comments": "n/a"
+    },
+    {
+        "group": "inspector",
+        "name": "some-project",
+        "description": "n/a",
+        "repository_url": "n/a",
+        "documentation_url": "n/a",
+        "package_download_url": ["n/a"],
+        "service_url": "n/a",
+        "language": "n/a",
+        "license": "n/a",
+        "platform": "n/a",
+        "comments": "n/a"
+    }
+]
