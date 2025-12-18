@@ -1,22 +1,10 @@
-// cl
-// import React, { useState } from 'react';
 import React, { useState, useEffect } from 'react';
 import styles from './styles.module.css';
-
-// Import all your JSON files
-// import projects_main from './projects_main.json';
-// import projects_library from './projects_library.json';
-
-// 2025-12-11 Thursday 15:45:59.Try this instead:
-// import projects from '@site/src/data/projects-v02.json';
+import projects_inspector from '@site/src/data/projects-inspector.json';
 import projects_library from '@site/src/data/projects-library.json';
 import projects_main from '@site/src/data/projects-main.json';
-
-import projects_toolkit from '@site/src/data/projects-toolkit.json';
-import projects_inspector from '@site/src/data/projects-inspector.json';
 import projects_other from '@site/src/data/projects-other.json';
-
-// Add more imports as needed
+import projects_toolkit from '@site/src/data/projects-toolkit.json';
 
 export default function ProjectGrids() {
     const [selectedProject, setSelectedProject] = useState(null);
@@ -24,14 +12,13 @@ export default function ProjectGrids() {
     const [message, setMessage] = useState('');
     const [modalMessage, setModalMessage] = useState('');
 
-    // Define your data sources with titles
+    // list of data sources
     const projectSources = [
         { title: 'Main Projects', data: projects_main },
         { title: 'Library Projects', data: projects_library },
-        { title: 'Toolkit Projects', data: projects_toolkit },
         { title: 'Inspector Projects', data: projects_inspector },
+        { title: 'Toolkit Projects', data: projects_toolkit },
         { title: 'Other Projects', data: projects_other },
-        // Add more sources here
     ];
 
     const openModal = (project) => {
@@ -49,8 +36,6 @@ export default function ProjectGrids() {
         function handleKeyDown(event) {
             if (event.key === 'Escape') {
                 setSelectedProject(null);
-                // 2025-12-11 Thursday 18:04:12.No longer used right?
-                // setActiveTab('overview');
             }
         }
         if (selectedProject) {
@@ -61,7 +46,7 @@ export default function ProjectGrids() {
         };
     }, [selectedProject]);
 
-    // 2025-12-12 Friday 12:15:54.  Add tooltip to card and modal.
+    // Add tooltip to card and modal.
     function DescriptionWithTooltip({ text }) {
         const descRef = React.useRef(null);
         const [showTooltip, setShowTooltip] = React.useState(false);
@@ -78,11 +63,9 @@ export default function ProjectGrids() {
         }, [text]);
 
         return (
-            // <div className={styles.toolDescriptionWrapper}>
             <div className={styles.projectDescriptionWrapper}>
                 <div
                     ref={descRef}
-                    // className={`${styles.toolDescription} ${styles.multiline}`}
                     className={`${styles.projectDescription} ${styles.multiline}`}
                 >
                     {text}
@@ -93,22 +76,20 @@ export default function ProjectGrids() {
     }
 
     return (
-        // <div className={styles.projectGridWrapper}>
         <div className={styles.projectGridWrapper01}>
             {/* Iterate through each data source */}
             {projectSources.map((source, sourceIdx) => (
                 <div key={sourceIdx} className={styles.gridSection}>
-                    {/* Optional: Add a heading for each grid */}
-                    {/* <div><h2 className={styles.sectionTitle}>{source.title}</h2></div> */}
+                    {/* Add a heading for each grid */}
                     <div className={styles.sectionTitle}>
                         <h2>{source.title}</h2>
                     </div>
 
                     <div className={styles.sectionIntro}>[intro]</div>
 
-                    {/* <div className={styles.projectGridContainer}> */}
                     <div className={styles.projectGridContainer01}>
                         <div className={styles.projectGrid}>
+                            {/* Iterate through each JSON object (project) in the .json file and create the main card */}
                             {source.data.map((project, idx) => (
                                 <div
                                     key={idx}
@@ -156,146 +137,64 @@ export default function ProjectGrids() {
                                             <DescriptionWithTooltip
                                                 text={project.description}
                                             />
-                                            {/* {project.description} */}
                                         </div>
                                     </div>
 
-{/* <div>
-    <div
-        className={
-            styles.packageDownloadWrapper
-        }
-    >
-        <strong>
-            Package Download URL:
-        </strong>
-        {project.package_download_url &&
-            project.package_download_url
-                .length > 0 && (
-                <ul
-                    style={{
-                        margin: 0,
-                        paddingLeft:
-                            '1.5rem',
-                        paddingTop:
-                            '0.2rem',
-                    }}
-                >
-                    {project.package_download_url.map(
-                        (url, urlIdx) => (
-                            <li
-                                key={urlIdx}
-                            >
-                                <a
-                                    className='wordWrap'
-                                    href={
-                                        url
-                                    }
-                                    target='_blank'
-                                    rel='noopener noreferrer'
-                                    onClick={(
-                                        e
-                                    ) => {
-                                        e.stopPropagation();
-                                        // handleMainLinkClick(
-                                        //     e,
-                                        //     spec,
-                                        //     'homepage'
-                                        // );
-                                    }}
-                                >
-                                    {url}
-                                </a>
-                            </li>
-                        )
-                    )}
-                </ul>
-            )}
-    </div>
-</div> */}
-
-{/* 2025-12-12 Friday 17:41:53.  Handle empty values and n/a for the package_download_url value. */}
-
-{/* <div>
-    <div className={styles.packageDownloadWrapper}>
-        <strong>Package Download URL:</strong>
-        {(() => {
-            // Filter out invalid URLs
-            const validUrls = project.package_download_url?.filter(
-                url => url && url !== 'n/a' && url !== '#' && url.trim() !== ''
-            ) || [];
-
-            if (validUrls.length > 0) {
-                return (
-                    <ul
-                        style={{
-                            margin: 0,
-                            paddingLeft: '1.5rem',
-                            paddingTop: '0.2rem',
-                        }}
-                    >
-                        {validUrls.map((url, urlIdx) => (
-                            <li key={urlIdx}>
-                                <a
-                                    className='wordWrap'
-                                    href={url}
-                                    target='_blank'
-                                    rel='noopener noreferrer'
-                                    onClick={(e) => {
-                                        e.stopPropagation();
-                                    }}
-                                >
-                                    {url}
-                                </a>
-                            </li>
-                        ))}
-                    </ul>
-                );
-            } else {
-                return <span> n/a</span>;
-            }
-        })()}
-    </div>
-</div> */}
-
-{/* 2025-12-12 Friday 17:57:49.Or this alternative. */}
-
-<div>
-    <div className={styles.packageDownloadWrapper}>
-        <strong>Package Download URL:</strong>
-        {project.package_download_url?.filter(
-            url => url && url !== 'n/a' && url !== '#' && url.trim() !== ''
-        ).length > 0 ? (
-            <ul
-                style={{
-                    margin: 0,
-                    paddingLeft: '1.5rem',
-                    paddingTop: '0.2rem',
-                }}
-            >
-                {project.package_download_url
-                    .filter(url => url && url !== 'n/a' && url !== '#' && url.trim() !== '')
-                    .map((url, urlIdx) => (
-                        <li key={urlIdx}>
-                                <a
-                                className='wordWrap'
-                                href={url}
-                                target='_blank'
-                                rel='noopener noreferrer'
-                                onClick={(e) => e.stopPropagation()}
-                            >
-                                {url}
-                            </a>
-                        </li>
-                    ))}
-            </ul>
-        ) : (
-            <span> n/a</span>
-        )}
-    </div>
-</div>
-
-
+                                    <div>
+                                        <div
+                                            className={
+                                                styles.packageDownloadWrapper
+                                            }
+                                        >
+                                            <strong>
+                                                Package Download URL:
+                                            </strong>
+                                            {project.package_download_url?.filter(
+                                                (url) =>
+                                                    url &&
+                                                    url !== 'n/a' &&
+                                                    url !== '#' &&
+                                                    url.trim() !== ''
+                                            ).length > 0 ? (
+                                                <ul
+                                                    style={{
+                                                        margin: 0,
+                                                        paddingLeft: '1.5rem',
+                                                        paddingTop: '0.2rem',
+                                                    }}
+                                                >
+                                                    {project.package_download_url
+                                                        .filter(
+                                                            (url) =>
+                                                                url &&
+                                                                url !== 'n/a' &&
+                                                                url !== '#' &&
+                                                                url.trim() !==
+                                                                    ''
+                                                        )
+                                                        .map((url, urlIdx) => (
+                                                            <li key={urlIdx}>
+                                                                <a
+                                                                    className='wordWrap'
+                                                                    href={url}
+                                                                    target='_blank'
+                                                                    rel='noopener noreferrer'
+                                                                    onClick={(
+                                                                        e
+                                                                    ) =>
+                                                                        e.stopPropagation()
+                                                                    }
+                                                                >
+                                                                    {url}
+                                                                </a>
+                                                            </li>
+                                                        ))}
+                                                </ul>
+                                            ) : (
+                                                <span> n/a</span>
+                                            )}
+                                        </div>
+                                    </div>
                                 </div>
                             ))}
                         </div>
@@ -347,6 +246,52 @@ export default function ProjectGrids() {
                                         )}
                                     </div>
 
+                                    {/* Catch empty and n/a and just display n/a as text. */}
+                                    <div className={styles.modalLinks01}>
+                                        <strong>Package Download URL:</strong>
+                                        {selectedProject.package_download_url?.filter(
+                                            (url) =>
+                                                url &&
+                                                url !== 'n/a' &&
+                                                url !== '#' &&
+                                                url.trim() !== ''
+                                        ).length > 0 ? (
+                                            <ul
+                                                style={{
+                                                    margin: 0,
+                                                    paddingLeft: '1.5rem',
+                                                    paddingTop: '0.2rem',
+                                                }}
+                                            >
+                                                {selectedProject.package_download_url
+                                                    .filter(
+                                                        (url) =>
+                                                            url &&
+                                                            url !== 'n/a' &&
+                                                            url !== '#' &&
+                                                            url.trim() !== ''
+                                                    )
+                                                    .map((url, urlIdx) => (
+                                                        <li key={urlIdx}>
+                                                            <a
+                                                                className='wordWrap'
+                                                                href={url}
+                                                                target='_blank'
+                                                                rel='noopener noreferrer'
+                                                                onClick={(e) =>
+                                                                    e.stopPropagation()
+                                                                }
+                                                            >
+                                                                {url}
+                                                            </a>
+                                                        </li>
+                                                    ))}
+                                            </ul>
+                                        ) : (
+                                            <span> n/a</span>
+                                        )}
+                                    </div>
+
                                     <div className={styles.modalLinks01}>
                                         <span style={{ fontWeight: 'bold' }}>
                                             Documentation URL:{' '}
@@ -373,71 +318,6 @@ export default function ProjectGrids() {
                                         )}
                                     </div>
 
-                                    {/* <div className={styles.modalLinks01}>
-                                        <strong>Package Download URL:</strong>
-                                        {selectedProject.package_download_url &&
-                                            selectedProject.package_download_url
-                                                .length > 0 && (
-                                                <ul
-                                                    style={{
-                                                        margin: 0,
-                                                        paddingLeft: '1.5rem',
-                                                        paddingTop: '0.2rem',
-                                                    }}
-                                                >
-                                                    {selectedProject.package_download_url.map(
-                                                        (url, idx) => (
-                                                            <li key={idx}>
-                                                                <a
-                                                                    className='wordWrap'
-                                                                    href={url}
-                                                                    target='_blank'
-                                                                    rel='noopener noreferrer'
-                                                                >
-                                                                    {url}
-                                                                </a>
-                                                            </li>
-                                                        )
-                                                    )}
-                                                </ul>
-                                            )}
-                                    </div> */}
-
-                                    {/* 2025-12-12 Friday 18:24:18.Try this alternative -- catch empty and n/a and just display n/a as text. */}
-                                    <div className={styles.modalLinks01}>
-                                        <strong>Package Download URL:</strong>
-        {selectedProject.package_download_url?.filter(
-            url => url && url !== 'n/a' && url !== '#' && url.trim() !== ''
-        ).length > 0 ? (
-            <ul
-                style={{
-                    margin: 0,
-                    paddingLeft: '1.5rem',
-                    paddingTop: '0.2rem',
-                }}
-            >
-                {selectedProject.package_download_url
-                    .filter(url => url && url !== 'n/a' && url !== '#' && url.trim() !== '')
-                    .map((url, urlIdx) => (
-                        <li key={urlIdx}>
-                            <a
-                                className='wordWrap'
-                                href={url}
-                                target='_blank'
-                                rel='noopener noreferrer'
-                                onClick={(e) => e.stopPropagation()}
-                            >
-                                {url}
-                            </a>
-                        </li>
-                    ))}
-            </ul>
-        ) : (
-            <span> n/a</span>
-        )}
-
-                                    </div>
-
                                     <div className={styles.modalLinks01}>
                                         <span style={{ fontWeight: 'bold' }}>
                                             Service URL:{' '}
@@ -462,19 +342,10 @@ export default function ProjectGrids() {
 
                                     <div className={styles.note_field}>
                                         <span style={{ fontWeight: 'bold' }}>
-                                            Language:{' '}
+                                            Language(s):{' '}
                                         </span>
                                         <div className={styles.modalText}>
-                                            {selectedProject.language}
-                                        </div>
-                                    </div>
-
-                                    <div className={styles.note_field}>
-                                        <span style={{ fontWeight: 'bold' }}>
-                                            License:{' '}
-                                        </span>
-                                        <div className={styles.modalText}>
-                                            {selectedProject.license}
+                                            {selectedProject.languages}
                                         </div>
                                     </div>
 
@@ -489,10 +360,19 @@ export default function ProjectGrids() {
 
                                     <div className={styles.note_field}>
                                         <span style={{ fontWeight: 'bold' }}>
-                                            Comments:{' '}
+                                            Software License:{' '}
                                         </span>
                                         <div className={styles.modalText}>
-                                            {selectedProject.comments}
+                                            {selectedProject.software_license}
+                                        </div>
+                                    </div>
+
+                                    <div className={styles.note_field}>
+                                        <span style={{ fontWeight: 'bold' }}>
+                                            Data License:{' '}
+                                        </span>
+                                        <div className={styles.modalText}>
+                                            {selectedProject.data_license}
                                         </div>
                                     </div>
                                 </div>

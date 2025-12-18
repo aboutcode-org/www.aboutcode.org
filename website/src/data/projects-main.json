@@ -7,10 +7,10 @@
         "documentation_url": "https://dejacode.readthedocs.io/en/latest/",
         "package_download_url": ["https://pypi.org/project/dejacode/"],
         "service_url": "https://public.dejacode.com/account/register/",
-        "language": "Python",
-        "license": "AGPL-3.0-only",
-        "platform": "Linux",
-        "comments": "n/a"
+        "languages": "Python",
+        "software_license": "AGPL-3.0-only",
+        "data_license": "n/a",
+        "platform": "Linux"
     },
     {
         "group": "Main",
@@ -20,62 +20,10 @@
         "documentation_url": "https://aboutcode.readthedocs.io/projects/PURLdb/en/latest/",
         "package_download_url": ["https://pypi.org/project/minecode-pipelines/", "https://pypi.org/project/purl2vcs/"],
         "service_url": "https://public.purldb.io/api/",
-        "language": "Python",
-        "license": "Apache-2.0",
-        "platform": "n/a",
-        "comments": "Service is API only"
-    },
-    {
-        "group": "Main",
-        "name": "scancode-licensedb",
-        "description": "Free and open database of software and related licenses with over 2400 curated license texts, their metadata and ScanCode license detection rules.",
-        "repository_url": "https://github.com/aboutcode-org/scancode-licensedb",
-        "documentation_url": "https://scancode-licensedb.aboutcode.org/help.html",
-        "package_download_url": ["https://pypi.org/project/licensedcode-data/", "https://pypi.org/project/licensedcode-index/"],
-        "service_url": "https://scancode-licensedb.aboutcode.org/",
-        "language": "Python",
-        "license": "Apache-2.0",
-        "platform": "n/a",
-        "comments": "n/a"
-    },
-    {
-        "group": "Main",
-        "name": "scancode-toolkit",
-        "description": "Set of code scanning tools that detect the origin (copyrights), license and vulnerabilities of code, packages and dependencies in a codebase.",
-        "repository_url": "https://github.com/aboutcode-org/scancode-toolkit",
-        "documentation_url": "https://scancode-toolkit.readthedocs.io/en/stable/",
-        "package_download_url": ["https://pypi.org/project/scancode-toolkit/", "https://pypi.org/project/scancode-toolkit-mini/"],
-        "service_url": "n/a",
-        "language": "Python",
-        "license": "Apache-2.0",
-        "platform": "n/a",
-        "comments": "n/a"
-    },
-    {
-        "group": "Main",
-        "name": "scancode-workbench",
-        "description": "Application to visualize and review scan results from ScanCode Toolkit scans. You can install and use the Workbench on a Linux, MacOS or Windows desktop.",
-        "repository_url": "https://github.com/aboutcode-org/scancode-workbench",
-        "documentation_url": "https://scancode-workbench.readthedocs.io/",
-        "package_download_url": ["https://github.com/aboutcode-org/scancode-workbench/releases/"],
-        "service_url": "n/a",
-        "language": "Electron",
-        "license": "Apache-2.0",
-        "platform": "Linux, MacOS, Windows",
-        "comments": "n/a"
-    },
-    {
-        "group": "Main",
-        "name": "vulnerablecode",
-        "description": "Provides a Web UI and API to access a database of known software package vulnerabilities with comprehensive information from upstream and downstream public sources including packages affected by a vulnerability and packages that fix a vulnerability.",
-        "repository_url": "https://github.com/aboutcode-org/vulnerablecode",
-        "documentation_url": "https://vulnerablecode.readthedocs.io/en/latest/",
-        "package_download_url": ["https://pypi.org/project/vulnerablecode/", "https://pypi.org/project/aboutcode.federated/", "https://pypi.org/project/aboutcode.hashid/"],
-        "service_url": "https://public2.vulnerablecode.io/",
-        "language": "Python",
-        "license": "Apache-2.0",
-        "platform": "n/a",
-        "comments": "n/a"
+        "languages": "Python",
+        "software_license": "Apache-2.0",
+        "data_license": "n/a",
+        "platform": "n/a"
     },
     {
         "group": "Main",
@@ -85,10 +33,10 @@
         "documentation_url": "https://scancodeio.readthedocs.io/en/latest/",
         "package_download_url": ["https://pypi.org/project/scancodeio/"],
         "service_url": "n/a",
-        "language": "Python",
-        "license": "Apache-2.0",
-        "platform": "n/a",
-        "comments": "n/a"
+        "languages": "Python",
+        "software_license": "Apache-2.0",
+        "data_license": "n/a",
+        "platform": "n/a"
     },
     {
         "group": "Main",
@@ -98,10 +46,23 @@
         "documentation_url": "https://scancode-analyzer.readthedocs.io/en/latest/",
         "package_download_url": ["https://pypi.org/project/scancode-analyzer/"],
         "service_url": "n/a",
-        "language": "Python",
-        "license": "Apache-2.0",
-        "platform": "n/a",
-        "comments": "n/a"
+        "languages": "Python",
+        "software_license": "Apache-2.0",
+        "data_license": "n/a",
+        "platform": "n/a"
+    },
+    {
+        "group": "Main",
+        "name": "scancode-licensedb",
+        "description": "Free and open database of software and related licenses with over 2400 curated license texts, their metadata and ScanCode license detection rules.",
+        "repository_url": "https://github.com/aboutcode-org/scancode-licensedb",
+        "documentation_url": "https://scancode-licensedb.aboutcode.org/help.html",
+        "package_download_url": ["https://pypi.org/project/licensedcode-data/", "https://pypi.org/project/licensedcode-index/"],
+        "service_url": "https://scancode-licensedb.aboutcode.org/",
+        "languages": "Python",
+        "software_license": "Apache-2.0",
+        "data_license": "n/a",
+        "platform": "n/a"
     },
     {
         "group": "Main",
@@ -111,9 +72,48 @@
         "documentation_url": "n/a",
         "package_download_url": ["n/a"],
         "service_url": "n/a",
-        "language": "Python",
-        "license": "Apache-2.0",
-        "platform": "n/a",
-        "comments": "n/a"
+        "languages": "Python",
+        "software_license": "Apache-2.0",
+        "data_license": "n/a",
+        "platform": "n/a"
+    },
+    {
+        "group": "Main",
+        "name": "scancode-toolkit",
+        "description": "Set of code scanning tools that detect the origin (copyrights), license and vulnerabilities of code, packages and dependencies in a codebase.",
+        "repository_url": "https://github.com/aboutcode-org/scancode-toolkit",
+        "documentation_url": "https://scancode-toolkit.readthedocs.io/en/stable/",
+        "package_download_url": ["https://pypi.org/project/scancode-toolkit/", "https://pypi.org/project/scancode-toolkit-mini/"],
+        "service_url": "n/a",
+        "languages": "Python",
+        "software_license": "Apache-2.0",
+        "data_license": "n/a",
+        "platform": "n/a"
+    },
+    {
+        "group": "Main",
+        "name": "scancode-workbench",
+        "description": "Application to visualize and review scan results from ScanCode Toolkit scans. You can install and use the Workbench on a Linux, MacOS or Windows desktop.",
+        "repository_url": "https://github.com/aboutcode-org/scancode-workbench",
+        "documentation_url": "https://scancode-workbench.readthedocs.io/",
+        "package_download_url": ["https://github.com/aboutcode-org/scancode-workbench/releases/"],
+        "service_url": "n/a",
+        "languages": "Electron",
+        "software_license": "Apache-2.0",
+        "data_license": "n/a",
+        "platform": "Linux, MacOS, Windows"
+    },
+    {
+        "group": "Main",
+        "name": "vulnerablecode",
+        "description": "Provides a Web UI and API to access a database of known software package vulnerabilities with comprehensive information from upstream and downstream public sources including packages affected by a vulnerability and packages that fix a vulnerability.",
+        "repository_url": "https://github.com/aboutcode-org/vulnerablecode",
+        "documentation_url": "https://vulnerablecode.readthedocs.io/en/latest/",
+        "package_download_url": ["https://pypi.org/project/vulnerablecode/", "https://pypi.org/project/aboutcode.federated/", "https://pypi.org/project/aboutcode.hashid/"],
+        "service_url": "https://public2.vulnerablecode.io/",
+        "languages": "Python",
+        "software_license": "Apache-2.0",
+        "data_license": "n/a",
+        "platform": "n/a"
     }
 ]

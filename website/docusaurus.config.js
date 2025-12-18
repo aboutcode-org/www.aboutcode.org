@@ -67,25 +67,10 @@ const config = {
                     editUrl: ({ docPath }) => {
                         // TODO We can include a map here as in packageurl.org.
                         // Otherwise, provide a default (so “Edit this page” still works)
-                        // return `https://github.com/aboutcode/www.aboutcode.org/blob/main/website/docs/${docPath}`;
+                        return `https://github.com/aboutcode-org/www.aboutcode.org/blob/main/website/docs/${docPath}`;
                         // fork:
-                        return `https://github.com/johnmhoran/www.aboutcode.org/blob/main/website/docs/${docPath}`;
+                        // return `https://github.com/johnmhoran/www.aboutcode.org/blob/main/website/docs/${docPath}`;
                     },
-                },
-                blog: {
-                    showReadingTime: true,
-                    feedOptions: {
-                        type: ['rss', 'atom'],
-                        xslt: true,
-                    },
-                    // Please change this to your repo.
-                    // Remove this to remove the "edit this page" links.
-                    editUrl:
-                        'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-                    // Useful options to enforce blogging best practices
-                    onInlineTags: 'warn',
-                    onInlineAuthors: 'warn',
-                    onUntruncatedBlogPosts: 'warn',
                 },
                 theme: {
                     customCss: './src/css/custom.css',
@@ -140,7 +125,6 @@ const config = {
                         position: 'left',
                         label: 'About',
                     },
-                    { to: '/blog', label: 'Blog', position: 'left' },
                     {
                         href: 'https://github.com/aboutcode-org',
                         label: 'GitHub',

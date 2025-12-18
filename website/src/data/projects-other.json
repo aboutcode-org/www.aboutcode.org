@@ -7,10 +7,23 @@
         "documentation_url": "n/a",
         "package_download_url": ["https://pypi.org/project/packageurl-python/"],
         "service_url": "n/a",
-        "language": "Python",
-        "license": "Apache-2.0",
-        "platform": "n/a",
-        "comments": "n/a"
+        "languages": "Python",
+        "software_license": "Apache-2.0",
+        "data_license": "n/a",
+        "platform": "n/a"
+    },
+    {
+        "group": "Other",
+        "name": "scancode-action",
+        "description": "scancode-action enables you to run ScanCode.io pipelines from your Workflows.",
+        "repository_url": "https://github.com/aboutcode-org/scancode-action",
+        "documentation_url": "n/a",
+        "package_download_url": ["n/a"],
+        "service_url": "n/a",
+        "languages": "Python",
+        "software_license": "Apache-2.0",
+        "data_license": "n/a",
+        "platform": "n/a"
     },
     {
         "group": "Other",
@@ -20,22 +33,22 @@
         "documentation_url": "n/a",
         "package_download_url": ["https://pypi.org/project/univers/"],
         "service_url": "n/a",
-        "language": "Python",
-        "license": "Apache-2.0",
-        "platform": "n/a",
-        "comments": "n/a"
+        "languages": "Python",
+        "software_license": "Apache-2.0",
+        "data_license": "n/a",
+        "platform": "n/a"
     },
     {
         "group": "Other",
-        "name": "some-project",
-        "description": "n/a",
-        "repository_url": "n/a",
+        "name": "vulntotal-extension",
+        "description": "Integrates the VulnTotal vulnerability analysis tool directly into your browser.",
+        "repository_url": "https://github.com/aboutcode-org/vulntotal-extension",
         "documentation_url": "n/a",
         "package_download_url": ["n/a"],
         "service_url": "n/a",
-        "language": "n/a",
-        "license": "n/a",
-        "platform": "n/a",
-        "comments": "n/a"
+        "languages": "Python",
+        "software_license": "Apache-2.0",
+        "data_license": "n/a",
+        "platform": "n/a"
     }
 ]
