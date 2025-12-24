@@ -72,6 +72,13 @@ const config = {
                         // return `https://github.com/johnmhoran/www.aboutcode.org/blob/main/website/docs/${docPath}`;
                     },
                 },
+                blog: {
+                    showReadingTime: true,
+                    blogSidebarTitle: 'All posts',
+                    blogSidebarCount: 'ALL',
+                    blogTitle: 'AboutCode blog!',
+                },
+
                 theme: {
                     customCss: './src/css/custom.css',
                 },
@@ -125,6 +132,7 @@ const config = {
                         position: 'left',
                         label: 'About',
                     },
+                    { to: '/blog', label: 'Blog', position: 'left' },
                     {
                         href: 'https://github.com/aboutcode-org',
                         label: 'GitHub',

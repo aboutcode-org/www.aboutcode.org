@@ -1,8 +1,9 @@
 ---
-slug: first-blog-post
-title: First Blog Post
-authors: [slorber, yangshun]
-tags: [hola, docusaurus]
+slug: test-blog-post
+title: Test Blog Post
+authors: [mjherzog]
+tags: [hello, docusaurus]
+hide_table_of_contents: false
 ---
 
 Lorem ipsum dolor sit amet...
