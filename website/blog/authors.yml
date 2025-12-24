@@ -1,25 +1,29 @@
-yangshun:
-  name: Yangshun Tay
-  title: Ex-Meta Staff Engineer, Co-founder GreatFrontEnd
-  url: https://linkedin.com/in/yangshun
-  image_url: https://github.com/yangshun.png
+dmclark:
+  name: Dennis Clark
+  title: (title)
+  url: https://www.linkedin.com/in/dennis-clark-03b6a6264/
+  image_url: https://avatars.githubusercontent.com/u/4991620?v=4
   page: true
   socials:
-    x: yangshunz
-    linkedin: yangshun
-    github: yangshun
-    newsletter: https://www.greatfrontend.com
+    linkedin: dennis-clark-03b6a6264
+    github: https://github.com/DennisClark
 
-slorber:
-  name: Sébastien Lorber
-  title: Docusaurus maintainer
-  url: https://sebastienlorber.com
-  image_url: https://github.com/slorber.png
-  page:
-    # customize the url of the author page at /blog/authors/<permalink>
-    permalink: '/all-sebastien-lorber-articles'
+mjherzog:
+  name: Michael Herzog
+  title: (title)
+  url: https://www.linkedin.com/in/michael-herzog-3a350
+  image_url: https://avatars.githubusercontent.com/u/4853767?v=4
+  page: true
   socials:
-    x: sebastienlorber
-    linkedin: sebastienlorber
-    github: slorber
-    newsletter: https://thisweekinreact.com
+    linkedin: michael-herzog-3a350
+    github: mjherzog
+
+pombredanne:
+  name: Philippe Ombredanne
+  title: (title)
+  url: https://www.linkedin.com/in/philippeombredanne
+  image_url: https://avatars.githubusercontent.com/u/675997?v=4
+  page: true
+  socials:
+    linkedin: philippeombredanne
+    github: pombredanne
