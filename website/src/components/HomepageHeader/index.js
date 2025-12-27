@@ -9,7 +9,7 @@ export default function HomepageHeader() {
           Welcome to AboutCode.org
         </h1>
         <p className={styles.heroSubtitle}>
-          [Tagline . . . ?]
+          FOSS for FOSS
         </p>
       </div>
     </div>

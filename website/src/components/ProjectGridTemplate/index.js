@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import styles from './styles.module.css';
-import projects_inspector from '@site/src/data/projects-inspector.json';
-import projects_library from '@site/src/data/projects-library.json';
-import projects_main from '@site/src/data/projects-main.json';
-import projects_other from '@site/src/data/projects-other.json';
-import projects_toolkit from '@site/src/data/projects-toolkit.json';
+import projects_application from '@site/src/data/projects-application.json';
+import projects_scancode from '@site/src/data/projects-scancode.json';
+import projects_package_url from '@site/src/data/projects-package-url.json';
+import projects_inspectors from '@site/src/data/projects-inspectors.json';
+import projects_libraries from '@site/src/data/projects-libraries.json';
 
 export default function ProjectGrids() {
     const [selectedProject, setSelectedProject] = useState(null);
@@ -14,11 +14,36 @@ export default function ProjectGrids() {
 
     // list of data sources
     const projectSources = [
-        { title: 'Main Projects', data: projects_main },
-        { title: 'Library Projects', data: projects_library },
-        { title: 'Inspector Projects', data: projects_inspector },
-        { title: 'Toolkit Projects', data: projects_toolkit },
-        { title: 'Other Projects', data: projects_other },
+        {
+            title: 'Application Projects',
+            data: projects_application,
+            description:
+                'These projects offer an application that you can install in the cloud or a local environment.',
+        },
+        {
+            title: 'ScanCode projects',
+            data: projects_scancode,
+            description:
+                'These projects are components or extensions of ScanCode.',
+        },
+        {
+            title: 'Package-URL (PURL) projects',
+            data: projects_package_url,
+            description:
+                'These projects provide tools and data to support the use of the PURL (Package-URL) or VERS (Version Range Specifier) specifications.',
+        },
+        {
+            title: 'Inspectors',
+            data: projects_inspectors,
+            description:
+                'AboutCode Inspectors are special-purpose analysis tools. You can run them as a ScanCode Toolkit plugin, as steps in a ScanCode.io pipeline, or from the command line.',
+        },
+        {
+            title: 'Libraries',
+            data: projects_libraries,
+            description:
+                'AboutCode libraries are key building blocks for the AboutCode software and data stack - they have also been incorporated into other major FOSS projects and are available for use by anyone.',
+        },
     ];
 
     const openModal = (project) => {
@@ -75,6 +100,17 @@ export default function ProjectGrids() {
         );
     }
 
+    // 2025-12-24 Wednesday 15:04:08.create a reusable helper for the lists
+    function normalizeToArray(value) {
+        if (Array.isArray(value)) return value;
+        if (typeof value === 'string' && value !== 'n/a' && value !== '#') {
+            return [value];
+        }
+        return [];
+    }
+
+    const leadMaintainers = normalizeToArray(selectedProject?.lead_maintainer);
+
     return (
         <div className={styles.projectGridWrapper01}>
             {/* Iterate through each data source */}
@@ -85,7 +121,9 @@ export default function ProjectGrids() {
                         <h2>{source.title}</h2>
                     </div>
 
-                    <div className={styles.sectionIntro}>[intro]</div>
+                    <div className={styles.sectionIntro}>
+                        {source.description}
+                    </div>
 
                     <div className={styles.projectGridContainer01}>
                         <div className={styles.projectGrid}>
@@ -135,64 +173,12 @@ export default function ProjectGrids() {
                                             }
                                         >
                                             <DescriptionWithTooltip
-                                                text={project.description}
+                                                text={project.description.map(
+                                                    (para, idx) => (
+                                                        <p key={idx}>{para}</p>
+                                                    )
+                                                )}
                                             />
-                                        </div>
-                                    </div>
-
-                                    <div>
-                                        <div
-                                            className={
-                                                styles.packageDownloadWrapper
-                                            }
-                                        >
-                                            <strong>
-                                                Package Download URL:
-                                            </strong>
-                                            {project.package_download_url?.filter(
-                                                (url) =>
-                                                    url &&
-                                                    url !== 'n/a' &&
-                                                    url !== '#' &&
-                                                    url.trim() !== ''
-                                            ).length > 0 ? (
-                                                <ul
-                                                    style={{
-                                                        margin: 0,
-                                                        paddingLeft: '1.5rem',
-                                                        paddingTop: '0.2rem',
-                                                    }}
-                                                >
-                                                    {project.package_download_url
-                                                        .filter(
-                                                            (url) =>
-                                                                url &&
-                                                                url !== 'n/a' &&
-                                                                url !== '#' &&
-                                                                url.trim() !==
-                                                                    ''
-                                                        )
-                                                        .map((url, urlIdx) => (
-                                                            <li key={urlIdx}>
-                                                                <a
-                                                                    className='wordWrap'
-                                                                    href={url}
-                                                                    target='_blank'
-                                                                    rel='noopener noreferrer'
-                                                                    onClick={(
-                                                                        e
-                                                                    ) =>
-                                                                        e.stopPropagation()
-                                                                    }
-                                                                >
-                                                                    {url}
-                                                                </a>
-                                                            </li>
-                                                        ))}
-                                                </ul>
-                                            ) : (
-                                                <span> n/a</span>
-                                            )}
                                         </div>
                                     </div>
                                 </div>
@@ -216,9 +202,16 @@ export default function ProjectGrids() {
                     >
                         <div className={styles.modalBody}>
                             <>
+
                                 <div className={styles.fullWidthSection}>
                                     <h2>{selectedProject.name}</h2>
-                                    <p>{selectedProject.description}</p>
+                                    <p>
+                                        {selectedProject.description.map(
+                                            (para, idx) => (
+                                                <p key={idx}>{para}</p>
+                                            )
+                                        )}
+                                    </p>
                                 </div>
 
                                 <div className={styles.column}>
@@ -259,18 +252,10 @@ export default function ProjectGrids() {
                                             <ul
                                                 style={{
                                                     margin: 0,
-                                                    paddingLeft: '1.5rem',
                                                     paddingTop: '0.2rem',
                                                 }}
                                             >
                                                 {selectedProject.package_download_url
-                                                    .filter(
-                                                        (url) =>
-                                                            url &&
-                                                            url !== 'n/a' &&
-                                                            url !== '#' &&
-                                                            url.trim() !== ''
-                                                    )
                                                     .map((url, urlIdx) => (
                                                         <li key={urlIdx}>
                                                             <a
@@ -374,6 +359,39 @@ export default function ProjectGrids() {
                                         <div className={styles.modalText}>
                                             {selectedProject.data_license}
                                         </div>
+                                    </div>
+
+                                    <div className={styles.modalLinks01}>
+                                        <span style={{ fontWeight: 'bold' }}>
+                                            Lead Maintainer(s):
+                                        </span>
+
+                                        {leadMaintainers.length > 0 ? (
+                                            <ul
+                                                className={
+                                                    styles.maintainerList
+                                                }
+                                            >
+                                                {leadMaintainers.map(
+                                                    (url, idx) => (
+                                                        <li key={idx}>
+                                                            <a
+                                                                href={url}
+                                                                target='_blank'
+                                                                rel='noopener noreferrer'
+                                                                className={
+                                                                    styles.modalLinkUrl
+                                                                }
+                                                            >
+                                                                {url}
+                                                            </a>
+                                                        </li>
+                                                    )
+                                                )}
+                                            </ul>
+                                        ) : (
+                                            <span>n/a</span>
+                                        )}
                                     </div>
                                 </div>
                             </>

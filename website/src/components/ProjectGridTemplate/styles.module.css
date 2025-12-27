@@ -416,8 +416,8 @@ display: list-item !important;
     text-overflow: ellipsis;
     display: -webkit-box;
 
-    -webkit-line-clamp: 4;
-    line-clamp: 4;
+    -webkit-line-clamp: 8;
+    line-clamp: 8;
 
     -webkit-box-orient: vertical;
     /* line-height: 1.4em; */
@@ -467,11 +467,14 @@ display: list-item !important;
     /* color: var(--ifm-font-color-base); */
 
     background: #f5f5f5;
+    background: #ffffff;
     color: #000000;
     border: 1px solid var(--ifm-color-emphasis-200);
     border: solid 2px #000000;
+    border: solid 2px #0066ff;
 
     padding: 8px 10px;
+    padding: 8px 10px 0px 10px;
     border-radius: 6px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     white-space: normal;
