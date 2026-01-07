@@ -103,6 +103,7 @@
     transition: transform 0.2s ease, box-shadow 0.2s ease,
         border-color 0.2s ease;
     color: #1a3e7a;
+    
 }
 
 .packageCell:hover {
@@ -197,7 +198,9 @@
     margin-bottom: 0px;
     color: #000000;
 }
-
+[data-theme="dark"] .sectionHeader h1 {
+    color: #e5e5e5;
+}
 .sectionHeader h2 {
     margin-bottom: 0px;
     color: #336699;

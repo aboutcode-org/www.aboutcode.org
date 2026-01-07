@@ -1,4 +1,4 @@
-/**
+/* *
  * Any CSS included here will be global. The classic template
  * bundles Infima by default. Infima is a CSS framework designed to
  * work well for content-centric websites.
@@ -62,11 +62,17 @@
 .theme-doc-sidebar-menu .menu__link {
   color: #000000;
 }
+[data-theme='dark'] .theme-doc-sidebar-menu .menu__link {
+  color: #dadde1;
+}
 .theme-doc-sidebar-menu .menu__link:hover,
 .theme-doc-sidebar-menu .menu__link--active {
   color: #3366cc;
 }
-
+[data-theme='dark'] .theme-doc-sidebar-menu .menu__link:hover,
+[data-theme='dark'] .theme-doc-sidebar-menu .menu__link--active {
+  color: #3366cc;
+}
 
 /* MOBILE NAV MENU */
 @media (max-width: 996px) {
