@@ -1,15 +1,16 @@
 /* Hero full-width */
 .fullHero {
     width: 100%;
-    color: white;
     text-align: center;
     padding: 2rem 2rem 2rem 2rem;
     background-size: cover;
     background-blend-mode: overlay;
-    /* background-image: linear-gradient(135deg, #666666 0%, #999999 100%),
-        url("/img/cube-background.jpg"); */
-        background-color: #e8e8e8;
+    background-color: #e8e8e8;
     color: #000000;
+}
+html[data-theme="dark"] .fullHero {
+  background-color: #252525;
+  color: white;
 }
 
 .heroInner {
@@ -23,8 +24,6 @@
 }
 
 .heroSubtitle {
-    font-size: 1.25rem;
     font-size: 2rem;
-    margin-bottom: 2rem;
     margin-bottom: 0.5rem;
 }

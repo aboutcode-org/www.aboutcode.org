@@ -1,7 +1,6 @@
 /* Hero full-width */
 .fullHero {
     width: 100%;
-    color: white;
     text-align: center;
     padding: 2rem 2rem 2rem 2rem;
     background-size: cover;
@@ -27,15 +26,16 @@
     padding: 0.5rem 0.5rem;
     box-shadow: inset 0 20px 40px -20px rgba(0, 0, 0, 0.05);
 }
+[data-theme="dark"] .purlGridContainer {
+    background-color: #252525;
+    border: solid 1px #353535;
+}
 
 /* Container for the grid */
 .purlGrid {
     display: flex;
     flex-wrap: wrap;
-    /* centers each row, including the last */
     justify-content: center;
-    gap: 0rem;
-    /* 2025-12-04 Thursday 11:57:31.   */
     gap: 1.5rem;
     padding: 1rem;
     margin: 0 auto;
@@ -47,9 +47,9 @@
     gap: 2rem;
     max-width: 1200px;
     margin: 3rem auto;
+    margin-top: 0;
     padding: 0 2rem;
     padding-top: 1rem;
-    margin-top: 0;
     border-radius: 10px;
 }
 
@@ -65,27 +65,12 @@
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
-/* Handle dark mode for the card */
 .card {
     background-color: var(--ifm-background-surface-color);
     color: var(--ifm-font-color-base);
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 0 6px #0000001a;
-}
-
-
-.packageCell {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    padding: 1rem;
-    background: #fff;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 /* Each card / cell */
@@ -96,7 +81,7 @@
     align-items: center;
     text-decoration: none;
     background: #ffffff;
-    border: 1px solid #e0e6ef;
+    border: 1px solid #404040;
     border-radius: 12px;
     padding: 0.5rem !important;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
@@ -104,10 +89,12 @@
         border-color 0.2s ease;
     color: #1a3e7a;
 }
+[data-theme="dark"] .packageCell {
+    background-color: #020202;
+}
 
-.packageCell:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+[data-theme="dark"] .packageCell span {
+    color: #0066ff;
 }
 
 .packageCell:hover {
@@ -123,7 +110,6 @@
     text-align: center;
     color: #1a3e7a;
 }
-
 
 .packageLogo {
     width: 64px;

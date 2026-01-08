@@ -48,8 +48,6 @@
     padding-top: 1rem;
     margin-top: 0;
     border-radius: 10px;
-    /* 2025-11-05 Wednesday 14:48:46.   */
-    /* box-shadow: 0 0 6px #0000001a; */
     border: solid 1px #e0e0e0;
     background-color: #f8f8f8;
 }
@@ -145,30 +143,12 @@
     height: 64px;
 }
 
-/* 2025-11-05 Wednesday 09:36:17.  For the intro. */
 .introContainer {
-    /* max-width: 1200px;
-  width: 100%;
-  text-align: center;
-  display: flex;
-  padding: 2rem;
-
-  margin: 2rem auto;
-  background-color: #e8e8e8; */
-
     display: grid;
-    /* grid-template-columns: 1fr 1fr; */
-    /* gap: 2rem; */
     max-width: 1200px;
-    margin: 3rem auto;
-    margin: 2rem auto;
-    margin: .5rem auto;
     margin: 1rem auto .5rem auto;
-    /* padding: 0 2rem; */
     padding-top: 1rem;
-    /* margin-top: 0; */
     border-radius: 10px;
-
     background-color: #00ccff;
 }
 
@@ -176,42 +156,28 @@
 .sectionIntro {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 1rem 0;
-  padding: 0.5rem 0;
   padding: 0;
-
-  /* background-color: #ffffcc; */
   line-height: 1.4rem;
 }
 
 .sectionHeader {
     display: flex;
-    /* justify-content: center; */
-
-    /* background-color: #ffcccc; */
     padding: 0px 0px 0px 0px;
-    /* padding: 1rem 2rem; */
 }
 
 .sectionHeader h1 {
     margin-bottom: 0px;
     color: #000000;
 }
+[data-theme="dark"] .sectionHeader h1 {
+    color: #e5e5e5;
+}
 
 .sectionHeader h2 {
     margin-bottom: 0px;
-    color: #336699;
     color: #992600;
 }
 
-/* 2025-11-22 Saturday 12:29:30.   */
-/* .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1rem 1.5rem;
-} */
-
-/* styles.module.css */
 .sectionContainer {
   max-width: 1200px;
   margin: 0 auto;

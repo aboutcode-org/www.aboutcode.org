@@ -1,25 +1,19 @@
-/* 2025-12-11 Thursday 15:47:22.From original ProjectGrid */
-/* Grid layout (reuse existing) */
 .projectGridWrapper {
-    margin: 2rem auto;
-    margin: 1rem auto;
     margin: 0.5rem auto;
     padding: 1rem;
-    background-color: #e8e8e8;
     background-color: #f5f5f5;
     border-radius: 12px;
-
-    border: solid 1px #b8b8b8;
     border: 0;
 }
 
 .projectGridWrapper01 {
-    /* margin: 0.5rem auto; */
-    padding: 1rem;
     background-color: #ffffff;
     border: 0;
-
     padding: 0rem;
+}
+[data-theme='dark'] .projectGridWrapper01 {
+    background: #1b1b1d;
+    color: #e5e5e5;
 }
 
 .projectGridContainer {
@@ -34,15 +28,19 @@
     width: 100%;
     /* Center the projectgrid on the page. */
     margin: 0 auto;
-
     padding: 1rem;
     background-color: #f5f5f5;
     border-radius: 12px;
-    border: solid 1px #b8b8b8;
     border: 0;
 }
+[data-theme='dark'] .projectGridContainer01 {
+    background: #020202;
+}
+[data-theme='dark'] .projectGridContainer01 {
+    background: #303030;
+}
 
- /* NEW: Replace flexbox with a proper grid */
+/* Replace flexbox with a proper grid -- 3 columns */
 .projectGrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columns */
@@ -52,33 +50,24 @@
 
 .projectCard {
     background: #fff;
-    border: 1px solid #e0e0e0;
     border: 1px solid #909090;
     border-radius: 12px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-
     padding: 1rem;
     text-align: left;
     cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-
     /* Remove sizing from flexbox layout */
     flex: none;
     max-width: none;
-
-    /* Keep your vertical stacking */
+    /* Keep vertical stacking */
     display: flex;
     flex-direction: column;
     margin-bottom: 0;
-    /* Handle the long URL values. */
-    word-break: break-all;
-    overflow-wrap: anywhere;
-    min-width: 0;              /* critical for grid children */
-
-    /* YO: Modern approach: */
+    min-width: 0;
+    /* Modern approach: */
     overflow-wrap: break-word;
     word-break: normal;
-
 }
 
 .projectCard:hover {
@@ -130,7 +119,6 @@
     background-color: #024c9c;
 }
 
-
 /* Spec links inside modal */
 .projectLinks {
     text-align: left;
@@ -139,11 +127,7 @@
     margin-top: 10px;
 
     /* Handle the long URL values. */
-    word-break: break-all;
-    overflow-wrap: anywhere;
     line-height: 1.25rem;
-
-    /* Modern approach: */
     overflow-wrap: break-word;
     word-break: normal;
 }
@@ -171,8 +155,7 @@
     margin-right: 1rem;
     text-decoration: none;
     color: #0366d6;
-    font-weight: 500;
-    font-weight:normal;
+    font-weight: normal;
     /* Handle the long URL values. */
     word-break: break-all;
     overflow-wrap: anywhere;
@@ -180,15 +163,6 @@
 .modalLinks01 a:hover {
     text-decoration: underline;
 }
-
-/* 2025-12-11 Thursday 11:14:14. */
-/* .modalLinks01 ul {
-list-style-type: disc !important;
-} */
-
-/* .modalLinks01 li {
-display: list-item !important;
-} */
 
 .featureList {
     line-height: 1.25rem;
@@ -198,7 +172,6 @@ display: list-item !important;
 .projectMeta {
     list-style: none;
     padding: 0;
-    margin: 0.5rem 0;
     margin: 0.1rem 0;
 }
 
@@ -218,30 +191,26 @@ display: list-item !important;
     padding: 1rem;
 }
 
-/* Adding another .modalContent below with 'position: relative;' hoping to position the alert inside the open modal. */
 .modalContent {
     background: white;
     border-radius: 8px;
-    max-width: 1200px;
-    max-width: 1000px;
     max-width: 800px;
     width: 100%;
     max-height: 90vh;
-    /* overflow: hidden; */
-    /* overflow-y: auto; */
-    overflow:none;
+    overflow: none;
     display: flex;
     flex-direction: column;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+[data-theme='dark'] .modalContent {
+    background: #202020;
+    border: solid 1px #404040;
 }
 
 /* Tabs */
 .modalTabs {
     display: flex;
-    border-bottom: 1px solid #e0e0e0;
-    border-bottom: 2px solid #e0e0e0;
     border-bottom: 0;
-    background-color: #f5f5f5;
     background-color: #ffffff;
 }
 
@@ -249,24 +218,17 @@ display: list-item !important;
     flex: 1;
     padding: 1rem;
     border: none;
-    background: none;
+    border-bottom: 2px solid #e8e8e8;
     cursor: pointer;
     font-size: 1rem;
     font-weight: 500;
     transition: background-color 0.2s;
-
-    border-bottom: 2px solid #e8e8e8;
-
     color: #606060;
-    background-color: #f8f8f8;
-    background-color: #f5f5f5;
-    background-color: #e8e8e8;
+    background: none;
     background-color: #ffffff;
 }
 
 .tab:hover {
-    background-color: #e8e8e8;
-    background-color: #f5f5f5;
     background-color: #ffffff;
     color: #0066ff;
     border-bottom: 2px solid #0066ff;
@@ -274,9 +236,7 @@ display: list-item !important;
 
 .tabActive {
     background-color: white;
-    border-bottom: 2px solid #007bff;
     border-bottom: 2px solid #000000;
-
     color: #000000;
 }
 
@@ -291,24 +251,19 @@ display: list-item !important;
 .modalBody {
     flex: 1;
     overflow-y: auto;
-    padding: 2rem;
     padding: 1.5rem;
-    border-top: solid 1px #ff0000;
     border-top: 0 !important;
-
-    /* padding-bottom: 0; */
 }
 
 /* Full width section */
 .fullWidthSection {
-    margin-bottom: 2rem;
-    padding-bottom: 2rem;
-
-    margin-bottom: 0rem;
+    margin-bottom: 1rem;
     padding-bottom: 0rem;
-
     border-bottom: 1px solid #e0e0e0;
     line-height: 1.25rem;
+}
+[data-theme='dark'] .fullWidthSection {
+    border-bottom: 1px solid #404040;
 }
 
 .fullWidthSection h2 {
@@ -321,7 +276,6 @@ display: list-item !important;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
-
     margin-top: 1rem;
 }
 
@@ -330,17 +284,6 @@ display: list-item !important;
     margin-bottom: 1rem;
 }
 
-/* 2025-12-11 Thursday 11:25:36.I don't think we need or want. */
-/* .column ul {
-    list-style: none;
-    padding: 0;
-}
-
-.column ul li {
-    margin-bottom: 0.5rem;
-} */
-
-/* See also new modalLinks01 style I'm creating below the projectlinks style toward the top of this file -- using that in the modal to displayHome: x on 1 line. */
 .modalLinks {
     display: flex;
     flex-direction: column;
@@ -349,33 +292,28 @@ display: list-item !important;
 
 .modalLinks a {
     display: inline-block;
-    background-color: #007bff;
     background-color: #ffffff;
-    color: white;
     color: #0066ff;
     text-decoration: none;
     border-radius: 4px;
     transition: background-color 0.2s;
-
     /* No effect? */
     display: inline;
 }
 
 .modalLinks a:hover {
-    background-color: #0056b3;
     background-color: #ffffff;
     text-decoration: underline;
 }
 
 .modalFooter {
-    padding: 1rem 2rem;
-    padding: 0rem 1.5rem 1.5rem 1.5rem;
-    /* 2025-12-11 Thursday 10:19:33. */
     padding: 1.5rem 1.5rem 1.5rem 1.5rem;
     border-top: solid 1px #e8e8e8;
-
     display: flex;
     justify-content: flex-end;
+}
+[data-theme='dark'] .modalFooter {
+    border-top: solid 1px #404040;
 }
 
 .closeButton {
@@ -410,39 +348,21 @@ display: list-item !important;
 }
 
 /* Limit display to two lines, then add ellipsis. */
-/* YO 2025-11-18 Tuesday 18:22:21.  Maybe rename to tooltipTarget */
 .projectDescription {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-
     -webkit-line-clamp: 8;
     line-clamp: 8;
-
     -webkit-box-orient: vertical;
-    /* line-height: 1.4em; */
-    /* height: 2.8em; */
-    /* height: 4.2em; */
     cursor: default;
-
-    /* 2025-11-18 Tuesday 09:40:29.   */
-    /* line-height: 1.25em; */
-    /* 2025-11-24 Monday 14:27:30.  */
-    /* line-height: 0.5rem; */
 }
 
 .projectDescriptionWrapper {
     position: relative;
     width: 100%;
     line-height: 1.25rem;
-    /* line-height: 1.4rem; */
-
-    /* 2025-12-11 Thursday 07:51:06. */
-    /* border-top: 1px solid #d8d8d8; */
-    margin-top: 20px;
     margin-top: 0px;
-
-    padding-top: 10px;
     padding-top: 0px;
 }
 
@@ -463,17 +383,9 @@ display: list-item !important;
     bottom: 100%;
     left: 50%;
     transform: translateX(-50%);
-    /* background: var(--ifm-background-surface-color); */
-    /* color: var(--ifm-font-color-base); */
-
-    background: #f5f5f5;
     background: #ffffff;
     color: #000000;
-    border: 1px solid var(--ifm-color-emphasis-200);
-    border: solid 2px #000000;
     border: solid 2px #0066ff;
-
-    padding: 8px 10px;
     padding: 8px 10px 0px 10px;
     border-radius: 6px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
@@ -484,39 +396,31 @@ display: list-item !important;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.2s ease-in-out;
-
-    font-size: 0.9rem;
-    font-size: 14px;
-    font-size: 15px;
-    font-size: 16px;
-    line-height: 1.5;
     line-height: 1.25em;
-    font-size: 0.9rem;
-    font-size: 1.0rem;
-
+    font-size: 1rem;
     overflow-wrap: break-word;
     word-break: normal;
 }
 
-/* 2025-12-12 Friday 14:41:19.Remember to uncomment this if you're turning tooltips back on! */
 .projectDescriptionWrapper:hover .tooltip {
     opacity: 1;
+}
+[data-theme='dark'] .tooltip {
+    background: #282828;
+    color: #f0f0f0;
+    border: solid 2px #505050;
 }
 
 .packageDownloadWrapper {
     position: relative;
     width: 100%;
     line-height: 1.25rem;
-    /* line-height: 1.4rem; */
-
-    /* 2025-12-11 Thursday 07:51:06. */
     border-top: 1px solid #d8d8d8;
     margin-top: 20px;
     padding-top: 10px;
 }
 
-/* This is for the alert that appears inside
-the modal when the link is clicked from inside an open modal. */
+/* appears inside modal when link is clicked from inside an open modal -- no longer used? */
 .modalAlert {
     margin-top: 1rem;
     padding: 0.75rem 1rem;
@@ -537,12 +441,6 @@ the modal when the link is clicked from inside an open modal. */
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-/* In place of .modalAlert just above, try this (including another .modalContent with 'position: relative;' hoping to position the alert inside the open modal. */
- /* ensure positioning context */
-.modalContent {
-    position: relative;
 }
 
 .modalAlertOverlay {
@@ -573,24 +471,20 @@ the modal when the link is clicked from inside an open modal. */
     }
 }
 
-/* For the under-construction popup. */
+/* For the under-construction popup -- no longer used, right? */
 .popupMessage {
     position: fixed;
     bottom: 2rem;
     left: 50%;
     transform: translateX(-50%);
-    background: #2563eb;
     background: #fcf3ce;
-    color: #fff;
     color: #000;
     padding: 0.75rem 1.25rem;
     border-radius: 8px;
     font-size: 0.95rem;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     box-shadow: 0 2px 10px #000000;
     z-index: 999;
     opacity: 0;
-    animation: fadeInOut 2.5s ease forwards;
     animation: fadeInOut 5s ease forwards;
 }
 
@@ -613,9 +507,8 @@ the modal when the link is clicked from inside an open modal. */
     }
 }
 
-/* See if I can adapt this (used in the modal) to the main page: */
+/* no longer used? */
 .modalAlertOverlay_main {
-    position: absolute;
     position: fixed;
     bottom: 1rem;
     left: 50%;
@@ -628,7 +521,6 @@ the modal when the link is clicked from inside an open modal. */
     text-align: center;
     width: 80%;
     max-width: 320px;
-    z-index: 10;
     z-index: 999;
     animation: fadeIn 0.3s ease;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -646,19 +538,13 @@ the modal when the link is clicked from inside an open modal. */
 
 /* Handle the long URLs. */
 .modalLinkUrl {
-    /* font-size: 0.85rem; */
-    /* line-height: 1.2; */
-    word-break: break-all;       /* forces breaks anywhere when needed */
-    overflow-wrap: anywhere;     /* clean modern wrapping */
-    max-width: 100%;             /* prevents overflow */
-    /* 2025-11-24 Monday 15:00:41.  */
+    word-break: break-all;
+    overflow-wrap: anywhere;
+    max-width: 100%;
     width: auto;
-
-    /* This fixed the display-on-same-line-as-field problem!!! */
     display: inline;
-    /* line-height: 1.25rem; */
 }
-/* 2025-11-24 Monday 16:45:48.  For the project.name value */
+
 .modalLinkUrl_break_word {
     overflow-wrap: break-word;
     word-break: normal;
@@ -669,12 +555,9 @@ the modal when the link is clicked from inside an open modal. */
 
 .modalText {
     font-size: 1rem;
-    line-height: 1.2;
-    max-width: 100%;             /* prevents overflow */
-    /* This fixed the display-on-same-line-as-field problem!!! */
+    max-width: 100%;
     display: inline;
     line-height: 1.25rem;
-    /* Modern approach: */
     overflow-wrap: break-word;
     word-break: normal;
 }
@@ -684,139 +567,71 @@ the modal when the link is clicked from inside an open modal. */
     padding-top: 5px;
 }
 
-
-/* 2025-11-22 Saturday 12:08:53.  Does this work? */
-/* Dark mode */
-/* [data-theme='dark'] .card {
-  background: #1d1f21;
-  color: #e5e5e5;
-} */
-
-/* [data-theme='dark'] .sectionHeader h1,
-[data-theme='dark'] .column h2 {
-  color: #f0f0f0;
-} */
-
-/* [data-theme='dark'] .projectCard {
-  background: #1d1f21;
-  background: #303030;
-  border-color: #909090;
-  color: #e5e5e5;
-} */
-
 [data-theme='dark'] .projectCard {
-  background: #000000;
-  border-color: #909090;
-  border-color: #505050;
-  color: #e5e5e5;
+    background: #000000;
+    border-color: #505050;
+    color: #e5e5e5;
 }
 
 [data-theme='dark'] .projectGridWrapper {
-  background: #303030;
-  border: solid 1px #505050;
-  color: #e5e5e5;
+    background: #303030;
+    border: solid 1px #505050;
+    color: #e5e5e5;
 }
 
-/* 2025-11-23 Sunday 18:53:02.  */
 .projectName {
-    /* Modern approach: */
     overflow-wrap: break-word;
     word-break: normal;
 }
 
-/* 2025-11-24 Monday 16:33:21.  Modify project card to add logo (if any). */
 .topRow {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.5rem; /* space between title and logo */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
 }
 
 .logoWrapper {
-  flex-shrink: 0;        /* logo never shrinks */
-  width: 40px;           /* pick your static width */
-  height: 40px;          /* consistent box */
-  display: flex;
-  align-items: center;
-  align-items: flex-start;    /* align logo at the top */
-  justify-content: center;
+    flex-shrink: 0; /* logo never shrinks */
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
 }
 
 .logoImg {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
 }
 
-/* 2025-12-10 Wednesday 18:53:41.  For the JSON values that are lists of URLs. */
 .wordWrap {
-  word-wrap: break-word;     /* old name, still works */
-  overflow-wrap: break-word; /* modern standard */
-  word-break: break-all;     /* fallback for very stubborn strings */
+    word-wrap: break-word; /* old name, still works */
+    overflow-wrap: break-word; /* modern standard */
+    word-break: break-all; /* fallback for very stubborn strings */
 }
-
-
-/* 2025-12-11 Thursday 16:32:13. */
-/* .sectionHeader h1 {
-    margin-bottom: 0px;
-    color: #000000;
-}
-
-.sectionHeader h2 {
-    margin-bottom: 0px;
-    color: #336699;
-    color: #992600;
-} */
-
-
-
-/* 2025-12-11 Thursday 17:12:30. */
-/* .gridSection {
-    margin-bottom: 3rem;
-}
-
-.sectionTitle {
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-    color: var(--ifm-heading-color);
-    border-bottom: 2px solid var(--ifm-color-emphasis-300);
-    padding-bottom: 0.5rem;
-} */
 
 .sectionTitle h2 {
     color: #992600;
-    /* color: #f49c1f; */
     margin-top: 20px;
-    /* margin-top: 40px; */
-
     margin-bottom: 20px;
-    /* margin-bottom: 10px; */
 }
-/* 2025-12-11 Thursday 18:08:34.Above replaces this below. */
-/* .projectGridWrapper01 h2 {
-    margin-bottom: 0px;
-    color: #336699;
-    color: #992600;
-
-    margin-top: 20px;
-    margin-bottom: 20px;
-} */
-
-/* Optional: Add spacing between last grid and next section title */
-/* .gridSection:not(:last-child) {
-    margin-bottom: 4rem;
-} */
+[data-theme='dark'] .sectionTitle h2 {
+    color: #666699;
+    color: #a0a0a0;
+    color: #gridSection;
+}
 
 .sectionIntro {
     margin-bottom: 20px;
 }
 
-/* 2025-12-12 Friday 14:03:35.  Add tooltips to the ProjectGridTemplate.  See above */
-
-/* 2025-12-12 Friday 18:07:06.  This is the grid container -- adding a separator between bottom of grid and following section. */
-
 .gridSection {
     border-bottom: solid 1px #000000;
     margin-bottom: 30px;
     padding-bottom: 30px;
+}
+[data-theme='dark'] .gridSection {
+    border-bottom: solid 1px #505050;
 }
