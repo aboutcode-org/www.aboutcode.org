@@ -1,0 +1,45 @@
+.scrollButtonContainer {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1000;
+}
+
+.scrollButton {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  border: 1px solid #e5e7eb;
+  background-color: #ffffff;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.scrollButton:hover {
+  background-color: #f9fafb;
+  transform: translateY(-0.25rem);
+}
+
+.scrollIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #374151;
+}
+
+/* Dark mode styles */
+html[data-theme="dark"] .scrollButton {
+  background-color: #1f2937;
+  border-color: #4b5563;
+}
+
+html[data-theme="dark"] .scrollButton:hover {
+  background-color: #374151;
+}
+
+html[data-theme="dark"] .scrollIcon {
+  color: #d1d5db;
+}
