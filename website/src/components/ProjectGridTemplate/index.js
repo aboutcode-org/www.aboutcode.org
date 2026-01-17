@@ -6,6 +6,50 @@ import projects_package_url from '@site/src/data/projects-package-url.json';
 import projects_inspectors from '@site/src/data/projects-inspectors.json';
 import projects_libraries from '@site/src/data/projects-libraries.json';
 
+// Field descriptions for tooltips
+const fieldDescriptions = {
+    repository_url:
+        'The URL of the source code repository (e.g., GitHub) where the project is hosted.',
+    package_download_url:
+        'Links to download the packaged software (e.g., PyPI, npm, or other package registries).',
+    documentation_url:
+        'Link to the official documentation for this project.',
+    service_url:
+        'URL to access a hosted/cloud version of this application or service.',
+    languages:
+        'The primary programming language(s) used to develop this project.',
+    platform:
+        'The operating system or platform this software runs on.',
+    software_license:
+        'The open source license under which the software code is released.',
+    data_license:
+        'The license under which any data produced or distributed by this project is released.',
+    lead_maintainer:
+        'The primary maintainer(s) responsible for this project.',
+};
+
+// InfoTooltip component for displaying field explanations
+function InfoTooltip({ text }) {
+    const [isVisible, setIsVisible] = useState(false);
+
+    return (
+        <span
+            className={styles.infoIconWrapper}
+            onMouseEnter={() => setIsVisible(true)}
+            onMouseLeave={() => setIsVisible(false)}
+            onClick={(e) => {
+                e.stopPropagation();
+                setIsVisible(!isVisible);
+            }}
+        >
+            <span className={styles.infoIcon}>ⓘ</span>
+            {isVisible && (
+                <span className={styles.infoTooltip}>{text}</span>
+            )}
+        </span>
+    );
+}
+
 export default function ProjectGrids() {
     const [selectedProject, setSelectedProject] = useState(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -216,9 +260,16 @@ export default function ProjectGrids() {
 
                                 <div className={styles.column}>
                                     <div className={styles.modalLinks01}>
-                                        <span style={{ fontWeight: 'bold' }}>
-                                            Repository URL:{' '}
-                                        </span>
+                                        <div className={styles.fieldLabel}>
+                                            <span style={{ fontWeight: 'bold' }}>
+                                                Repository URL:
+                                            </span>
+                                            <InfoTooltip
+                                                text={
+                                                    fieldDescriptions.repository_url
+                                                }
+                                            />
+                                        </div>
                                         {selectedProject.repository_url &&
                                         selectedProject.repository_url !==
                                             'n/a' &&
@@ -241,7 +292,14 @@ export default function ProjectGrids() {
 
                                     {/* Catch empty and n/a and just display n/a as text. */}
                                     <div className={styles.modalLinks01}>
-                                        <strong>Package Download URL:</strong>
+                                        <div className={styles.fieldLabel}>
+                                            <strong>Package Download URL:</strong>
+                                            <InfoTooltip
+                                                text={
+                                                    fieldDescriptions.package_download_url
+                                                }
+                                            />
+                                        </div>
                                         {selectedProject.package_download_url?.filter(
                                             (url) =>
                                                 url &&
@@ -278,9 +336,16 @@ export default function ProjectGrids() {
                                     </div>
 
                                     <div className={styles.modalLinks01}>
-                                        <span style={{ fontWeight: 'bold' }}>
-                                            Documentation URL:{' '}
-                                        </span>
+                                        <div className={styles.fieldLabel}>
+                                            <span style={{ fontWeight: 'bold' }}>
+                                                Documentation URL:
+                                            </span>
+                                            <InfoTooltip
+                                                text={
+                                                    fieldDescriptions.documentation_url
+                                                }
+                                            />
+                                        </div>
                                         {selectedProject.documentation_url &&
                                         selectedProject.documentation_url !==
                                             'n/a' &&
@@ -304,9 +369,16 @@ export default function ProjectGrids() {
                                     </div>
 
                                     <div className={styles.modalLinks01}>
-                                        <span style={{ fontWeight: 'bold' }}>
-                                            Service URL:{' '}
-                                        </span>
+                                        <div className={styles.fieldLabel}>
+                                            <span style={{ fontWeight: 'bold' }}>
+                                                Service URL:
+                                            </span>
+                                            <InfoTooltip
+                                                text={
+                                                    fieldDescriptions.service_url
+                                                }
+                                            />
+                                        </div>
                                         {selectedProject.service_url &&
                                         selectedProject.service_url !== 'n/a' &&
                                         selectedProject.service_url !== '#' ? (
@@ -326,45 +398,80 @@ export default function ProjectGrids() {
                                     </div>
 
                                     <div className={styles.note_field}>
-                                        <span style={{ fontWeight: 'bold' }}>
-                                            Language(s):{' '}
-                                        </span>
+                                        <div className={styles.fieldLabel}>
+                                            <span style={{ fontWeight: 'bold' }}>
+                                                Language(s):
+                                            </span>
+                                            <InfoTooltip
+                                                text={
+                                                    fieldDescriptions.languages
+                                                }
+                                            />
+                                        </div>
                                         <div className={styles.modalText}>
                                             {selectedProject.languages}
                                         </div>
                                     </div>
 
                                     <div className={styles.note_field}>
-                                        <span style={{ fontWeight: 'bold' }}>
-                                            Platform:{' '}
-                                        </span>
+                                        <div className={styles.fieldLabel}>
+                                            <span style={{ fontWeight: 'bold' }}>
+                                                Platform:
+                                            </span>
+                                            <InfoTooltip
+                                                text={
+                                                    fieldDescriptions.platform
+                                                }
+                                            />
+                                        </div>
                                         <div className={styles.modalText}>
                                             {selectedProject.platform}
                                         </div>
                                     </div>
 
                                     <div className={styles.note_field}>
-                                        <span style={{ fontWeight: 'bold' }}>
-                                            Software License:{' '}
-                                        </span>
+                                        <div className={styles.fieldLabel}>
+                                            <span style={{ fontWeight: 'bold' }}>
+                                                Software License:
+                                            </span>
+                                            <InfoTooltip
+                                                text={
+                                                    fieldDescriptions.software_license
+                                                }
+                                            />
+                                        </div>
                                         <div className={styles.modalText}>
                                             {selectedProject.software_license}
                                         </div>
                                     </div>
 
                                     <div className={styles.note_field}>
-                                        <span style={{ fontWeight: 'bold' }}>
-                                            Data License:{' '}
-                                        </span>
+                                        <div className={styles.fieldLabel}>
+                                            <span style={{ fontWeight: 'bold' }}>
+                                                Data License:
+                                            </span>
+                                            <InfoTooltip
+                                                text={
+                                                    fieldDescriptions.data_license
+                                                }
+                                            />
+                                        </div>
                                         <div className={styles.modalText}>
                                             {selectedProject.data_license}
                                         </div>
                                     </div>
 
                                     <div className={styles.modalLinks01}>
-                                        <span style={{ fontWeight: 'bold' }}>
-                                            Lead Maintainer(s):
-                                        </span>
+                                        <div className={styles.fieldLabel}>
+                                            <span style={{ fontWeight: 'bold' }}>
+                                                Lead Maintainer(s):
+                                            </span>
+                                            <InfoTooltip
+                                                text={
+                                                    fieldDescriptions.lead_maintainer
+                                                }
+                                            />
+                                        </div>
 
                                         {leadMaintainers.length > 0 ? (
                                             <ul

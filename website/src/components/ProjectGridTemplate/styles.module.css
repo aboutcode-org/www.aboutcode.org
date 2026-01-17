@@ -618,9 +618,7 @@
     margin-bottom: 20px;
 }
 [data-theme='dark'] .sectionTitle h2 {
-    color: #666699;
     color: #a0a0a0;
-    color: #gridSection;
 }
 
 .sectionIntro {
@@ -634,4 +632,103 @@
 }
 [data-theme='dark'] .gridSection {
     border-bottom: solid 1px #505050;
+}
+
+/* Info icon tooltip styles */
+.infoIconWrapper {
+    position: relative;
+    display: inline-block;
+    cursor: help;
+    margin-left: 2px;
+    vertical-align: middle;
+}
+
+.infoIcon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    color: #0066ff;
+    transition: color 0.2s ease;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+.infoIcon:hover {
+    color: #0044cc;
+}
+
+[data-theme='dark'] .infoIcon {
+    color: #6699ff;
+}
+
+[data-theme='dark'] .infoIcon:hover {
+    color: #88aaff;
+}
+
+.infoTooltip {
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ffffff;
+    color: #333333;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    font-weight: normal;
+    line-height: 1.4;
+    white-space: normal;
+    width: max-content;
+    max-width: 280px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    text-align: left;
+}
+
+.infoTooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -6px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: #ffffff transparent transparent transparent;
+}
+
+.infoTooltip::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -7px;
+    border-width: 7px;
+    border-style: solid;
+    border-color: #cccccc transparent transparent transparent;
+}
+
+[data-theme='dark'] .infoTooltip {
+    background: #2a2a2a;
+    color: #e0e0e0;
+    border-color: #505050;
+}
+
+[data-theme='dark'] .infoTooltip::after {
+    border-color: #2a2a2a transparent transparent transparent;
+}
+
+[data-theme='dark'] .infoTooltip::before {
+    border-color: #505050 transparent transparent transparent;
+}
+
+/* Field label with info icon */
+.fieldLabel {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 4px;
 }
