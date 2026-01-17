@@ -82,7 +82,7 @@ export default function ProjectGrids() {
                 // check if content is overflowing its container
                 setShowTooltip(
                     el.scrollHeight > el.clientHeight ||
-                        el.scrollWidth > el.clientWidth
+                    el.scrollWidth > el.clientWidth
                 );
             }
         }, [text]);
@@ -111,6 +111,28 @@ export default function ProjectGrids() {
 
     const leadMaintainers = normalizeToArray(selectedProject?.lead_maintainer);
 
+    function getFirstSentence(descriptionArr) {
+        if (!descriptionArr || descriptionArr.length === 0) return '';
+        const firstPara = descriptionArr[0];
+        // Split by period, exclamation, or question mark followed by space or end of string
+        const sentences = firstPara.split(/([.!?])(?:\s|$)/);
+        if (sentences.length >= 2) {
+            return sentences[0] + sentences[1];
+        }
+        return firstPara;
+    }
+
+    function isValidLink(url) {
+        return url && url !== 'n/a' && url !== '#' && url.trim() !== '';
+    }
+
+    function isValidValue(value) {
+        if (!value) return false;
+        if (Array.isArray(value)) return value.length > 0;
+        const lower = String(value).toLowerCase();
+        return lower !== 'n/a' && lower !== '#' && lower.trim() !== '';
+    }
+
     return (
         <div className={styles.projectGridWrapper01}>
             {/* Iterate through each data source */}
@@ -134,52 +156,76 @@ export default function ProjectGrids() {
                                     className={styles.projectCard}
                                     onClick={() => openModal(project)}
                                 >
-                                    <div>
-                                        <div className={styles.topRow}>
-                                            <h4 className={styles.projectName}>
-                                                {project.repository_url ? (
-                                                    <a
-                                                        href={
-                                                            project.repository_url
-                                                        }
-                                                        target={
-                                                            project.repository_url.startsWith(
-                                                                'http'
-                                                            )
-                                                                ? '_blank'
-                                                                : '_self'
-                                                        }
-                                                        rel='noopener noreferrer'
-                                                        className={
-                                                            styles.modalLinkUrl_break_word
-                                                        }
-                                                        onClick={(e) =>
-                                                            e.stopPropagation()
-                                                        }
-                                                    >
-                                                        {project.name}
-                                                    </a>
-                                                ) : (
-                                                    project.name
-                                                )}
-                                            </h4>
-                                        </div>
+                                    <div className={styles.topRow}>
+                                        <h4 className={styles.projectName}>
+                                            {project.name}
+                                        </h4>
+                                        {isValidLink(project.repository_url) && (
+                                            <a
+                                                href={project.repository_url}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className={styles.externalLinkIcon}
+                                                onClick={(e) => e.stopPropagation()}
+                                            >
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                                </svg>
+                                            </a>
+                                        )}
                                     </div>
 
-                                    <div>
-                                        <div
-                                            className={
-                                                styles.projectDescriptionWrapper
-                                            }
-                                        >
-                                            <DescriptionWithTooltip
-                                                text={project.description.map(
-                                                    (para, idx) => (
-                                                        <p key={idx}>{para}</p>
-                                                    )
-                                                )}
-                                            />
-                                        </div>
+                                    <div className={styles.projectDescriptionWrapper}>
+                                        <p className={styles.projectDescription}>
+                                            {getFirstSentence(project.description)}
+                                        </p>
+                                    </div>
+
+                                    <div className={styles.cardLinks}>
+                                        {isValidLink(project.documentation_url) && (
+                                            <div className={styles.cardLinkRow}>
+                                                <span className={styles.cardLinkLabel}>Documentation:</span>
+                                                <a
+                                                    href={project.documentation_url}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className={styles.cardLinkValue}
+                                                    onClick={(e) => e.stopPropagation()}
+                                                >
+                                                    {project.documentation_url}
+                                                </a>
+                                            </div>
+                                        )}
+                                        {isValidLink(project.repository_url) && (
+                                            <div className={styles.cardLinkRow}>
+                                                <span className={styles.cardLinkLabel}>Repository:</span>
+                                                <a
+                                                    href={project.repository_url}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className={styles.cardLinkValue}
+                                                    onClick={(e) => e.stopPropagation()}
+                                                >
+                                                    {project.repository_url}
+                                                </a>
+                                            </div>
+                                        )}
+                                        {isValidLink(project.service_url) && (
+                                            <div className={styles.cardLinkRow}>
+                                                <span className={styles.cardLinkLabel}>Service URL:</span>
+                                                <a
+                                                    href={project.service_url}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className={styles.cardLinkValue}
+                                                    onClick={(e) => e.stopPropagation()}
+                                                >
+                                                    {project.service_url}
+                                                </a>
+                                            </div>
+                                        )}
                                     </div>
                                 </div>
                             ))}
@@ -215,47 +261,28 @@ export default function ProjectGrids() {
                                 </div>
 
                                 <div className={styles.column}>
-                                    <div className={styles.modalLinks01}>
-                                        <span style={{ fontWeight: 'bold' }}>
-                                            Repository URL:{' '}
-                                        </span>
-                                        {selectedProject.repository_url &&
-                                        selectedProject.repository_url !==
-                                            'n/a' &&
-                                        selectedProject.repository_url !==
-                                            '#' ? (
+                                    {isValidLink(selectedProject.repository_url) && (
+                                        <div className={styles.modalLinks01}>
+                                            <span style={{ fontWeight: 'bold' }}>
+                                                Repository URL:{' '}
+                                            </span>
                                             <a
-                                                href={
-                                                    selectedProject.repository_url
-                                                }
+                                                href={selectedProject.repository_url}
                                                 target='_blank'
                                                 rel='noopener noreferrer'
                                                 className={styles.modalLinkUrl}
                                             >
                                                 {selectedProject.repository_url}
                                             </a>
-                                        ) : (
-                                            <span>n/a</span>
-                                        )}
-                                    </div>
+                                        </div>
+                                    )}
 
-                                    {/* Catch empty and n/a and just display n/a as text. */}
-                                    <div className={styles.modalLinks01}>
-                                        <strong>Package Download URL:</strong>
-                                        {selectedProject.package_download_url?.filter(
-                                            (url) =>
-                                                url &&
-                                                url !== 'n/a' &&
-                                                url !== '#' &&
-                                                url.trim() !== ''
-                                        ).length > 0 ? (
-                                            <ul
-                                                style={{
-                                                    margin: 0,
-                                                    paddingTop: '0.2rem',
-                                                }}
-                                            >
+                                    {selectedProject.package_download_url?.filter(isValidLink).length > 0 && (
+                                        <div className={styles.modalLinks01}>
+                                            <strong>Package Download URL:</strong>
+                                            <ul style={{ margin: 0, paddingTop: '0.2rem' }}>
                                                 {selectedProject.package_download_url
+                                                    .filter(isValidLink)
                                                     .map((url, urlIdx) => (
                                                         <li key={urlIdx}>
                                                             <a
@@ -263,136 +290,114 @@ export default function ProjectGrids() {
                                                                 href={url}
                                                                 target='_blank'
                                                                 rel='noopener noreferrer'
-                                                                onClick={(e) =>
-                                                                    e.stopPropagation()
-                                                                }
+                                                                onClick={(e) => e.stopPropagation()}
                                                             >
                                                                 {url}
                                                             </a>
                                                         </li>
                                                     ))}
                                             </ul>
-                                        ) : (
-                                            <span> n/a</span>
-                                        )}
-                                    </div>
+                                        </div>
+                                    )}
 
-                                    <div className={styles.modalLinks01}>
-                                        <span style={{ fontWeight: 'bold' }}>
-                                            Documentation URL:{' '}
-                                        </span>
-                                        {selectedProject.documentation_url &&
-                                        selectedProject.documentation_url !==
-                                            'n/a' &&
-                                        selectedProject.documentation_url !==
-                                            '#' ? (
+                                    {isValidLink(selectedProject.documentation_url) && (
+                                        <div className={styles.modalLinks01}>
+                                            <span style={{ fontWeight: 'bold' }}>
+                                                Documentation URL:{' '}
+                                            </span>
                                             <a
-                                                href={
-                                                    selectedProject.documentation_url
-                                                }
+                                                href={selectedProject.documentation_url}
                                                 target='_blank'
                                                 rel='noopener noreferrer'
                                                 className={styles.modalLinkUrl}
                                             >
-                                                {
-                                                    selectedProject.documentation_url
-                                                }
+                                                {selectedProject.documentation_url}
                                             </a>
-                                        ) : (
-                                            <span>n/a</span>
-                                        )}
-                                    </div>
+                                        </div>
+                                    )}
 
-                                    <div className={styles.modalLinks01}>
-                                        <span style={{ fontWeight: 'bold' }}>
-                                            Service URL:{' '}
-                                        </span>
-                                        {selectedProject.service_url &&
-                                        selectedProject.service_url !== 'n/a' &&
-                                        selectedProject.service_url !== '#' ? (
+                                    {isValidLink(selectedProject.service_url) && (
+                                        <div className={styles.modalLinks01}>
+                                            <span style={{ fontWeight: 'bold' }}>
+                                                Service URL:{' '}
+                                            </span>
                                             <a
-                                                href={
-                                                    selectedProject.service_url
-                                                }
+                                                href={selectedProject.service_url}
                                                 target='_blank'
                                                 rel='noopener noreferrer'
                                                 className={styles.modalLinkUrl}
                                             >
                                                 {selectedProject.service_url}
                                             </a>
-                                        ) : (
-                                            <span>n/a</span>
-                                        )}
-                                    </div>
-
-                                    <div className={styles.note_field}>
-                                        <span style={{ fontWeight: 'bold' }}>
-                                            Language(s):{' '}
-                                        </span>
-                                        <div className={styles.modalText}>
-                                            {selectedProject.languages}
                                         </div>
-                                    </div>
+                                    )}
 
-                                    <div className={styles.note_field}>
-                                        <span style={{ fontWeight: 'bold' }}>
-                                            Platform:{' '}
-                                        </span>
-                                        <div className={styles.modalText}>
-                                            {selectedProject.platform}
+                                    {isValidValue(selectedProject.languages) && (
+                                        <div className={styles.note_field}>
+                                            <span style={{ fontWeight: 'bold' }}>
+                                                Language(s):{' '}
+                                            </span>
+                                            <div className={styles.modalText}>
+                                                {selectedProject.languages}
+                                            </div>
                                         </div>
-                                    </div>
+                                    )}
 
-                                    <div className={styles.note_field}>
-                                        <span style={{ fontWeight: 'bold' }}>
-                                            Software License:{' '}
-                                        </span>
-                                        <div className={styles.modalText}>
-                                            {selectedProject.software_license}
+                                    {isValidValue(selectedProject.platform) && (
+                                        <div className={styles.note_field}>
+                                            <span style={{ fontWeight: 'bold' }}>
+                                                Platform:{' '}
+                                            </span>
+                                            <div className={styles.modalText}>
+                                                {selectedProject.platform}
+                                            </div>
                                         </div>
-                                    </div>
+                                    )}
 
-                                    <div className={styles.note_field}>
-                                        <span style={{ fontWeight: 'bold' }}>
-                                            Data License:{' '}
-                                        </span>
-                                        <div className={styles.modalText}>
-                                            {selectedProject.data_license}
+                                    {isValidValue(selectedProject.software_license) && (
+                                        <div className={styles.note_field}>
+                                            <span style={{ fontWeight: 'bold' }}>
+                                                Software License:{' '}
+                                            </span>
+                                            <div className={styles.modalText}>
+                                                {selectedProject.software_license}
+                                            </div>
                                         </div>
-                                    </div>
+                                    )}
 
-                                    <div className={styles.modalLinks01}>
-                                        <span style={{ fontWeight: 'bold' }}>
-                                            Lead Maintainer(s):
-                                        </span>
+                                    {isValidValue(selectedProject.data_license) && (
+                                        <div className={styles.note_field}>
+                                            <span style={{ fontWeight: 'bold' }}>
+                                                Data License:{' '}
+                                            </span>
+                                            <div className={styles.modalText}>
+                                                {selectedProject.data_license}
+                                            </div>
+                                        </div>
+                                    )}
 
-                                        {leadMaintainers.length > 0 ? (
-                                            <ul
-                                                className={
-                                                    styles.maintainerList
-                                                }
-                                            >
-                                                {leadMaintainers.map(
-                                                    (url, idx) => (
-                                                        <li key={idx}>
-                                                            <a
-                                                                href={url}
-                                                                target='_blank'
-                                                                rel='noopener noreferrer'
-                                                                className={
-                                                                    styles.modalLinkUrl
-                                                                }
-                                                            >
-                                                                {url}
-                                                            </a>
-                                                        </li>
-                                                    )
+                                    {leadMaintainers.filter(isValidLink).length > 0 && (
+                                        <div className={styles.modalLinks01}>
+                                            <span style={{ fontWeight: 'bold' }}>
+                                                Lead Maintainer(s):
+                                            </span>
+                                            <ul className={styles.maintainerList}>
+                                                {leadMaintainers.filter(isValidLink).map((url, idx) => (
+                                                    <li key={idx}>
+                                                        <a
+                                                            href={url}
+                                                            target='_blank'
+                                                            rel='noopener noreferrer'
+                                                            className={styles.modalLinkUrl}
+                                                        >
+                                                            {url}
+                                                        </a>
+                                                    </li>
+                                                )
                                                 )}
                                             </ul>
-                                        ) : (
-                                            <span>n/a</span>
-                                        )}
-                                    </div>
+                                        </div>
+                                    )}
                                 </div>
                             </>
                         </div>
