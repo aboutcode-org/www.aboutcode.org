@@ -104,27 +104,9 @@ const config = {
                     { to: '/', label: 'Home', position: 'left', exact: true },
                     {
                         type: 'docSidebar',
-                        sidebarId: 'scancode',
+                        sidebarId: 'getting_started',
                         position: 'left',
-                        label: 'ScanCode',
-                    },
-                    {
-                        type: 'docSidebar',
-                        sidebarId: 'vulnerablecode',
-                        position: 'left',
-                        label: 'VulnerableCode',
-                    },
-                    {
-                        type: 'docSidebar',
-                        sidebarId: 'purldb',
-                        position: 'left',
-                        label: 'PURL-DB',
-                    },
-                    {
-                        type: 'docSidebar',
-                        sidebarId: 'dejacode',
-                        position: 'left',
-                        label: 'DejaCode',
+                        label: 'Getting Started',
                     },
                     {
                         type: 'docSidebar',
@@ -175,7 +157,7 @@ const config = {
                     { label: 'Privacy Policy', to: '/privacy' },
                     { label: 'Terms of Service', to: '/terms' },
                 ],
-                copyright: `Copyright AboutCode Foundation ASBL. &nbsp; All rights reserved. &nbsp; Built with Docusaurus.`,
+                copyright: `Copyright AboutCode Europe ASBL. &nbsp; All rights reserved. &nbsp; Built with Docusaurus.`,
             },
             prism: {
                 theme: prismThemes.github,
