@@ -6,3 +6,9 @@ README.md
 **/.DS_Store
 **/build
 **/.docusaurus
+**/.env
+**/.env.*
+Dockerfile
+Dockerfile.dev
+docker-compose.yml
+.dockerignore
