@@ -7,7 +7,7 @@ title: Privacy & Security
 
 ## Does ScanCode Work Completely Offline?
 
-**Yes.** ScanCode Toolkit operates completely offline and does NOT send signatures or source code to any third-party systems. Your code remains on-premise at all times.
+**Yes.** ScanCode Toolkit operates completely offline and does **not** send signatures or source code to any third-party systems. Your code remains on-premise at all times.
 
 ### Key Points
 
@@ -37,7 +37,7 @@ This ensures zero network activity during scans.
 ScanCode Toolkit works completely air-gapped out of the box. Simply:
 
 1. Install ScanCode on your on-premise system
-2. Run scans with `--no-check-for-updates` flag
+2. Run scans (optionally use `--no-check-for-updates` flag to disable version checks)
 3. No internet connection required
 
 ### ScanCode.io
@@ -142,7 +142,7 @@ For organizations with strict security requirements:
 
 ### Q: Can I use ScanCode without internet access?
 
-**A: Yes.** ScanCode Toolkit works completely offline with the `--no-check-for-updates` flag.
+**A: Yes.** ScanCode Toolkit works completely offline by default. Use the `--no-check-for-updates` flag to disable the optional version check and ensure zero network activity.
 
 ### Q: What about vulnerability data?
 
@@ -150,7 +150,7 @@ For organizations with strict security requirements:
 
 ### Q: Do I need to configure anything for offline use?
 
-**A: For ScanCode Toolkit, no additional configuration needed.** Just use the `--no-check-for-updates` flag. For other tools, configure local API endpoints.
+**A: For ScanCode Toolkit, no configuration is required.** It works offline by default. Optionally use the `--no-check-for-updates` flag to prevent the version check. For other tools, configure local API endpoints.
 
 ### Q: How do I keep data current in air-gapped environments?
 
