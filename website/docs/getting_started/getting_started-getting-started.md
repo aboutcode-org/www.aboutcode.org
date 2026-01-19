@@ -1,17 +1,4 @@
-# Getting Started
+# Getting started
 
-Welcome to AboutCode! This guide will help you get started with our tools and projects.
-
-AboutCode is a family of open source projects and open data designed to help you discover, identify, and manage the software you use. Whether you are a developer, a compliance officer, or a security researcher, our tools provide the metadata and analysis needed to understand your software supply chain.
-
-## Our Mission
-
-Our mission is to make open source easier and safer to use by building critical tools for Software Composition Analysis (SCA) and beyond. We believe that good open source tools and open data help everyone consume more free and open source software safely and efficiently.
-
-## Where to Begin?
-
-- **[Software Identification](./getting_started-software-identification)**: Learn how we identify software packages and components.
-- **[Security](./getting_started-security)**: Discover how we help you find and manage vulnerabilities in your dependencies.
-- **[Compliance](./getting_started-compliance)**: Understand how our tools help you stay compliant with open source licenses.
-
-Join our community on [Slack](https://join.slack.com/t/aboutcode-org/shared_invite/zt-1paqwxccw-IuafuiAvYJFkTqGaZsC1og) or [GitHub](https://github.com/aboutcode-org) to get involved!
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?

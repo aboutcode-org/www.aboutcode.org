@@ -1,7 +1,6 @@
 ---
 slug: atom-chen-aboutcode
 title: atom and chen join AboutCode
-date: 2025-02-04
 authors: [pombredanne]
 tags: [atom,chen]
 hide_table_of_contents: false
