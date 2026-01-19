@@ -11,7 +11,9 @@ hide_table_of_contents: false
 
 [atom](https://github.com/AppThreat/atom) and [chen](https://github.com/AppThreat/chen),
 two open source tools for high-quality code analysis built by the
+
 [AppThreat](https://www.appthreat.com/) team, are now part of the
+
 non-profit [AboutCode](https://aboutcode.org/)
 organization committed to making open source easier and safer
 to use by building critical open source tools for Software Composition
