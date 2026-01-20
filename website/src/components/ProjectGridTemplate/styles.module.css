@@ -618,9 +618,7 @@
     margin-bottom: 20px;
 }
 [data-theme='dark'] .sectionTitle h2 {
-    color: #666699;
     color: #a0a0a0;
-    color: #gridSection;
 }
 
 .sectionIntro {
@@ -634,4 +632,14 @@
 }
 [data-theme='dark'] .gridSection {
     border-bottom: solid 1px #505050;
+}
+
+.projectCardURLs {
+    list-style: none;
+    padding: 0;
+    margin: 0.1rem 0;
+}
+
+.packageDownloadUrlList {
+    margin-bottom: 0px;
 }

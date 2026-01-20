@@ -82,7 +82,7 @@ export default function ProjectGrids() {
                 // check if content is overflowing its container
                 setShowTooltip(
                     el.scrollHeight > el.clientHeight ||
-                        el.scrollWidth > el.clientWidth
+                        el.scrollWidth > el.clientWidth,
                 );
             }
         }, [text]);
@@ -100,16 +100,27 @@ export default function ProjectGrids() {
         );
     }
 
-    // 2025-12-24 Wednesday 15:04:08.create a reusable helper for the lists
     function normalizeToArray(value) {
-        if (Array.isArray(value)) return value;
-        if (typeof value === 'string' && value !== 'n/a' && value !== '#') {
+        const INVALID_VALUES = new Set(['Not available', 'Not applicable']);
+
+        if (Array.isArray(value)) {
+            return value.filter(
+                (v) => typeof v === 'string' && !INVALID_VALUES.has(v),
+            );
+        }
+
+        if (typeof value === 'string' && !INVALID_VALUES.has(value)) {
             return [value];
         }
+
         return [];
     }
 
     const leadMaintainers = normalizeToArray(selectedProject?.lead_maintainer);
+
+    const packageDownloadUrls = normalizeToArray(
+        selectedProject?.package_download_url,
+    );
 
     return (
         <div className={styles.projectGridWrapper01}>
@@ -137,32 +148,15 @@ export default function ProjectGrids() {
                                     <div>
                                         <div className={styles.topRow}>
                                             <h4 className={styles.projectName}>
-                                                {project.repository_url ? (
-                                                    <a
-                                                        href={
-                                                            project.repository_url
-                                                        }
-                                                        target={
-                                                            project.repository_url.startsWith(
-                                                                'http'
-                                                            )
-                                                                ? '_blank'
-                                                                : '_self'
-                                                        }
-                                                        rel='noopener noreferrer'
-                                                        className={
-                                                            styles.modalLinkUrl_break_word
-                                                        }
-                                                        onClick={(e) =>
-                                                            e.stopPropagation()
-                                                        }
-                                                    >
-                                                        {project.name}
-                                                    </a>
-                                                ) : (
-                                                    project.name
-                                                )}
+                                                {project.name}
                                             </h4>
+                                            <div className={styles.logoWrapper}>
+                                                <img
+                                                    src='./img/link.svg'
+                                                    alt='logo'
+                                                    className={styles.logoImg}
+                                                />
+                                            </div>
                                         </div>
                                     </div>
 
@@ -176,10 +170,123 @@ export default function ProjectGrids() {
                                                 text={project.description.map(
                                                     (para, idx) => (
                                                         <p key={idx}>{para}</p>
-                                                    )
+                                                    ),
                                                 )}
                                             />
                                         </div>
+                                    </div>
+
+                                    <div className={styles.modalLinks01}>
+                                        {project.documentation_url &&
+                                            project.documentation_url !==
+                                                'Not applicable' &&
+                                            project.documentation_url !==
+                                                'Not available' && (
+                                                <div
+                                                    className={
+                                                        styles.modalLinks01
+                                                    }
+                                                >
+                                                    <span
+                                                        style={{
+                                                            fontWeight: 'bold',
+                                                        }}
+                                                    >
+                                                        Documentation URL:{' '}
+                                                    </span>
+                                                    <a
+                                                        href={
+                                                            project.documentation_url
+                                                        }
+                                                        target='_blank'
+                                                        rel='noopener noreferrer'
+                                                        className={
+                                                            styles.modalLinkUrl
+                                                        }
+                                                        onClick={(e) =>
+                                                            e.stopPropagation()
+                                                        }
+                                                    >
+                                                        {
+                                                            project.documentation_url
+                                                        }
+                                                    </a>
+                                                </div>
+                                            )}
+                                    </div>
+
+                                    <div className={styles.modalLinks01}>
+                                        {project.repository_url &&
+                                            project.repository_url !==
+                                                'Not applicable' &&
+                                            project.repository_url !==
+                                                'Not available' && (
+                                                <div
+                                                    className={
+                                                        styles.modalLinks01
+                                                    }
+                                                >
+                                                    <span
+                                                        style={{
+                                                            fontWeight: 'bold',
+                                                        }}
+                                                    >
+                                                        Repository URL:{' '}
+                                                    </span>
+                                                    <a
+                                                        href={
+                                                            project.repository_url
+                                                        }
+                                                        target='_blank'
+                                                        rel='noopener noreferrer'
+                                                        className={
+                                                            styles.modalLinkUrl
+                                                        }
+                                                        onClick={(e) =>
+                                                            e.stopPropagation()
+                                                        }
+                                                    >
+                                                        {project.repository_url}
+                                                    </a>
+                                                </div>
+                                            )}
+                                    </div>
+
+                                    <div className={styles.modalLinks01}>
+                                        {project.service_url &&
+                                            project.service_url !==
+                                                'Not applicable' &&
+                                            project.service_url !==
+                                                'Not available' && (
+                                                <div
+                                                    className={
+                                                        styles.modalLinks01
+                                                    }
+                                                >
+                                                    <span
+                                                        style={{
+                                                            fontWeight: 'bold',
+                                                        }}
+                                                    >
+                                                        Service URL:{' '}
+                                                    </span>
+                                                    <a
+                                                        href={
+                                                            project.service_url
+                                                        }
+                                                        target='_blank'
+                                                        rel='noopener noreferrer'
+                                                        className={
+                                                            styles.modalLinkUrl
+                                                        }
+                                                        onClick={(e) =>
+                                                            e.stopPropagation()
+                                                        }
+                                                    >
+                                                        {project.service_url}
+                                                    </a>
+                                                </div>
+                                            )}
                                     </div>
                                 </div>
                             ))}
@@ -202,171 +309,276 @@ export default function ProjectGrids() {
                     >
                         <div className={styles.modalBody}>
                             <>
-
                                 <div className={styles.fullWidthSection}>
                                     <h2>{selectedProject.name}</h2>
                                     <p>
                                         {selectedProject.description.map(
                                             (para, idx) => (
                                                 <p key={idx}>{para}</p>
-                                            )
+                                            ),
                                         )}
                                     </p>
                                 </div>
 
                                 <div className={styles.column}>
-                                    <div className={styles.modalLinks01}>
-                                        <span style={{ fontWeight: 'bold' }}>
-                                            Repository URL:{' '}
-                                        </span>
+                                    <div>
                                         {selectedProject.repository_url &&
-                                        selectedProject.repository_url !==
-                                            'n/a' &&
-                                        selectedProject.repository_url !==
-                                            '#' ? (
-                                            <a
-                                                href={
-                                                    selectedProject.repository_url
-                                                }
-                                                target='_blank'
-                                                rel='noopener noreferrer'
-                                                className={styles.modalLinkUrl}
+                                            selectedProject.repository_url !==
+                                                'Not applicable' &&
+                                            selectedProject.repository_url !==
+                                                'Not available' && (
+                                                <div
+                                                    className={
+                                                        styles.modalLinks01
+                                                    }
+                                                >
+                                                    <span
+                                                        style={{
+                                                            fontWeight: 'bold',
+                                                        }}
+                                                    >
+                                                        Repository URL:{' '}
+                                                    </span>
+                                                    <a
+                                                        href={
+                                                            selectedProject.repository_url
+                                                        }
+                                                        target='_blank'
+                                                        rel='noopener noreferrer'
+                                                        className={
+                                                            styles.modalLinkUrl
+                                                        }
+                                                    >
+                                                        {
+                                                            selectedProject.repository_url
+                                                        }
+                                                    </a>
+                                                </div>
+                                            )}
+                                    </div>
+
+                                    <div>
+                                        {packageDownloadUrls.length > 0 && (
+                                            <div
+                                                className={styles.modalLinks01}
                                             >
-                                                {selectedProject.repository_url}
-                                            </a>
-                                        ) : (
-                                            <span>n/a</span>
+                                                <span
+                                                    style={{
+                                                        fontWeight: 'bold',
+                                                    }}
+                                                >
+                                                    Package Download URL
+                                                    {packageDownloadUrls.length >
+                                                    1
+                                                        ? 's'
+                                                        : ''}
+                                                    :{' '}
+                                                </span>
+                                                <ul
+                                                    className={
+                                                        styles.packageDownloadUrlList
+                                                    }
+                                                >
+                                                    {packageDownloadUrls.map(
+                                                        (url, idx) => (
+                                                            <li key={idx}>
+                                                                <a
+                                                                    href={url}
+                                                                    target='_blank'
+                                                                    rel='noopener noreferrer'
+                                                                    className={
+                                                                        styles.modalLinkUrl
+                                                                    }
+                                                                >
+                                                                    {url}
+                                                                </a>
+                                                            </li>
+                                                        ),
+                                                    )}
+                                                </ul>
+                                            </div>
                                         )}
                                     </div>
 
-                                    {/* Catch empty and n/a and just display n/a as text. */}
-                                    <div className={styles.modalLinks01}>
-                                        <strong>Package Download URL:</strong>
-                                        {selectedProject.package_download_url?.filter(
-                                            (url) =>
-                                                url &&
-                                                url !== 'n/a' &&
-                                                url !== '#' &&
-                                                url.trim() !== ''
-                                        ).length > 0 ? (
-                                            <ul
-                                                style={{
-                                                    margin: 0,
-                                                    paddingTop: '0.2rem',
-                                                }}
-                                            >
-                                                {selectedProject.package_download_url
-                                                    .map((url, urlIdx) => (
-                                                        <li key={urlIdx}>
-                                                            <a
-                                                                className='wordWrap'
-                                                                href={url}
-                                                                target='_blank'
-                                                                rel='noopener noreferrer'
-                                                                onClick={(e) =>
-                                                                    e.stopPropagation()
-                                                                }
-                                                            >
-                                                                {url}
-                                                            </a>
-                                                        </li>
-                                                    ))}
-                                            </ul>
-                                        ) : (
-                                            <span> n/a</span>
-                                        )}
-                                    </div>
-
-                                    <div className={styles.modalLinks01}>
-                                        <span style={{ fontWeight: 'bold' }}>
-                                            Documentation URL:{' '}
-                                        </span>
+                                    <div>
                                         {selectedProject.documentation_url &&
-                                        selectedProject.documentation_url !==
-                                            'n/a' &&
-                                        selectedProject.documentation_url !==
-                                            '#' ? (
-                                            <a
-                                                href={
-                                                    selectedProject.documentation_url
-                                                }
-                                                target='_blank'
-                                                rel='noopener noreferrer'
-                                                className={styles.modalLinkUrl}
-                                            >
-                                                {
-                                                    selectedProject.documentation_url
-                                                }
-                                            </a>
-                                        ) : (
-                                            <span>n/a</span>
-                                        )}
+                                            selectedProject.documentation_url !==
+                                                'Not applicable' &&
+                                            selectedProject.documentation_url !==
+                                                'Not available' && (
+                                                <div
+                                                    className={
+                                                        styles.modalLinks01
+                                                    }
+                                                >
+                                                    <span
+                                                        style={{
+                                                            fontWeight: 'bold',
+                                                        }}
+                                                    >
+                                                        Documentation URL:{' '}
+                                                    </span>
+                                                    <a
+                                                        href={
+                                                            selectedProject.documentation_url
+                                                        }
+                                                        target='_blank'
+                                                        rel='noopener noreferrer'
+                                                        className={
+                                                            styles.modalLinkUrl
+                                                        }
+                                                    >
+                                                        {
+                                                            selectedProject.documentation_url
+                                                        }
+                                                    </a>
+                                                </div>
+                                            )}
                                     </div>
 
-                                    <div className={styles.modalLinks01}>
-                                        <span style={{ fontWeight: 'bold' }}>
-                                            Service URL:{' '}
-                                        </span>
+                                    <div>
                                         {selectedProject.service_url &&
-                                        selectedProject.service_url !== 'n/a' &&
-                                        selectedProject.service_url !== '#' ? (
-                                            <a
-                                                href={
-                                                    selectedProject.service_url
-                                                }
-                                                target='_blank'
-                                                rel='noopener noreferrer'
-                                                className={styles.modalLinkUrl}
+                                            selectedProject.service_url !==
+                                                'Not applicable' &&
+                                            selectedProject.service_url !==
+                                                'Not available' && (
+                                                <div
+                                                    className={
+                                                        styles.modalLinks01
+                                                    }
+                                                >
+                                                    <span
+                                                        style={{
+                                                            fontWeight: 'bold',
+                                                        }}
+                                                    >
+                                                        Service URL:{' '}
+                                                    </span>
+                                                    <a
+                                                        href={
+                                                            selectedProject.service_url
+                                                        }
+                                                        target='_blank'
+                                                        rel='noopener noreferrer'
+                                                        className={
+                                                            styles.modalLinkUrl
+                                                        }
+                                                    >
+                                                        {
+                                                            selectedProject.service_url
+                                                        }
+                                                    </a>
+                                                </div>
+                                            )}
+                                    </div>
+
+                                    <div>
+                                        {selectedProject.languages &&
+                                            selectedProject.languages !==
+                                                'Not applicable' &&
+                                            selectedProject.languages !==
+                                                'Not available' && (
+                                                <div
+                                                    className={
+                                                        styles.modalLinks01
+                                                    }
+                                                >
+                                                    <span
+                                                        style={{
+                                                            fontWeight: 'bold',
+                                                        }}
+                                                    >
+                                                        Language(s):{' '}
+                                                    </span>
+                                                    {selectedProject.languages}
+                                                </div>
+                                            )}
+                                    </div>
+
+                                    <div>
+                                        {selectedProject.platform &&
+                                            selectedProject.platform !==
+                                                'Not applicable' &&
+                                            selectedProject.platform !==
+                                                'Not available' && (
+                                                <div
+                                                    className={
+                                                        styles.modalLinks01
+                                                    }
+                                                >
+                                                    <span
+                                                        style={{
+                                                            fontWeight: 'bold',
+                                                        }}
+                                                    >
+                                                        Platform:{' '}
+                                                    </span>
+                                                    {selectedProject.platform}
+                                                </div>
+                                            )}
+                                    </div>
+
+                                    <div>
+                                        {selectedProject.software_license &&
+                                            selectedProject.software_license !==
+                                                'Not applicable' &&
+                                            selectedProject.software_license !==
+                                                'Not available' && (
+                                                <div
+                                                    className={
+                                                        styles.modalLinks01
+                                                    }
+                                                >
+                                                    <span
+                                                        style={{
+                                                            fontWeight: 'bold',
+                                                        }}
+                                                    >
+                                                        Software License:{' '}
+                                                    </span>
+                                                    {
+                                                        selectedProject.software_license
+                                                    }
+                                                </div>
+                                            )}
+                                    </div>
+
+                                    <div>
+                                        {selectedProject.data_license &&
+                                            selectedProject.data_license !==
+                                                'Not applicable' &&
+                                            selectedProject.data_license !==
+                                                'Not available' && (
+                                                <div
+                                                    className={
+                                                        styles.modalLinks01
+                                                    }
+                                                >
+                                                    <span
+                                                        style={{
+                                                            fontWeight: 'bold',
+                                                        }}
+                                                    >
+                                                        Data License:{' '}
+                                                    </span>
+                                                    {
+                                                        selectedProject.data_license
+                                                    }
+                                                </div>
+                                            )}
+                                    </div>
+
+                                    {leadMaintainers.length > 0 && (
+                                        <div className={styles.modalLinks01}>
+                                            <span
+                                                style={{ fontWeight: 'bold' }}
                                             >
-                                                {selectedProject.service_url}
-                                            </a>
-                                        ) : (
-                                            <span>n/a</span>
-                                        )}
-                                    </div>
-
-                                    <div className={styles.note_field}>
-                                        <span style={{ fontWeight: 'bold' }}>
-                                            Language(s):{' '}
-                                        </span>
-                                        <div className={styles.modalText}>
-                                            {selectedProject.languages}
-                                        </div>
-                                    </div>
-
-                                    <div className={styles.note_field}>
-                                        <span style={{ fontWeight: 'bold' }}>
-                                            Platform:{' '}
-                                        </span>
-                                        <div className={styles.modalText}>
-                                            {selectedProject.platform}
-                                        </div>
-                                    </div>
-
-                                    <div className={styles.note_field}>
-                                        <span style={{ fontWeight: 'bold' }}>
-                                            Software License:{' '}
-                                        </span>
-                                        <div className={styles.modalText}>
-                                            {selectedProject.software_license}
-                                        </div>
-                                    </div>
-
-                                    <div className={styles.note_field}>
-                                        <span style={{ fontWeight: 'bold' }}>
-                                            Data License:{' '}
-                                        </span>
-                                        <div className={styles.modalText}>
-                                            {selectedProject.data_license}
-                                        </div>
-                                    </div>
-
-                                    <div className={styles.modalLinks01}>
-                                        <span style={{ fontWeight: 'bold' }}>
-                                            Lead Maintainer(s):
-                                        </span>
-
-                                        {leadMaintainers.length > 0 ? (
+                                                Lead Maintainer
+                                                {leadMaintainers.length > 1
+                                                    ? 's'
+                                                    : ''}
+                                                :{' '}
+                                            </span>
                                             <ul
                                                 className={
                                                     styles.maintainerList
@@ -386,13 +598,11 @@ export default function ProjectGrids() {
                                                                 {url}
                                                             </a>
                                                         </li>
-                                                    )
+                                                    ),
                                                 )}
                                             </ul>
-                                        ) : (
-                                            <span>n/a</span>
-                                        )}
-                                    </div>
+                                        </div>
+                                    )}
                                 </div>
                             </>
                         </div>
