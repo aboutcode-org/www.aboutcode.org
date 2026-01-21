@@ -27,3 +27,13 @@ pombredanne:
   socials:
     linkedin: philippeombredanne
     github: pombredanne
+
+tg1999:
+  name: Tushar Goel
+  title: Software Engineer
+  url: https://www.linkedin.com/in/tushar-goel-53b09411a/
+  image_url: https://avatars.githubusercontent.com/u/34160672?v=4
+  page: true
+  socials:
+    linkedin: tushar-goel-53b09411a
+    github: https://github.com/TG1999
