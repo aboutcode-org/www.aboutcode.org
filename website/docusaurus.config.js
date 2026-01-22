@@ -155,7 +155,8 @@ const config = {
                     },
 
                     { label: 'Privacy Policy', to: '/privacy' },
-                    { label: 'Terms of Service', to: '/terms' },
+                    { label: 'Terms of Use', to: '/terms' },
+                    { label: 'Credits', to: '/credits' },
                 ],
                 copyright: `Copyright AboutCode Europe ASBL. &nbsp; Content licensed under CC-BY-SA-4.0. &nbsp; Built with Docusaurus.`,
             },

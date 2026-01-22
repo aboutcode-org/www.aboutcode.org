@@ -11,7 +11,6 @@ const sidebars = {
         'about/about-meetings',
         'about/about-news',
         'about/about-releases',
-        'about/about-resources',
     ],
     getting_started: [
         'getting_started/getting_started-getting-started',

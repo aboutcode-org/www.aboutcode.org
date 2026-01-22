@@ -18,8 +18,4 @@ that provides advanced supply chain capabilities for cyber risk reduction.
 for representing systems with software components as SBOMs
 (Software Bill of Materials) and other AI, data and security references.
 
-The following sections provide details about each project.  For each project
-card:
-
-- click the title in the upper-left corner to visit the GitHub repo
-- click the main body of the card to open a detailed modal
+The following sections provide details about each project.
