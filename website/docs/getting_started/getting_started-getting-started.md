@@ -1,4 +1,44 @@
 # Getting started
 
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+The AboutCode community designs, develops, and sustains an open source 
+ecosystem of interoperable tools, accurate data, and practical standards to
+enable organizations of any size to identify open source or other third-party
+software, automate license compliance, and improve software supply chain 
+security. AboutCode software and data can provide a comprehensive solution for some organizations, or an organization can reuse AboutCode "building blocks" 
+in their own systems and workflows.
+
+The purpose of this Getting Started section is to help you understand what software or data AboutCode projects provide so that you can determine how to
+best use them to meet your requirements for software identification, license
+compliance and supply chain security. Our approach is to describe common use cases and show you how specific AboutCode capabilities apply to those use 
+cases.
+
+The use cases are grouped according to 3 major topics:
+- Software identification
+- License compliance
+- Supply chain security
+
+If you already know which AboutCode projects you are interested in you can 
+find project information in the **AboutCode Projects Overview** section of the 
+home page of this website. Each project card provides comprehensive project
+information including:
+- Description
+- Documentation URL
+- GitHub Repository URL
+- Licenses for software, data and services as applicable
+- Primary language
+- Platform 
+
+The projects are presented in 5 categories:
+- Applications: These projects offer an application that you can install in the cloud or a local environment.
+- ScanCode: These projects are components or extensions of ScanCode.
+- Package-URL: These projects provide tools and data to support the use of the PURL (Package-URL) or VERS (Version Range Specifier) specifications.
+- Inspectors: AboutCode Inspectors are special-purpose analysis tools. You can run them as a ScanCode Toolkit plugin, as steps in a ScanCode.io pipeline, or from the command line.
+- Libraries: AboutCode libraries are key building blocks for the AboutCode software and data stack - they have also been incorporated into other major 
+FOSS projects and are available for use by anyone.
+
+If you questions about how to apply AboutCode building blocks to your requirements please join one of our community meetings or on Gitter or Slack.
+See our [Meetings page](https://aboutcode-org.github.io/www.aboutcode.org/docs/about/about-meetings) for details.
+
+
+
+
