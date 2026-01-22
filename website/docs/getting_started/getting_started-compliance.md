@@ -6,6 +6,6 @@
 
 **Generate SBOMs**
 
-**Automate compliance
+**Automate compliance**
 - Generate compliance artifacts (e.g. attribution notices)
 
