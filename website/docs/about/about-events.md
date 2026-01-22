@@ -18,11 +18,11 @@ number of attendees in our conference space. We request that you help sponsor
 the workshop with a donation, but sponsorship is not required to attend.
 
 *   **FOSS license and security compliance tools workshop (Pre-FOSDEM 2026)**
-    *   **Date**: January 30, 2026
-    *   **Location**: Hotel Bedford, Brussels, Belgium
-    *   **About**: A workshop to foster collaboration among developers and 
-    users of FOSS license and security compliance tools.
-    *   **Link**: [More information](https://aboutcode.org/blog/2026-01-fosdem-workshop/) (Placeholder link)
+    - **Date**: January 30, 2026
+    - **Location**: Hotel Bedford, Brussels, Belgium
+    - **About**: A workshop to foster collaboration among developers and 
+    users of FOSS license and security compliance tools
+    - For more information or to register see: https://workshop.aboutcode.org/
 
 
 ## Past Events
