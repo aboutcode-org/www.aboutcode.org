@@ -16,7 +16,7 @@ responsibility to review these Terms of Use from time to time for any changes.
 
 ## Site Content and License
 All content included on the Website (collectively, “Site Content”) is the 
-property of AboutCode Europe ASBL, nexB Inc., or its licensors. 
+property of AboutCode Europe ASBL, nexB, or their respective licensors. 
 
 **License**: Unless otherwise noted, the content on this website is licensed 
 under the [Creative Commons Attribution-ShareAlike 4.0 International License 
@@ -28,7 +28,7 @@ service marks of their respective owners. Nothing in this Terms of Use shall
 be deemed to confer on any person any license or right with respect to any 
 such image, logo or name.
 
-AboutCode, ScanCode, VulnerableCode and DejaCode are trademarks of nexB, Inc.
+AboutCode, ScanCode, VulnerableCode and DejaCode are trademarks of nexB.
 
 ## Use of the Website
 You may use the Website solely in accordance with these Website Terms of Use. 
@@ -44,9 +44,11 @@ quiet enjoyment or non-infringement.
 
 ## Limitation of Liability
 To the fullest extent permitted by applicable law, in no event shall nexB or 
-AboutCode Europe ASBL or nexB Inc. be liable to you or any third party for any indirect, consequential, exemplary, incidental, special or punitive damages.
+AboutCode Europe ASBL be liable to you or any third party for any indirect, 
+consequential, exemplary, incidental, special or punitive damages.
 
 ## Contacting Us
-For questions regarding these Terms of Use, please contact us at [info@nexb.com](mailto:info@nexb.com).
+For questions regarding these Terms of Use, please contact us at 
+[info@nexb.com](mailto:info@nexb.com).
 
 Last updated: January 2026
