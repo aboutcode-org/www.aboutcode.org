@@ -1,9 +1,44 @@
-hello:
-  label: Hello
-  permalink: /hello
-  description: Hello tag description
+advisories:
+  label: advisories
+  permalink: /advisories
+  description: advisories tag description
 
-docusaurus:
-  label: Docusaurus
-  permalink: /docusaurus
-  description: Docusaurus tag description
+api:
+  label: api
+  permalink: /api
+  description: api tag description
+
+atom:
+  label: atom
+  permalink: /atom
+  description: atom tag description
+
+chen:
+  label: chen
+  permalink: /chen
+  description: chen tag description
+
+dependencies:
+  label: dependencies
+  permalink: /dependencies
+  description: dependencies tag description
+
+purl:
+  label: PURL
+  permalink: /PURL
+  description: PURL tag description
+
+vcio:
+  label: vcio
+  permalink: /vcio
+  description: vcio tag description
+
+vers:
+  label: VERS
+  permalink: /VERS
+  description: VERS tag description
+
+vulnerabilities:
+  label: vulnerabilities
+  permalink: /vulnerabilities
+  description: vulnerabilities tag description

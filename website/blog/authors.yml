@@ -28,6 +28,16 @@ pombredanne:
     linkedin: philippeombredanne
     github: pombredanne
 
+team:
+  name: AboutCode team
+  title: Open source for open source
+  url: https://github.com/aboutcode-org
+  image_url: /img/nexB_icon.svg
+  page: true
+  socials:
+    linkedin: https://www.linkedin.com/company/nexb
+    github: https://github.com/aboutcode-org
+
 tg1999:
   name: Tushar Goel
   title: Software Engineer
