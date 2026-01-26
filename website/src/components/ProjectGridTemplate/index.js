@@ -15,30 +15,35 @@ export default function ProjectGrids() {
     // list of data sources
     const projectSources = [
         {
+            id: 'application-projects',
             title: 'Application Projects',
             data: projects_application,
             description:
                 'These projects offer an application that you can install in the cloud or a local environment.',
         },
         {
+            id: 'scancode-projects',
             title: 'ScanCode projects',
             data: projects_scancode,
             description:
                 'These projects are components or extensions of ScanCode.',
         },
         {
+            id: 'purl-projects',
             title: 'Package-URL (PURL) projects',
             data: projects_package_url,
             description:
                 'These projects provide tools and data to support the use of the PURL (Package-URL) or VERS (Version Range Specifier) specifications.',
         },
         {
+            id: 'inspectors',
             title: 'Inspectors',
             data: projects_inspectors,
             description:
                 'AboutCode Inspectors are special-purpose analysis tools. You can run them as a ScanCode Toolkit plugin, as steps in a ScanCode.io pipeline, or from the command line.',
         },
         {
+            id: 'libraries',
             title: 'Libraries',
             data: projects_libraries,
             description:
@@ -129,7 +134,8 @@ export default function ProjectGrids() {
                 <div key={sourceIdx} className={styles.gridSection}>
                     {/* Add a heading for each grid */}
                     <div className={styles.sectionTitle}>
-                        <h2>{source.title}</h2>
+                        {/* <h2>{source.title}</h2> */}
+                        <h2 id={source.id}>{source.title}</h2>
                     </div>
 
                     <div className={styles.sectionIntro}>
