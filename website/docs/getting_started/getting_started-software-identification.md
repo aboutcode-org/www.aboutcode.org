@@ -38,7 +38,8 @@ capabilities.
 
 ## Identify software packages and components
 For the basic use case of identifying software packages and components, 
-AboutCode offers the DejaCode application, ScanCode tools, the PURLDB database and the [PURL standard](https://package-url.github.io/www.packageurl.org/docs/purl/purl-spec-introduction). 
+AboutCode offers the DejaCode application, ScanCode tools, the PURLDB database
+ and the [PURL standard](https://package-url.github.io/www.packageurl.org/docs/purl/purl-spec-introduction). 
 
 - [DejaCode](https://dejacode.readthedocs.io/en/latest/) is an enterprise-level
 application to automate managing your software assets including license 
@@ -187,8 +188,8 @@ dependencies including:
 dependency data from package manifest and dependency lock files (e.g., 
 package.json or package-lock.json for npm. The reported package data includes 
 the scope of a dependency and related attributes (runtime, optional, pinned, 
-direct). Scancode uses many AboutCode libraries and utilities to identify software
-package dependencies including:
+direct). Scancode uses many AboutCode libraries and utilities to identify 
+software package dependencies including:
 
 - [dependency inspector](https://github.com/aboutcode-org/dependency-inspector/blob/main/README.rst) 
 is a command line tool to generate package lockfiles and parsable package 
