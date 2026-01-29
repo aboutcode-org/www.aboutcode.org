@@ -41,7 +41,7 @@ license in the LicenseDB is labelled with a License Category, such as 'Copyleft'
 
 There are also other [AboutCode projects](/#scancode-projects) that are components or extensions of ScanCode.
 
-## Apply license usage policies**
+## Apply license usage policies
 The only feasible way to automate license compliance for third-party software
 is to define and apply license policies that are easy for anyone in your 
 organization to recognize. 
@@ -106,7 +106,7 @@ common obligations:
 - You make an offer in your Attribution Notice to redistribute the source code.
 - You are prepared to redistribute that source code on request - this often
 includes an obligation to provide instructions and tools to build from source.
-You can use the *DejaCode** to track Product packages or components that are subject to source redistribution obligations and their deployment/distribution
+You can use *DejaCode** to track Product packages or components that are subject to source redistribution obligations and their deployment/distribution
 status. **DejaCode** also provides reports to create a source redistribution
 checklist in case you receive a request for source.
 

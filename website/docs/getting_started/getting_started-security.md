@@ -76,14 +76,14 @@ The primary format for this information is VEX (Vulnerability Exploitability
 eXchange). VEX focuses on whether a vulnerability in a component can actually 
 be exploited in a specific context. 
 
-There are several evolving VEX specifications including:
+There are currently three evolving VEX specifications:
 - [CSAF](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html) from
  OASIS Open
 - [CycloneDX VEX](https://cyclonedx.org/capabilities/vex/) from the CycloneDX 
 project
-- [OpenVEX](https://openssf.org/projects/openvex/) from OpenSSF. It is not 
-clear which of these specifications will become primary, but they all cover 
-similar data.
+- [OpenVEX](https://openssf.org/projects/openvex/) from OpenSSF. 
+
+It is not clear which of these specifications will become primary, but they all cover similar data.
 
 [DejaCode](https://dejacode.readthedocs.io/en/latest/) provides a Product 
 (inventory or SBOM) feature to record the essential VEX data such as:
