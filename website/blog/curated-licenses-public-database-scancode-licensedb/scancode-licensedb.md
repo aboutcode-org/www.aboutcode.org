@@ -12,13 +12,13 @@ The ScanCode LicenseDB is all about identifying a wide variety of licenses that 
 
 New software licenses appear constantly (like mushrooms popping out of the ground after a heavy rain) and old nearly-forgotten ones are rediscovered when someone [scans a codebase](https://www.nexb.com/scancode/) that incorporates legacy code (like finding rare medieval manuscripts in the back shelves of a library). The [ScanCode LicenseDB](https://scancode-licensedb.aboutcode.org/) precisely identifies and organizes licenses and their metadata so that multiple members of the software community can understand exactly which licenses are being referenced in project documentation.
 
-If you have seen a license notice, passed it on to your legal team for scrutiny, and completed that review, but you probably do not want to repeat that process over and over again.
+If you have seen a license notice, passed it on to your legal team for scrutiny, and completed that review, then you probably do not want to repeat that process over and over again.
 
 With over 2,000 licenses, ScanCode LicenseDB is arguably the largest free list of curated software licenses available on the internet, and an essential reference license resource for license compliance and SBOMs. ScanCode LicenseDB is available as a website, a JSON or YAML API, and a git repository making it easy to reuse and integrate in tools that need a database of reference software licenses.
 
 Here are some key points about the ScanCode LicenseDB:
 
-- Is a list of 2,092 licenses recognized by scancode-toolkit as of 2023-03-13
+- Is a list of 2,470 licenses recognized by scancode-toolkit as of 2026-01-29
 - Identifies each license by the license key defined in scancode-toolkit
 - Provides an SPDX Identifier (with link) to every license and exception on the SPDX License List, and a “Licenseref” identifier for every license and exception not on the SPDX License List.
 - Provides license texts in plain text formats.
