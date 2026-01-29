@@ -4,7 +4,7 @@ import HomepageContent from "../components/HomepageContent";
 
 export default function Home() {
     return (
-        <Layout title="Home" description="Landing page for schema project">
+        <Layout title="Home" description="Landing page for www.aboutcode.org">
             <HomepageHeader />
             <HomepageContent />
         </Layout>
