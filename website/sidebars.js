@@ -17,6 +17,7 @@ const sidebars = {
         'getting_started/getting_started-software-identification',
         'getting_started/getting_started-security',
         'getting_started/getting_started-compliance',
+        'getting-started/fetting-started-cravex',
     ],
 };
 
