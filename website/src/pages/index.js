@@ -3,10 +3,10 @@ import HomepageHeader from "../components/HomepageHeader";
 import HomepageContent from "../components/HomepageContent";
 
 export default function Home() {
-    return (
-        <Layout title="Home" description="Landing page for www.aboutcode.org">
-            <HomepageHeader />
-            <HomepageContent />
-        </Layout>
-    );
+  return (
+    <Layout title="Home" description="Landing page for www.aboutcode.org">
+      <HomepageHeader />
+      <HomepageContent />
+    </Layout>
+  );
 }
