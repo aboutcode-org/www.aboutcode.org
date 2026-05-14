@@ -129,6 +129,12 @@ const config = {
                     },
                     {
                         type: 'docSidebar',
+                        sidebarId: 'projects',
+                        position: 'left',
+                        label: 'Projects',
+                    },
+                    {
+                        type: 'docSidebar',
                         sidebarId: 'about',
                         position: 'left',
                         label: 'About',

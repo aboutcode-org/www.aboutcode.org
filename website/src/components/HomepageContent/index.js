@@ -1,9 +1,9 @@
 import React from 'react';
+import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import HomeIntro from './HomeIntro.mdx';
 import ProjectOverview from './ProjectOverview.md';
 import Supporters from './Supporters.md';
-import ProjectGridTemplate from '@site/src/components/ProjectGridTemplate';
 import styles from './styles.module.css';
 
 export default function HomepageContent() {
@@ -36,7 +36,11 @@ export default function HomepageContent() {
                     <ProjectOverview />
                 </div>
 
-                <ProjectGridTemplate />
+                <div className={styles.sectionActions}>
+                    <Link className='button button--primary' to='/docs/projects'>
+                        Explore AboutCode projects
+                    </Link>
+                </div>
             </section>
 
             <section className={styles.sectionContainer}>

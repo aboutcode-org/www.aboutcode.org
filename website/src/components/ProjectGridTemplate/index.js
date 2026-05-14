@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
 import projects_application from '@site/src/data/projects-application.json';
 import projects_scancode from '@site/src/data/projects-scancode.json';
@@ -7,9 +8,10 @@ import projects_inspectors from '@site/src/data/projects-inspectors.json';
 import projects_libraries from '@site/src/data/projects-libraries.json';
 import project_field_help from '@site/src/data/project_field_help.json';
 
-export default function ProjectGrids() {
+export default function ProjectGrids({ projectSourceIds }) {
     const [selectedProject, setSelectedProject] = useState(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const linkIconUrl = useBaseUrl('/img/link.svg');
 
     // list of data sources
     const projectSources = [
@@ -49,6 +51,10 @@ export default function ProjectGrids() {
                 'AboutCode libraries are key building blocks for the AboutCode software and data stack - they have also been incorporated into other major FOSS projects and are available for use by anyone.',
         },
     ];
+
+    const selectedProjectSources = projectSourceIds
+        ? projectSources.filter((source) => projectSourceIds.includes(source.id))
+        : projectSources;
 
     const openModal = (project) => {
         setSelectedProject(project);
@@ -156,7 +162,7 @@ export default function ProjectGrids() {
     return (
         <div className={styles.projectGridWrapper01}>
             {/* Iterate through each data source */}
-            {projectSources.map((source, sourceIdx) => (
+            {selectedProjectSources.map((source, sourceIdx) => (
                 <div key={sourceIdx} className={styles.gridSection}>
                     {/* Add a heading for each grid */}
                     <div className={styles.sectionTitle}>
@@ -183,7 +189,7 @@ export default function ProjectGrids() {
                                             </h4>
                                             <div className={styles.logoWrapper}>
                                                 <img
-                                                    src='./img/link.svg'
+                                                    src={linkIconUrl}
                                                     alt='logo'
                                                     className={styles.logoImg}
                                                 />

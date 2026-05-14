@@ -21,9 +21,8 @@ The use cases are grouped according to 3 major topics:
 - Supply chain security
 
 If you already know which AboutCode projects you are interested in you can
-find project information in the **AboutCode Projects Overview** section of the
-home page of this website. Each project card provides comprehensive project
-information including:
+find project information in the [Projects](/docs/projects) section of this website.
+Each project card provides comprehensive project information including:
 - Description
 - Documentation URL
 - GitHub Repository URL
@@ -32,17 +31,17 @@ information including:
 - Platform
 
 The projects are presented in 5 categories:
-- [Applications](/#application-projects): These projects offer an application
+- [Applications](/docs/projects/applications): These projects offer an application
   that you can install in the cloud or a local environment.
-- [ScanCode](/#scancode-projects): These projects are components or extensions
+- [ScanCode](/docs/projects/scancode): These projects are components or extensions
   of ScanCode.
-- [Package-URL](/#purl-projects): These projects provide tools and data to
+- [Package-URL](/docs/projects/package-url): These projects provide tools and data to
   support the use of the PURL (Package-URL) or VERS (Version Range Specifier)
   specifications.
-- [Inspectors](/#inspectors): AboutCode Inspectors are special-purpose
+- [Inspectors](/docs/projects/inspectors): AboutCode Inspectors are special-purpose
   analysis tools. You can run them as a ScanCode Toolkit plugin, as steps in
   a ScanCode.io pipeline, or from the command line.
-- [Libraries](/#libraries): AboutCode libraries are key building blocks for
+- [Libraries](/docs/projects/libraries): AboutCode libraries are key building blocks for
   the AboutCode software and data stack - they have also been incorporated
   into other major FOSS projects and are available for use by anyone.
 

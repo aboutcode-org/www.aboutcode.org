@@ -39,7 +39,7 @@ reference database for the 2400 licenses detected by ScanCode. It is limited
 to public license texts but not to only those licenses that meet the OSI definition of open source. ScanCode's objective is to identify licenses regardless of whether they are open source, proprietary or in-between. Each 
 license in the LicenseDB is labelled with a License Category, such as 'Copyleft', 'Permissive' or 'Public Domain'.
 
-There are also other [AboutCode projects](/#scancode-projects) that are components or extensions of ScanCode.
+There are also other [AboutCode ScanCode projects](/docs/projects/scancode) that are components or extensions of ScanCode.
 
 ## Apply license usage policies
 The only feasible way to automate license compliance for third-party software
@@ -109,5 +109,4 @@ includes an obligation to provide instructions and tools to build from source.
 You can use *DejaCode** to track Product packages or components that are subject to source redistribution obligations and their deployment/distribution
 status. **DejaCode** also provides reports to create a source redistribution
 checklist in case you receive a request for source.
-
 

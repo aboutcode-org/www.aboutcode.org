@@ -12,6 +12,14 @@ const sidebars = {
         'about/about-news',
         'about/about-releases',
     ],
+    projects: [
+        'projects/projects-overview',
+        'projects/applications',
+        'projects/scancode',
+        'projects/package-url',
+        'projects/inspectors',
+        'projects/libraries',
+    ],
     getting_started: [
         'getting_started/getting_started-getting-started',
         'getting_started/getting_started-software-identification',
