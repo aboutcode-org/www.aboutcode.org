@@ -29,7 +29,7 @@ export default function HomepageContent() {
                     className={styles.sectionHeader}
                     style={{ marginBottom: '15px', marginTop: '15px' }}
                 >
-                    <h1>AboutCode Projects Overview</h1>
+                    <h2>AboutCode Projects Overview</h2>
                 </div>
 
                 <div className={styles.sectionIntro}>

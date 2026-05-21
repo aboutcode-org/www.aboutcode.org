@@ -6,10 +6,11 @@ export default function HomepageHeader() {
     <div className={styles.fullHero}>
       <div className={styles.heroInner}>
         <h1 className={styles.heroTitle}>
-          Welcome to AboutCode.org
+          Healthy and Safe<br />
+          Software Supply Chains
         </h1>
         <p className={styles.heroSubtitle}>
-          FOSS for FOSS
+          Built on open data, open code, and open standards.
         </p>
       </div>
     </div>
