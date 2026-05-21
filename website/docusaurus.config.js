@@ -39,7 +39,7 @@ const currentBaseUrl = siteConfig[deployTarget].baseUrl
 const config = {
     title: 'AboutCode.org',
     tagline: '[Tagline . . . ?]',
-    favicon: 'img/nexB_icon.png',
+    favicon: 'img/favicon.ico',
 
     markdown: {
         format: 'detect', // Auto-detects: .md = plain Markdown (CommonMark), .mdx = MDX
@@ -116,7 +116,7 @@ const config = {
             navbar: {
                 logo: {
                     alt: 'www.aboutcode.org Logo',
-                    src: 'img/AboutCode-logo-stackedv3.png',
+                    src: 'img/AboutCode.svg',
                 },
                 style: 'dark',
                 items: [
