@@ -41,11 +41,12 @@ export default function HomepageContent() {
                     className={styles.sectionHeader}
                     style={{ marginBottom: '15px', marginTop: '15px' }}
                 >
-                    <h2>Software supply chain standards</h2>
+                    <h2>Community and Adopters</h2>
                 </div>
                 <div className={styles.sectionIntro}>
-                    <StandardsOverview />
+                    <p>AboutCode projects are supported by over 700 contributors and downloaded over 4 millions times per day.</p>
                 </div>
+                <AdoptersBanner />
             </section>
 
             <section className={styles.sectionContainer}>
@@ -53,10 +54,13 @@ export default function HomepageContent() {
                     className={styles.sectionHeader}
                     style={{ marginBottom: '15px', marginTop: '15px' }}
                 >
-                    <h2>Adopters</h2>
+                    <h2>Software supply chain standards</h2>
                 </div>
-                <AdoptersBanner />
+                <div className={styles.sectionIntro}>
+                    <StandardsOverview />
+                </div>
             </section>
+
 
             <section className={styles.sectionContainer}>
                 <div
