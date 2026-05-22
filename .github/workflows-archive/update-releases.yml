@@ -1,14 +1,17 @@
 name: Update Releases Feed
+
 on:
   workflow_dispatch:
   schedule:
     # - cron: "15 * * * *" # every hour at :15
     - cron: "15 9 * * *" # every day at 09:15 UTC
+
 jobs:
   update:
     runs-on: ubuntu-latest
     permissions:
       contents: write  # needed to commit updates to releases.json
+
     strategy:
       max-parallel: 1
       matrix:
@@ -47,19 +50,23 @@ jobs:
           - aboutcode-org/vulnerablecode
           - aboutcode-org/www.aboutcode.org
           # Add more repos here
+
     env:
       GITHUB_TOKEN: ${{ secrets.GH_REPO_POLLING }}
+
     steps:
       # 1 Checkout the target repo (Repo B)
       - name: Checkout repository
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6.0.2
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5  # v4.3.1
         with:
           ref: main
           fetch-depth: 0
           token: ${{ secrets.GH_REPO_POLLING }}
+
       # 2 Debug: show which repo is being processed
       - name: Debug - current repo
         run: echo "Processing ${{ matrix.repo }}"
+
       # 3 Fetch the latest release from the current source repo
       - name: Fetch latest release
         run: |
@@ -67,6 +74,7 @@ jobs:
           curl -s -H "Accept: application/vnd.github+json" \
             https://api.github.com/repos/$REPO/releases/latest \
             -o release.json || echo '{}' > release.json
+
       # 4 Update releases.json in website/static cl
       - name: Update releases.json
         env:
@@ -102,6 +110,7 @@ jobs:
           mv "$TMP" website/static/releases.json
           rm -f release.json "$FILTER"
         shell: bash
+
         # 5 Commit & push changes if releases.json changed
       - name: Commit and push if changed
         run: |
