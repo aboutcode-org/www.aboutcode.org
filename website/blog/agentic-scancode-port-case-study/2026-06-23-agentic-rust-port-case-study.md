@@ -16,6 +16,8 @@ The core module is ScanCode Toolkit, the industry-leading open source code scann
 
 This incident is not isolated. AboutCode (and many other open source projects) are experiencing a steady influx of AI-generated issues and pull requests that are superficially plausible, templated, often duplicating existing reports, and almost never grounded in actual use of the software. Maintainers across the open source ecosystem call this AI slop. It consumes human triage time, degrades signal in issue trackers, and erodes the social contract between users, contributors, and maintainers. The porting incident described in this post is the same phenomenon at a larger scale and with higher stakes.
 
+<!-- truncate -->
+
 This article documents what happened technically, what it reveals about the current state of AI-assisted development, and what the open source community needs to do when dealing with AI-generated code.
 
 ## What the agent did
