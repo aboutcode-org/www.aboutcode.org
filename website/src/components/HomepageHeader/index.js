@@ -10,7 +10,7 @@ export default function HomepageHeader() {
           Software Supply Chains
         </h1>
         <p className={styles.heroSubtitle}>
-          Built on open data, open code, and open standards.
+          We build, maintain, and sustain open data with open source code and open standards.
         </p>
       </div>
     </div>
