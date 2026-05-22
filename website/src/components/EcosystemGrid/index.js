@@ -68,9 +68,9 @@ const languages = [
 
 const vulnSources = [
     { label: 'Alpine Security', logo: 'img/ecosystems/apk.png', url: 'https://secdb.alpinelinux.org' },
-    { label: 'Apache HTTPD', logo: 'img/ecosystems/apache.png', url: 'https://httpd.apache.org/security/' },
-    { label: 'Apache Kafka', logo: 'img/ecosystems/apache.png', url: 'https://kafka.apache.org/cve-list' },
-    { label: 'Apache Tomcat', logo: 'img/ecosystems/apache.png', url: 'https://tomcat.apache.org/security.html' },
+    { label: 'Apache HTTPD', logo: 'img/logos/apache.svg', url: 'https://httpd.apache.org/security/' },
+    { label: 'Apache Kafka', logo: 'img/logos/apache.svg', url: 'https://kafka.apache.org/cve-list' },
+    { label: 'Apache Tomcat', logo: 'img/logos/apache.svg', url: 'https://tomcat.apache.org/security.html' },
     { label: 'Arch Linux', logo: 'img/ecosystems/alpm.png', url: 'https://security.archlinux.org' },
     { label: 'curl', logo: 'img/ecosystems/curl.svg', url: 'https://curl.se/docs/security.html' },
     { label: 'Debian Security', logo: 'img/ecosystems/deb.png', url: 'https://security-tracker.debian.org' },
