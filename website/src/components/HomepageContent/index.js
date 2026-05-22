@@ -35,8 +35,6 @@ export default function HomepageContent() {
                 <div className={styles.sectionIntro}>
                     <StandardsOverview />
                 </div>
-
-                <ProjectGridTemplate />
             </section>
 
             <section className={styles.sectionContainer}>

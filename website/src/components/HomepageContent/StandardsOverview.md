@@ -1,3 +1,9 @@
+
+AboutCode is leading the way with simple and practical standards like PURL. 
+PURL is the common identifier across software supply chain standards, 
+making it possible to correlate and cross-reference data between SBOMs, 
+vulnerability databases, reports, advisories, attestations, and tools.
+
 **Package-URL (PURL)**: a widely used standard to identify software
 packages of any type with simple, readable and concise URLs. The PURL
 standard is [ECMA-427](https://ecma-tc54.github.io/ECMA-427/). Created by AboutCode.
@@ -50,8 +56,4 @@ lifecycle stages. Uses PURL for package identification.
 
 **TEA**: (Transparent Exchange of Attestations) is a standard for software
 supply chain attestations and trust. Uses PURL to reference attested packages.
-
-PURL is the common identifier across these standards, making it possible to
-correlate data between SBOMs, vulnerability reports, advisories, and
-attestations.
 

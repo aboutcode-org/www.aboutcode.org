@@ -519,11 +519,9 @@
 }
 
 .sectionTitle h2 {
-    color: #992600;
+    color: #ff8800;
     margin-top: 20px;
     margin-bottom: 20px;
-
-    /* 2026-01-25 Sunday 15:32:00.  Scroll so section is visible! Adjust to navbar height. */
     scroll-margin-top: 5rem;
 }
 [data-theme='dark'] .sectionTitle h2 {
@@ -535,7 +533,6 @@
 }
 
 .gridSection {
-    border-bottom: solid 1px #000000;
     margin-bottom: 30px;
     padding-bottom: 30px;
 }
