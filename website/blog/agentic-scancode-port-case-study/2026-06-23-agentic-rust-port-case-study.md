@@ -12,10 +12,6 @@ hide_table_of_contents: false
 
 ScanCode detects licenses, copyrights, package dependencies, vulnerabilities, and a few more things in both source code and binary files. The use cases include license and security compliance and software supply chain management. It is the product of over a decade of careful design, architecture, and testing by an open source community of over 700 contributors, supporting more than 40,000 automated tests covering license detection alone, and over 90,000 automated tests overall.
 
-![Agentic ScanCode port case study](agentic-scancode-port-case-study.svg)
-
-<!-- truncate -->
-
 The core module is ScanCode Toolkit, the industry-leading open source code scanning engine. In early 2026, an agentic LLM system ported ScanCode Toolkit, from Python to Rust, published the derived results under a name that infringed the ScanCode trademark, stripped copyright and license notices from both ScanCode and third-party code we vendored and carefully attributed, and started an outreach campaign, without ever engaging the AboutCode community.
 
 This incident is not isolated. AboutCode (and many other open source projects) are experiencing a steady influx of AI-generated issues and pull requests that are superficially plausible, templated, often duplicating existing reports, and almost never grounded in actual use of the software. Maintainers across the open source ecosystem call this AI slop. It consumes human triage time, degrades signal in issue trackers, and erodes the social contract between users, contributors, and maintainers. The porting incident described in this post is the same phenomenon at a larger scale and with higher stakes.
