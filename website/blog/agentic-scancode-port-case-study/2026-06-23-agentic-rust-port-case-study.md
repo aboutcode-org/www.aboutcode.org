@@ -2,7 +2,7 @@
 slug: agentic-scancode-port-case-study
 title: An AI agent ported our codebase from Python to Rust
 authors: [pombredanne]
-tags: [scancode,rust,ageent,genai]
+tags: [scancode, rust, agent, genai]
 hide_table_of_contents: false
 ---
 
@@ -11,6 +11,9 @@ hide_table_of_contents: false
 ## A case study, not an isolated incident
 
 ScanCode detects licenses, copyrights, package dependencies, vulnerabilities, and a few more things in both source code and binary files. The use cases include license and security compliance and software supply chain management. It is the product of over a decade of careful design, architecture, and testing by an open source community of over 700 contributors, supporting more than 40,000 automated tests covering license detection alone, and over 90,000 automated tests overall.
+
+![Agentic ScanCode port case study](agentic-scancode-port-case-study.svg)
+<!-- truncate -->
 
 The core module is ScanCode Toolkit, the industry-leading open source code scanning engine. In early 2026, an agentic LLM system ported ScanCode Toolkit, from Python to Rust, published the derived results under a name that infringed the ScanCode trademark, stripped copyright and license notices from both ScanCode and third-party code we vendored and carefully attributed, and started an outreach campaign, without ever engaging the AboutCode community.
 
@@ -22,7 +25,7 @@ This article documents what happened technically, what it reveals about the curr
 
 The porting was driven by an LLM orchestration harness (using OpenCode and an OpenClaw-vibe coded OpenCode plugin). The agent's approach was straightforward: take a mature, well-tested Python codebase and refactor it in Rust. This is not an independent rewrite or inspired by ScanCode as it claims. It is a mechanical translation and it is exactly the kind of task LLMs are well-suited for.
 
-Why? Code translation is fundamentally like a language translation task, and Large Language Models (LLMs) were originally designed for such language tasks. The extensive ScanCode test suite provided the specification and the guide rails. The agent did not need to understand the algorithms; it only needed to produce code that passed the tests. 
+Why? Code translation is fundamentally like a language translation task, and Large Language Models (LLMs) were originally designed for such language tasks. The extensive ScanCode test suite provided the specification and the guide rails. The agent did not need to understand the algorithms; it only needed to produce code that passed the tests.
 
 This is worth repeating: A comprehensive test suite, decent documentation, and curated datasets is what makes automated porting possible. It is also what makes a codebase easier to replicate without understanding it.
 
@@ -34,9 +37,9 @@ The Rust port published a "benchmark" that claimed 10x to 100x improvements in p
 
 Compiled Rust is capable of outperforming interpreted Python. In the published "benchmarks", the Rust port runs faster than ScanCode, but when checked it returns incorrect results, missing detections and skipping files. ScanCode runs the standard ScanCode test suite faster than the Rust port, even though the Rust port covers fewer tests. After applying optimization similar to what the Rust port did, ScanCode runs as fast or faster than the Rust port, while maintaining correctness, and attribution.
 
-Testing correctness or speed on a subset does not equate with superiority on the whole.  
+Testing correctness or speed on a subset does not equate with superiority on the whole.
 
-This also demonstrates a core problem of AI-assisted software development. The agents replicated ScanCode's structure well enough to pass some tests, but not well enough to pass all tests. The port applied performance optimizations and caching strategies to appear faster, but sacrificing critical data correctness and completeness. 
+This also demonstrates a core problem of AI-assisted software development. The agents replicated ScanCode's structure well enough to pass some tests, but not well enough to pass all tests. The port applied performance optimizations and caching strategies to appear faster, but sacrificing critical data correctness and completeness.
 
 ## License and copyright failures
 
@@ -75,12 +78,12 @@ This episode is not primarily about one project or one set of actors. It is a pr
 
 The specific conditions that made ScanCode a target are the same conditions that characterize most successful open source projects: a mature codebase, comprehensive tests, plenty of documentation, lots of curated content, large downstream user base, an active community, and a well-known and trusted name. The tools and techniques used are becoming routine with AI-generated commits, contributions, and rewrites: agentic orchestration, automated issue crawling, and targeted community outreach.
 
-The human and social dimensions of this incident are as important, if not more important, as the technical ones. The agent crawled ScanCode's issue tracker and implemented old, outdated or incorrect features, such as a three-year-old feature request for yum database support, a tool that Fedora deprecated a decade ago and whose repository was archived in March 2026\. The agent also reported the development of new features, but these features already exist in other AboutCode open source projects.
+The human and social dimensions of this incident are as important, if not more important, as the technical ones. The agent crawled ScanCode's issue tracker and implemented old, outdated or incorrect features, such as a three-year-old feature request for yum database support, a tool that Fedora deprecated a decade ago and whose repository was archived in March 2026. The agent also reported the development of new features, but these features already exist in other AboutCode open source projects.
 
 This is what automated development without community context produces: technically functional work that is socially and strategically incoherent, creating mostly useless or redundant technical debt and bypassing the ecosystem domain expertise and collective wisdom needed to select which feature to implement.
 
-This is one of the less-discussed costs of AI slop at scale. It is not just noise, it is misdirected effort that consumes real resources on both sides. Maintainers spend time triaging and closing low-quality issues. Automated systems spend compute implementing stale or irrelevant features. Neither produces value. And the accumulated technical debt in cluttered issue trackers, undiscovered license violations, and replicated but misunderstood code falls on human maintainers to clean up.  
-   
+This is one of the less-discussed costs of AI slop at scale. It is not just noise, it is misdirected effort that consumes real resources on both sides. Maintainers spend time triaging and closing low-quality issues. Automated systems spend compute implementing stale or irrelevant features. Neither produces value. And the accumulated technical debt in cluttered issue trackers, undiscovered license violations, and replicated but misunderstood code falls on human maintainers to clean up.
+
 The community outreach campaign by the Rust port team contacting users to suggest replacing ScanCode reflects the same absence of community understanding. The Rust port developers never engaged ScanCode's public community channels, weekly meetings, or chatting with maintainers, until that campaign began. An automated system optimizing for adoption does not naturally model the trust relationships and collaborative norms that open source communities are built on.
 
 ## Feedback for the community
@@ -97,7 +100,7 @@ If your tooling generates code ported from or inspired by existing projects, you
 
 AI and ML practitioners and enthusiasts, please understand that the open source projects you train on, benchmark against, and port from are maintained by communities. These communities are composed of people, and have norms, governance structures, contribution pathways, and years of accumulated context and domain expertise.
 
-Participating in these communities, before, during, and after building on their work, is not a formality. It is how the ecosystem that enables your work is sustained. The performance gains available in ScanCode come from that community's accumulated expertise. 
+Participating in these communities, before, during, and after building on their work, is not a formality. It is how the ecosystem that enables your work is sustained. The performance gains available in ScanCode come from that community's accumulated expertise.
 
 ## Onwards and upwards: Taking the high road
 
