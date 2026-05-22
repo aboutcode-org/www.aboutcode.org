@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './styles.module.css';
 
-const packageEcosystems = [
+const ecosystemAndLanguageItems = [
     { label: 'Alpine', logo: 'img/logos/apk.png', url: 'https://packageurl.org/docs/purl-spec/types-doc/apk-definition' },
     { label: 'Arch Linux', logo: 'img/logos/alpm.png', url: 'https://packageurl.org/docs/purl-spec/types-doc/alpm-definition' },
     { label: 'Bazel', logo: 'img/logos/bazel.png', url: 'https://packageurl.org/docs/purl-spec/types-doc/bazel-definition' },
@@ -24,7 +24,7 @@ const packageEcosystems = [
     { label: 'GitHub', logo: 'img/logos/github.png', url: 'https://packageurl.org/docs/purl-spec/types-doc/github-definition' },
     { label: 'Hackage', logo: 'img/logos/hackage.png', url: 'https://packageurl.org/docs/purl-spec/types-doc/hackage-definition' },
     { label: 'Hex', logo: 'img/logos/hex.png', url: 'https://packageurl.org/docs/purl-spec/types-doc/hex-definition' },
-    { label: 'Hugging Face', logo: 'img/logos/huggingface-ecosystem.svg', url: 'https://packageurl.org/docs/purl-spec/types-doc/huggingface-definition' },
+    { label: 'Hugging Face', logo: 'img/logos/huggingface.svg', url: 'https://packageurl.org/docs/purl-spec/types-doc/huggingface-definition' },
     { label: 'Julia', logo: 'img/logos/julia.png', url: 'https://packageurl.org/docs/purl-spec/types-doc/julia-definition' },
     { label: 'LuaRocks', logo: 'img/logos/luarocks.svg', url: 'https://packageurl.org/docs/purl-spec/types-doc/luarocks-definition' },
     { label: 'Maven', logo: 'img/logos/maven.png', url: 'https://packageurl.org/docs/purl-spec/types-doc/maven-definition' },
@@ -41,40 +41,20 @@ const packageEcosystems = [
     { label: 'RubyGems', logo: 'img/logos/gem.png', url: 'https://packageurl.org/docs/purl-spec/types-doc/gem-definition' },
     { label: 'Swift', logo: 'img/logos/swift.svg', url: 'https://packageurl.org/docs/purl-spec/types-doc/swift-definition' },
     { label: 'Yocto', logo: 'img/logos/yocto.png', url: 'https://packageurl.org/docs/purl-spec/types-doc/yocto-definition' },
-];
-
-const languages = [
-    { label: 'C / C++', logo: 'img/logos/conan.png', url: 'https://packageurl.org/docs/purl-spec/types-doc/conan-definition' },
-    { label: 'Dart', logo: 'img/logos/pub.png', url: 'https://packageurl.org/docs/purl-spec/types-doc/pub-definition' },
-    { label: 'Elixir / Erlang', logo: 'img/logos/hex.png', url: 'https://packageurl.org/docs/purl-spec/types-doc/hex-definition' },
     { label: 'Go', logo: 'img/logos/golang.png', url: 'https://packageurl.org/docs/purl-spec/types-doc/golang-definition' },
-    { label: 'Haskell', logo: 'img/logos/hackage.png', url: 'https://packageurl.org/docs/purl-spec/types-doc/hackage-definition' },
     { label: 'Haxe', logo: 'img/logos/haxe.png', url: 'https://lib.haxe.org' },
-    { label: 'Java', logo: 'img/logos/maven.png', url: 'https://packageurl.org/docs/purl-spec/types-doc/maven-definition' },
-    { label: 'JavaScript', logo: 'img/logos/npm.png', url: 'https://packageurl.org/docs/purl-spec/types-doc/npm-definition' },
-    { label: 'Julia', logo: 'img/logos/julia.png', url: 'https://packageurl.org/docs/purl-spec/types-doc/julia-definition' },
-    { label: 'Lua', logo: 'img/logos/luarocks.svg', url: 'https://packageurl.org/docs/purl-spec/types-doc/luarocks-definition' },
-    { label: '.NET / C#', logo: 'img/logos/nuget.png', url: 'https://packageurl.org/docs/purl-spec/types-doc/nuget-definition' },
-    { label: 'OCaml', logo: 'img/logos/opam.svg', url: 'https://packageurl.org/docs/purl-spec/types-doc/opam-definition' },
-    { label: 'Perl', logo: 'img/logos/cpan.png', url: 'https://packageurl.org/docs/purl-spec/types-doc/cpan-definition' },
-    { label: 'PHP', logo: 'img/logos/composer.jpg', url: 'https://packageurl.org/docs/purl-spec/types-doc/composer-definition' },
-    { label: 'Python', logo: 'img/logos/pypi.png', url: 'https://packageurl.org/docs/purl-spec/types-doc/pypi-definition' },
-    { label: 'R', logo: 'img/logos/cran.png', url: 'https://packageurl.org/docs/purl-spec/types-doc/cran-definition' },
     { label: 'Raku', logo: 'img/logos/raku.svg', url: 'https://raku.org' },
-    { label: 'Ruby', logo: 'img/logos/gem.png', url: 'https://packageurl.org/docs/purl-spec/types-doc/gem-definition' },
-    { label: 'Rust', logo: 'img/logos/cargo.png', url: 'https://packageurl.org/docs/purl-spec/types-doc/cargo-definition' },
-    { label: 'Swift', logo: 'img/logos/swift.svg', url: 'https://packageurl.org/docs/purl-spec/types-doc/swift-definition' },
 ];
 
 const vulnSources = [
     { label: 'Alpine Security', logo: 'img/logos/apk.png', url: 'https://secdb.alpinelinux.org' },
-    { label: 'Apache HTTPD', logo: 'img/logos/apache.svg', url: 'https://httpd.apache.org/security/' },
-    { label: 'Apache Kafka', logo: 'img/logos/apache.svg', url: 'https://kafka.apache.org/cve-list' },
-    { label: 'Apache Tomcat', logo: 'img/logos/apache.svg', url: 'https://tomcat.apache.org/security.html' },
-    { label: 'Arch Linux', logo: 'img/logos/alpm.png', url: 'https://security.archlinux.org' },
-    { label: 'curl', logo: 'img/logos/curl.svg', url: 'https://curl.se/docs/security.html' },
+    { label: 'Apache HTTPD', logo: 'img/logos/apache.svg', url: 'https://httpd.apache.org/security/', logoClass: 'logoWideLarge' },
+    { label: 'Apache Kafka', logo: 'img/logos/apache.svg', url: 'https://kafka.apache.org/cve-list', logoClass: 'logoWideLarge' },
+    { label: 'Apache Tomcat', logo: 'img/logos/apache.svg', url: 'https://tomcat.apache.org/security.html', logoClass: 'logoWideLarge' },
+    { label: 'Arch Linux', logo: 'img/logos/alpm.png', url: 'https://security.archlinux.org', logoClass: 'logoLarge' },
+    { label: 'curl', logo: 'img/logos/curl.svg', url: 'https://curl.se/docs/security.html', logoClass: 'logoWideLarge' },
     { label: 'Debian Security', logo: 'img/logos/deb.png', url: 'https://security-tracker.debian.org' },
-    { label: 'Elixir Advisories', logo: 'img/logos/elixir.png', url: 'https://github.com/dependabot/elixir-security-advisories' },
+    { label: 'Elixir Advisories', logo: 'img/logos/elixir.png', url: 'https://github.com/dependabot/elixir-security-advisories', logoClass: 'logoLarge' },
     { label: 'EPSS', logo: 'img/logos/epss.png', url: 'https://www.first.org/epss/' },
     { label: 'Gentoo GLSA', logo: 'img/logos/gentoo.png', url: 'https://security.gentoo.org' },
     { label: 'GitHub Advisories', logo: 'img/logos/github.png', url: 'https://github.com/advisories' },
@@ -85,14 +65,14 @@ const vulnSources = [
     { label: 'NVD', logo: 'img/logos/nvd.png', url: 'https://nvd.nist.gov' },
     { label: 'OpenSSL', logo: 'img/logos/openssl.png', url: 'https://www.openssl.org/news/vulnerabilities.html' },
     { label: 'OSS-Fuzz', logo: 'img/logos/ossfuzz.png', url: 'https://google.github.io/oss-fuzz/' },
-    { label: 'OSV.dev', logo: 'img/logos/osv.svg', url: 'https://osv.dev' },
+    { label: 'OSV.dev', logo: 'img/logos/osv.svg', url: 'https://osv.dev', logoClass: 'logoWideLarge' },
     { label: 'PostgreSQL', logo: 'img/logos/postgresql.svg', url: 'https://www.postgresql.org/support/security/' },
     { label: 'PyPA', logo: 'img/logos/pypi.png', url: 'https://github.com/pypa/advisory-database' },
     { label: 'Red Hat', logo: 'img/logos/redhat.png', url: 'https://access.redhat.com/security/security-updates/' },
     { label: 'Ruby Advisory DB', logo: 'img/logos/gem.png', url: 'https://github.com/rubysec/ruby-advisory-db' },
     { label: 'Rust Advisory DB', logo: 'img/logos/cargo.png', url: 'https://github.com/rustsec/advisory-db' },
-    { label: 'SUSE', logo: 'img/logos/suse.svg', url: 'https://www.suse.com/security/' },
-    { label: 'Ubuntu USN', logo: 'img/logos/ubuntu.svg', url: 'https://ubuntu.com/security/notices' },
+    { label: 'SUSE', logo: 'img/logos/suse.svg', url: 'https://www.suse.com/security/', logoClass: 'logoWideLarge' },
+    { label: 'Ubuntu USN', logo: 'img/logos/ubuntu.svg', url: 'https://ubuntu.com/security/notices', logoClass: 'ubuntuLogo' },
     { label: 'Vulnrichment (CISA)', logo: 'img/logos/cisa.png', url: 'https://github.com/cisagov/vulnrichment' },
     { label: 'Xen', logo: 'img/logos/xen.png', url: 'https://xenbits.xen.org/xsa/' },
 ];
@@ -115,7 +95,7 @@ function GridSection({ title, items }) {
                                 <img
                                     src={`/${item.logo}`}
                                     alt={item.label}
-                                    className={styles.cellLogo}
+                                    className={`${styles.cellLogo} ${item.logoClass ? styles[item.logoClass] : ''}`}
                                 />
                             )}
                         </div>
@@ -130,8 +110,7 @@ function GridSection({ title, items }) {
 export default function EcosystemGrid() {
     return (
         <div className={styles.gridWrapper}>
-            <GridSection title="Package ecosystems" items={packageEcosystems} />
-            <GridSection title="Programming languages" items={languages} />
+            <GridSection title="Package ecosystems and programming languages" items={ecosystemAndLanguageItems} />
             <GridSection title="Vulnerability data sources" items={vulnSources} />
         </div>
     );

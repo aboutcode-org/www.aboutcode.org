@@ -143,6 +143,55 @@ export default function ProjectGrids() {
 
     const isUsableValue = (value) => normalizeToArray(value).length > 0;
 
+    function CardLinks({ project }) {
+        const hasLinks =
+            isUsableValue(project.documentation_url) ||
+            isUsableValue(project.repository_url) ||
+            isUsableValue(project.service_url);
+
+        if (!hasLinks) {
+            return null;
+        }
+
+        return (
+            <div className={styles.cardLinks}>
+                {isUsableValue(project.documentation_url) && (
+                    <a
+                        href={project.documentation_url}
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        className={styles.cardLink}
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        Doc
+                    </a>
+                )}
+                {isUsableValue(project.repository_url) && (
+                    <a
+                        href={project.repository_url}
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        className={styles.cardLink}
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        Code
+                    </a>
+                )}
+                {isUsableValue(project.service_url) && (
+                    <a
+                        href={project.service_url}
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        className={styles.cardLink}
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        Demo
+                    </a>
+                )}
+            </div>
+        );
+    }
+
     return (
         <div className={styles.projectGridWrapper01}>
             {/* Iterate through each data source */}
@@ -171,13 +220,7 @@ export default function ProjectGrids() {
                                             <h4 className={styles.projectName}>
                                                 {project.name}
                                             </h4>
-                                            <div className={styles.logoWrapper}>
-                                                <img
-                                                    src='./img/link.svg'
-                                                    alt='logo'
-                                                    className={styles.logoImg}
-                                                />
-                                            </div>
+                                            <CardLinks project={project} />
                                         </div>
                                     </div>
 
@@ -197,41 +240,6 @@ export default function ProjectGrids() {
                                         </div>
                                     )}
 
-                                    <div className={styles.cardLinks}>
-                                        {isUsableValue(project.documentation_url) && (
-                                            <a
-                                                href={project.documentation_url}
-                                                target='_blank'
-                                                rel='noopener noreferrer'
-                                                className={styles.cardLink}
-                                                onClick={(e) => e.stopPropagation()}
-                                            >
-                                                Doc
-                                            </a>
-                                        )}
-                                        {isUsableValue(project.repository_url) && (
-                                            <a
-                                                href={project.repository_url}
-                                                target='_blank'
-                                                rel='noopener noreferrer'
-                                                className={styles.cardLink}
-                                                onClick={(e) => e.stopPropagation()}
-                                            >
-                                                Code
-                                            </a>
-                                        )}
-                                        {isUsableValue(project.service_url) && (
-                                            <a
-                                                href={project.service_url}
-                                                target='_blank'
-                                                rel='noopener noreferrer'
-                                                className={styles.cardLink}
-                                                onClick={(e) => e.stopPropagation()}
-                                            >
-                                                Demo
-                                            </a>
-                                        )}
-                                    </div>
                                 </div>
                             ))}
                         </div>

@@ -9,7 +9,7 @@
 }
 
 .sectionTitle {
-    color: #ff8800;
+    color: #2a6bc7;
     font-size: 1rem;
     margin-bottom: 0.75rem;
 }
@@ -52,12 +52,12 @@
 .cell:hover {
     transform: translateY(-2px);
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
-    border-color: #ff8800;
+    border-color: #2a6bc7;
     text-decoration: none;
 }
 
 .logoSlot {
-    height: 36px;
+    height: 44px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -68,6 +68,25 @@
     height: 32px;
     object-fit: contain;
     border-radius: 4px;
+}
+
+.logoLarge {
+    width: 42px;
+    height: 42px;
+}
+
+.logoWideLarge {
+    width: 62px;
+    height: 40px;
+}
+
+.ubuntuLogo {
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    border-radius: 50%;
+    background: #e95420;
+    box-sizing: border-box;
 }
 
 .cellLabel {
