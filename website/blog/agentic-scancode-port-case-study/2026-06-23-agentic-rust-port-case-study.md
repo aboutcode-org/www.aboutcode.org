@@ -13,6 +13,7 @@ hide_table_of_contents: false
 ScanCode detects licenses, copyrights, package dependencies, vulnerabilities, and a few more things in both source code and binary files. The use cases include license and security compliance and software supply chain management. It is the product of over a decade of careful design, architecture, and testing by an open source community of over 700 contributors, supporting more than 40,000 automated tests covering license detection alone, and over 90,000 automated tests overall.
 
 ![Agentic ScanCode port case study](agentic-scancode-port-case-study.svg)
+
 <!-- truncate -->
 
 The core module is ScanCode Toolkit, the industry-leading open source code scanning engine. In early 2026, an agentic LLM system ported ScanCode Toolkit, from Python to Rust, published the derived results under a name that infringed the ScanCode trademark, stripped copyright and license notices from both ScanCode and third-party code we vendored and carefully attributed, and started an outreach campaign, without ever engaging the AboutCode community.
@@ -45,9 +46,9 @@ This also demonstrates a core problem of AI-assisted software development. The a
 
 ScanCode is Apache-2.0 licensed. The Apache open source license is among the most permissive available, with minimal requirements:
 
-1. Retain the original NOTICE file.  
-2. Preserve license and copyright headers, including in modified files.  
-3. Note changes made to modified files.  
+1. Retain the original NOTICE file.
+2. Preserve license and copyright headers, including in modified files.
+3. Note changes made to modified files.
 4. Do not reuse the project name without permission.
 
 The port violated all four requirements. Requirements 1 and 4 were partially corrected after ScanCode maintainers reached out. Requirements 2 and 3 were not.

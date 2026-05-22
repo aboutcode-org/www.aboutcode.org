@@ -3,6 +3,11 @@ advisories:
   permalink: /advisories
   description: advisories tag description
 
+agent:
+  label: agent
+  permalink: /agent
+  description: agent tag description
+
 api:
   label: api
   permalink: /api
@@ -38,6 +43,11 @@ java:
   permalink: /java
   description: java tag description
 
+genai:
+  label: GenAI
+  permalink: /genai
+  description: GenAI tag description
+
 license clarity scoring:
   label: license clarity scoring
   permalink: /license clarity scoring
@@ -62,6 +72,16 @@ SCA automation:
   label: SCA automation
   permalink: /SCA automation
   description: SCA automation tag description
+
+rust:
+  label: Rust
+  permalink: /rust
+  description: Rust tag description
+
+scancode:
+  label: ScanCode
+  permalink: /scancode
+  description: ScanCode tag description
 
 vcio:
   label: vcio
