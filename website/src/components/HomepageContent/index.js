@@ -76,10 +76,10 @@ export default function HomepageContent() {
                     className={styles.sectionHeader}
                     style={{ marginBottom: '15px', marginTop: '15px' }}
                 >
-                    <h2>Supported ecosystems and languages</h2>
+                    <h2>Supported ecosystems, languages, and data sources</h2>
                 </div>
                 <div className={styles.sectionIntro}>
-                    <p>AboutCode tools support 50+ package ecosystems, programming languages,
+                    <p>AboutCode tools support 80+ package ecosystems, programming languages,
                     and vulnerability data sources, all identified using{' '}
                     <a href="https://packageurl.org">Package-URL (PURL)</a>.</p>
                 </div>
