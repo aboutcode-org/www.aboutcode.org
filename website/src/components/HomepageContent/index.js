@@ -44,7 +44,12 @@ export default function HomepageContent() {
                     <h2>Community and Adopters</h2>
                 </div>
                 <div className={styles.sectionIntro}>
-                    <p>AboutCode projects are supported by over 700 contributors and downloaded over 4 millions times per day.</p>
+                    <p>AboutCode is supported by over 700 contributors and
+                        downloaded over 4 millions times per day.
+                    </p>
+                    <p>Our open tools, data, and standards are used by
+                       leading open source projects and organizations worldwide.
+                    </p>
                 </div>
                 <AdoptersBanner />
             </section>

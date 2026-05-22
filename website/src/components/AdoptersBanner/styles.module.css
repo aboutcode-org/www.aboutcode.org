@@ -11,9 +11,9 @@
 .bannerTrack {
     display: flex;
     align-items: center;
-    gap: 2.5rem;
+    gap: 1rem;
     width: max-content;
-    animation: scroll 120s linear infinite;
+    animation: scroll 480s linear infinite;
 }
 
 .bannerTrack:hover {
