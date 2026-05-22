@@ -26,6 +26,7 @@ const siteConfig = {
         baseUrl: '/www.aboutcode.org/',
     },
     dreamhost: {
+        // url: 'https://www.aboutcode.org',
         url: 'https://aboutcode.org',
         baseUrl: '/',
     },
@@ -55,7 +56,7 @@ const config = {
     // Adapt the www.packageurl.org approach for the GH Pages vs. DreamHost baseUrl adjustment.
     url: siteConfig[deployTarget].url,
     baseUrl: siteConfig[deployTarget].baseUrl,
-    trailingSlash: false,
+    trailingSlash: true,
 
     onBrokenLinks: 'throw',
     // The following is deprecated, to be removed in v4, replaced with similar structure above under 'markdown:'.
@@ -192,3 +193,4 @@ const config = {
 };
 
 export default config;
+
