@@ -202,7 +202,7 @@ export default function ProjectGrids() {
                                     ) && (
                                         <div className={styles.modalLinks01}>
                                             <FieldLabelHelpCard
-                                                label='Documentation URL'
+                                                label='Doc'
                                                 help={
                                                     project_field_help.documentation_url
                                                 }
@@ -224,7 +224,7 @@ export default function ProjectGrids() {
                                     {isUsableValue(project.repository_url) && (
                                         <div className={styles.modalLinks01}>
                                             <FieldLabelHelpCard
-                                                label='Repository URL'
+                                                label='Code'
                                                 help={
                                                     project_field_help.repository_url
                                                 }
@@ -246,7 +246,7 @@ export default function ProjectGrids() {
                                     {isUsableValue(project.service_url) && (
                                         <div className={styles.modalLinks01}>
                                             <FieldLabelHelpCard
-                                                label='Service URL'
+                                                label='Demo'
                                                 help={
                                                     project_field_help.service_url
                                                 }
@@ -302,7 +302,7 @@ export default function ProjectGrids() {
                                     ) && (
                                         <div className={styles.modalLinks01}>
                                             <FieldLabelHelpCard
-                                                label='Repository URL'
+                                                label='Code'
                                                 help={
                                                     project_field_help.repository_url
                                                 }
@@ -325,7 +325,7 @@ export default function ProjectGrids() {
                                     ) && (
                                         <div className={styles.modalLinks01}>
                                             <FieldLabelHelpCard
-                                                label='Package Download URL(s)'
+                                                label='Download'
                                                 help={
                                                     project_field_help.package_download_url
                                                 }
@@ -360,7 +360,7 @@ export default function ProjectGrids() {
                                     ) && (
                                         <div className={styles.modalLinks01}>
                                             <FieldLabelHelpCard
-                                                label='Documentation URL'
+                                                label='Doc'
                                                 help={
                                                     project_field_help.documentation_url
                                                 }
@@ -385,7 +385,7 @@ export default function ProjectGrids() {
                                     ) && (
                                         <div className={styles.modalLinks01}>
                                             <FieldLabelHelpCard
-                                                label='Service URL'
+                                                label='Demo'
                                                 help={
                                                     project_field_help.service_url
                                                 }
