@@ -106,7 +106,7 @@ export default function HomepageContent() {
                     <h2>Supported ecosystems, languages, and data sources</h2>
                 </div>
                 <div className={styles.sectionIntro}>
-                    <p>AboutCode tools support 80+ package ecosystems, programming languages,
+                    <p>AboutCode tools support 70+ package ecosystems, programming languages,
                     and vulnerability data sources, all identified using{' '}
                     <a href="https://packageurl.org">Package-URL (PURL)</a>.</p>
                 </div>
