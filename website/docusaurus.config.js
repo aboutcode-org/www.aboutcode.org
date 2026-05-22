@@ -119,9 +119,20 @@ const config = {
                 style: 'dark',
                 items: [
                     {
-                        href: 'https://aboutcode.readthedocs.io',
+                        type: 'dropdown',
                         label: 'Documentation',
                         position: 'left',
+                        items: [
+                            {
+                                type: 'docSidebar',
+                                sidebarId: 'getting_started',
+                                label: 'Getting Started',
+                            },
+                            {
+                                href: 'https://aboutcode.readthedocs.io',
+                                label: 'Reference',
+                            },
+                        ],
                     },
                     { to: '/blog', label: 'Blog', position: 'left' },
                     {
@@ -131,6 +142,8 @@ const config = {
                         items: [
                             { to: '/docs/about/about-contribute', label: 'Contribute' },
                             { to: '/docs/about/about-meetings', label: 'Meetings' },
+                            { to: '/docs/about/about-news', label: 'News' },
+                            { to: '/docs/about/about-events', label: 'Events' },
                             {
                                 href: 'https://join.slack.com/t/aboutcode-org/shared_invite/zt-1paqwxccw-IuafuiAvYJFkTqGaZsC1og',
                                 label: 'Slack',
@@ -139,25 +152,6 @@ const config = {
                                 href: 'https://github.com/aboutcode-org',
                                 label: 'GitHub',
                             },
-                        ],
-                    },
-                    {
-                        type: 'dropdown',
-                        label: 'About',
-                        position: 'left',
-                        items: [
-                            {
-                                type: 'docSidebar',
-                                sidebarId: 'getting_started',
-                                label: 'Getting Started',
-                            },
-                            {
-                                type: 'docSidebar',
-                                sidebarId: 'about',
-                                label: 'About AboutCode',
-                            },
-                            { to: '/docs/about/about-news', label: 'News' },
-                            { to: '/docs/about/about-events', label: 'Events' },
                         ],
                     },
                     {

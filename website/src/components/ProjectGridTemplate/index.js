@@ -1,53 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import styles from './styles.module.css';
-import projects_application from '@site/src/data/projects-application.json';
-import projects_scancode from '@site/src/data/projects-scancode.json';
-import projects_package_url from '@site/src/data/projects-package-url.json';
-import projects_inspectors from '@site/src/data/projects-inspectors.json';
-import projects_libraries from '@site/src/data/projects-libraries.json';
 import project_field_help from '@site/src/data/project_field_help.json';
 
-export default function ProjectGrids() {
+export default function ProjectGrids({
+    projectSources = [],
+    showSectionTitles = true,
+}) {
     const [selectedProject, setSelectedProject] = useState(null);
-    const [isModalOpen, setIsModalOpen] = useState(false);
-
-    // list of data sources
-    const projectSources = [
-        {
-            id: 'application-projects',
-            title: 'Apps for the software supply chains',
-            data: projects_application,
-        },
-        {
-            id: 'scancode-projects',
-            title: 'Scan code with ScanCode',
-            data: projects_scancode,
-        },
-        {
-            id: 'purl-projects',
-            title: 'Data keyed by Package-URL (PURL)',
-            data: projects_package_url,
-        },
-        {
-            id: 'inspectors',
-            title: 'Inspectors for special purpose',
-            data: projects_inspectors,
-        },
-        {
-            id: 'libraries',
-            title: 'Libraries and building blocks',
-            data: projects_libraries,
-        },
-    ];
 
     const openModal = (project) => {
         setSelectedProject(project);
-        setIsModalOpen(true);
     };
 
     const closeModal = () => {
         setSelectedProject(null);
-        setIsModalOpen(false);
     };
 
     // Close modal on Escape key
@@ -198,13 +164,17 @@ export default function ProjectGrids() {
             {projectSources.map((source, sourceIdx) => (
                 <div key={sourceIdx} className={styles.gridSection}>
                     {/* Add a heading for each grid */}
-                    <div className={styles.sectionTitle}>
-                        <h2 id={source.id}>{source.title}</h2>
-                    </div>
+                    {showSectionTitles && (
+                        <div className={styles.sectionTitle}>
+                            <h2 id={source.id}>{source.title}</h2>
+                        </div>
+                    )}
 
-                    <div className={styles.sectionIntro}>
-                        {source.description}
-                    </div>
+                    {source.description && (
+                        <div className={styles.sectionIntro}>
+                            {source.description}
+                        </div>
+                    )}
 
                     <div className={styles.projectGridContainer01}>
                         <div className={styles.projectGrid}>
