@@ -1,9 +1,12 @@
 name: Build & Deploy Docusaurus Site
+
 on:
   push:
     branches: [ main ]
+
   pull_request:
     branches: [ main ]
+
   workflow_dispatch:
     inputs:
       target:
@@ -14,19 +17,24 @@ on:
         options:
           - gh
           - dreamhost
+
 permissions:
   contents: read
   pages: write
   id-token: write
+
 jobs:
   build:
     name: Build site
     runs-on: ubuntu-latest
+
     outputs:
       deploy_target: ${{ steps.set-target.outputs.target }}
+
     steps:
       - name: Checkout repo
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6.0.2
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5  # v4.3.1
+
       - name: Set deploy target
         id: set-target
         run: |
@@ -35,28 +43,33 @@ jobs:
           else
             echo "target=gh" >> $GITHUB_OUTPUT
           fi
+
       - name: Setup Node
-        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f  # v6.3.0
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020  # v4.4.0
         with:
-          node-version: 24
+          node-version: 20
           cache: npm
           cache-dependency-path: website/package-lock.json
+
       - name: Install dependencies
         run: |
           cd website
           npm ci
+
       - name: Build Docusaurus site
         env:
           DEPLOY_TARGET: ${{ steps.set-target.outputs.target }}
         run: |
           cd website
           npm run build
+
       - name: Upload build artifact
-        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f  # v7.0.0
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02  # v4.6.2
         with:
           name: docusaurus-build
           path: website/build
-          include-hidden-files: true
+
+
   deploy-gh-pages:
     name: Deploy to GitHub Pages
     needs: build
@@ -64,20 +77,26 @@ jobs:
       needs.build.outputs.deploy_target == 'gh' &&
       github.event_name != 'pull_request'
     runs-on: ubuntu-latest
+
     environment:
         name: github-pages
+
     steps:
       - name: Download build artifact
-        uses: actions/download-artifact@70fc10c777b56b1aba04a2c2e9e26d02b34f4d69  # v7.0.0
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093  # v4.3.0
         with:
           name: docusaurus-build
           path: build
+
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9  # v5.0.0
+        uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b  # v4.0.0
         with:
           path: build
+
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@cd2ce8fcbc39b97be8ca5fce6e763baed58fa128  # v5.0.0
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e #v4.0.5
+
+
   deploy-dreamhost:
     name: Deploy to DreamHost
     needs: build
@@ -85,19 +104,22 @@ jobs:
       needs.build.outputs.deploy_target == 'dreamhost' &&
       github.event_name != 'pull_request'
     runs-on: ubuntu-latest
+
     steps:
       - name: Download build artifact
-        uses: actions/download-artifact@70fc10c777b56b1aba04a2c2e9e26d02b34f4d69  # v7.0.0
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093  # v4.3.0
         with:
           name: docusaurus-build
           path: build
+
       - name: Setup SSH
         run: |
           mkdir -p ~/.ssh
           echo "${{ secrets.DREAMHOST_SSH_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -H ${{ secrets.DREAMHOST_HOST }} >> ~/.ssh/known_hosts
+
       - name: Deploy via rsync
         run: |
-          rsync -avz build/ \
+          rsync -avz --delete build/ \
             ${{ secrets.DREAMHOST_USER }}@${{ secrets.DREAMHOST_HOST }}:${{ secrets.DREAMHOST_PATH }}/
