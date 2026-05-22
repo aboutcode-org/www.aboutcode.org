@@ -68,7 +68,7 @@ jobs:
         name: github-pages
     steps:
       - name: Download build artifact
-        uses: actions/download-artifact@70fc10c777b56b1aba04a2c2e9e26d02b34f4d69  # v7.0.0
+        uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131  # v7.0.0
         with:
           name: docusaurus-build
           path: build
@@ -87,7 +87,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download build artifact
-        uses: actions/download-artifact@70fc10c777b56b1aba04a2c2e9e26d02b34f4d69  # v7.0.0
+        uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131  # v7.0.0
         with:
           name: docusaurus-build
           path: build
