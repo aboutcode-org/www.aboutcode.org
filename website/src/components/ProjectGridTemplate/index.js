@@ -197,73 +197,41 @@ export default function ProjectGrids() {
                                         </div>
                                     )}
 
-                                    {isUsableValue(
-                                        project.documentation_url,
-                                    ) && (
-                                        <div className={styles.modalLinks01}>
-                                            <FieldLabelHelpCard
-                                                label='Doc'
-                                                help={
-                                                    project_field_help.documentation_url
-                                                }
-                                            />
+                                    <div className={styles.cardLinks}>
+                                        {isUsableValue(project.documentation_url) && (
                                             <a
                                                 href={project.documentation_url}
                                                 target='_blank'
                                                 rel='noopener noreferrer'
-                                                className={styles.modalLinkUrl}
-                                                onClick={(e) =>
-                                                    e.stopPropagation()
-                                                }
+                                                className={styles.cardLink}
+                                                onClick={(e) => e.stopPropagation()}
                                             >
-                                                {project.documentation_url}
+                                                Doc
                                             </a>
-                                        </div>
-                                    )}
-
-                                    {isUsableValue(project.repository_url) && (
-                                        <div className={styles.modalLinks01}>
-                                            <FieldLabelHelpCard
-                                                label='Code'
-                                                help={
-                                                    project_field_help.repository_url
-                                                }
-                                            />
+                                        )}
+                                        {isUsableValue(project.repository_url) && (
                                             <a
                                                 href={project.repository_url}
                                                 target='_blank'
                                                 rel='noopener noreferrer'
-                                                className={styles.modalLinkUrl}
-                                                onClick={(e) =>
-                                                    e.stopPropagation()
-                                                }
+                                                className={styles.cardLink}
+                                                onClick={(e) => e.stopPropagation()}
                                             >
-                                                {project.repository_url}
+                                                Code
                                             </a>
-                                        </div>
-                                    )}
-
-                                    {isUsableValue(project.service_url) && (
-                                        <div className={styles.modalLinks01}>
-                                            <FieldLabelHelpCard
-                                                label='Demo'
-                                                help={
-                                                    project_field_help.service_url
-                                                }
-                                            />
+                                        )}
+                                        {isUsableValue(project.service_url) && (
                                             <a
                                                 href={project.service_url}
                                                 target='_blank'
                                                 rel='noopener noreferrer'
-                                                className={styles.modalLinkUrl}
-                                                onClick={(e) =>
-                                                    e.stopPropagation()
-                                                }
+                                                className={styles.cardLink}
+                                                onClick={(e) => e.stopPropagation()}
                                             >
-                                                {project.service_url}
+                                                Demo
                                             </a>
-                                        </div>
-                                    )}
+                                        )}
+                                    </div>
                                 </div>
                             ))}
                         </div>

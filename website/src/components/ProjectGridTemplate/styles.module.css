@@ -443,6 +443,26 @@
 }
 
 /* Handle the long URLs. */
+.cardLinks {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid #e0e6ef;
+}
+
+.cardLink {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #2a6bc7;
+    text-decoration: none;
+}
+
+.cardLink:hover {
+    text-decoration: underline;
+    color: #ff8800;
+}
+
 .modalLinkUrl {
     word-break: break-all;
     overflow-wrap: anywhere;
