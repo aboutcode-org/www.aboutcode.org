@@ -1,6 +1,21 @@
 Options -MultiViews
+
 RewriteEngine On
 RewriteBase /
+
+# =========================================================
+# Archived project redirects
+# =========================================================
+
+# Redirect exact project roots and all subpaths
+RewriteRule ^dejacode/?(.*)?$ https://aboutcode.org/#application-projects [R=302,L,NE]
+RewriteRule ^scancode/?(.*)?$ https://aboutcode.org/#application-projects [R=302,L,NE]
+RewriteRule ^vulnerablecode/?(.*)?$ https://aboutcode.org/#application-projects [R=302,L,NE]
+
+# =========================================================
+# Docusaurus SPA fallback
+# =========================================================
+
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.html [L]
