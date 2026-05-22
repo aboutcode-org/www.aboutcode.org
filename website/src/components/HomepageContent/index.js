@@ -1,14 +1,15 @@
 import React from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import HomeIntro from './HomeIntro.mdx';
-import ProjectOverview from './ProjectOverview.md';
 import StandardsOverview from './StandardsOverview.md';
+import Adopters from './Adopters.md';
+import ProjectOverview from './ProjectOverview.md';
 import Supporters from './Supporters.md';
+import CapabilitiesGrid from '@site/src/components/CapabilitiesGrid';
 import ProjectGridTemplate from '@site/src/components/ProjectGridTemplate';
 import styles from './styles.module.css';
 
 export default function HomepageContent() {
-    // Get baseUrl from Docusaurus context
     const { siteConfig } = useDocusaurusContext();
     const { baseUrl } = siteConfig;
 
@@ -24,6 +25,11 @@ export default function HomepageContent() {
                     <HomeIntro />
                 </div>
             </section>
+
+            <section className={styles.sectionContainer}>
+                <CapabilitiesGrid />
+            </section>
+
             <section className={styles.sectionContainer}>
                 <div
                     className={styles.sectionHeader}
@@ -31,7 +37,6 @@ export default function HomepageContent() {
                 >
                     <h2>Software supply chain standards</h2>
                 </div>
-
                 <div className={styles.sectionIntro}>
                     <StandardsOverview />
                 </div>
@@ -42,13 +47,23 @@ export default function HomepageContent() {
                     className={styles.sectionHeader}
                     style={{ marginBottom: '15px', marginTop: '15px' }}
                 >
-                    <h2>AboutCode Projects</h2>
+                    <h2>Adopters</h2>
                 </div>
+                <div className={styles.sectionIntro}>
+                    <Adopters />
+                </div>
+            </section>
 
+            <section className={styles.sectionContainer}>
+                <div
+                    className={styles.sectionHeader}
+                    style={{ marginBottom: '15px', marginTop: '15px' }}
+                >
+                    <h2>Projects</h2>
+                </div>
                 <div className={styles.sectionIntro}>
                     <ProjectOverview />
                 </div>
-
                 <ProjectGridTemplate />
             </section>
 
@@ -57,14 +72,13 @@ export default function HomepageContent() {
                     className={styles.sectionHeader}
                     style={{ marginBottom: '15px', marginTop: '30px' }}
                 >
-                    <h1>Supporters</h1>
+                    <h2>Supporters</h2>
                 </div>
                 <div className={styles.sectionIntro}>
                     <Supporters />
                 </div>
             </section>
 
-            {/* temp dummy div to create space above footer */}
             <div style={{ marginBottom: '50px' }}></div>
         </main>
     );

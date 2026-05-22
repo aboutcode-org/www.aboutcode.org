@@ -1,0 +1,48 @@
+import React from 'react';
+import styles from './styles.module.css';
+
+const capabilities = [
+    {
+        title: 'Open Reference Data',
+        description: 'Curated datasets for 2,400+ licenses, millions of packages, and aggregated vulnerability data from dozens of public sources.',
+        link: '/docs/getting_started/getting_started-software-identification/',
+    },
+    {
+        title: 'License Detection',
+        description: 'Detect licenses in any codebase, whether open source, proprietary, or in between. Powers dozens of open source and commercial SCA tools.',
+        link: '/docs/getting_started/getting_started-compliance/',
+    },
+    {
+        title: 'Code Matching and Binary Analysis',
+        description: 'Identify code origin at package, file, and snippet level using PurlDB fingerprints. Match deployed binaries, containers, and firmware back to source packages.',
+        link: '/docs/getting_started/getting_started-software-identification/',
+    },
+    {
+        title: 'Dependency Management',
+        description: 'Resolve direct and transitive dependencies across package ecosystems with ScanCode pipelines and dedicated inspectors.',
+        link: '/docs/getting_started/getting_started-software-identification/',
+    },
+    {
+        title: 'Vulnerability Management',
+        description: 'Aggregate vulnerability data, map to affected packages, identify fixes, and score exploitability and risk for triage.',
+        link: '/docs/getting_started/getting_started-security/',
+    },
+    {
+        title: 'SBOMs and Compliance',
+        description: 'Generate and manage SBOMs in CycloneDX and SPDX. Meet CRA requirements with automated VEX reporting and vulnerability tracking.',
+        link: '/docs/getting_started/getting_started-cravex/',
+    },
+];
+
+export default function CapabilitiesGrid() {
+    return (
+        <div className={styles.grid}>
+            {capabilities.map((cap) => (
+                <a key={cap.title} href={cap.link} className={styles.card}>
+                    <h3 className={styles.cardTitle}>{cap.title}</h3>
+                    <p className={styles.cardDescription}>{cap.description}</p>
+                </a>
+            ))}
+        </div>
+    );
+}

@@ -121,33 +121,50 @@ const config = {
                 style: 'dark',
                 items: [
                     {
-                        type: 'docSidebar',
-                        sidebarId: 'getting_started',
-                        position: 'left',
-                        label: 'Getting Started',
-                    },
-                    {
-                        type: 'docSidebar',
-                        sidebarId: 'about',
-                        position: 'left',
-                        label: 'About',
-                    },
-                    { to: '/docs/about/about-contribute', label: 'Contribute', position: 'left' },
-                    { to: '/docs/about/about-meetings', label: 'Meetings', position: 'left' },
-                    { to: '/blog', label: 'Blog', position: 'left' },
-                    {
                         href: 'https://aboutcode.readthedocs.io',
                         label: 'Documentation',
                         position: 'left',
                     },
+                    { to: '/blog', label: 'Blog', position: 'left' },
                     {
-                        href: 'https://github.com/aboutcode-org/www.aboutcode.org',
-                        label: 'GitHub',
-                        position: 'right',
+                        type: 'dropdown',
+                        label: 'Community',
+                        position: 'left',
+                        items: [
+                            { to: '/docs/about/about-contribute', label: 'Contribute' },
+                            { to: '/docs/about/about-meetings', label: 'Meetings' },
+                            {
+                                href: 'https://join.slack.com/t/aboutcode-org/shared_invite/zt-1paqwxccw-IuafuiAvYJFkTqGaZsC1og',
+                                label: 'Slack',
+                            },
+                            {
+                                href: 'https://github.com/aboutcode-org',
+                                label: 'GitHub',
+                            },
+                        ],
                     },
                     {
-                        href: 'https://join.slack.com/t/aboutcode-org/shared_invite/zt-1paqwxccw-IuafuiAvYJFkTqGaZsC1og',
-                        label: 'Slack',
+                        type: 'dropdown',
+                        label: 'About',
+                        position: 'left',
+                        items: [
+                            {
+                                type: 'docSidebar',
+                                sidebarId: 'getting_started',
+                                label: 'Getting Started',
+                            },
+                            {
+                                type: 'docSidebar',
+                                sidebarId: 'about',
+                                label: 'About AboutCode',
+                            },
+                            { to: '/docs/about/about-news', label: 'News' },
+                            { to: '/docs/about/about-events', label: 'Events' },
+                        ],
+                    },
+                    {
+                        href: 'https://github.com/aboutcode-org',
+                        label: 'GitHub',
                         position: 'right',
                     },
                 ],

@@ -15,38 +15,28 @@ export default function ProjectGrids() {
     const projectSources = [
         {
             id: 'application-projects',
-            title: 'Application Projects',
+            title: 'Apps for the software supply chains',
             data: projects_application,
-            description:
-                'These projects offer an application that you can install in the cloud or a local environment.',
         },
         {
             id: 'scancode-projects',
-            title: 'ScanCode projects',
+            title: 'Scan code with ScanCode',
             data: projects_scancode,
-            description:
-                'These projects are components or extensions of ScanCode.',
         },
         {
             id: 'purl-projects',
-            title: 'Package-URL (PURL) projects',
+            title: 'Data keyed by Package-URL (PURL)',
             data: projects_package_url,
-            description:
-                'These projects provide tools and data to support the use of the PURL (Package-URL) or VERS (Version Range Specifier) specifications.',
         },
         {
             id: 'inspectors',
-            title: 'Inspectors',
+            title: 'Inspectors for special purpose',
             data: projects_inspectors,
-            description:
-                'AboutCode Inspectors are special-purpose analysis tools. You can run them as a ScanCode Toolkit plugin, as steps in a ScanCode.io pipeline, or from the command line.',
         },
         {
             id: 'libraries',
-            title: 'Libraries',
+            title: 'Libraries and building blocks',
             data: projects_libraries,
-            description:
-                'AboutCode libraries are key building blocks for the AboutCode software and data stack - they have also been incorporated into other major FOSS projects and are available for use by anyone.',
         },
     ];
 
