@@ -2,6 +2,7 @@ import React from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import HomeIntro from './HomeIntro.mdx';
 import ProjectOverview from './ProjectOverview.md';
+import StandardsOverview from './StandardsOverview.md';
 import Supporters from './Supporters.md';
 import ProjectGridTemplate from '@site/src/components/ProjectGridTemplate';
 import styles from './styles.module.css';
@@ -23,13 +24,27 @@ export default function HomepageContent() {
                     <HomeIntro />
                 </div>
             </section>
+            <section className={styles.sectionContainer}>
+                <div
+                    className={styles.sectionHeader}
+                    style={{ marginBottom: '15px', marginTop: '15px' }}
+                >
+                    <h2>Software supply chain standards</h2>
+                </div>
+
+                <div className={styles.sectionIntro}>
+                    <StandardsOverview />
+                </div>
+
+                <ProjectGridTemplate />
+            </section>
 
             <section className={styles.sectionContainer}>
                 <div
                     className={styles.sectionHeader}
                     style={{ marginBottom: '15px', marginTop: '15px' }}
                 >
-                    <h2>AboutCode Projects Overview</h2>
+                    <h2>AboutCode Projects</h2>
                 </div>
 
                 <div className={styles.sectionIntro}>
