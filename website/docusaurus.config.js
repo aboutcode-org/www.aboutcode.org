@@ -26,7 +26,6 @@ const siteConfig = {
         baseUrl: '/www.aboutcode.org/',
     },
     dreamhost: {
-        // url: 'https://www.aboutcode.org',
         url: 'https://aboutcode.org',
         baseUrl: '/',
     },
@@ -120,7 +119,6 @@ const config = {
                 },
                 style: 'dark',
                 items: [
-                    { to: '/', label: 'Home', position: 'left', exact: true },
                     {
                         type: 'docSidebar',
                         sidebarId: 'getting_started',
@@ -133,7 +131,14 @@ const config = {
                         position: 'left',
                         label: 'About',
                     },
+                    { to: '/docs/about/about-contribute', label: 'Contribute', position: 'left' },
+                    { to: '/docs/about/about-meetings', label: 'Meetings', position: 'left' },
                     { to: '/blog', label: 'Blog', position: 'left' },
+                    {
+                        href: 'https://aboutcode.readthedocs.io',
+                        label: 'Documentation',
+                        position: 'left',
+                    },
                     {
                         href: 'https://github.com/aboutcode-org/www.aboutcode.org',
                         label: 'GitHub',
