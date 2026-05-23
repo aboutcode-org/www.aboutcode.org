@@ -1,7 +1,7 @@
 [
     {
         "group": "libraries",
-        "name": "ag-gen-code-search",
+        "name": "ai-gen-code-search",
         "description": ["Open source tools to find code that may have been generated using LLMs and GPT tools."],
         "repository_url": "https://github.com/aboutcode-org/ai-gen-code-search",
         "documentation_url": "https://ai-gen-code-search.readthedocs.io/en/stable/",

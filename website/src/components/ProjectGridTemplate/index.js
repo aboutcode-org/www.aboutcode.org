@@ -1,63 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import styles from './styles.module.css';
-import projects_application from '@site/src/data/projects-application.json';
-import projects_scancode from '@site/src/data/projects-scancode.json';
-import projects_package_url from '@site/src/data/projects-package-url.json';
-import projects_inspectors from '@site/src/data/projects-inspectors.json';
-import projects_libraries from '@site/src/data/projects-libraries.json';
 import project_field_help from '@site/src/data/project_field_help.json';
 
-export default function ProjectGrids() {
+export default function ProjectGrids({
+    projectSources = [],
+    showSectionTitles = true,
+}) {
     const [selectedProject, setSelectedProject] = useState(null);
-    const [isModalOpen, setIsModalOpen] = useState(false);
-
-    // list of data sources
-    const projectSources = [
-        {
-            id: 'application-projects',
-            title: 'Application Projects',
-            data: projects_application,
-            description:
-                'These projects offer an application that you can install in the cloud or a local environment.',
-        },
-        {
-            id: 'scancode-projects',
-            title: 'ScanCode projects',
-            data: projects_scancode,
-            description:
-                'These projects are components or extensions of ScanCode.',
-        },
-        {
-            id: 'purl-projects',
-            title: 'Package-URL (PURL) projects',
-            data: projects_package_url,
-            description:
-                'These projects provide tools and data to support the use of the PURL (Package-URL) or VERS (Version Range Specifier) specifications.',
-        },
-        {
-            id: 'inspectors',
-            title: 'Inspectors',
-            data: projects_inspectors,
-            description:
-                'AboutCode Inspectors are special-purpose analysis tools. You can run them as a ScanCode Toolkit plugin, as steps in a ScanCode.io pipeline, or from the command line.',
-        },
-        {
-            id: 'libraries',
-            title: 'Libraries',
-            data: projects_libraries,
-            description:
-                'AboutCode libraries are key building blocks for the AboutCode software and data stack - they have also been incorporated into other major FOSS projects and are available for use by anyone.',
-        },
-    ];
 
     const openModal = (project) => {
         setSelectedProject(project);
-        setIsModalOpen(true);
     };
 
     const closeModal = () => {
         setSelectedProject(null);
-        setIsModalOpen(false);
     };
 
     // Close modal on Escape key
@@ -153,19 +109,72 @@ export default function ProjectGrids() {
 
     const isUsableValue = (value) => normalizeToArray(value).length > 0;
 
+    function CardLinks({ project }) {
+        const hasLinks =
+            isUsableValue(project.documentation_url) ||
+            isUsableValue(project.repository_url) ||
+            isUsableValue(project.service_url);
+
+        if (!hasLinks) {
+            return null;
+        }
+
+        return (
+            <div className={styles.cardLinks}>
+                {isUsableValue(project.documentation_url) && (
+                    <a
+                        href={project.documentation_url}
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        className={styles.cardLink}
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        Doc
+                    </a>
+                )}
+                {isUsableValue(project.repository_url) && (
+                    <a
+                        href={project.repository_url}
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        className={styles.cardLink}
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        Code
+                    </a>
+                )}
+                {isUsableValue(project.service_url) && (
+                    <a
+                        href={project.service_url}
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        className={styles.cardLink}
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        Demo
+                    </a>
+                )}
+            </div>
+        );
+    }
+
     return (
         <div className={styles.projectGridWrapper01}>
             {/* Iterate through each data source */}
             {projectSources.map((source, sourceIdx) => (
                 <div key={sourceIdx} className={styles.gridSection}>
                     {/* Add a heading for each grid */}
-                    <div className={styles.sectionTitle}>
-                        <h2 id={source.id}>{source.title}</h2>
-                    </div>
+                    {showSectionTitles && (
+                        <div className={styles.sectionTitle}>
+                            <h2 id={source.id}>{source.title}</h2>
+                        </div>
+                    )}
 
-                    <div className={styles.sectionIntro}>
-                        {source.description}
-                    </div>
+                    {source.description && (
+                        <div className={styles.sectionIntro}>
+                            {source.description}
+                        </div>
+                    )}
 
                     <div className={styles.projectGridContainer01}>
                         <div className={styles.projectGrid}>
@@ -181,13 +190,7 @@ export default function ProjectGrids() {
                                             <h4 className={styles.projectName}>
                                                 {project.name}
                                             </h4>
-                                            <div className={styles.logoWrapper}>
-                                                <img
-                                                    src='./img/link.svg'
-                                                    alt='logo'
-                                                    className={styles.logoImg}
-                                                />
-                                            </div>
+                                            <CardLinks project={project} />
                                         </div>
                                     </div>
 
@@ -207,73 +210,6 @@ export default function ProjectGrids() {
                                         </div>
                                     )}
 
-                                    {isUsableValue(
-                                        project.documentation_url,
-                                    ) && (
-                                        <div className={styles.modalLinks01}>
-                                            <FieldLabelHelpCard
-                                                label='Documentation URL'
-                                                help={
-                                                    project_field_help.documentation_url
-                                                }
-                                            />
-                                            <a
-                                                href={project.documentation_url}
-                                                target='_blank'
-                                                rel='noopener noreferrer'
-                                                className={styles.modalLinkUrl}
-                                                onClick={(e) =>
-                                                    e.stopPropagation()
-                                                }
-                                            >
-                                                {project.documentation_url}
-                                            </a>
-                                        </div>
-                                    )}
-
-                                    {isUsableValue(project.repository_url) && (
-                                        <div className={styles.modalLinks01}>
-                                            <FieldLabelHelpCard
-                                                label='Repository URL'
-                                                help={
-                                                    project_field_help.repository_url
-                                                }
-                                            />
-                                            <a
-                                                href={project.repository_url}
-                                                target='_blank'
-                                                rel='noopener noreferrer'
-                                                className={styles.modalLinkUrl}
-                                                onClick={(e) =>
-                                                    e.stopPropagation()
-                                                }
-                                            >
-                                                {project.repository_url}
-                                            </a>
-                                        </div>
-                                    )}
-
-                                    {isUsableValue(project.service_url) && (
-                                        <div className={styles.modalLinks01}>
-                                            <FieldLabelHelpCard
-                                                label='Service URL'
-                                                help={
-                                                    project_field_help.service_url
-                                                }
-                                            />
-                                            <a
-                                                href={project.service_url}
-                                                target='_blank'
-                                                rel='noopener noreferrer'
-                                                className={styles.modalLinkUrl}
-                                                onClick={(e) =>
-                                                    e.stopPropagation()
-                                                }
-                                            >
-                                                {project.service_url}
-                                            </a>
-                                        </div>
-                                    )}
                                 </div>
                             ))}
                         </div>
@@ -312,7 +248,7 @@ export default function ProjectGrids() {
                                     ) && (
                                         <div className={styles.modalLinks01}>
                                             <FieldLabelHelpCard
-                                                label='Repository URL'
+                                                label='Code'
                                                 help={
                                                     project_field_help.repository_url
                                                 }
@@ -335,7 +271,7 @@ export default function ProjectGrids() {
                                     ) && (
                                         <div className={styles.modalLinks01}>
                                             <FieldLabelHelpCard
-                                                label='Package Download URL(s)'
+                                                label='Download'
                                                 help={
                                                     project_field_help.package_download_url
                                                 }
@@ -370,7 +306,7 @@ export default function ProjectGrids() {
                                     ) && (
                                         <div className={styles.modalLinks01}>
                                             <FieldLabelHelpCard
-                                                label='Documentation URL'
+                                                label='Doc'
                                                 help={
                                                     project_field_help.documentation_url
                                                 }
@@ -395,7 +331,7 @@ export default function ProjectGrids() {
                                     ) && (
                                         <div className={styles.modalLinks01}>
                                             <FieldLabelHelpCard
-                                                label='Service URL'
+                                                label='Demo'
                                                 help={
                                                     project_field_help.service_url
                                                 }

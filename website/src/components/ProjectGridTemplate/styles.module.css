@@ -443,6 +443,29 @@
 }
 
 /* Handle the long URLs. */
+.cardLinks {
+    display: flex;
+    flex-shrink: 0;
+    gap: 0.75rem;
+    justify-content: flex-end;
+    margin-left: auto;
+    padding-top: 0.1rem;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.cardLink {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #2a6bc7;
+    text-decoration: none;
+}
+
+.cardLink:hover {
+    text-decoration: underline;
+    color: #2a6bc7;
+}
+
 .modalLinkUrl {
     word-break: break-all;
     overflow-wrap: anywhere;
@@ -486,30 +509,19 @@
 }
 
 .projectName {
+    flex: 1;
+    margin: 0;
+    min-width: 0;
     overflow-wrap: break-word;
     word-break: normal;
 }
 
 .topRow {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     gap: 0.5rem;
-}
-
-.logoWrapper {
-    flex-shrink: 0; /* logo never shrinks */
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-}
-
-.logoImg {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
+    margin-bottom: 0.75rem;
 }
 
 .wordWrap {
@@ -519,15 +531,13 @@
 }
 
 .sectionTitle h2 {
-    color: #992600;
+    color: #2a6bc7;
     margin-top: 20px;
     margin-bottom: 20px;
-
-    /* 2026-01-25 Sunday 15:32:00.  Scroll so section is visible! Adjust to navbar height. */
     scroll-margin-top: 5rem;
 }
 [data-theme='dark'] .sectionTitle h2 {
-    color: #a0a0a0;
+    color: #2a6bc7;
 }
 
 .sectionIntro {
@@ -535,7 +545,6 @@
 }
 
 .gridSection {
-    border-bottom: solid 1px #000000;
     margin-bottom: 30px;
     padding-bottom: 30px;
 }

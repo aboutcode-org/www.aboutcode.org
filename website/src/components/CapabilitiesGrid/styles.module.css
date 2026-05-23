@@ -1,0 +1,41 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.25rem;
+    max-width: 1200px;
+    margin: 1.5rem auto;
+    padding: 0;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem;
+    border: 1px solid #e0e6ef;
+    border-radius: 8px;
+    background: var(--ifm-background-surface-color);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-color: #2a6bc7;
+    text-decoration: none;
+    color: inherit;
+}
+
+.cardTitle {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    color: #2a6bc7;
+}
+
+.cardDescription {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: var(--ifm-font-color-base);
+}

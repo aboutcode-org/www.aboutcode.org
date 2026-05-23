@@ -18,6 +18,7 @@ const sidebars = {
         'getting_started/getting_started-security',
         'getting_started/getting_started-compliance',
         'getting_started/getting_started-cravex',
+        'getting_started/getting_started-standards',
     ],
 };
 

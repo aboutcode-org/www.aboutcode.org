@@ -39,7 +39,7 @@ const currentBaseUrl = siteConfig[deployTarget].baseUrl
 const config = {
     title: 'AboutCode.org',
     tagline: '[Tagline . . . ?]',
-    favicon: 'img/nexB_icon.png',
+    favicon: 'img/favicon.ico',
 
     markdown: {
         format: 'detect', // Auto-detects: .md = plain Markdown (CommonMark), .mdx = MDX
@@ -56,7 +56,7 @@ const config = {
     // Adapt the www.packageurl.org approach for the GH Pages vs. DreamHost baseUrl adjustment.
     url: siteConfig[deployTarget].url,
     baseUrl: siteConfig[deployTarget].baseUrl,
-    trailingSlash: false,
+    trailingSlash: true,
 
     onBrokenLinks: 'throw',
     // The following is deprecated, to be removed in v4, replaced with similar structure above under 'markdown:'.
@@ -108,40 +108,55 @@ const config = {
     themeConfig:
         /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         ({
-            // Replace with your project's social card
-            // image: 'img/docusaurus-social-card.jpg',
             // colorMode: {
             //     respectPrefersColorScheme: true,
             // },
             navbar: {
                 logo: {
                     alt: 'www.aboutcode.org Logo',
-                    src: 'img/AboutCode-logo-stackedv3.png',
+                    src: 'img/AboutCode.svg',
                 },
                 style: 'dark',
                 items: [
-                    { to: '/', label: 'Home', position: 'left', exact: true },
                     {
-                        type: 'docSidebar',
-                        sidebarId: 'getting_started',
+                        type: 'dropdown',
+                        label: 'Documentation',
                         position: 'left',
-                        label: 'Getting Started',
-                    },
-                    {
-                        type: 'docSidebar',
-                        sidebarId: 'about',
-                        position: 'left',
-                        label: 'About',
+                        items: [
+                            {
+                                type: 'docSidebar',
+                                sidebarId: 'getting_started',
+                                label: 'Getting Started',
+                            },
+                            {
+                                href: 'https://aboutcode.readthedocs.io',
+                                label: 'Reference',
+                            },
+                        ],
                     },
                     { to: '/blog', label: 'Blog', position: 'left' },
                     {
-                        href: 'https://github.com/aboutcode-org/www.aboutcode.org',
-                        label: 'GitHub',
-                        position: 'right',
+                        type: 'dropdown',
+                        label: 'Community',
+                        position: 'left',
+                        items: [
+                            { to: '/docs/about/about-contribute', label: 'Contribute' },
+                            { to: '/docs/about/about-meetings', label: 'Meetings' },
+                            { to: '/docs/about/about-news', label: 'News' },
+                            { to: '/docs/about/about-events', label: 'Events' },
+                            {
+                                href: 'https://join.slack.com/t/aboutcode-org/shared_invite/zt-1paqwxccw-IuafuiAvYJFkTqGaZsC1og',
+                                label: 'Slack',
+                            },
+                            {
+                                href: 'https://github.com/aboutcode-org',
+                                label: 'GitHub',
+                            },
+                        ],
                     },
                     {
-                        href: 'https://join.slack.com/t/aboutcode-org/shared_invite/zt-1paqwxccw-IuafuiAvYJFkTqGaZsC1og',
-                        label: 'Slack',
+                        href: 'https://github.com/aboutcode-org',
+                        label: 'GitHub',
                         position: 'right',
                     },
                 ],

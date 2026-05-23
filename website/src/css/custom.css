@@ -6,13 +6,18 @@
     margin-right: 0;
 }
 
+.navbar__logo img {
+    height: 32px;
+    width: auto;
+}
+
 /* Consolidate navbar and sidebar CSS. */
 .navbar--dark {
-    --ifm-navbar-background-color: #375298;
+    --ifm-navbar-background-color: #2b3a5e;
 }
 /* navbar (full width) */
 .navbar {
-    background-color: #375298;
+    background-color: #2b3a5e;
 }
 .navbar .navbar__link {
     color: #ffffff;
@@ -45,14 +50,14 @@
 @media (max-width: 996px) {
     .menu__link {
         color: #ffffff;
-        background-color: #375298;
+        background-color: #2b3a5e;
         font-weight: 400;
     }
     .menu__link:hover,
     .menu__link--active {
         color: #ffffff;
         text-decoration: underline;
-        background-color: #375298;
+        background-color: #2b3a5e;
     }
 
     /* sidebar */
@@ -82,5 +87,5 @@
 }
 
 .footer {
-    background-color: #101010;
+    background-color: #2b3a5e;
 }
