@@ -17,7 +17,7 @@
 .grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
     gap: 0.5rem;
     background: #f7f7f7;
     border-radius: 8px;
