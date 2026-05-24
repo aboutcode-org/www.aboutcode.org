@@ -13,7 +13,7 @@
     align-items: center;
     gap: 1rem;
     width: max-content;
-    animation: scroll 480s linear infinite;
+    animation: scroll 300s linear infinite;
 }
 
 .bannerTrack:hover {
