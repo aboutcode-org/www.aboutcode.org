@@ -3,6 +3,7 @@ import styles from './styles.module.css';
 
 const withLogo = [
     { name: 'Apache Software Foundation', url: 'https://www.apache.org', logo: 'img/logos/apache.svg' },
+    { name: 'BANG', url: 'https://github.com/armijnhemel/binaryanalysis-ng', logo: 'img/logos/bang.png', showName: true, title: 'Binary Analysis Next Generation (BANG)' },
     { name: 'CSAF', url: 'https://csaf.io', logo: 'img/logos/csaf.png' },
     { name: 'CVE', url: 'https://www.cve.org', logo: 'img/logos/cve.svg' },
     { name: 'ClearlyDefined', url: 'https://clearlydefined.io', logo: 'img/logos/clearlydefined.png' },
@@ -13,6 +14,7 @@ const withLogo = [
     { name: 'Erlang Ecosystem Foundation', url: 'https://erlef.org', logo: 'img/logos/erlang-ecosystem.png' },
     { name: 'Ecosyste.ms', url: 'https://ecosyste.ms', logo: 'img/logos/ecosystems.png' },
     { name: 'FOSSLight', url: 'https://fosslight.org', logo: 'img/logos/fosslight.png' },
+    { name: 'FSF', url: 'https://www.fsf.org', logo: 'img/logos/fsf.png' },
     { name: 'FSFE', url: 'https://fsfe.org', logo: 'img/logos/fsfe.svg' },
     { name: 'FOSSology', url: 'https://www.fossology.org', logo: 'img/logos/fossology.png' },
     { name: 'Google OSV', url: 'https://osv.dev', logo: 'img/logos/osv.svg' },
@@ -46,7 +48,6 @@ const withoutLogo = [
     { name: 'Anchore', url: 'https://anchore.com' },
     { name: 'Apple', url: 'https://www.apple.com' },
     { name: 'Audi', url: 'https://www.audi.com' },
-    { name: 'BANG', url: 'https://github.com/armijnhemel/binaryanalysis-ng' },
     { name: 'BMW', url: 'https://www.bmw.com' },
     { name: 'Bosch', url: 'https://www.bosch.com' },
     { name: 'BlackDuck Software', url: 'https://www.blackduck.com' },
@@ -61,7 +62,6 @@ const withoutLogo = [
     { name: 'Deutsche Bahn', url: 'https://www.deutschebahn.com' },
     { name: 'Endor Labs', url: 'https://www.endorlabs.com' },
     { name: 'Ericsson', url: 'https://www.ericsson.com' },
-    { name: 'FSF', url: 'https://www.fsf.org' },
     { name: 'Fujitsu', url: 'https://www.fujitsu.com' },
     { name: 'GitHub', url: 'https://github.com' },
     { name: 'Google', url: 'https://www.google.com' },
@@ -116,18 +116,24 @@ export default function AdoptersBanner() {
         <div className={styles.bannerWrapper}>
             <div className={styles.bannerTrack}>
                 {adopters.map((a) => (
-                    <a key={a.name} href={a.url} target="_blank" rel="noopener noreferrer" className={styles.adopter} title={a.name}>
+                    <a key={a.name} href={a.url} target="_blank" rel="noopener noreferrer" className={styles.adopter} title={a.title || a.name}>
                         {a.logo ? (
-                            <img src={`/${a.logo}`} alt={a.name} className={styles.adopterLogo} />
+                            <>
+                                <img src={`/${a.logo}`} alt={a.name} className={styles.adopterLogo} />
+                                {a.showName && <span className={styles.adopterName}>{a.name}</span>}
+                            </>
                         ) : (
                             <span className={styles.adopterName}>{a.name}</span>
                         )}
                     </a>
                 ))}
                 {adopters.map((a) => (
-                    <a key={a.name + '-dup'} href={a.url} target="_blank" rel="noopener noreferrer" className={styles.adopter} title={a.name}>
+                    <a key={a.name + '-dup'} href={a.url} target="_blank" rel="noopener noreferrer" className={styles.adopter} title={a.title || a.name}>
                         {a.logo ? (
-                            <img src={`/${a.logo}`} alt={a.name} className={styles.adopterLogo} />
+                            <>
+                                <img src={`/${a.logo}`} alt={a.name} className={styles.adopterLogo} />
+                                {a.showName && <span className={styles.adopterName}>{a.name}</span>}
+                            </>
                         ) : (
                             <span className={styles.adopterName}>{a.name}</span>
                         )}
