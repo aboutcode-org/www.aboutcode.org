@@ -21,7 +21,7 @@ const dataCards = [
         description:
             'ScanCode LicenseDB is the largest open database of software licenses, ' +
             'with over 2,000 curated license texts, over 35,000 detection rules, and SPDX mappings used by scanners worldwide.',
-        stats: '2,000+ licenses catalogued, 35,000+ license notices curated',
+        stats: '2,500+ licenses and 35,000+ notices curated',
         links: [
             { label: 'LicenseDB', url: 'https://scancode-licensedb.aboutcode.org' },
             { label: 'Code', url: 'https://github.com/aboutcode-org/scancode-licensedb' },
