@@ -190,13 +190,13 @@
 
 .projectLinkRow {
     max-width: 1200px;
-    margin: 0.4rem auto 0;
+    margin: 0 auto 0;
     text-align: left;
 }
 
 .projectLink {
     color: #2a6bc7;
-    font-weight: 600;
+    font-weight: normal;
 }
 
 .projectLink:hover {
