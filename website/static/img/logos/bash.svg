@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <rect width="100" height="100" rx="12" fill="#2e3436"/>
+  <text x="50" y="45" font-family="monospace" font-size="14" font-weight="bold" fill="#4ec9b0" text-anchor="middle">Bash</text>
+  <text x="50" y="68" font-family="monospace" font-size="14" fill="#aaa" text-anchor="middle">$ _</text>
+</svg>
