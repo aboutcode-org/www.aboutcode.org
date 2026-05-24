@@ -8,6 +8,7 @@ import Supporters from './Supporters.md';
 import ValuePillars from '@site/src/components/ValuePillars';
 import CapabilitiesGrid from '@site/src/components/CapabilitiesGrid';
 import EcosystemGrid from '@site/src/components/EcosystemGrid';
+import OpenDataSection from '@site/src/components/OpenDataSection';
 import ProjectGridTemplate from '@site/src/components/ProjectGridTemplate';
 import { featuredProjectSources } from '@site/src/data/projects-featured';
 import styles from './styles.module.css';
@@ -76,6 +77,16 @@ export default function HomepageContent() {
                 </div>
             </section>
 
+
+            <section className={styles.sectionContainer}>
+                <div
+                    className={styles.sectionHeader}
+                    style={{ marginBottom: '15px', marginTop: '15px' }}
+                >
+                    <h2>Open data</h2>
+                </div>
+                <OpenDataSection />
+            </section>
 
             <section className={styles.sectionContainer}>
                 <div
