@@ -35,7 +35,7 @@ export default function HomepageContent() {
                 <CapabilitiesGrid />
             </section>
 
-            <section className={styles.sectionContainer}>
+            <section id="community" className={styles.sectionContainer}>
                 <div
                     className={styles.sectionHeader}
                     style={{ marginBottom: '15px', marginTop: '15px' }}
@@ -65,7 +65,7 @@ export default function HomepageContent() {
                 </div>
             </section>
 
-            <section className={styles.sectionContainer}>
+            <section id="standards" className={styles.sectionContainer}>
                 <div
                     className={styles.sectionHeader}
                     style={{ marginBottom: '15px', marginTop: '15px' }}
@@ -78,7 +78,7 @@ export default function HomepageContent() {
             </section>
 
 
-            <section className={styles.sectionContainer}>
+            <section id="data" className={styles.sectionContainer}>
                 <div
                     className={styles.sectionHeader}
                     style={{ marginBottom: '15px', marginTop: '15px' }}
@@ -88,12 +88,12 @@ export default function HomepageContent() {
                 <OpenDataSection />
             </section>
 
-            <section className={styles.sectionContainer}>
+            <section id="projects" className={styles.sectionContainer}>
                 <div
                     className={styles.sectionHeader}
                     style={{ marginBottom: '15px', marginTop: '15px' }}
                 >
-                    <h2>Interoperable tools, organized as module projects</h2>
+                    <h2>Interoperable modular tools and projects</h2>
                 </div>
                 <div className={styles.sectionIntro}>
                     <ProjectOverview />
