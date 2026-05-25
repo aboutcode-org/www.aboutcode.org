@@ -5,13 +5,6 @@ const sidebars = {
 
   // But you can create a sidebar manually
 
-    about: [
-        'about/about-contribute',
-        'about/about-events',
-        'about/about-meetings',
-        'about/about-news',
-        'about/about-releases',
-    ],
     getting_started: [
         'getting_started/getting_started-getting-started',
         'getting_started/getting_started-software-identification',
@@ -20,6 +13,15 @@ const sidebars = {
         'getting_started/getting_started-cravex',
         'getting_started/getting_started-standards',
     ],
+
+    about: [
+        'about/about-contribute',
+        'about/about-meetings',
+        'about/about-releases',
+        'about/about-events',
+        'about/about-news',
+    ],
+
 };
 
 export default sidebars;

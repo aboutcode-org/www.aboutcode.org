@@ -41,6 +41,7 @@ const config = {
     tagline: '[Tagline . . . ?]',
     favicon: 'img/favicon.ico',
 
+
     markdown: {
         format: 'detect', // Auto-detects: .md = plain Markdown (CommonMark), .mdx = MDX
         hooks: {
@@ -51,6 +52,7 @@ const config = {
     // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
     future: {
         v4: true, // Improve compatibility with the upcoming Docusaurus v4
+        faster: false,
     },
 
     // Adapt the www.packageurl.org approach for the GH Pages vs. DreamHost baseUrl adjustment.
@@ -119,46 +121,51 @@ const config = {
                 style: 'dark',
                 items: [
                     {
-                        type: 'dropdown',
+                        type: 'docSidebar',
+                        sidebarId: 'getting_started',
+                        position: 'left',
+                        label: 'Getting Started',
+                    },
+                    {
+                        href: 'https://aboutcode.readthedocs.io',
                         label: 'Documentation',
                         position: 'left',
-                        items: [
-                            {
-                                type: 'docSidebar',
-                                sidebarId: 'getting_started',
-                                label: 'Getting Started',
-                            },
-                            {
-                                href: 'https://aboutcode.readthedocs.io',
-                                label: 'Reference',
-                            },
-                        ],
                     },
-                    { to: '/blog', label: 'Blog', position: 'left' },
+                    {   to: '/blog',
+                        label: 'Blog',
+                        position: 'left'
+                    },
                     {
                         type: 'dropdown',
-                        label: 'Community',
+                        label: 'About',
                         position: 'left',
                         items: [
-                            { to: '/docs/about/about-contribute', label: 'Contribute' },
                             { to: '/docs/about/about-meetings', label: 'Meetings' },
+                            { to: '/docs/about/about-contribute', label: 'Contribute' },
                             { to: '/docs/about/about-news', label: 'News' },
                             { to: '/docs/about/about-events', label: 'Events' },
+                            { to: '/docs/about/about-releases', label: 'Releases' },
                             {
                                 href: 'https://join.slack.com/t/aboutcode-org/shared_invite/zt-1paqwxccw-IuafuiAvYJFkTqGaZsC1og',
-                                label: 'Slack',
+                                label: 'Chat',
                             },
                             {
                                 href: 'https://github.com/aboutcode-org',
-                                label: 'GitHub',
+                                label: 'Code',
                             },
                         ],
                     },
                     {
-                        href: 'https://github.com/aboutcode-org',
-                        label: 'GitHub',
+                        href: 'https://join.slack.com/t/aboutcode-org/shared_invite/zt-1paqwxccw-IuafuiAvYJFkTqGaZsC1og',
+                        label: 'Chat',
                         position: 'right',
                     },
+                    {
+                        href: 'https://github.com/aboutcode-org',
+                        label: 'Code',
+                        position: 'right',
+                    },
+
                 ],
             },
             footer: {
