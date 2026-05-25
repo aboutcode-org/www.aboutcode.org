@@ -9,7 +9,7 @@ export default function HomepageHeader() {
           Healthy Software Supply Chains
         </h1>
         <p className={styles.heroSubtitle}>
-          We build, maintain, and sustain open data with open source code and open standards for the software supply chains.
+          We build, and maintain open software supply chains data with open source code and open standards.
         </p>
       </div>
     </div>
