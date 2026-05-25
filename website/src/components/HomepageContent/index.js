@@ -93,7 +93,7 @@ export default function HomepageContent() {
                     className={styles.sectionHeader}
                     style={{ marginBottom: '15px', marginTop: '15px' }}
                 >
-                    <h2>Interoperable modular tools and projects</h2>
+                    <h2>Interoperable modular tools and projects - <a href="/docs/getting_started/getting_started-getting-started/" className={styles.headerLink}>Getting started...</a></h2>
                 </div>
                 <div className={styles.sectionIntro}>
                     <ProjectOverview />
@@ -109,7 +109,7 @@ export default function HomepageContent() {
                 </div>
             </section>
 
-            <section className={styles.sectionContainer}>
+            <section id="ecosystems" className={styles.sectionContainer}>
                 <div
                     className={styles.sectionHeader}
                     style={{ marginBottom: '15px', marginTop: '15px' }}

@@ -203,3 +203,14 @@
 .projectLink:hover {
     color: #2a6bc7;
 }
+
+.headerLink {
+    font-size: inherit;
+    color: #2a6bc7;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.headerLink:hover {
+    text-decoration: underline;
+}
