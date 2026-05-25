@@ -16,7 +16,9 @@
 }
 
 .headerLink {
-    font-size: inherit;
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: normal;
     color: #2a6bc7;
     text-decoration: none;
 }
