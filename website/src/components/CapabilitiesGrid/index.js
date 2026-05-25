@@ -3,18 +3,18 @@ import styles from './styles.module.css';
 
 const capabilities = [
     {
-        title: 'Open Reference Data',
-        description: 'Curated datasets for 2,400+ licenses, millions of packages, and aggregated vulnerability data from dozens of public sources.',
-        link: '/docs/getting_started/getting_started-software-identification/',
-    },
-    {
         title: 'License Detection',
-        description: 'Detect licenses in any codebase, whether open source, proprietary, or in between. Powers dozens of open source and commercial SCA tools.',
+        description: 'Detect licenses in any codebase, whether open source, or proprietary; in source code and binaries. Powers dozens of open source and commercial SCA tools.',
         link: '/docs/getting_started/getting_started-compliance/',
     },
     {
-        title: 'Code Matching and Binary Analysis',
-        description: 'Identify code origin at package, file, and snippet level using PurlDB fingerprints. Match deployed binaries, containers, and firmware back to source packages.',
+        title: 'Code Origin Matching',
+        description: 'Identify code origin at package, file, and snippet level using PurlDB fingerprints and matching pipelines.',
+        link: '/docs/getting_started/getting_started-software-identification/',
+    },
+    {
+        title: 'Binary Analysis',
+        description: 'Match deployed binaries, containers, and firmware back to source packages. Analyze ELFs, PEs, Mach-Os, and archives.',
         link: '/docs/getting_started/getting_started-software-identification/',
     },
     {
