@@ -47,15 +47,15 @@
     {
         "group": "package-url",
         "name": "purlvalidator-go",
-        "description": ["Go library for validating Package URLs (PURLs). It works fully offline, including in air-gapped or restricted environments"],
+        "description": ["Go library for validating Package URLs (PURLs). It works fully offline, including in air-gapped or restricted environments."],
         "repository_url": "https://github.com/aboutcode-org/purlvalidator-go",
         "documentation_url": "https://github.com/aboutcode-org/purlvalidator-go/blob/main/README.md",
         "package_download_url": ["Not applicable"],
         "service_url": "Not applicable",
-        "languages": "Python",
+        "languages": "Go",
         "software_license": "Apache-2.0",
         "data_license": "Not applicable",
-        "platform": "Python",
+        "platform": "Go",
         "lead_maintainer": ["Not applicable"],
         "notes": "Not applicable"
     },
