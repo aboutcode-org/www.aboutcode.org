@@ -52,3 +52,7 @@ lifecycle stages. Uses PURL for package identification.
 
 **TEA**: (Transparent Exchange of Attestations) is a standard for software
 supply chain attestations and trust. Uses PURL to reference attested packages.
+
+---
+
+[Get started with CRA compliance and SBOMs...](/docs/getting_started/getting_started-cravex/)
