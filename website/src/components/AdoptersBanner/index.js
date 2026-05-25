@@ -54,7 +54,7 @@ const withoutLogo = [
     { name: 'CARIAD', url: 'https://cariad.technology' },
     { name: 'Chainguard', url: 'https://www.chainguard.dev' },
     { name: 'Checkmarx', url: 'https://checkmarx.com' },
-    { name: 'SODGE IT', url: 'https://www.sodge-it.com' },
+    { name: 'sodge IT', url: 'https://www.sodgeit.de' },
     { name: 'Citi', url: 'https://www.citigroup.com' },
     { name: 'Cisco', url: 'https://www.cisco.com' },
     { name: 'CIRCL.lu', url: 'https://www.circl.lu' },
