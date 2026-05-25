@@ -6,12 +6,23 @@
 
 .section {
     margin-bottom: 1.5rem;
+    scroll-margin-top: 80px;
 }
 
 .sectionTitle {
     color: #2a6bc7;
     font-size: 1rem;
     margin-bottom: 0.75rem;
+}
+
+.headerLink {
+    font-size: inherit;
+    color: #2a6bc7;
+    text-decoration: none;
+}
+
+.headerLink:hover {
+    text-decoration: underline;
 }
 
 .grid {

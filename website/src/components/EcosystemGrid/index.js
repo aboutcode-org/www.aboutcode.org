@@ -119,10 +119,15 @@ const vulnSources = [
     { label: 'Xen', logo: 'img/logos/xen.svg', url: 'https://xenbits.xen.org/xsa/', logoClass: 'logoLarge' },
 ];
 
-function GridSection({ title, items }) {
+function GridSection({ id, title, items, headerLink }) {
     return (
-        <div className={styles.section}>
-            <h3 className={styles.sectionTitle}>{title}</h3>
+        <div id={id} className={styles.section}>
+            <h3 className={styles.sectionTitle}>
+                {title}
+                {headerLink && (
+                    <>{' - '}<a href={headerLink.url} className={styles.headerLink}>{headerLink.label}...</a></>
+                )}
+            </h3>
             <div className={styles.grid}>
                 {items.map((item) => (
                     <a
@@ -152,8 +157,8 @@ function GridSection({ title, items }) {
 export default function EcosystemGrid() {
     return (
         <div className={styles.gridWrapper}>
-            <GridSection title="Package ecosystems and programming languages" items={ecosystemAndLanguageItems} />
-            <GridSection title="Vulnerability data sources" items={vulnSources} />
+            <GridSection id="pkg-ecosystems" title="Package ecosystems and programming languages" items={ecosystemAndLanguageItems} headerLink={{ label: 'Getting started', url: '/docs/getting_started/getting_started-software-identification/' }} />
+            <GridSection id="vuln-sources" title="Vulnerability data sources" items={vulnSources} headerLink={{ label: 'Getting started', url: '/docs/getting_started/getting_started-security/' }} />
         </div>
     );
 }
