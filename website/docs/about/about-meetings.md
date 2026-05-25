@@ -26,7 +26,7 @@ related projects
 You can also join our community via chat:
 *   [Gitter / Element](https://app.gitter.im/#/room/#aboutcode-org_discuss:gitter.im)
 There are Gitter channels for the major AboutCode projects and for GSoC.
-*   [Slack](https://join.slack.com/t/aboutcode-org/shared_invite/zt-1paqwxccw-IuafuiAvYJFkTqGaZsC1og)
+*   [Slack](https://join.slack.com/t/aboutcode-org/shared_invite/zt-31uzazd7l-tBHcqKUKkX6jUEPRLswiNw)
 There are Slack channels for most AboutCode projects and for topics like 
 supply chain security. The project channels include notifications from GitHub 
 to help you track project activity.

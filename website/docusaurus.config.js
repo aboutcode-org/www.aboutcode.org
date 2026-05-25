@@ -146,7 +146,7 @@ const config = {
                             { to: '/standards', label: 'Standards' },
                             { to: '/credits', label: 'Thank you' },
                             {
-                                href: 'https://join.slack.com/t/aboutcode-org/shared_invite/zt-1paqwxccw-IuafuiAvYJFkTqGaZsC1og',
+                                href: 'https://join.slack.com/t/aboutcode-org/shared_invite/zt-31uzazd7l-tBHcqKUKkX6jUEPRLswiNw',
                                 label: 'Chat',
                             },
                             {
@@ -156,7 +156,7 @@ const config = {
                         ],
                     },
                     {
-                        href: 'https://join.slack.com/t/aboutcode-org/shared_invite/zt-1paqwxccw-IuafuiAvYJFkTqGaZsC1og',
+                        href: 'https://join.slack.com/t/aboutcode-org/shared_invite/zt-31uzazd7l-tBHcqKUKkX6jUEPRLswiNw',
                         label: 'Chat',
                         position: 'right',
                     },
@@ -184,7 +184,7 @@ const config = {
                     },
 
                     {
-                        html: `<a href="https://join.slack.com/t/aboutcode-org/shared_invite/zt-1paqwxccw-IuafuiAvYJFkTqGaZsC1og" target="_blank" rel="noopener noreferrer" aria-label="Slack"><img src="${currentBaseUrl}img/slack-logo.svg" alt="" width="20" height="20"></a>`,
+                        html: `<a href="https://join.slack.com/t/aboutcode-org/shared_invite/zt-31uzazd7l-tBHcqKUKkX6jUEPRLswiNw" target="_blank" rel="noopener noreferrer" aria-label="Slack"><img src="${currentBaseUrl}img/slack-logo.svg" alt="" width="20" height="20"></a>`,
                     },
 
                     {
