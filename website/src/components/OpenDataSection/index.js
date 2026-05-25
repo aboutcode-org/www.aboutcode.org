@@ -6,9 +6,10 @@ const dataCards = [
         title: 'Packages',
         description:
             'PurlDB is a comprehensive, open database of software package metadata indexed by Package-URL. ' +
-            'Combined with ClearlyDefined - managed by AboutCode - it provides provenance, licensing, ' + 
+            'Combined with ClearlyDefined - managed by AboutCode - it provides provenance, licensing, ' +
             'and origin data for millions of packages.',
         stats: '75M+ packages indexed',
+        titleLink: '/#ecosystems',
         links: [
             { label: 'PurlDB', url: 'https://public.purldb.io/api/' },
             { label: 'Code', url: 'https://github.com/aboutcode-org/purldb' },
@@ -33,6 +34,7 @@ const dataCards = [
             'VulnerableCode is a free and open database of software package vulnerabilities, ' +
             'correlating advisories from 30+ sources and mapping them to affected packages using Package-URL.',
         stats: '300K+ vulnerabilities tracked',
+        titleLink: '/#vuln-sources',
         links: [
             { label: 'VulnerableCode', url: 'https://public.vulnerablecode.io' },
             { label: 'Code', url: 'https://github.com/aboutcode-org/vulnerablecode' },
@@ -45,6 +47,8 @@ export default function OpenDataSection() {
         <div className={styles.wrapper}>
             <div className={styles.intro}>
                 <p>
+                    Curated datasets for thousands of licenses, millions of packages, and aggregated
+                    vulnerability data from dozens of public sources.
                     We believe software supply chain data should be open, decentralized, and federated.
                     Our <a href="https://github.com/aboutcode-org/federatedcode">FederatedCode</a> approach
                     enables anyone to publish and consume package, license, and vulnerability data using
@@ -55,7 +59,9 @@ export default function OpenDataSection() {
             <div className={styles.grid}>
                 {dataCards.map((card) => (
                     <div key={card.title} className={styles.card}>
-                        <h3 className={styles.cardTitle}>{card.title}</h3>
+                        <h3 className={styles.cardTitle}>
+                            {card.titleLink ? <a href={card.titleLink} style={{ color: 'inherit', textDecoration: 'none' }}>{card.title}</a> : card.title}
+                        </h3>
                         <p className={styles.cardDescription}>{card.description}</p>
                         <span className={styles.cardStats}>{card.stats}</span>
                         <div className={styles.cardLinks}>
