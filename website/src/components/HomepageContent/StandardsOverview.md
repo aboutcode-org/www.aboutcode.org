@@ -6,4 +6,7 @@ contributes to CycloneDX and co-founded SPDX.
 PURL is the common thread that ties SBOMs, vulnerability databases, security
 advisories, and attestations together.
 
-[See all supported standards](/docs/getting_started/getting_started-standards/)
+SPDX license expressions enable common, concise and accurate licensing
+identification across tools and SBOMs.
+
+[See all supported standards](/standards/)

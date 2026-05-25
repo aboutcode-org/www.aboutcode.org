@@ -145,6 +145,7 @@ const config = {
                             { to: '/docs/about/about-news', label: 'News' },
                             { to: '/docs/about/about-events', label: 'Events' },
                             { to: '/docs/about/about-releases', label: 'Releases' },
+                            { to: '/standards', label: 'Standards' },
                             {
                                 href: 'https://join.slack.com/t/aboutcode-org/shared_invite/zt-1paqwxccw-IuafuiAvYJFkTqGaZsC1og',
                                 label: 'Chat',
