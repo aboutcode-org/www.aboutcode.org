@@ -74,7 +74,7 @@ A Product can be third-party or first-party (or second-party:customer). You
 can define a Product at any level - e.g., some may be at a component or assembly level. You can experiment with the Product/SBOM features with a free [DejaCode trial account](https://public.dejacode.com/account/register/)
 - [ScanCode.io](https://scancodeio.readthedocs.io/en/latest/) provides 
 features to import and export SBOMs in CycloneDX (version 1.7, 1.6, 1.5 or 
-1.4) or SPDX format (version 2.3 or 2.2). You can use the `'load_sbom` 
+1.4) or SPDX format (version 2.3 or 2.2). You can use the `load_sbom` 
 pipeline to load one more SBOMs as a Project and use `add-on` pipelines to 
 enrich the data before you export it as an SBOM. You can also export Project data in JSON or XLSX format. If you need to edit an SBOM, you should use **DejaCode** instead of **ScanCode.io**
 
@@ -106,6 +106,6 @@ common obligations:
 - You make an offer in your Attribution Notice to redistribute the source code.
 - You are prepared to redistribute that source code on request - this often
 includes an obligation to provide instructions and tools to build from source.
-You can use *DejaCode** to track Product packages or components that are subject to source redistribution obligations and their deployment/distribution
+You can use **DejaCode** to track Product packages or components that are subject to source redistribution obligations and their deployment/distribution
 status. **DejaCode** also provides reports to create a source redistribution
 checklist in case you receive a request for source.
