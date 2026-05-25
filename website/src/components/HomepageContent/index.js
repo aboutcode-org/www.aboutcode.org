@@ -40,7 +40,7 @@ export default function HomepageContent() {
                     className={styles.sectionHeader}
                     style={{ marginBottom: '15px', marginTop: '15px' }}
                 >
-                    <h2>Community and Adopters</h2>
+                    <h2>Community and adopters, fostering shared development</h2>
                 </div>
                 <div className={styles.sectionIntro}>
                     <p>AboutCode is supported by over 700 contributors and
@@ -70,7 +70,7 @@ export default function HomepageContent() {
                     className={styles.sectionHeader}
                     style={{ marginBottom: '15px', marginTop: '15px' }}
                 >
-                    <h2>Software supply chain standards</h2>
+                    <h2>Practical software supply chain standards</h2>
                 </div>
                 <div className={styles.sectionIntro}>
                     <StandardsOverview />
@@ -83,7 +83,7 @@ export default function HomepageContent() {
                     className={styles.sectionHeader}
                     style={{ marginBottom: '15px', marginTop: '15px' }}
                 >
-                    <h2>Open data</h2>
+                    <h2>Accurate and open data</h2>
                 </div>
                 <OpenDataSection />
             </section>
@@ -93,7 +93,7 @@ export default function HomepageContent() {
                     className={styles.sectionHeader}
                     style={{ marginBottom: '15px', marginTop: '15px' }}
                 >
-                    <h2>Projects</h2>
+                    <h2>Interoperable tools, organized as module projects</h2>
                 </div>
                 <div className={styles.sectionIntro}>
                     <ProjectOverview />
