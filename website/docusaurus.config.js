@@ -125,11 +125,6 @@ const config = {
                         position: 'left',
                         label: 'Getting Started',
                     },
-                    {
-                        href: 'https://aboutcode.readthedocs.io',
-                        label: 'Documentation',
-                        position: 'left',
-                    },
                     {   to: '/blog',
                         label: 'Blog',
                         position: 'left'
@@ -139,12 +134,17 @@ const config = {
                         label: 'About',
                         position: 'left',
                         items: [
+                            {
+                                href: 'https://aboutcode.readthedocs.io',
+                                label: 'Documentation',
+                            },
                             { to: '/docs/about/about-meetings', label: 'Meetings' },
                             { to: '/docs/about/about-contribute', label: 'Contribute' },
                             { to: '/docs/about/about-news', label: 'News' },
                             { to: '/docs/about/about-events', label: 'Events' },
                             { to: '/docs/about/about-releases', label: 'Releases' },
                             { to: '/standards', label: 'Standards' },
+                            { to: '/credits', label: 'Thank you' },
                             {
                                 href: 'https://join.slack.com/t/aboutcode-org/shared_invite/zt-1paqwxccw-IuafuiAvYJFkTqGaZsC1og',
                                 label: 'Chat',
