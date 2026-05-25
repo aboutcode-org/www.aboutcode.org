@@ -8,6 +8,7 @@ import Supporters from './Supporters.md';
 import ValuePillars from '@site/src/components/ValuePillars';
 import CapabilitiesGrid from '@site/src/components/CapabilitiesGrid';
 import EcosystemGrid from '@site/src/components/EcosystemGrid';
+import LicenseDataGrid from '@site/src/components/LicenseDataGrid';
 import OpenDataSection from '@site/src/components/OpenDataSection';
 import ProjectGridTemplate from '@site/src/components/ProjectGridTemplate';
 import { featuredProjectSources } from '@site/src/data/projects-featured';
@@ -45,6 +46,9 @@ export default function HomepageContent() {
                 <div className={styles.sectionIntro}>
                     <p>AboutCode is supported by over 700 contributors and
                         downloaded over 4 millions times per day.
+                        Join our <a href="https://join.slack.com/t/aboutcode-org/shared_invite/zt-1paqwxccw-IuafuiAvYJFkTqGaZsC1og">chat</a> and
+                        our <a href="/docs/about/about-meetings/">weekly calls</a> to
+                        meet and start the conversation with AboutCode maintainers and contributors.
                     </p>
                     <p>Our open tools, data, and standards are used by
                        leading open source projects and organizations worldwide.
@@ -114,7 +118,7 @@ export default function HomepageContent() {
                     className={styles.sectionHeader}
                     style={{ marginBottom: '15px', marginTop: '15px' }}
                 >
-                    <h2>Supported ecosystems, languages, and data sources</h2>
+                    <h2>Supported ecosystems, languages, licenses, and data sources</h2>
                 </div>
                 <div className={styles.sectionIntro}>
                     <p>AboutCode tools support 70+ package ecosystems, programming languages,
@@ -122,6 +126,8 @@ export default function HomepageContent() {
                     <a href="https://packageurl.org">Package-URL (PURL)</a>.</p>
                 </div>
                 <EcosystemGrid />
+                <div id="licensing" style={{ scrollMarginTop: '80px' }}></div>
+                <LicenseDataGrid />
             </section>
 
             <div style={{ marginBottom: '50px' }}></div>
