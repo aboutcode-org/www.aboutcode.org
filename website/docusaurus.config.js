@@ -38,7 +38,7 @@ const currentBaseUrl = siteConfig[deployTarget].baseUrl
 /** @type {import('@docusaurus/types').Config} */
 const config = {
     title: 'AboutCode.org',
-    tagline: '[Tagline . . . ?]',
+    tagline: 'Open data, tools, and standards for the software supply chains',
     favicon: 'img/favicon.ico',
 
 
