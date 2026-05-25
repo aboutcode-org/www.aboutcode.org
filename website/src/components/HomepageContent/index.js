@@ -45,7 +45,7 @@ export default function HomepageContent() {
                 </div>
                 <div className={styles.sectionIntro}>
                     <p>AboutCode is supported by over 700 contributors and
-                        downloaded over 4 millions times per day.
+                        downloaded over 4 million times per day.
                         Join our <a href="https://join.slack.com/t/aboutcode-org/shared_invite/zt-1paqwxccw-IuafuiAvYJFkTqGaZsC1og">chat</a> and
                         our <a href="/docs/about/about-meetings/">weekly calls</a> to
                         meet and start the conversation with AboutCode maintainers and contributors.

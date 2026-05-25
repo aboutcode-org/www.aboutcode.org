@@ -20,7 +20,7 @@ We also depend on and are thankful for major open source projects including:
 - [Django](https://www.djangoproject.com) is the web framework powering our applications
 - [Redis](https://redis.io) provides task queue and caching
 - [Docusaurus](https://docusaurus.io) powers this website
-- [React](https://reactjs.org) is the UI framework used here
+- [React](https://react.dev) is the UI framework used here
 - [nginx](https://nginx.org) serves our deployments
 
 ## Website dependencies
@@ -30,7 +30,7 @@ We gratefully acknowledge the following open source projects that make this webs
 | Project | Owner | License | URL |
 | --- | --- | --- | --- |
 | Docusaurus | Facebook, Inc. | [MIT](https://scancode-licensedb.aboutcode.org/mit.html) | [docusaurus.io](https://docusaurus.io/) |
-| React | Meta Platforms, Inc. | [MIT](https://scancode-licensedb.aboutcode.org/mit.html) | [reactjs.org](https://reactjs.org/) |
+| React | Meta Platforms, Inc. | [MIT](https://scancode-licensedb.aboutcode.org/mit.html) | [react.dev](https://react.dev/) |
 | MDX-JS | Compositor and Vercel, Inc. | [MIT](https://scancode-licensedb.aboutcode.org/mit.html) | [mdxjs.com](https://mdxjs.com/) |
 | Prism React Renderer | Nearform | [MIT](https://scancode-licensedb.aboutcode.org/mit.html) | [GitHub](https://github.com/FormidableLabs/prism-react-renderer) |
 | clsx | Luke Edwards | [MIT](https://scancode-licensedb.aboutcode.org/mit.html) | [GitHub](https://github.com/lukeed/clsx) |
