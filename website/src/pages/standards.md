@@ -50,8 +50,8 @@ schema from Google. Uses PURL to identify affected packages across ecosystems.
 **CLE**: (Common Lifecycle Enumeration) is a standard for describing software
 lifecycle stages. Uses PURL for package identification.
 
-**TEA**: (Transparent Exchange of Attestations) is a standard for software
-supply chain attestations and trust. Uses PURL to reference attested packages.
+**TEA**: (Transparent Exchange API) is a standard for software supply chain
+data exchange and trust. Uses PURL to reference packages.
 
 ---
 
