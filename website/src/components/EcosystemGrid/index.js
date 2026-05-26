@@ -1,7 +1,8 @@
 import React from 'react';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
 
-const ecosystemAndLanguageItems = [
+const ecosystems = [
     { label: 'Alpine', logo: 'img/logos/apk.png', url: 'https://packageurl.org/docs/purl-spec/types-doc/apk-definition' },
     { label: 'Android', logo: 'img/logos/android.svg', url: 'https://developer.android.com' },
     { label: 'Arch Linux', logo: 'img/logos/alpm.png', url: 'https://packageurl.org/docs/purl-spec/types-doc/alpm-definition', logoClass: 'logoXL' },
@@ -119,6 +120,30 @@ const vulnSources = [
     { label: 'Xen', logo: 'img/logos/xen.svg', url: 'https://xenbits.xen.org/xsa/', logoClass: 'logoLarge' },
 ];
 
+function GridItem({ item }) {
+    const logoSrc = useBaseUrl(`/${item.logo}`);
+    return (
+        <a
+            key={item.label}
+            href={item.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.cell}
+        >
+            <div className={styles.logoSlot}>
+                {item.logo && (
+                    <img
+                        src={logoSrc}
+                        alt={item.label}
+                        className={`${styles.cellLogo} ${item.logoClass ? styles[item.logoClass] : ''}`}
+                    />
+                )}
+            </div>
+            <span className={styles.cellLabel}>{item.label}</span>
+        </a>
+    );
+}
+
 function GridSection({ id, title, items, headerLink }) {
     return (
         <div id={id} className={styles.section}>
@@ -130,24 +155,7 @@ function GridSection({ id, title, items, headerLink }) {
             </h3>
             <div className={styles.grid}>
                 {items.map((item) => (
-                    <a
-                        key={item.label}
-                        href={item.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={styles.cell}
-                    >
-                        <div className={styles.logoSlot}>
-                            {item.logo && (
-                                <img
-                                    src={`/${item.logo}`}
-                                    alt={item.label}
-                                    className={`${styles.cellLogo} ${item.logoClass ? styles[item.logoClass] : ''}`}
-                                />
-                            )}
-                        </div>
-                        <span className={styles.cellLabel}>{item.label}</span>
-                    </a>
+                    <GridItem key={item.label} item={item} />
                 ))}
             </div>
         </div>
@@ -157,7 +165,7 @@ function GridSection({ id, title, items, headerLink }) {
 export default function EcosystemGrid() {
     return (
         <div className={styles.gridWrapper}>
-            <GridSection id="pkg-ecosystems" title="Package ecosystems and programming languages" items={ecosystemAndLanguageItems} headerLink={{ label: 'Getting started', url: '/docs/getting_started/getting_started-software-identification/' }} />
+            <GridSection id="pkg-ecosystems" title="Package ecosystems and programming languages" items={ecosystems} headerLink={{ label: 'Getting started', url: '/docs/getting_started/getting_started-software-identification/' }} />
             <GridSection id="vuln-sources" title="Vulnerability data sources" items={vulnSources} headerLink={{ label: 'Getting started', url: '/docs/getting_started/getting_started-security/' }} />
         </div>
     );

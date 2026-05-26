@@ -1,4 +1,5 @@
 import React from 'react';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
 
 const licenses = [
@@ -22,7 +23,28 @@ const licenses = [
     { label: 'Zlib', logo: 'img/logos/lic-zlib.svg', url: 'https://scancode-licensedb.aboutcode.org/zlib.html' },
 ];
 
-export default function LicenseDataGrid() {
+function LicenseItem({ item }) {
+    const logoSrc = useBaseUrl(`/${item.logo}`);
+    return (
+        <a
+            href={item.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.cell}
+        >
+            <div className={styles.logoSlot}>
+                <img
+                    src={logoSrc}
+                    alt={item.label}
+                    className={styles.cellLogo}
+                />
+            </div>
+            <span className={styles.cellLabel}>{item.label}</span>
+        </a>
+    );
+}
+
+export default function LicenseGrid() {
     return (
         <div className={styles.wrapper}>
             <h3 className={styles.sectionTitle}>
@@ -52,22 +74,7 @@ export default function LicenseDataGrid() {
             </div>
             <div className={styles.grid}>
                 {licenses.map((item) => (
-                    <a
-                        key={item.label}
-                        href={item.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={styles.cell}
-                    >
-                        <div className={styles.logoSlot}>
-                            <img
-                                src={`/${item.logo}`}
-                                alt={item.label}
-                                className={styles.cellLogo}
-                            />
-                        </div>
-                        <span className={styles.cellLabel}>{item.label}</span>
-                    </a>
+                    <LicenseItem key={item.label} item={item} />
                 ))}
             </div>
 

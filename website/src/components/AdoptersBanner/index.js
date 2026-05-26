@@ -1,4 +1,5 @@
 import React from 'react';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
 
 const withLogo = [
@@ -111,33 +112,33 @@ while (li < withLogo.length || ni < withoutLogo.length) {
     if (li < withLogo.length) adopters.push(withLogo[li++]);
 }
 
+
+function AdopterItem({ item, suffix = '' }) {
+    const logoSrc = useBaseUrl(`/${item.logo}`);
+    return (
+        <a href={item.url} target="_blank" rel="noopener noreferrer"
+           className={styles.adopter} title={item.title || item.name}>
+            {item.logo ? (
+                <>
+                    <img src={logoSrc} alt={item.name} className={styles.adopterLogo} />
+                    {item.showName && <span className={styles.adopterName}>{item.name}</span>}
+                </>
+            ) : (
+                <span className={styles.adopterName}>{item.name}</span>
+            )}
+        </a>
+    );
+}
+
 export default function AdoptersBanner() {
     return (
         <div className={styles.bannerWrapper}>
             <div className={styles.bannerTrack}>
-                {adopters.map((a) => (
-                    <a key={a.name} href={a.url} target="_blank" rel="noopener noreferrer" className={styles.adopter} title={a.title || a.name}>
-                        {a.logo ? (
-                            <>
-                                <img src={`/${a.logo}`} alt={a.name} className={styles.adopterLogo} />
-                                {a.showName && <span className={styles.adopterName}>{a.name}</span>}
-                            </>
-                        ) : (
-                            <span className={styles.adopterName}>{a.name}</span>
-                        )}
-                    </a>
+                {adopters.map((item) => (
+                    <AdopterItem key={item.name} item={item} />
                 ))}
-                {adopters.map((a) => (
-                    <a key={a.name + '-dup'} href={a.url} target="_blank" rel="noopener noreferrer" className={styles.adopter} title={a.title || a.name}>
-                        {a.logo ? (
-                            <>
-                                <img src={`/${a.logo}`} alt={a.name} className={styles.adopterLogo} />
-                                {a.showName && <span className={styles.adopterName}>{a.name}</span>}
-                            </>
-                        ) : (
-                            <span className={styles.adopterName}>{a.name}</span>
-                        )}
-                    </a>
+                {adopters.map((item) => (
+                    <AdopterItem key={item.name + '-dup'} item={item} suffix="-dup" />
                 ))}
             </div>
         </div>

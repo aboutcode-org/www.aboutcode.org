@@ -1,4 +1,5 @@
 import React from 'react';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
 
 const pillars = [
@@ -28,27 +29,32 @@ const pillars = [
     },
 ];
 
+function PillarCard({ pillar }) {
+    const iconSrc = useBaseUrl(pillar.icon);
+    const content = (
+        <>
+            <img src={iconSrc} alt="" className={styles.pillarIcon} />
+            <h3 className={styles.pillarTitle}>{pillar.title}</h3>
+            <p className={styles.pillarDescription}>{pillar.description}</p>
+        </>
+    );
+    return pillar.link ? (
+        <a href={pillar.link} className={styles.pillar} style={{ textDecoration: 'none', color: 'inherit' }}>
+            {content}
+        </a>
+    ) : (
+        <div className={styles.pillar}>
+            {content}
+        </div>
+    );
+}
+
 export default function ValuePillars() {
     return (
         <div className={styles.pillarsGrid}>
-            {pillars.map((pillar) => {
-                const content = (
-                    <>
-                        <img src={pillar.icon} alt="" className={styles.pillarIcon} />
-                        <h3 className={styles.pillarTitle}>{pillar.title}</h3>
-                        <p className={styles.pillarDescription}>{pillar.description}</p>
-                    </>
-                );
-                return pillar.link ? (
-                    <a key={pillar.title} href={pillar.link} className={styles.pillar} style={{ textDecoration: 'none', color: 'inherit' }}>
-                        {content}
-                    </a>
-                ) : (
-                    <div key={pillar.title} className={styles.pillar}>
-                        {content}
-                    </div>
-                );
-            })}
+            {pillars.map((pillar) => (
+                <PillarCard key={pillar.title} pillar={pillar} />
+            ))}
         </div>
     );
 }

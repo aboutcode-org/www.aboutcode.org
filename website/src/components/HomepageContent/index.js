@@ -8,7 +8,7 @@ import Supporters from './Supporters.md';
 import ValuePillars from '@site/src/components/ValuePillars';
 import CapabilitiesGrid from '@site/src/components/CapabilitiesGrid';
 import EcosystemGrid from '@site/src/components/EcosystemGrid';
-import LicenseDataGrid from '@site/src/components/LicenseDataGrid';
+import LicenseGrid from '@site/src/components/LicenseGrid';
 import OpenDataSection from '@site/src/components/OpenDataSection';
 import ProjectGridTemplate from '@site/src/components/ProjectGridTemplate';
 import { featuredProjectSources } from '@site/src/data/projects-featured';
@@ -127,7 +127,7 @@ export default function HomepageContent() {
                 </div>
                 <EcosystemGrid />
                 <div id="licensing" style={{ scrollMarginTop: '80px' }}></div>
-                <LicenseDataGrid />
+                <LicenseGrid />
             </section>
 
             <div style={{ marginBottom: '50px' }}></div>
