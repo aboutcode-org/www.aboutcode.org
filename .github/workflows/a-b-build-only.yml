@@ -1,15 +1,9 @@
 name: Build Docusaurus Site (Manual)
 on:
-  workflow_dispatch:
-    inputs:
-      target:
-        description: "Build target (affects baseUrl config)"
-        required: true
-        default: "dreamhost"
-        type: choice
-        options:
-          - dreamhost
-          - gh
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 permissions:
   contents: read
 jobs:
@@ -31,7 +25,7 @@ jobs:
           npm ci
       - name: Build Docusaurus site
         env:
-          DEPLOY_TARGET: ${{ inputs.target }}
+          DEPLOY_TARGET: dreamhost
         run: |
           cd website
           npm run build
@@ -41,5 +35,3 @@ jobs:
           name: docusaurus-build
           path: website/build
           include-hidden-files: true
-          # JMH -- TBD:
-          # retention-days: 7
