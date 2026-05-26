@@ -21,7 +21,7 @@ all package ecosystems. VERS solves the problem of each ecosystem having its
 own incompatible version range syntax. It is used in CycloneDX and CSAF to
 express affected version ranges in vulnerability advisories and SBOMs.
 
-## SBOM standards
+## SBOM standards supported by AboutCode
 
 **CycloneDX**: (OWASP CycloneDX) is a full-stack Bill of Materials (BOM)
 standard ([ECMA-424](https://ecma-international.org/publications-and-standards/standards/ecma-424/))
