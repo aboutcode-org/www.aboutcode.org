@@ -1,0 +1,66 @@
+name: Build & Deploy Docusaurus Site to Production
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check-branch:
+    name: Verify we are on the main branch for prod
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fail if not on main
+        if: github.ref != 'refs/heads/main'
+        run: |
+          echo "Production deploys are only allowed from the main branch."
+          exit 1
+
+  build:
+    name: Build site
+    needs: check-branch
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6.0.2
+      - name: Setup Node
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f  # v6.3.0
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: website/package-lock.json
+      - name: Install dependencies
+        run: |
+          cd website
+          npm ci
+      - name: Build Docusaurus site
+        env:
+          DEPLOY_TARGET: dreamhost
+        run: |
+          cd website
+          npm run build
+      - name: Upload build artifact
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f  # v7.0.0
+        with:
+          name: docusaurus-build
+          path: website/build
+          include-hidden-files: true
+
+  deploy:
+    name: Deploy to DreamHost
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download build artifact
+        uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131  # v7.0.0
+        with:
+          name: docusaurus-build
+          path: build
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.DREAMHOST_SSH_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H ${{ secrets.DREAMHOST_HOST }} >> ~/.ssh/known_hosts
+      - name: Deploy via rsync
+        run: |
+          rsync -avz build/ \
+            ${{ secrets.DREAMHOST_USER }}@${{ secrets.DREAMHOST_HOST }}:${{ secrets.DREAMHOST_PATH }}/
