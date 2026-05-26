@@ -129,40 +129,37 @@ const config = {
                         label: 'Blog',
                         position: 'left'
                     },
+                    {   to: '/projects',
+                        label: 'Projects',
+                        position: 'left'
+                    },
                     {
                         type: 'dropdown',
                         label: 'About',
                         position: 'left',
                         items: [
-                            {
-                                href: 'https://aboutcode.readthedocs.io',
-                                label: 'Documentation',
-                            },
-                            { to: '/docs/about/about-meetings', label: 'Meetings' },
                             { to: '/docs/about/about-contribute', label: 'Contribute' },
-                            { to: '/docs/about/about-news', label: 'News' },
                             { to: '/docs/about/about-events', label: 'Events' },
+                            { to: '/docs/about/about-meetings', label: 'Meetings' },
+                            { to: '/docs/about/about-news', label: 'News' },
                             { to: '/docs/about/about-releases', label: 'Releases' },
                             { to: '/docs/about/about-standards', label: 'Standards' },
                             { to: '/docs/about/about-credits', label: 'Thank you' },
-                            {
-                                href: 'https://join.slack.com/t/aboutcode-org/shared_invite/zt-31uzazd7l-tBHcqKUKkX6jUEPRLswiNw',
-                                label: 'Chat',
-                            },
-                            {
-                                href: 'https://github.com/aboutcode-org',
-                                label: 'Code',
-                            },
                         ],
                     },
                     {
+                        href: 'https://aboutcode.readthedocs.io',
+                        label: 'Doc',
+                        position: 'right',
+                    },
+                    {
                         href: 'https://join.slack.com/t/aboutcode-org/shared_invite/zt-31uzazd7l-tBHcqKUKkX6jUEPRLswiNw',
-                        label: 'Chat',
+                        label: 'Slack',
                         position: 'right',
                     },
                     {
                         href: 'https://github.com/aboutcode-org',
-                        label: 'Code',
+                        label: 'GitHub',
                         position: 'right',
                     },
 
