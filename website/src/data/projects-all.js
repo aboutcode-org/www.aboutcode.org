@@ -26,7 +26,7 @@ export const allProjectSources = [
     },
     {
         id: 'inspectors',
-        title: 'Inspectors for special purpose',
+        title: 'Specialized inspector utilities',
         data: projectsInspectors,
     },
     {
