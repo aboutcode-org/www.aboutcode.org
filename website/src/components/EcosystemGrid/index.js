@@ -170,12 +170,13 @@ function GridItem({ item }) {
 }
 
 function GridSection({ id, title, items, header_link, intro }) {
+    const headerLinkHref = useBaseUrl(header_link?.url || '/');
     return (
         <div id={id} className={styles.section}>
             <h3 className={styles.sectionTitle}>
                 {title}
                 {header_link && (
-                    <>{' - '}<a href={header_link.url} className={styles.header_link}>{header_link.label}...</a></>
+                    <>{' - '}<a href={headerLinkHref} className={styles.header_link}>{header_link.label}...</a></>
                 )}
             </h3>
             {intro && <div className={styles.intro}>{intro}</div>}

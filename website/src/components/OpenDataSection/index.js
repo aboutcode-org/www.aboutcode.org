@@ -1,4 +1,5 @@
 import React from 'react';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
 
 const dataCards = [
@@ -43,6 +44,32 @@ const dataCards = [
     },
 ];
 
+function DataCard({ card }) {
+    const titleHref = useBaseUrl(card.titleLink || '/');
+    return (
+        <div className={styles.card}>
+            <h3 className={styles.cardTitle}>
+                {card.titleLink ? <a href={titleHref} style={{ color: 'inherit', textDecoration: 'none' }}>{card.title}</a> : card.title}
+            </h3>
+            <p className={styles.cardDescription}>{card.description}</p>
+            <span className={styles.cardStats}>{card.stats}</span>
+            <div className={styles.cardLinks}>
+                {card.links.map((link) => (
+                    <a
+                        key={link.label}
+                        href={link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.cardLink}
+                    >
+                        {link.label}
+                    </a>
+                ))}
+            </div>
+        </div>
+    );
+}
+
 export default function OpenDataSection() {
     return (
         <div className={styles.wrapper}>
@@ -59,26 +86,7 @@ export default function OpenDataSection() {
             </div>
             <div className={styles.grid}>
                 {dataCards.map((card) => (
-                    <div key={card.title} className={styles.card}>
-                        <h3 className={styles.cardTitle}>
-                            {card.titleLink ? <a href={card.titleLink} style={{ color: 'inherit', textDecoration: 'none' }}>{card.title}</a> : card.title}
-                        </h3>
-                        <p className={styles.cardDescription}>{card.description}</p>
-                        <span className={styles.cardStats}>{card.stats}</span>
-                        <div className={styles.cardLinks}>
-                            {card.links.map((link) => (
-                                <a
-                                    key={link.label}
-                                    href={link.url}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className={styles.cardLink}
-                                >
-                                    {link.label}
-                                </a>
-                            ))}
-                        </div>
-                    </div>
+                    <DataCard key={card.title} card={card} />
                 ))}
             </div>
         </div>

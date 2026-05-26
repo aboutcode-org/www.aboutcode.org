@@ -1,4 +1,5 @@
 import React from 'react';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
 
 const capabilities = [
@@ -34,14 +35,21 @@ const capabilities = [
     },
 ];
 
+function CapabilityCard({ cap }) {
+    const href = useBaseUrl(cap.link);
+    return (
+        <a key={cap.title} href={href} className={styles.card}>
+            <h3 className={styles.cardTitle}>{cap.title}</h3>
+            <p className={styles.cardDescription}>{cap.description}</p>
+        </a>
+    );
+}
+
 export default function CapabilitiesGrid() {
     return (
         <div className={styles.grid}>
             {capabilities.map((cap) => (
-                <a key={cap.title} href={cap.link} className={styles.card}>
-                    <h3 className={styles.cardTitle}>{cap.title}</h3>
-                    <p className={styles.cardDescription}>{cap.description}</p>
-                </a>
+                <CapabilityCard key={cap.title} cap={cap} />
             ))}
         </div>
     );

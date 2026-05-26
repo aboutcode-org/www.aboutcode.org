@@ -31,6 +31,7 @@ const pillars = [
 
 function PillarCard({ pillar }) {
     const iconSrc = useBaseUrl(pillar.icon);
+    const linkHref = useBaseUrl(pillar.link || '/');
     const content = (
         <>
             <img src={iconSrc} alt="" className={styles.pillarIcon} />
@@ -39,7 +40,7 @@ function PillarCard({ pillar }) {
         </>
     );
     return pillar.link ? (
-        <a href={pillar.link} className={styles.pillar} style={{ textDecoration: 'none', color: 'inherit' }}>
+        <a href={linkHref} className={styles.pillar} style={{ textDecoration: 'none', color: 'inherit' }}>
             {content}
         </a>
     ) : (

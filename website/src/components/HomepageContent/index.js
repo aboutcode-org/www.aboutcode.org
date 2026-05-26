@@ -1,7 +1,8 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import HomeIntro from './HomeIntro.mdx';
-import StandardsOverview from './StandardsOverview.md';
+import StandardsOverview from './StandardsOverview.mdx';
 import AdoptersBanner from '@site/src/components/AdoptersBanner';
 import ProjectOverview from './ProjectOverview.md';
 import Supporters from './Supporters.md';
@@ -14,6 +15,8 @@ import { featuredProjectSources } from '@site/src/data/projects-featured';
 import styles from './styles.module.css';
 
 export default function HomepageContent() {
+    const meetingsUrl = useBaseUrl('/docs/about/about-meetings/');
+    const gettingStartedUrl = useBaseUrl('/docs/getting_started/getting_started-getting-started/');
     return (
         <main>
             <section className={styles.sectionContainer}>
@@ -46,7 +49,7 @@ export default function HomepageContent() {
                     <p>AboutCode is supported by over 700 contributors and
                         downloaded over 4 million times per day.
                         Join our <a href="https://join.slack.com/t/aboutcode-org/shared_invite/zt-31uzazd7l-tBHcqKUKkX6jUEPRLswiNw">chat</a> and
-                        our <a href="/docs/about/about-meetings/">weekly calls</a> to
+                        our <a href={meetingsUrl}>weekly calls</a> to
                         meet and start the conversation with AboutCode maintainers and contributors.
                     </p>
                     <p>Our open tools, data, and standards are used by
@@ -96,7 +99,9 @@ export default function HomepageContent() {
                     className={styles.sectionHeader}
                     style={{ marginBottom: '15px', marginTop: '15px' }}
                 >
-                    <h2>Interoperable modular tools and projects we support or maintain - <a href="/docs/getting_started/getting_started-getting-started/" className={styles.headerLink}>Getting started...</a></h2>
+                    <h2>Interoperable modular tools and projects we 
+                    support or maintain - <a href={gettingStartedUrl}
+                    className={styles.headerLink}>Getting started...</a></h2>
                 </div>
                 <div className={styles.sectionIntro}>
                     <ProjectOverview />
