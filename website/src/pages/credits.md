@@ -57,5 +57,5 @@ ServiceNow, Siemens, Snyk, Sony, Sonatype, SPDX, SUSE, Swift, TypeScript, Ubuntu
 Veracode, Verizon, Visual Basic, VMware, Volkswagen, VS Code, Windows, Xen, Yocto,
 Zeiss, and Zlib.
 
-AboutCode, ScanCode, VulnerableCode, PurlDB, and Package-URL are trademarks or
+AboutCode, DejaCode, ScanCode, VulnerableCode, and PurlDB are trademarks or
 service marks of nexB Inc. and AboutCode Europe ASBL.
