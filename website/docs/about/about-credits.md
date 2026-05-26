@@ -1,3 +1,7 @@
+---
+sidebar_label: Thank you
+---
+
 # Thank you and credits
 
 ## Thank you
