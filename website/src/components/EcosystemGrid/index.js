@@ -196,21 +196,21 @@ export default function EcosystemGrid() {
                 id="licensing"
                 title="Licensing data"
                 items={licenses}
-                header_link={{ label: 'Getting started', url: '/docs/getting_started/getting_started-compliance/' }}
+                header_link={{ label: 'Getting started', url: '/docs/getting_started/compliance/' }}
                 intro={<p>The ScanCode LicenseDB contains 2,500+ curated licenses across 12 categories. Browse all <a href="https://scancode-licensedb.aboutcode.org" target="_blank" rel="noopener noreferrer">2,500+ licenses</a> in the LicenseDB. Industry-leading license detection is backed by <a href="https://github.com/aboutcode-org/scancode-toolkit/tree/develop/src/licensedcode/data/rules" target="_blank" rel="noopener noreferrer">over 35,000 license notices</a> used as detection rules.</p>}
             />
             <GridSection
             	id="pkg-ecosystems"
             	title="Package ecosystems and programming languages"
             	items={ecosystems}
-            	header_link={{ label: 'Getting started', url: '/docs/getting_started/getting_started-software-identification/' }}
+            	header_link={{ label: 'Getting started', url: '/docs/getting_started/software-identification/' }}
                 intro={<p>The AboutCode package database and scanners track million of packages over 70 package ecosystems and programming languages. </p>}
         	/>
             <GridSection
                 id="vuln-sources"
                 title="Vulnerability data sources"
                 items={vulnSources}
-                header_link={{ label: 'Getting started', url: '/docs/getting_started/getting_started-security/' }}
+                header_link={{ label: 'Getting started', url: '/docs/getting_started/security/' }}
                 intro={<p>AboutCode collects, correlates, and improves vulnerabilities from over 50 data sources, privileging upstream data. </p>}
             />
         </div>

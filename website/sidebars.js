@@ -6,21 +6,21 @@ const sidebars = {
   // But you can create a sidebar manually
 
     getting_started: [
-        'getting_started/getting_started-getting-started',
-        'getting_started/getting_started-software-identification',
-        'getting_started/getting_started-security',
-        'getting_started/getting_started-compliance',
-        'getting_started/getting_started-cravex',
+        'getting_started/getting-started',
+        'getting_started/software-identification',
+        'getting_started/security',
+        'getting_started/compliance',
+        'getting_started/cravex',
     ],
 
     about: [
-        'about/about-meetings',
-        'about/about-contribute',
-        'about/about-news',
-        'about/about-events',
-        'about/about-releases',
-        'about/about-standards',
-        'about/about-credits',
+        'about/meetings',
+        'about/contribute',
+        'about/news',
+        'about/events',
+        'about/releases',
+        'about/standards',
+        'about/credits',
     ],
 
 };

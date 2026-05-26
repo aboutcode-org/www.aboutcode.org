@@ -15,8 +15,8 @@ import { featuredProjectSources } from '@site/src/data/projects-featured';
 import styles from './styles.module.css';
 
 export default function HomepageContent() {
-    const meetingsUrl = useBaseUrl('/docs/about/about-meetings/');
-    const gettingStartedUrl = useBaseUrl('/docs/getting_started/getting_started-getting-started/');
+    const meetingsUrl = useBaseUrl('/docs/about/meetings/');
+    const gettingStartedUrl = useBaseUrl('/docs/getting_started/getting-started/');
     return (
         <main>
             <section className={styles.sectionContainer}>

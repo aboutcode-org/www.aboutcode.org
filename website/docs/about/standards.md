@@ -59,4 +59,4 @@ data exchange and trust. Uses PURL to reference packages.
 
 ---
 
-[Get started with CRA compliance and SBOMs...](../getting_started/getting_started-cravex.md)
+[Get started with CRA compliance and SBOMs...](../getting_started/cravex.md)

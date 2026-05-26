@@ -48,4 +48,4 @@ The projects are presented in 5 categories:
 
 If you have questions about how to apply AboutCode building blocks to your
 requirements, please join one of our community meetings or on Gitter or Slack.
-See our [Meetings page](/docs/about/about-meetings) for details.
+See our [Meetings page](/docs/about/meetings) for details.
