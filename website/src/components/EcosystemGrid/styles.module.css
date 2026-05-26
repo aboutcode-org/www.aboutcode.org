@@ -15,6 +15,12 @@
     margin-bottom: 0.75rem;
 }
 
+.intro {
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
 .headerLink {
     font-size: 1rem;
     font-style: italic;

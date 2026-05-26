@@ -8,7 +8,6 @@ import Supporters from './Supporters.md';
 import ValuePillars from '@site/src/components/ValuePillars';
 import CapabilitiesGrid from '@site/src/components/CapabilitiesGrid';
 import EcosystemGrid from '@site/src/components/EcosystemGrid';
-import LicenseGrid from '@site/src/components/LicenseGrid';
 import OpenDataSection from '@site/src/components/OpenDataSection';
 import ProjectGridTemplate from '@site/src/components/ProjectGridTemplate';
 import { featuredProjectSources } from '@site/src/data/projects-featured';
@@ -121,13 +120,11 @@ export default function HomepageContent() {
                     <h2>Supported ecosystems, languages, licenses, and data sources</h2>
                 </div>
                 <div className={styles.sectionIntro}>
-                    <p>AboutCode tools support 70+ package ecosystems, programming languages,
+                    <p>AboutCode tools support a large number of licenses, package ecosystems, programming languages,
                     and vulnerability data sources, all identified using{' '}
-                    <a href="https://packageurl.org">Package-URL (PURL)</a>.</p>
+                    <a href="https://packageurl.org">Package-URL (PURL)</a> or SPDX license expressions.</p>
                 </div>
                 <EcosystemGrid />
-                <div id="licensing" style={{ scrollMarginTop: '80px' }}></div>
-                <LicenseGrid />
             </section>
 
             <div style={{ marginBottom: '50px' }}></div>
