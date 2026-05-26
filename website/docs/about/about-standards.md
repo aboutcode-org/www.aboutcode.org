@@ -1,3 +1,7 @@
+---
+sidebar_label: Standards
+---
+
 # Software Supply Chain Standards
 
 AboutCode is leading the way with simple and practical standards like PURL.
@@ -55,4 +59,4 @@ data exchange and trust. Uses PURL to reference packages.
 
 ---
 
-[Get started with CRA compliance and SBOMs...](/docs/getting_started/getting_started-cravex/)
+[Get started with CRA compliance and SBOMs...](../getting_started/getting_started-cravex.md)
