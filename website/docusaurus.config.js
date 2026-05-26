@@ -143,8 +143,8 @@ const config = {
                             { to: '/docs/about/about-news', label: 'News' },
                             { to: '/docs/about/about-events', label: 'Events' },
                             { to: '/docs/about/about-releases', label: 'Releases' },
-                            { to: '/standards', label: 'Standards' },
-                            { to: '/credits', label: 'Thank you' },
+                            { to: '/docs/about/about-standards', label: 'Standards' },
+                            { to: '/docs/about/about-credits', label: 'Thank you' },
                             {
                                 href: 'https://join.slack.com/t/aboutcode-org/shared_invite/zt-31uzazd7l-tBHcqKUKkX6jUEPRLswiNw',
                                 label: 'Chat',
@@ -197,7 +197,7 @@ const config = {
 
                     { label: 'Privacy Policy', to: '/privacy' },
                     { label: 'Terms of Use', to: '/terms' },
-                    { label: 'Credits', to: '/credits' },
+                    { label: 'Credits', to: '/docs/about/about-credits' },
                 ],
                 copyright: `Copyright AboutCode Europe ASBL. &nbsp; Content licensed under CC-BY-SA-4.0. &nbsp; Built with Docusaurus.`,
             },

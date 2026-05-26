@@ -14,11 +14,13 @@ const sidebars = {
     ],
 
     about: [
-        'about/about-contribute',
         'about/about-meetings',
-        'about/about-releases',
-        'about/about-events',
+        'about/about-contribute',
         'about/about-news',
+        'about/about-events',
+        'about/about-releases',
+        'about/about-standards',
+        'about/about-credits',
     ],
 
 };
