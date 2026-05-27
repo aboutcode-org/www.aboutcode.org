@@ -18,7 +18,7 @@ We value contributions from members of the community.  You can always suggest a 
 
 The staging version of the website is published at: https://aboutcode-org.github.io/www.aboutcode.org/.
 
-The production version of the website (hosted at Dreamhost)is published at: https://www.aboutcode.org/ .
+The production version of the website (Dreamhost) is published at: https://www.aboutcode.org/.
 
 ## Simplified website structure
 This section documents the website structure which necessarily follows a Docusaurus template and configuration. There are two primary ways to update the website:
