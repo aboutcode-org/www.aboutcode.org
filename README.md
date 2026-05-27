@@ -1,8 +1,19 @@
 # www.aboutcode.org
 
-## Overview
-This is the repository for the AboutCode public website. It is based on [Docusaurus](https://docusaurus.io/docs).
-This website is currently in an Alpha phase with the primary focus on content over format.
+This is the repository for the AboutCode public website.
+It is based on [Docusaurus](https://docusaurus.io/docs).
+
+# Getting started
+
+This requires to have node 20 installed
+
+- npm install
+
+- The staging website is published at: https://aboutcode-org.github.io/www.aboutcode.org/
+- The production website is published at: https://aboutcode.org
+
+
+### Contributing 
 
 We value contributions from members of the community.  You can always suggest a new feature or a change to some existing element of the website by opening an issue and, if you're ready, a PR.
 - The normal process for suggesting changes is to create an issue to explain the change before creating a pull request.

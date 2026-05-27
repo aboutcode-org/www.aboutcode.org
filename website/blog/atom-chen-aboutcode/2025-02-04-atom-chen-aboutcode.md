@@ -78,6 +78,6 @@ committed to open source software, prioritizing transparency, inclusivity, and
  community-driven development. A technical advisory group (TAG) will be formed
   to ensure project development addresses the needs of the wider community.
 
-Want to get involved? Join the AboutCode [Slack](https://join.slack.com/t/aboutcode-org/shared_invite/zt-1paqwxccw-IuafuiAvYJFkTqGaZsC1og)
+Want to get involved? Join the AboutCode [Slack](https://join.slack.com/t/aboutcode-org/shared_invite/zt-31uzazd7l-tBHcqKUKkX6jUEPRLswiNw)
 or [Gitter](https://app.gitter.im/#/room/#aboutcode-org_discuss:gitter.im)
 to chat with the community.

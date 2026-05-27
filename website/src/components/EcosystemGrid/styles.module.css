@@ -6,6 +6,7 @@
 
 .section {
     margin-bottom: 1.5rem;
+    scroll-margin-top: 80px;
 }
 
 .sectionTitle {
@@ -14,10 +15,28 @@
     margin-bottom: 0.75rem;
 }
 
+.intro {
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.headerLink {
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: normal;
+    color: #2a6bc7;
+    text-decoration: none;
+}
+
+.headerLink:hover {
+    text-decoration: underline;
+}
+
 .grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
     gap: 0.5rem;
     background: #f7f7f7;
     border-radius: 8px;
@@ -78,6 +97,11 @@
 .logoWideLarge {
     width: 62px;
     height: 40px;
+}
+
+.logoXL {
+    width: 80px;
+    height: 42px;
 }
 
 .ubuntuLogo {

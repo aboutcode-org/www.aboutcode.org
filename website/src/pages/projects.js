@@ -9,7 +9,7 @@ export default function Projects() {
     return (
         <Layout
             title='Projects'
-            description='Supported AboutCode projects'
+            description='Supported or Maintained AboutCode projects'
         >
             <main>
                 <section className={styles.sectionContainer}>

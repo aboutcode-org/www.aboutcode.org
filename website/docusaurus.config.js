@@ -38,8 +38,9 @@ const currentBaseUrl = siteConfig[deployTarget].baseUrl
 /** @type {import('@docusaurus/types').Config} */
 const config = {
     title: 'AboutCode.org',
-    tagline: '[Tagline . . . ?]',
+    tagline: 'Open data, tools, and standards for the software supply chains',
     favicon: 'img/favicon.ico',
+
 
     markdown: {
         format: 'detect', // Auto-detects: .md = plain Markdown (CommonMark), .mdx = MDX
@@ -119,46 +120,49 @@ const config = {
                 style: 'dark',
                 items: [
                     {
-                        type: 'dropdown',
-                        label: 'Documentation',
+                        type: 'docSidebar',
+                        sidebarId: 'getting_started',
                         position: 'left',
-                        items: [
-                            {
-                                type: 'docSidebar',
-                                sidebarId: 'getting_started',
-                                label: 'Getting Started',
-                            },
-                            {
-                                href: 'https://aboutcode.readthedocs.io',
-                                label: 'Reference',
-                            },
-                        ],
+                        label: 'Getting Started',
                     },
-                    { to: '/blog', label: 'Blog', position: 'left' },
+                    {   to: '/blog',
+                        label: 'Blog',
+                        position: 'left'
+                    },
+                    {   to: '/projects',
+                        label: 'Projects',
+                        position: 'left'
+                    },
                     {
                         type: 'dropdown',
-                        label: 'Community',
+                        label: 'About',
                         position: 'left',
                         items: [
-                            { to: '/docs/about/about-contribute', label: 'Contribute' },
-                            { to: '/docs/about/about-meetings', label: 'Meetings' },
-                            { to: '/docs/about/about-news', label: 'News' },
-                            { to: '/docs/about/about-events', label: 'Events' },
-                            {
-                                href: 'https://join.slack.com/t/aboutcode-org/shared_invite/zt-1paqwxccw-IuafuiAvYJFkTqGaZsC1og',
-                                label: 'Slack',
-                            },
-                            {
-                                href: 'https://github.com/aboutcode-org',
-                                label: 'GitHub',
-                            },
+                            { to: '/docs/about/contribute', label: 'Contribute' },
+                            { to: '/docs/about/events', label: 'Events' },
+                            { to: '/docs/about/meetings', label: 'Meetings' },
+                            { to: '/docs/about/news', label: 'News' },
+                            { to: '/docs/about/releases', label: 'Releases' },
+                            { to: '/docs/about/standards', label: 'Standards' },
+                            { to: '/docs/about/credits', label: 'Thank you' },
                         ],
+                    },
+                    {
+                        href: 'https://aboutcode.readthedocs.io',
+                        label: 'Doc',
+                        position: 'right',
+                    },
+                    {
+                        href: 'https://join.slack.com/t/aboutcode-org/shared_invite/zt-31uzazd7l-tBHcqKUKkX6jUEPRLswiNw',
+                        label: 'Slack',
+                        position: 'right',
                     },
                     {
                         href: 'https://github.com/aboutcode-org',
                         label: 'GitHub',
                         position: 'right',
                     },
+
                 ],
             },
             footer: {
@@ -177,7 +181,7 @@ const config = {
                     },
 
                     {
-                        html: `<a href="https://join.slack.com/t/aboutcode-org/shared_invite/zt-1paqwxccw-IuafuiAvYJFkTqGaZsC1og" target="_blank" rel="noopener noreferrer" aria-label="Slack"><img src="${currentBaseUrl}img/slack-logo.svg" alt="" width="20" height="20"></a>`,
+                        html: `<a href="https://join.slack.com/t/aboutcode-org/shared_invite/zt-31uzazd7l-tBHcqKUKkX6jUEPRLswiNw" target="_blank" rel="noopener noreferrer" aria-label="Slack"><img src="${currentBaseUrl}img/slack-logo.svg" alt="" width="20" height="20"></a>`,
                     },
 
                     {
@@ -190,7 +194,7 @@ const config = {
 
                     { label: 'Privacy Policy', to: '/privacy' },
                     { label: 'Terms of Use', to: '/terms' },
-                    { label: 'Credits', to: '/credits' },
+                    { label: 'Credits', to: '/docs/about/credits' },
                 ],
                 copyright: `Copyright AboutCode Europe ASBL. &nbsp; Content licensed under CC-BY-SA-4.0. &nbsp; Built with Docusaurus.`,
             },

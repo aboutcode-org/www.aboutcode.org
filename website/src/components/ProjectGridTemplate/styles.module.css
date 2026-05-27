@@ -42,10 +42,10 @@
 
 /* Replace flexbox with a proper grid -- 3 columns */
 .projectGrid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 1.5rem;
-    align-items: stretch; /* Auto-match heights per row */
 }
 
 .projectCard {
@@ -59,8 +59,7 @@
     transition:
         transform 0.2s ease,
         box-shadow 0.2s ease;
-    /* Remove sizing from flexbox layout */
-    flex: none;
+    flex: 0 1 calc(33.333% - 1rem);
     max-width: none;
     /* Keep vertical stacking */
     display: flex;
@@ -79,15 +78,15 @@
 
 /* Breakpoints for tablets */
 @media (max-width: 1024px) {
-    .projectGrid {
-        grid-template-columns: repeat(2, 1fr);
+    .projectCard {
+        flex: 0 1 calc(50% - 1rem);
     }
 }
 
 /* Breakpoints for mobile */
 @media (max-width: 640px) {
-    .projectGrid {
-        grid-template-columns: 1fr;
+    .projectCard {
+        flex: 0 1 100%;
     }
 }
 
