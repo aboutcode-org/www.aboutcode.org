@@ -8,8 +8,8 @@ const sidebars = {
     getting_started: [
         'getting_started/getting-started',
         'getting_started/software-identification',
-        'getting_started/security',
-        'getting_started/compliance',
+        'getting_started/software-security',
+        'getting_started/license-compliance',
         'getting_started/cravex',
     ],
 
