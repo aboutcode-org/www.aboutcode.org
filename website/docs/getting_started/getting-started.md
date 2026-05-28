@@ -15,10 +15,11 @@ compliance and supply chain security. Our approach is to describe common use
 cases and show you how specific AboutCode capabilities apply to those use
 cases.
 
-The use cases are grouped according to 3 major topics:
+The use cases are grouped according to 4 major topics:
 - Software identification
 - License compliance
 - Supply chain security
+- CRAVEX: Abbreviation for "Cyber Resilience Application for Vulnerability Exploitability Exchange"
 
 If you already know which AboutCode projects you are interested in you can
 find project information in the **AboutCode Projects Overview** section of the
