@@ -17,9 +17,9 @@ represents approximately 80% of software in use according to most surveys.
 ## Package-URL
 
 The AboutCode team identified this problem in 2018 in the context of working
-on our ScanCode and VulnerableCode projects. The solution was and is the PURL 
+on our ScanCode and VulnerableCode projects. The solution is the PURL 
 (Package-URL) specification which has become the most widely used software
-identifier for open source software. PURL is now an Ecma standard: [ECMA-427](https://ecma-tc54.github.io/ECMA-427/), 
+identifier for open source software. PURL is now an Ecma standard: [ECMA-427](https://ecma-tc54.github.io/ECMA-427/) 
 and it is on a fast track to become an ISO standard. 
 
 Our team also identified a related problem - after you have a standard way
@@ -28,7 +28,7 @@ package versions to determine whether a reported vulnerability affects the
 version that you use? Our solution is the VERS (VErsion Range Specifier) 
 specification which will be submitted to Ecma as a standard in 2026.
 
-See the [Package-URL website](https://package-url.github.io/www.packageurl.org/) 
+See the [Package-URL](https://www.packageurl.org/) website
 for more information about PURL and VERS.
 
 See the Package-URL (PURL) projects section of the Home page for more 
@@ -38,7 +38,7 @@ capabilities.
 ## Identify software packages and components
 For the basic use case of identifying software packages and components, 
 AboutCode offers the DejaCode application, ScanCode tools, the PURLDB database
- and the [PURL standard](https://package-url.github.io/www.packageurl.org/docs/purl/purl-spec-introduction). 
+ and the [PURL](https://www.packageurl.org/docs/purl/introduction) standard.
 
 - [DejaCode](https://dejacode.readthedocs.io/en/latest/) is an enterprise-level
 application to automate managing your software assets including license 
