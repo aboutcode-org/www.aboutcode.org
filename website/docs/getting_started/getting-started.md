@@ -18,13 +18,13 @@ cases.
 The use cases are grouped according to 4 major topics:
 - Software identification
 - License compliance
-- Supply chain security
-- CRAVEX: Abbreviation for "Cyber Resilience Application for Vulnerability Exploitability Exchange"
-
+- Software security
+- CRAVEX: An open source solution for any organization to efficiently comply with the CRA
+and other regulatory requirements and improve its overall software security posture.
+  
 If you already know which AboutCode projects you are interested in you can
-find project information in the **AboutCode Projects Overview** section of the
-Projects page of this website. Each project card provides comprehensive project
-information including:
+find detailed project information in the Projects page of this website. Each project 
+card provides comprehensive project information including:
 - Description
 - Documentation URL
 - GitHub Repository URL
@@ -49,4 +49,4 @@ The projects are presented in 5 categories:
 
 If you have questions about how to apply AboutCode building blocks to your
 requirements, please join one of our community meetings or on Gitter or Slack.
-See our [Meetings page](/docs/about/meetings) for details.
+See our [Meetings](/docs/about/meetings) page for details.
