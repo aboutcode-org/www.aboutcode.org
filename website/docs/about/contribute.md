@@ -3,12 +3,10 @@
 We welcome contributions of all kinds, including bug reports, code, 
 documentation, design ideas, and use cases.
 
-General information about contributing to an AboutCode project can be found at [Contributing to AboutCode](https://aboutcode.readthedocs.io/en/latest/contributing.html) documentation.
+General information about contributing to an AboutCode project can be found 
+at [Contributing to AboutCode](https://aboutcode.readthedocs.io/en/latest/contributing.html) documentation.
 
-You can find specific information about how to contribute to documentation at
- [Contributing to AboutCode Documentation](https://aboutcode.readthedocs.io/en/latest/contributing/contrib_doc.html).
-
-The README file for an AboutCode project will provide details about the 
+The README file for each AboutCode project provides details about the 
 project structure and instructions for how to install a local development
 environment for the project (as applicable).
 
@@ -24,4 +22,4 @@ your code under the project's license.
 ## Code of Conduct
 
 We are committed to fostering an open and welcoming environment. Please review 
-our [Code of Conduct](https://github.com/aboutcode-org/scancode-toolkit/blob/develop/CODE_OF_CONDUCT.rst) before participating.
+our [Code of Conduct](https://github.com/aboutcode-org/aboutcode/blob/main/CODE_OF_CONDUCT.rst) before participating.
