@@ -14,10 +14,10 @@ const sidebars = {
     ],
 
     about: [
-        'about/meetings',
         'about/contribute',
-        'about/news',
         'about/events',
+        'about/meetings',
+        'about/news',
         'about/releases',
         'about/standards',
         'about/credits',
