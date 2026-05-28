@@ -17,8 +17,8 @@ cases.
 
 The use cases are grouped according to 4 major topics:
 - Software identification
-- License compliance
 - Software security
+- License compliance
 - CRAVEX: An open source solution for any organization to efficiently comply with the CRA
 and other regulatory requirements and improve its overall software security posture.
   
