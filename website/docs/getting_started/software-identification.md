@@ -19,9 +19,8 @@ represents approximately 80% of software in use according to most surveys.
 The AboutCode team identified this problem in 2018 in the context of working
 on our ScanCode and VulnerableCode projects. The solution was and is the PURL 
 (Package-URL) specification which has become the most widely used software
-identifier for open source software. PURL is now an Ecma standard - [ECMA-427]
-(https://ecma-tc54.github.io/ECMA-427/), and it is on a fast track to become 
-an ISO standard. 
+identifier for open source software. PURL is now an Ecma standard: [ECMA-427](https://ecma-tc54.github.io/ECMA-427/), 
+and it is on a fast track to become an ISO standard. 
 
 Our team also identified a related problem - after you have a standard way
 to identify software packages, what is a standard way to compare software
