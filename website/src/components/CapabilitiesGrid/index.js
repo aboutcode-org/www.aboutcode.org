@@ -6,7 +6,7 @@ const capabilities = [
     {
         title: 'License Detection',
         description: 'Detect licenses in any codebase, whether open source, or proprietary; in source code and binaries. Powers dozens of open source and commercial SCA tools.',
-        link: '/docs/getting_started/compliance/',
+        link: '/docs/getting_started/license-compliance/',
     },
     {
         title: 'Code Origin Matching',
@@ -26,7 +26,7 @@ const capabilities = [
     {
         title: 'Vulnerability Management',
         description: 'Aggregate vulnerability data, map to affected packages, identify fixes, and score exploitability and risk for triage.',
-        link: '/docs/getting_started/security/',
+        link: '/docs/getting_started/software-security/',
     },
     {
         title: 'SBOMs and Compliance',

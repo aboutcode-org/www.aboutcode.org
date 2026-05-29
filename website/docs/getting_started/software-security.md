@@ -1,4 +1,4 @@
-# Security
+# "Software Security
 Software security is a very broad domain. The AboutCode community has focused
 on the identification, reporting, triage and remediation of open source 
 vulnerabilities because this fits with our core expertise in software

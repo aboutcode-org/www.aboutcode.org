@@ -1,4 +1,4 @@
-# Compliance
+# License Compliance
 Compliance with licenses for third-party software is a very broad topic which was historically separated into two distinct domains:
 - Licenses for commercial software products where a purchasing department or
 similar organization has the primary responsibility for negotiating license 
