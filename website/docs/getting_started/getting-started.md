@@ -21,9 +21,9 @@ The use cases are grouped according to 4 major topics:
 - License compliance
 - CRAVEX: An open source solution for any organization to efficiently comply with the CRA
 and other regulatory requirements and improve its overall software security posture.
-  
+
 If you already know which AboutCode projects you are interested in you can
-find detailed project information in the Projects page of this website. Each project 
+find detailed project information in the Projects page of this website. Each project
 card provides comprehensive project information including:
 - Description
 - Documentation URL
@@ -33,17 +33,17 @@ card provides comprehensive project information including:
 - Platform
 
 The projects are presented in 5 categories:
-- [Applications](/projects/): These projects offer an application
+- [Applications](/projects#application-projects): These projects offer an application
   that you can install in the cloud or a local environment.
-- [ScanCode](/projects/): These projects are components or extensions
+- [ScanCode](/projects#scancode-projects): These projects are components or extensions
   of ScanCode.
-- [Package-URL](/projects/): These projects provide tools and data to
+- [Package-URL](/projects#purl-projects): These projects provide tools and data to
   support the use of the PURL (Package-URL) or VERS (Version Range Specifier)
   specifications.
-- [Inspectors](/projects/): AboutCode Inspectors are special-purpose
+- [Inspectors](/projects#inspectors): AboutCode Inspectors are special-purpose
   analysis tools. You can run them as a ScanCode Toolkit plugin, as steps in
   a ScanCode.io pipeline, or from the command line.
-- [Libraries](/projects/): AboutCode libraries are key building blocks for
+- [Libraries](/projects#libraries): AboutCode libraries are key building blocks for
   the AboutCode software and data stack - they have also been incorporated
   into other major FOSS projects and are available for use by anyone.
 
