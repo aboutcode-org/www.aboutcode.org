@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '@theme/Layout';
 import ProjectOverview from '@site/src/components/HomepageContent/ProjectOverview.md';
-import ProjectGridTemplate from '@site/src/components/ProjectGridTemplate';
+import ProjectGrid from '@site/src/components/ProjectGrid';
 import { allProjectSources } from '@site/src/data/projects-all';
 import styles from '@site/src/components/HomepageContent/styles.module.css';
 
@@ -22,7 +22,7 @@ export default function Projects() {
                     <div className={styles.sectionIntro}>
                         <ProjectOverview />
                     </div>
-                    <ProjectGridTemplate projectSources={allProjectSources} />
+                    <ProjectGrid projectSources={allProjectSources} />
                 </section>
                 <div style={{ marginBottom: '50px' }}></div>
             </main>

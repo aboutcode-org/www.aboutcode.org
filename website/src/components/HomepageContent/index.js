@@ -10,7 +10,7 @@ import ValuePillars from '@site/src/components/ValuePillars';
 import CapabilitiesGrid from '@site/src/components/CapabilitiesGrid';
 import EcosystemGrid from '@site/src/components/EcosystemGrid';
 import OpenDataSection from '@site/src/components/OpenDataSection';
-import ProjectGridTemplate from '@site/src/components/ProjectGridTemplate';
+import ProjectGrid from '@site/src/components/ProjectGrid';
 import { featuredProjectSources } from '@site/src/data/projects-featured';
 import styles from './styles.module.css';
 
@@ -115,7 +115,7 @@ export default function HomepageContent() {
                 <div className={styles.sectionIntro}>
                     <ProjectOverview />
                 </div>
-                <ProjectGridTemplate
+                <ProjectGrid
                     projectSources={featuredProjectSources}
                     showSectionTitles={false}
                 />
