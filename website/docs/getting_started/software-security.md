@@ -5,10 +5,10 @@ vulnerabilities because this fits with our core expertise in software
 identification and SCA (Software Composition Analysis). We are, however, 
 expanding our scope for software security with the recent addition of the 
 **atom** and **chen** project to the AboutCode community, but most of our tools
- and data are related to software vulnerabilities. See also [atom and chen join AboutCode](/blog/atom-chen-aboutcode).
+ and data are related to software vulnerabilities.
 
 Note that AboutCode tools and data for software vulnerabilities expect that 
-software will be identified with a [PURL (Package-URL)](https://package-url.github.io/www.packageurl.org/docs/purl/purl-spec-introduction).
+software will be identified with a [PURL (Package-URL)](https://packageurl.org/docs/purl/introduction).
 
 ## Identify vulnerabilities
 For the basic use case of identifying software vulnerabilities, AboutCode 
@@ -21,10 +21,10 @@ vulnerabilities from upstream and downstream public data sources. The
 VulnerableCode tools collect, aggregate and correlated vulnerabilities and 
 maps them to package versions using PURL. 
 
-    AboutCode hosts the public [VCIO](https://public2.vulnerablecode.io/) 
+    AboutCode hosts the public [VCIO](https://public.vulnerablecode.io/) 
     database with a Web UI for queries and an API. Access is free but there 
     are some restrictions on the frequency and volume of API requests. You can
-     use the VulnerableCode tools to build, maintain and 
+    use the VulnerableCode tools to build, maintain and 
     use (Web UI and APIs) your own private VCIO database.
 
 - [DejaCode](https://dejacode.readthedocs.io/en/latest/) integrates software
@@ -43,22 +43,22 @@ your Scan project. Then you can view the vulnerability data in the UI, export
 it (JSON, XLSX, SPDX, CDX and other formats) or pull it from the API.
 
 ## Manage risk with aggregated vulnerability data 
-[VulnerableCode](https://vulnerablecode.readthedocs.io/en/latest/) provides
-tools to create and maintain a database of known software vulnerabilities
-from public sources up and down the software supply chain. When evaluating the
-vulnerabilities for a package (or a single vulnerability) you will need 
-information from upstream FOSS projects and downstream projects and distros 
-that include software from upstream. For example, there may be significant 
-differences in [CVSS](https://www.first.org/cvss/) Severity scores provided by
-different organizations With a **VulnerableCode** database like 
-[VCIO](https://public2.vulnerablecode.io/) you can see the aggregated Severity
- information for each vulnerability in one place or pull it with the API for 
-use in other systems.
+**VulnerableCode** provides tools to create and maintain a database of known 
+software vulnerabilities from public sources up and down the software supply 
+chain. When evaluating the vulnerabilities for a package (or a single 
+vulnerability) you will need information from upstream FOSS projects and 
+downstream projects and distros that include software from upstream. For 
+example, there may be significant differences in [CVSS](https://www.first.org/cvss/) 
+Severity scores provided by different organizations With a **VulnerableCode** 
+database like [VCIO](https://public.vulnerablecode.io/) you can see the 
+aggregated Severity information for each vulnerability in one place or pull it 
+with the API for use in other systems.
 
 ## Triage vulnerabilities
 One of the most complex tasks for managing vulnerabilities is to determine
-which vulnerabilities require your attention and in which order. [VulnerableCode](https://vulnerablecode.readthedocs.io/en/latest/) provides three key metrics for each 
-vulnerability to assist with this triage:
+which vulnerabilities require your attention and in which order. 
+**VulnerableCode** provides three key metrics for each vulnerability to assist
+ with this triage:
 - _Exploitability_: Exploitability indicates the likelihood that a 
 vulnerability in a software package could be used by malicious actors to 
 compromise systems, applications, or networks. This metric is determined 
@@ -85,8 +85,8 @@ project
 
 It is not clear which of these specifications will become primary, but they all cover similar data.
 
-[DejaCode](https://dejacode.readthedocs.io/en/latest/) provides a Product 
-(inventory or SBOM) feature to record the essential VEX data such as:
+**DejaCode** provides a Product (inventory or SBOM) feature to record the 
+essential VEX data such as:
 - Status: The current state of an occurrence of a vulnerability, after 
 automated or manual analysis.
 - Justification: The rationale for why the impact analysis state was asserted.

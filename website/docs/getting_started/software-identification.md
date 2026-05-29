@@ -19,8 +19,9 @@ represents approximately 80% of software in use according to most surveys.
 The AboutCode team identified this problem in 2018 in the context of working
 on our ScanCode and VulnerableCode projects. The solution is the PURL 
 (Package-URL) specification which has become the most widely used software
-identifier for open source software. PURL is now an Ecma standard: [ECMA-427](https://ecma-tc54.github.io/ECMA-427/) 
-and it is on a fast track to become an ISO standard. 
+identifier for open source software. PURL is now an Ecma standard: 
+[ECMA-427](https://ecma-tc54.github.io/ECMA-427/). ECMA-427 is on a fast track
+ to become an ISO standard. 
 
 Our team also identified a related problem - after you have a standard way
 to identify software packages, what is a standard way to compare software
@@ -29,11 +30,9 @@ version that you use? Our solution is the VERS (VErsion Range Specifier)
 specification which will be submitted to Ecma as a standard in 2026.
 
 See the [Package-URL](https://www.packageurl.org/) website
-for more information about PURL and VERS.
+for more information about the PURL and VERS specifications
 
-See the Package-URL (PURL) projects section of the Home page for more 
-information about AboutCode tools that provide PURL- and VERS-specific 
-capabilities.
+All AboutCode projects use PURL for software identification.
 
 ## Identify software packages and components
 For the basic use case of identifying software packages and components, 
@@ -80,7 +79,7 @@ SPDX License List.
 and manage a database of package metadata keyed by PURL. You can use PURLDB 
 data via API to enrich your package and SBOM data in DejaCode, ScanCode.io, 
 or your own application. The AboutCode team also currently hosts a public 
-[PURLDB](https://public.purldb.io/api/) service with REST API.
+[PURLDB service](https://public.purldb.io/api/) with a REST API.
 
 ## Analyze containers 
 The analysis of containers to produce inventories or SBOMs for the software
@@ -89,11 +88,11 @@ increasing volume of software deployed on containers and the large volume of
 software deployed in most containers. For this use case, the primary AboutCode
 tools and data are:
 
-- [ScanCode.io](https://scancodeio.readthedocs.io/en/latest/) provides the 
-`analyze_docker_image` pipeline for container analysis. This will produce a
-software inventory for Resources (all files), Packages (package metadata),
-Dependencies (from package manifest files). The scan data also includes 
-detailed information about image layers and their file content.
+- **ScanCode.io** provides the `analyze_docker_image` pipeline for container 
+analysis. This pipeline will produce a software inventory including Resources 
+(all files), Packages (packages and their metadata), and Dependencies 
+(from package manifest files). The scan data also includes detailed 
+information about image layers and their file content.
 
     If you conclude that the ScanCode.io inventory is accurate, you can 
     export the data in CycloneDX or SPDX SBOM format, or in JSON or XLSX format
@@ -102,10 +101,9 @@ detailed information about image layers and their file content.
     If you need to update or enhance the scan data before you produce an SBOM, 
     DejaCode provides several options.
     
-- [DejaCode](https://dejacode.readthedocs.io/en/latest/) is highly integrated
-with ScanCode so that you can easily import ScanCode scan data from ScanCode
-Toolkit or ScanCode.io into DejaCode as a **Product**. In DejaCode, you can 
-then:
+- **DejaCode** is deeply integrated with ScanCode so that you can easily 
+import ScanCode scan data from ScanCode Toolkit or ScanCode.io into DejaCode 
+as a Product. In DejaCode, you can then:
     
     - Enrich the package data from PURLDB
     - Apply your license usage policies
@@ -116,9 +114,9 @@ then:
 
 - [container-inspector](https://github.com/aboutcode-org/container-inspector/blob/main/README.rst) 
 is a static analysis tool to analyze the structure of software components in a
- container image. container-inspector is used in the ScanCode.io 
- `analyze_docker_image` pipeline for the layer analysis,
-but you can also use it as a command line utility.
+container image. **container-inspector** is used in the ScanCode.io 
+`analyze_docker_image` pipeline for the layer analysis, but you can also use 
+it as a command line utility.
 
 ## Consume or produce SBOMs
 The EU CRA (Cyber Resilience Act) and other regulatory initiatives have 
@@ -142,10 +140,9 @@ AboutCode community we consider binary-source matching to be a subset of the
 much larger domain of matching "deploy" files to "devel" files. This matching 
 challenge includes:
 
-- [ScanCode.io](https://scancodeio.readthedocs.io/en/latest/) supports 
-"deploy-to-devel" matching with the `map_deploy_to_develop` pipeline.
+- **ScanCode.io** supports "deploy-to-devel" matching with the 
+`map_deploy_to_develop` pipeline.
 This pipeline currently handles:
-
   - Matching Linux ELF, Windows, MacOS or Rust binaries to source
   - Matching Go binaries to source
   - Matching Java `jar` or `class` files to corresponding Java, Kotlin or 
@@ -161,8 +158,7 @@ algorithm. You can use the **MatchCode Toolkit** as a library.
 - ScanCode uses several AboutCode libraries to analyze "deploy" files 
 including:
    - [binary-inspector](https://github.com/aboutcode-org/binary-inspector/blob/main/README.rst) 
-   extracts symbols from binaries in ELF, Mach-O, WinPe and
-   other formats
+   extracts symbols from binaries in ELF, Mach-O, WinPe and other formats
    - [elf-inspector](https://github.com/aboutcode-org/elf-inspector/blob/main/README.rst) 
    collects data from ELF binaries
    - [go-inspector](https://github.com/aboutcode-org/go-inspector/blob/main/README.rst) 
