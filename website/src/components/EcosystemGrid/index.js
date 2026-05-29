@@ -260,19 +260,12 @@ export default function EcosystemGrid() {
                 intro={<p>AboutCode tracks over 2,500+ curated licenses across 12 categories. Browse all <a href="https://scancode-licensedb.aboutcode.org" target="_blank" rel="noopener noreferrer">2,500+ licenses</a> in the LicenseDB. Industry-leading license detection is backed by <a href="https://github.com/aboutcode-org/scancode-toolkit/tree/develop/src/licensedcode/data/rules" target="_blank" rel="noopener noreferrer">over 35,000 license notices</a> used as detection rules.</p>}
             />
             <GridSection
-            	id="programming-languages"
-            	title="Programming languages"
-            	items={programming_languages}
-            	header_link={{ label: 'Get started with software identification', url: '/docs/getting_started/software-identification/' }}
-                intro={<p>AboutCode tools detect and analyze code across many programming languages.</p>}
-        	/>
-            <GridSection
-            	id="operating-systems"
-            	title="Operating systems"
-            	items={operating_systems}
-            	header_link={{ label: 'Get started with software identification', url: '/docs/getting_started/software-identification/' }}
-                intro={<p>AboutCode tools support packages and distributions across major server, desktop, and mobile operating systems.</p>}
-        	/>
+                id="vuln-sources"
+                title="Software vulnerabilities"
+                items={vulnerability_sources}
+                header_link={{ label: 'Get started with security', url: '/docs/getting_started/software-security/' }}
+                intro={<p>AboutCode collects, correlates, and improves vulnerabilities from multiple advisory data sources, privileging upstream data. </p>}
+            />
             <GridSection
             	id="pkg-ecosystems"
             	title="Package ecosystems"
@@ -281,18 +274,18 @@ export default function EcosystemGrid() {
                 intro={<p>The AboutCode package database and scanners track millions of packages from most package ecosystems.</p>}
         	/>
             <GridSection
-                id="vuln-sources"
-                title="Software vulnerabilities"
-                items={vulnerability_sources}
-                header_link={{ label: 'Get started with security', url: '/docs/getting_started/software-security/' }}
-                intro={<p>AboutCode collects, correlates, and improves vulnerabilities from multiple advisory data sources, privileging upstream data. </p>}
+                id="operating-systems"
+                title="Operating systems"
+                items={operating_systems}
+                header_link={{ label: 'Get started with software identification', url: '/docs/getting_started/software-identification/' }}
+                intro={<p>AboutCode tools support packages and distributions across major server, desktop, and mobile operating systems.</p>}
             />
             <GridSection
-                id="vuln-reference-data"
-                title="Supporting vulnerability reference data"
-                items={vulnerability_reference_data}
-                header_link={{ label: 'Get started with security', url: '/docs/getting_started/software-security/' }}
-                intro={<p>AboutCode imports vulnerability reference data in key industry formats, mapping these to PURL. </p>}
+                id="programming-languages"
+                title="Programming languages"
+                items={programming_languages}
+                header_link={{ label: 'Get started with software identification', url: '/docs/getting_started/software-identification/' }}
+                intro={<p>AboutCode tools detect and analyze code across many programming languages.</p>}
             />
             <GridSection
                 id="binary-formats"
@@ -307,6 +300,13 @@ export default function EcosystemGrid() {
                 items={archive_formats}
                 header_link={{ label: 'Get started with software identification', url: '/docs/getting_started/software-identification/' }}
                 intro={<p>AboutCode supports extraction of most archive, compressed, package, and disk image file formats.</p>}
+            />
+            <GridSection
+                id="vuln-reference-data"
+                title="Vulnerability severeity and other reference data"
+                items={vulnerability_reference_data}
+                header_link={{ label: 'Get started with security', url: '/docs/getting_started/software-security/' }}
+                intro={<p>AboutCode imports vulnerability reference data in key industry formats, mapping these to PURL. </p>}
             />
         </div>
     );
