@@ -303,7 +303,7 @@ export default function EcosystemGrid() {
             />
             <GridSection
                 id="vuln-reference-data"
-                title="Vulnerability severeity and other reference data"
+                title="Vulnerability severity and other reference data"
                 items={vulnerability_reference_data}
                 header_link={{ label: 'Get started with security', url: '/docs/getting_started/software-security/' }}
                 intro={<p>AboutCode imports vulnerability reference data in key industry formats, mapping these to PURL. </p>}
