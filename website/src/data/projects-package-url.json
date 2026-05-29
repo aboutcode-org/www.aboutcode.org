@@ -34,7 +34,7 @@
         "name": "purl-validator",
         "description": ["Decentralized PURL validator so that libraries can use it offline and help them create better PURLs."],
         "repository_url": "https://github.com/aboutcode-org/purl-validator",
-        "documentation_url": "https://github.com/aboutcode-org/purl-validator/blob/main/README.rst",
+        "documentation_url": "https://github.com/aboutcode-org/purl-validator/blob/main/README.md",
         "package_download_url": ["https://pypi.org/project/purl-validator/"],
         "service_url": "Not applicable",
         "languages": "Python",

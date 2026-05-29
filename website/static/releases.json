@@ -124,7 +124,7 @@
     "tag_url": "https://github.com/aboutcode-org/fetchcode/releases/tag/v0.8.2",
     "published_at": "2026-03-18T13:03:02Z",
     "releases_page_url": "https://github.com/aboutcode-org/fetchcode/releases",
-    "compare_url": "https://github.com/aboutcode-org/fetchcode/compare/v0.8.2...main",
+    "compare_url": "https://github.com/aboutcode-org/fetchcode/compare/v0.8.2...master",
     "commits_since": 0,
     "prerelease": false,
     "author": "github-actions[bot]"
@@ -150,7 +150,7 @@
     "tag_url": "https://github.com/aboutcode-org/scancode-toolkit/releases/tag/v32.5.0",
     "published_at": "2026-01-15T23:39:20Z",
     "releases_page_url": "https://github.com/aboutcode-org/scancode-toolkit/releases",
-    "compare_url": "https://github.com/aboutcode-org/scancode-toolkit/compare/v32.5.0...main",
+    "compare_url": "https://github.com/aboutcode-org/scancode-toolkit/compare/v32.5.0...develop",
     "commits_since": 0,
     "prerelease": false,
     "author": "github-actions[bot]"
@@ -267,7 +267,7 @@
     "tag_url": "https://github.com/aboutcode-org/aboutcode-toolkit/releases/tag/v11.1.1",
     "published_at": "2025-03-31T04:29:41Z",
     "releases_page_url": "https://github.com/aboutcode-org/aboutcode-toolkit/releases",
-    "compare_url": "https://github.com/aboutcode-org/aboutcode-toolkit/compare/v11.1.1...main",
+    "compare_url": "https://github.com/aboutcode-org/aboutcode-toolkit/compare/v11.1.1...develop",
     "commits_since": 0,
     "prerelease": false,
     "author": "github-actions[bot]"
@@ -384,7 +384,7 @@
     "tag_url": "https://github.com/aboutcode-org/scancode-workbench/releases/tag/v4.0.3",
     "published_at": "2024-08-08T04:21:38Z",
     "releases_page_url": "https://github.com/aboutcode-org/scancode-workbench/releases",
-    "compare_url": "https://github.com/aboutcode-org/scancode-workbench/compare/v4.0.3...main",
+    "compare_url": "https://github.com/aboutcode-org/scancode-workbench/compare/v4.0.3...develop",
     "commits_since": 0,
     "prerelease": false,
     "author": "chinyeungli"
@@ -423,7 +423,7 @@
     "tag_url": "",
     "published_at": "",
     "releases_page_url": "https://github.com/aboutcode-org/www.aboutcode.org/releases",
-    "compare_url": "https://github.com/aboutcode-org/www.aboutcode.org/compare/...main",
+    "compare_url": "",
     "commits_since": 0,
     "prerelease": null,
     "author": ""

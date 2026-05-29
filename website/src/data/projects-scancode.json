@@ -34,7 +34,7 @@
         "name": "scancode-workbench",
         "description": ["ScanCode Workbench is an application to visualize and review scan results from ScanCode Toolkit scans. You can install and use the Workbench on a Linux, MacOS or Windows desktop."],
         "repository_url": "https://github.com/aboutcode-org/scancode-workbench",
-        "documentation_url": "https://scancode-workbench.readthedocs.io/latest",
+        "documentation_url": "https://scancode-workbench.readthedocs.io/en/latest/",
         "package_download_url": ["https://github.com/aboutcode-org/scancode-workbench/releases/"],
         "service_url": "Not applicable",
         "languages": "Electron",
