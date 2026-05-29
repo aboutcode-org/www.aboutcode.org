@@ -8,7 +8,7 @@ expanding our scope for software security with the recent addition of the
  and data are related to software vulnerabilities.
 
 Note that AboutCode tools and data for software vulnerabilities expect that 
-software will be identified with a [PURL (Package-URL)](https://package-url.github.io/www.packageurl.org/docs/purl/purl-spec-introduction).
+software will be identified with a [PURL (Package-URL)](https://packageurl.org/docs/purl/introduction).
 
 ## Identify vulnerabilities
 For the basic use case of identifying software vulnerabilities, AboutCode 
