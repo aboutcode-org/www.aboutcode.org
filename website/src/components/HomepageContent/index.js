@@ -34,6 +34,16 @@ export default function HomepageContent() {
             </section>
 
             <section className={styles.sectionContainer}>
+                <div
+                    className={styles.sectionHeader}
+                    style={{ marginBottom: '15px', marginTop: '15px' }}
+                >
+                    <h2>Key capabilities</h2>
+                </div>
+                <div className={styles.sectionIntro}>
+                    <p>AboutCode provides modular building blocks for software composition analysis,
+                    from license detection to vulnerability management, that you can combine to match your workflow.</p>
+                </div>
                 <CapabilitiesGrid />
             </section>
 
