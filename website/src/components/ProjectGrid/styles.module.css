@@ -544,8 +544,8 @@
 }
 
 .gridSection {
-    margin-bottom: 30px;
-    padding-bottom: 30px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
 }
 [data-theme='dark'] .gridSection {
     border-bottom: solid 1px #505050;

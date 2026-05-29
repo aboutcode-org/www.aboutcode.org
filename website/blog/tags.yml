@@ -1,104 +1,104 @@
 advisories:
   label: advisories
   permalink: /advisories
-  description: advisories tag description
+  description: Posts about security advisories, related data, import in  AboutCode.
 
 agent:
   label: agent
   permalink: /agent
-  description: agent tag description
+  description: Posts about AI agents and agentic workflows.
 
 api:
   label: api
   permalink: /api
-  description: api tag description
+  description: Posts about APIs and endpoints.
 
 atom:
   label: atom
   permalink: /atom
-  description: atom tag description
+  description: Posts about atom, a code analysis tool.
 
 chen:
   label: chen
   permalink: /chen
-  description: chen tag description
+  description: Posts about chen, a code analysis tool.
 
 copyleft:
   label: copyleft
   permalink: /copyleft
-  description: copyleft tag description
+  description: Posts about copyleft licenses.
 
 dependencies:
   label: dependencies
   permalink: /dependencies
-  description: dependencies tag description
+  description: Posts about software dependencies, resolution, and graphs.
 
 dual license:
   label: dual license
-  permalink: /dual license
-  description: dual license tag description
+  permalink: /dual-license
+  description: Posts about software released choices of licenses.
 
 java:
   label: java
   permalink: /java
-  description: java tag description
+  description: Posts about Java(tm) software.
 
 genai:
   label: GenAI
   permalink: /genai
-  description: GenAI tag description
+  description: Posts about generative AI.
 
 license clarity scoring:
   label: license clarity scoring
-  permalink: /license clarity scoring
-  description: license clarity scoring tag description
+  permalink: /license-clarity-scoring
+  description: Posts about license clarity scoring to measure license documentation quality.
 
 license compliance:
   label: license compliance
-  permalink: /license compliance
-  description: license compliance tag description
+  permalink: /license-compliance
+  description: Posts about open source license compliance processes and tooling.
 
 license detection:
   label: license detection
-  permalink: /license detection
-  description: license detection tag description
+  permalink: /license-detection
+  description: Posts about license detection.
 
 purl:
   label: PURL
-  permalink: /PURL
-  description: PURL tag description
+  permalink: /purl
+  description: Posts about Package URL (PURL), the standard identifier for software packages.
 
 SCA automation:
   label: SCA automation
-  permalink: /SCA automation
-  description: SCA automation tag description
+  permalink: /sca-automation
+  description: Posts about Software Composition Analysis workflows, and automation.
 
 rust:
   label: Rust
   permalink: /rust
-  description: Rust tag description
+  description: Posts about the Rust programming language or ecoystem.
 
 scancode:
   label: ScanCode
   permalink: /scancode
-  description: ScanCode tag description
+  description: Posts about ScanCode Toolkit and ScanCode.io.
 
 vcio:
   label: vcio
   permalink: /vcio
-  description: vcio tag description
+  description: Posts about VulnerableCode.io.
 
 vers:
   label: VERS
-  permalink: /VERS
-  description: VERS tag description
+  permalink: /vers
+  description: Posts about VERS, the version range specification used alongside PURL.
 
 version control:
   label: version control
-  permalink: /version control
-  description: version control tag description
+  permalink: /version-control
+  description: Posts about version control.
 
 vulnerabilities:
   label: vulnerabilities
   permalink: /vulnerabilities
-  description: vulnerabilities tag description
+  description: Posts about software vulnerabilities.

@@ -10,13 +10,12 @@ import ValuePillars from '@site/src/components/ValuePillars';
 import CapabilitiesGrid from '@site/src/components/CapabilitiesGrid';
 import EcosystemGrid from '@site/src/components/EcosystemGrid';
 import OpenDataSection from '@site/src/components/OpenDataSection';
-import ProjectGridTemplate from '@site/src/components/ProjectGridTemplate';
+import ProjectGrid from '@site/src/components/ProjectGrid';
 import { featuredProjectSources } from '@site/src/data/projects-featured';
 import styles from './styles.module.css';
 
 export default function HomepageContent() {
     const meetingsUrl = useBaseUrl('/docs/about/meetings/');
-    const gettingStartedUrl = useBaseUrl('/docs/getting_started/getting-started/');
     return (
         <main>
             <section className={styles.sectionContainer}>
@@ -35,6 +34,16 @@ export default function HomepageContent() {
             </section>
 
             <section className={styles.sectionContainer}>
+                <div
+                    className={styles.sectionHeader}
+                    style={{ marginBottom: '15px', marginTop: '15px' }}
+                >
+                    <h2>Main capabilities</h2>
+                </div>
+                <div className={styles.sectionIntro}>
+                    <p>AboutCode provides modular building blocks for software composition analysis,
+                    from license detection to vulnerability management, that you can combine to match your workflow.</p>
+                </div>
                 <CapabilitiesGrid />
             </section>
 
@@ -76,7 +85,7 @@ export default function HomepageContent() {
                     className={styles.sectionHeader}
                     style={{ marginBottom: '15px', marginTop: '15px' }}
                 >
-                    <h2>Practical software supply chain standards</h2>
+                    <h2>Practical software supply chain standards - <Link to="/docs/about/standards/" className={styles.headerLink}>See all supported standards</Link></h2>
                 </div>
                 <div className={styles.sectionIntro}>
                     <StandardsOverview />
@@ -99,22 +108,17 @@ export default function HomepageContent() {
                     className={styles.sectionHeader}
                     style={{ marginBottom: '15px', marginTop: '15px' }}
                 >
-                    <h2>Interoperable modular tools and projects we 
-                    support or maintain - <a href={gettingStartedUrl}
-                    className={styles.headerLink}>Getting started...</a></h2>
+                    <h2>Interoperable modular tools and projects we
+                    support or maintain - <Link to="/projects/"
+                    className={styles.headerLink}>See all projects</Link></h2>
                 </div>
                 <div className={styles.sectionIntro}>
                     <ProjectOverview />
                 </div>
-                <ProjectGridTemplate
+                <ProjectGrid
                     projectSources={featuredProjectSources}
                     showSectionTitles={false}
                 />
-                <div className={styles.projectLinkRow}>
-                    <Link className={styles.projectLink} to="/projects/">
-                        See all supported projects
-                    </Link>
-                </div>
             </section>
 
             <section id="ecosystems" className={styles.sectionContainer}>
