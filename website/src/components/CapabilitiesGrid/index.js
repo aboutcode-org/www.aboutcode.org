@@ -6,27 +6,27 @@ const capabilities = [
     {
         title: 'License Detection',
         description: 'Detect licenses in any codebase, whether open source, or proprietary; in source code and binaries. Powers dozens of open source and commercial SCA tools.',
-        link: '/docs/getting_started/license-compliance/',
+        link: '/docs/getting_started/license-compliance/#identify-licenses-for-software-and-for-data',
     },
     {
         title: 'Code Origin Matching',
         description: 'Identify code origin at package, file, and snippet level using PurlDB fingerprints and matching pipelines.',
-        link: '/docs/getting_started/software-identification/',
+        link: '/docs/getting_started/software-identification/#match-binaries-to-source',
     },
     {
         title: 'Binary Analysis',
         description: 'Match deployed binaries, containers, and firmware back to source packages. Analyze ELFs, PEs, Mach-Os, and archives.',
-        link: '/docs/getting_started/software-identification/',
+        link: '/docs/getting_started/software-identification/#match-binaries-to-source',
     },
     {
         title: 'Dependency Management',
         description: 'Resolve direct and transitive dependencies across package ecosystems with ScanCode pipelines and dedicated inspectors.',
-        link: '/docs/getting_started/software-identification/',
+        link: '/docs/getting_started/software-identification/#identify-software-dependencies',
     },
     {
         title: 'Vulnerability Management',
         description: 'Aggregate vulnerability data, map to affected packages, identify fixes, and score exploitability and risk for triage.',
-        link: '/docs/getting_started/software-security/',
+        link: '/docs/getting_started/software-security/#manage-risk-with-aggregated-vulnerability-data',
     },
     {
         title: 'SBOMs and Compliance',

@@ -11,7 +11,7 @@ import {
 export const allProjectSources = [
     {
         id: 'application-projects',
-        title: 'Apps for the software supply chains',
+        title: 'Apps for software supply chains',
         data: [...projectsApplication, clearlyDefinedProject],
     },
     {

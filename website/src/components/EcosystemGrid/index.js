@@ -254,16 +254,16 @@ export default function EcosystemGrid() {
         <div className={styles.gridWrapper}>
             <GridSection
                 id="licensing"
-                title="License"
+                title="Licenses"
                 items={licenses}
-                header_link={{ label: 'Get started with compliance', url: '/docs/getting_started/license-compliance/' }}
+                header_link={{ label: 'Get started with license compliance', url: '/docs/getting_started/license-compliance/' }}
                 intro={<p>AboutCode tracks over 2,500+ curated licenses across 12 categories. Browse all <a href="https://scancode-licensedb.aboutcode.org" target="_blank" rel="noopener noreferrer">2,500+ licenses</a> in the LicenseDB. Industry-leading license detection is backed by <a href="https://github.com/aboutcode-org/scancode-toolkit/tree/develop/src/licensedcode/data/rules" target="_blank" rel="noopener noreferrer">over 35,000 license notices</a> used as detection rules.</p>}
             />
             <GridSection
                 id="vuln-sources"
                 title="Software vulnerabilities"
                 items={vulnerability_sources}
-                header_link={{ label: 'Get started with security', url: '/docs/getting_started/software-security/' }}
+                header_link={{ label: 'Get started with software security', url: '/docs/getting_started/software-security/' }}
                 intro={<p>AboutCode collects, correlates, and improves vulnerabilities from multiple advisory data sources, privileging upstream data. </p>}
             />
             <GridSection
@@ -305,7 +305,7 @@ export default function EcosystemGrid() {
                 id="vuln-reference-data"
                 title="Vulnerability severity and other reference data"
                 items={vulnerability_reference_data}
-                header_link={{ label: 'Get started with security', url: '/docs/getting_started/software-security/' }}
+                header_link={{ label: 'Get started with software security', url: '/docs/getting_started/software-security/' }}
                 intro={<p>AboutCode imports vulnerability reference data in key industry formats, mapping these to PURL. </p>}
             />
         </div>
