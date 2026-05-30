@@ -1,5 +1,18 @@
 [
   {
+    "repo": "v7.1.0",
+    "repo_slug": "aboutcode-org/purldb",
+    "repo_url": "https://github.com/aboutcode-org/purldb",
+    "tag": "v7.1.0",
+    "tag_url": "https://github.com/aboutcode-org/purldb/releases/tag/v7.1.0",
+    "published_at": "2026-05-29T20:40:52Z",
+    "releases_page_url": "https://github.com/aboutcode-org/purldb/releases",
+    "compare_url": "https://github.com/aboutcode-org/purldb/compare/v7.1.0...main",
+    "commits_since": 0,
+    "prerelease": false,
+    "author": "JonoYang"
+  },
+  {
     "repo": "v31.1.0",
     "repo_slug": "aboutcode-org/extractcode",
     "repo_url": "https://github.com/aboutcode-org/extractcode",
@@ -245,19 +258,6 @@
     "commits_since": 0,
     "prerelease": false,
     "author": "pombredanne"
-  },
-  {
-    "repo": "v7.0.0",
-    "repo_slug": "aboutcode-org/purldb",
-    "repo_url": "https://github.com/aboutcode-org/purldb",
-    "tag": "v7.0.0",
-    "tag_url": "https://github.com/aboutcode-org/purldb/releases/tag/v7.0.0",
-    "published_at": "2025-05-14T11:22:31Z",
-    "releases_page_url": "https://github.com/aboutcode-org/purldb/releases",
-    "compare_url": "https://github.com/aboutcode-org/purldb/compare/v7.0.0...main",
-    "commits_since": 0,
-    "prerelease": false,
-    "author": "github-actions[bot]"
   },
   {
     "repo": "AboutCode Toolkit v11.1.1",
