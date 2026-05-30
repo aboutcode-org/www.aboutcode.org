@@ -124,7 +124,7 @@
     "tag_url": "https://github.com/aboutcode-org/fetchcode/releases/tag/v0.8.2",
     "published_at": "2026-03-18T13:03:02Z",
     "releases_page_url": "https://github.com/aboutcode-org/fetchcode/releases",
-    "compare_url": "https://github.com/aboutcode-org/fetchcode/compare/v0.8.2...master",
+    "compare_url": "https://github.com/aboutcode-org/fetchcode/compare/v0.8.2...main",
     "commits_since": 0,
     "prerelease": false,
     "author": "github-actions[bot]"
