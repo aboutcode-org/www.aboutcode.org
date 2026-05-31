@@ -68,18 +68,6 @@ export default function HomepageContent() {
                 <AdoptersBanner />
             </section>
 
-            <section className={styles.sectionContainer}>
-                <div
-                    className={styles.sectionHeader}
-                    style={{ marginBottom: '15px', marginTop: '15px' }}
-                >
-                    <h2>Supporters</h2>
-                </div>
-                <div className={styles.sectionIntro}>
-                    <Supporters />
-                </div>
-            </section>
-
             <section id="standards" className={styles.sectionContainer}>
                 <div
                     className={styles.sectionHeader}
@@ -136,6 +124,24 @@ export default function HomepageContent() {
                     also includes operating systems, programming languages, binary and archive formats, and more data sources.</p>
                 </div>
                 <EcosystemGrid featured />
+            </section>
+
+            <section className={styles.sectionContainer}>
+                <div
+                    className={styles.sectionHeader}
+                    style={{ marginBottom: '15px', marginTop: '15px' }}
+                >
+                    <h2>Supporters</h2>
+                </div>
+                <div className={styles.sectionIntro}>
+                    <Supporters />
+                    <p>
+                        <Link to="/docs/about/meetings/">Join the conversation</Link>,{' '}
+                        <Link to="/docs/about/contribute/">or contribute</Link> to{' '}
+                        <Link to="/projects/">AboutCode projects</Link> to help make the software
+                        supply chains healthier and safer!
+                    </p>
+                </div>
             </section>
 
             <div style={{ marginBottom: '50px' }}></div>
