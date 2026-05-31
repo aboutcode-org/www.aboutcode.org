@@ -229,8 +229,17 @@ function GridItem({ item }) {
     );
 }
 
-function GridSection({ id, title, items, header_link, intro }) {
+
+// Grid section comes either as a summary with see all link, or no link for
+// the full envt. page
+function GridSection({ id, title, items, header_link, intro, see_all }) {
     const headerLinkHref = useBaseUrl(header_link?.url || '/');
+    const seeAllHref = useBaseUrl(see_all?.url || '/');
+
+    const introWithSeeAll = intro && see_all
+        ? React.cloneElement(intro, {}, ...React.Children.toArray(intro.props.children), ' ',
+            <a key="see-all" href={seeAllHref} className={styles.seeAll}>{see_all.label}.</a>)
+        : intro;
     return (
         <div id={id} className={styles.section}>
             <h3 className={styles.sectionTitle}>
@@ -239,7 +248,7 @@ function GridSection({ id, title, items, header_link, intro }) {
                     <>{' - '}<a href={headerLinkHref} className={styles.header_link}>{header_link.label}...</a></>
                 )}
             </h3>
-            {intro && <div className={styles.intro}>{intro}</div>}
+            {introWithSeeAll && <div className={styles.intro}>{introWithSeeAll}</div>}
             <div className={styles.grid}>
                 {items.map((item) => (
                     <GridItem key={item.label} item={item} />
@@ -249,7 +258,56 @@ function GridSection({ id, title, items, header_link, intro }) {
     );
 }
 
-export default function EcosystemGrid() {
+// Feature only the most common on home, with links to see all.
+
+const featured_licenses = [
+    'MIT', 'Apache-2.0', 'GPL-2.0', 'GPL-3.0', 'BSD-2-Clause',
+    'BSD-3-Clause', 'LGPL-2.0', 'LGPL-2.1', 'LGPL-3.0',
+].map((label) => licenses.find((v) => v.label === label));
+
+const featured_vulnerability_sources = [
+    'NVD', 'CVE', 'GitHub Advisories', 'GitLab Advisories', 'OSV.dev',
+    'npm Advisories', 'PyPA', 'Ruby Advisory DB', 'Rust Advisory DB',
+].map((label) => vulnerability_sources.find((v) => v.label === label));
+
+const featured_package_ecosystems = [
+    'npm', 'PyPI', 'Maven', 'NuGet', 'RubyGems',
+    'Cargo', 'Composer', 'Conda', 'Docker',
+].map((label) => package_ecosystems.find((v) => v.label === label));
+
+
+export default function EcosystemGrid({ featured = false }) {
+    if (featured) {
+        return (
+            <div className={styles.gridWrapper}>
+                <GridSection
+                    id="licensing"
+                    title="Licenses"
+                    items={featured_licenses}
+                    header_link={{ label: 'Get started with license compliance', url: '/docs/getting_started/license-compliance/' }}
+                    intro={<p>AboutCode tracks over 2,500+ curated licenses across 12 categories. Browse all <a href="https://scancode-licensedb.aboutcode.org" target="_blank" rel="noopener noreferrer">2,500+ licenses</a> in the LicenseDB. Industry-leading license detection is backed by <a href="https://github.com/aboutcode-org/scancode-toolkit/tree/develop/src/licensedcode/data/rules" target="_blank" rel="noopener noreferrer">over 35,000 license notices</a> used as detection rules.</p>}
+                    see_all={{ label: 'See more supported licenses', url: '/environments/#licensing' }}
+                />
+                <GridSection
+                    id="vuln-sources"
+                    title="Software vulnerabilities"
+                    items={featured_vulnerability_sources}
+                    header_link={{ label: 'Get started with software security', url: '/docs/getting_started/software-security/' }}
+                    intro={<p>AboutCode collects, correlates, and improves vulnerabilities from multiple advisory data sources, privileging upstream data.</p>}
+                    see_all={{ label: 'See more tracked vulnerability sources', url: '/environments/#vuln-sources' }}
+                />
+                <GridSection
+                    id="pkg-ecosystems"
+                    title="Package ecosystems"
+                    items={featured_package_ecosystems}
+                    header_link={{ label: 'Get started with software identification', url: '/docs/getting_started/software-identification/' }}
+                    intro={<p>The AboutCode package database and scanners track millions of packages from most package ecosystems.</p>}
+                    see_all={{ label: 'See more supported package ecosystems', url: '/environments/#pkg-ecosystems' }}
+                />
+            </div>
+        );
+    }
+
     return (
         <div className={styles.gridWrapper}>
             <GridSection
@@ -260,6 +318,13 @@ export default function EcosystemGrid() {
                 intro={<p>AboutCode tracks over 2,500+ curated licenses across 12 categories. Browse all <a href="https://scancode-licensedb.aboutcode.org" target="_blank" rel="noopener noreferrer">2,500+ licenses</a> in the LicenseDB. Industry-leading license detection is backed by <a href="https://github.com/aboutcode-org/scancode-toolkit/tree/develop/src/licensedcode/data/rules" target="_blank" rel="noopener noreferrer">over 35,000 license notices</a> used as detection rules.</p>}
             />
             <GridSection
+                id="pkg-ecosystems"
+                title="Package ecosystems"
+                items={package_ecosystems}
+                header_link={{ label: 'Get started with software identification', url: '/docs/getting_started/software-identification/' }}
+                intro={<p>The AboutCode package database and scanners track millions of packages from most package ecosystems.</p>}
+            />
+            <GridSection
                 id="vuln-sources"
                 title="Software vulnerabilities"
                 items={vulnerability_sources}
@@ -267,12 +332,12 @@ export default function EcosystemGrid() {
                 intro={<p>AboutCode collects, correlates, and improves vulnerabilities from multiple advisory data sources, privileging upstream data. </p>}
             />
             <GridSection
-            	id="pkg-ecosystems"
-            	title="Package ecosystems"
-            	items={package_ecosystems}
-            	header_link={{ label: 'Get started with software identification', url: '/docs/getting_started/software-identification/' }}
-                intro={<p>The AboutCode package database and scanners track millions of packages from most package ecosystems.</p>}
-        	/>
+                id="vuln-reference-data"
+                title="Vulnerability severity and other reference data"
+                items={vulnerability_reference_data}
+                header_link={{ label: 'Get started with software security', url: '/docs/getting_started/software-security/' }}
+                intro={<p>AboutCode imports vulnerability reference data in key industry formats, mapping these to PURL. </p>}
+            />
             <GridSection
                 id="operating-systems"
                 title="Operating systems"
@@ -300,13 +365,6 @@ export default function EcosystemGrid() {
                 items={archive_formats}
                 header_link={{ label: 'Get started with software identification', url: '/docs/getting_started/software-identification/' }}
                 intro={<p>AboutCode supports extraction of most archive, compressed, package, and disk image file formats.</p>}
-            />
-            <GridSection
-                id="vuln-reference-data"
-                title="Vulnerability severity and other reference data"
-                items={vulnerability_reference_data}
-                header_link={{ label: 'Get started with software security', url: '/docs/getting_started/software-security/' }}
-                intro={<p>AboutCode imports vulnerability reference data in key industry formats, mapping these to PURL. </p>}
             />
         </div>
     );
