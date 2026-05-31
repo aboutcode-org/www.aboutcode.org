@@ -7,7 +7,7 @@ export default function Environments() {
     return (
         <Layout
             title='Environments'
-            description='Licenses, package ecosystems, programming languages, operating systems, vulnerability sources, and other environments supported by AboutCode tools.'
+            description='Licenses, package ecosystems, programming languages, operating systems, vulnerability sources, and other environments supported by AboutCode tools. and data'
         >
             <main>
                 <section className={styles.sectionContainer}>
