@@ -56,15 +56,17 @@ const siteConfig = {
 // Define const for the footer icon paths.
 const currentBaseUrl = siteConfig[deployTarget].baseUrl
 
+const vcs = vcs_info();
+const buildLine = vcs.version === 'unknown'
+    ? ''
+    : `<div class="footer__build">Built from <a href="${vcs.repo_url}" target="_blank" rel="noopener noreferrer">${vcs.repo_url} @ ${vcs.version}</a> on ${vcs.commit_date}</div>`;
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
     title: 'AboutCode.org',
     tagline: 'Open data, tools, and standards for the software supply chains',
     favicon: 'img/favicon.ico',
 
-    customFields: {
-        vcs_info: vcs_info(),
-    },
 
 
     markdown: {
@@ -221,7 +223,7 @@ const config = {
                     { label: 'Terms of Use', to: '/terms' },
                     { label: 'Credits', to: '/docs/about/credits' },
                 ],
-                copyright: `Copyright AboutCode Europe ASBL. &nbsp; Content licensed under CC-BY-SA-4.0. &nbsp; Built with Docusaurus.`,
+                copyright: `Copyright (c) AboutCode Europe ASBL. &nbsp; Content licensed under CC-BY-SA-4.0.${buildLine}`,
             },
             prism: {
                 theme: prismThemes.github,
