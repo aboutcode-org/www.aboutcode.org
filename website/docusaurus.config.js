@@ -5,6 +5,27 @@
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
 import { themes as prismThemes } from 'prism-react-renderer';
+import { execSync } from 'node:child_process';
+
+// Run git to get versions, and commit date when buildingg.
+// Fall-back to defaulst for non-git clones/tarballs/plain dir upload
+function vcs_info() {
+    const run = (cmd) => execSync(cmd, { encoding: 'utf8' }).trim();
+    try {
+        return {
+            version: run('git describe --always --tags --dirty'),
+            commit_date: run('git log -1 --format=%cI'),
+            // also strip trailing slash
+            repo_url: run('git config --get remote.origin.url').replace(/\/$/, ''),
+        };
+    } catch {
+        return {
+            version: 'unknown',
+            commit_date: '',
+            repo_url: 'https://github.com/aboutcode-org/www.aboutcode.org',
+        };
+    }
+}
 
 // Deployment target: local | gh | dreamhost
 /** @type {'local' | 'gh' | 'dreamhost'} */
@@ -40,6 +61,10 @@ const config = {
     title: 'AboutCode.org',
     tagline: 'Open data, tools, and standards for the software supply chains',
     favicon: 'img/favicon.ico',
+
+    customFields: {
+        vcs_info: vcs_info(),
+    },
 
 
     markdown: {
