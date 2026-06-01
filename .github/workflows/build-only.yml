@@ -1,4 +1,4 @@
-name: Build Docusaurus Site (Manual)
+name: Test build in CI
 on:
   push:
     branches: [ main ]

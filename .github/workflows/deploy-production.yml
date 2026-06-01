@@ -1,4 +1,4 @@
-name: Build & Deploy Docusaurus Site to Production
+name: Deploy to production
 on:
   workflow_dispatch:
 permissions:

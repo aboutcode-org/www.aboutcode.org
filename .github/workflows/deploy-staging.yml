@@ -1,4 +1,4 @@
-name: Build & Deploy Docusaurus Site to Staging (Github pages)
+name: DDeploy to staging (Github pages)
 on:
   workflow_dispatch:
 permissions:
