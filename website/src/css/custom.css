@@ -89,3 +89,15 @@
 .footer {
     background-color: #2b3a5e;
 }
+
+.footer__build {
+    margin-top: 0.5rem;
+    font-size: 0.75rem;
+    opacity: 0.55;
+}
+
+.footer__build a {
+    color: inherit;
+    border-bottom: 1px dotted currentColor;
+    text-decoration: none;
+}

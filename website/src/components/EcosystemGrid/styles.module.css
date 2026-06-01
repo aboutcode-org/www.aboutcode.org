@@ -138,3 +138,33 @@
 [data-theme='dark'] .cellLabel {
     color: #c8d0e0;
 }
+
+.moreList {
+    margin: 0.25rem 0 0 0;
+    padding-left: 1.25rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.moreList a {
+    color: #2a6bc7;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.moreList a:hover {
+    text-decoration: underline;
+}
+
+.moreCount {
+    color: #6b7a99;
+    font-size: 0.8rem;
+}
+
+.moreSummary {
+    color: #2b3a5e;
+}
+
+[data-theme='dark'] .moreSummary {
+    color: #c8d0e0;
+}

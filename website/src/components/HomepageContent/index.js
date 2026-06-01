@@ -68,18 +68,6 @@ export default function HomepageContent() {
                 <AdoptersBanner />
             </section>
 
-            <section className={styles.sectionContainer}>
-                <div
-                    className={styles.sectionHeader}
-                    style={{ marginBottom: '15px', marginTop: '15px' }}
-                >
-                    <h2>Supporters</h2>
-                </div>
-                <div className={styles.sectionIntro}>
-                    <Supporters />
-                </div>
-            </section>
-
             <section id="standards" className={styles.sectionContainer}>
                 <div
                     className={styles.sectionHeader}
@@ -126,14 +114,34 @@ export default function HomepageContent() {
                     className={styles.sectionHeader}
                     style={{ marginBottom: '15px', marginTop: '15px' }}
                 >
-                    <h2>Supported ecosystems, languages, licenses, and data sources</h2>
+                    <h2>Supported ecosystems, languages, licenses, and data sources - <Link to="/environments/" className={styles.headerLink}>See all environments</Link></h2>
                 </div>
                 <div className={styles.sectionIntro}>
                     <p>AboutCode tools support a large number of licenses, package ecosystems, programming languages,
                     and vulnerability data sources, all identified using{' '}
-                    <a href="https://packageurl.org">Package-URL (PURL)</a> or SPDX license expressions.</p>
+                    <a href="https://packageurl.org">Package-URL (PURL)</a> or SPDX license expressions.
+                    See a few highlights below; the full set of supported <Link to="/environments/">Environments</Link>
+                    also includes operating systems, programming languages, binary and archive formats, and more data sources.</p>
                 </div>
-                <EcosystemGrid />
+                <EcosystemGrid featured />
+            </section>
+
+            <section className={styles.sectionContainer}>
+                <div
+                    className={styles.sectionHeader}
+                    style={{ marginBottom: '15px', marginTop: '15px' }}
+                >
+                    <h2>Supporters</h2>
+                </div>
+                <div className={styles.sectionIntro}>
+                    <Supporters />
+                    <p>
+                        <Link to="/docs/about/meetings/">Join the conversation</Link>,{' '}
+                        <Link to="/docs/about/contribute/">or contribute</Link> to{' '}
+                        <Link to="/projects/">AboutCode projects</Link> to help make the software
+                        supply chains healthier and safer!
+                    </p>
+                </div>
             </section>
 
             <div style={{ marginBottom: '50px' }}></div>

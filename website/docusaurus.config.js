@@ -5,6 +5,27 @@
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
 import { themes as prismThemes } from 'prism-react-renderer';
+import { execSync } from 'node:child_process';
+
+// Run git to get versions, and commit date when buildingg.
+// Fall-back to defaulst for non-git clones/tarballs/plain dir upload
+function vcs_info() {
+    const run = (cmd) => execSync(cmd, { encoding: 'utf8' }).trim();
+    try {
+        return {
+            version: run('git describe --always --tags --dirty'),
+            commit_date: run('git log -1 --format=%cI'),
+            // also strip trailing slash
+            repo_url: run('git config --get remote.origin.url').replace(/\/$/, ''),
+        };
+    } catch {
+        return {
+            version: 'unknown',
+            commit_date: '',
+            repo_url: 'https://github.com/aboutcode-org/www.aboutcode.org',
+        };
+    }
+}
 
 // Deployment target: local | gh | dreamhost
 /** @type {'local' | 'gh' | 'dreamhost'} */
@@ -35,11 +56,17 @@ const siteConfig = {
 // Define const for the footer icon paths.
 const currentBaseUrl = siteConfig[deployTarget].baseUrl
 
+const vcs = vcs_info();
+const buildLine = vcs.version === 'unknown'
+    ? ''
+    : `<div class="footer__build">Built with Docusaurus from <a href="${vcs.repo_url}" target="_blank" rel="noopener noreferrer">${vcs.repo_url} @ ${vcs.version}</a> on ${vcs.commit_date}</div>`;
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
     title: 'AboutCode.org',
     tagline: 'Open data, tools, and standards for the software supply chains',
     favicon: 'img/favicon.ico',
+
 
 
     markdown: {
@@ -133,6 +160,10 @@ const config = {
                         label: 'Projects',
                         position: 'left'
                     },
+                    {   to: '/environments',
+                        label: 'Environments',
+                        position: 'left'
+                    },
                     {
                         type: 'dropdown',
                         label: 'About',
@@ -196,7 +227,7 @@ const config = {
                     { label: 'Terms of Use', to: '/terms' },
                     { label: 'Credits', to: '/docs/about/credits' },
                 ],
-                copyright: `Copyright AboutCode Europe ASBL. &nbsp; Content licensed under CC-BY-SA-4.0. &nbsp; Built with Docusaurus.`,
+                copyright: `Copyright (c) AboutCode Europe ASBL. &nbsp; Content licensed under CC-BY-SA-4.0.${buildLine}`,
             },
             prism: {
                 theme: prismThemes.github,
