@@ -120,8 +120,10 @@ export default function HomepageContent() {
                     <p>AboutCode tools support a large number of licenses, package ecosystems, programming languages,
                     and vulnerability data sources, all identified using{' '}
                     <a href="https://packageurl.org">Package-URL (PURL)</a> or SPDX license expressions.
-                    See a few highlights below; the full set of supported <Link to="/environments/">Environments</Link>
-                    also includes operating systems, programming languages, binary and archive formats, and more data sources.</p>
+                    See a few highlights below; the full set of supported <Link
+                    to="/environments/">Environments</Link> also includes operating
+                    systems, programming languages, binary and archive formats,
+                    and more data sources.</p>
                 </div>
                 <EcosystemGrid featured />
             </section>
