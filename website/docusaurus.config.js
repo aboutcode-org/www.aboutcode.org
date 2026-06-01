@@ -59,7 +59,7 @@ const currentBaseUrl = siteConfig[deployTarget].baseUrl
 const vcs = vcs_info();
 const buildLine = vcs.version === 'unknown'
     ? ''
-    : `<div class="footer__build">Built with Docusaurus from <a href="${vcs.repo_url}" target="_blank" rel="noopener noreferrer">${vcs.repo_url} @ ${vcs.version}</a> on ${vcs.commit_date}</div>`;
+    : `<div class="footer__build">Built with Docusaurus from <a href="${vcs.repo_url}/tree/${vcs.version}" target="_blank" rel="noopener noreferrer">${vcs.repo_url}/tree/${vcs.version}</a> on ${vcs.commit_date}</div>`;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
