@@ -1,4 +1,4 @@
-name: DDeploy to staging (Github pages)
+name: Deploy to staging (Github pages)
 on:
   workflow_dispatch:
 permissions:
