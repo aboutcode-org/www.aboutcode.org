@@ -13,6 +13,19 @@
     "author": "github-actions[bot]"
   },
   {
+    "repo": "v39.0.0",
+    "repo_slug": "aboutcode-org/vulnerablecode",
+    "repo_url": "https://github.com/aboutcode-org/vulnerablecode",
+    "tag": "v39.0.0",
+    "tag_url": "https://github.com/aboutcode-org/vulnerablecode/releases/tag/v39.0.0",
+    "published_at": "2026-06-17T16:53:35Z",
+    "releases_page_url": "https://github.com/aboutcode-org/vulnerablecode/releases",
+    "compare_url": "https://github.com/aboutcode-org/vulnerablecode/compare/v39.0.0...main",
+    "commits_since": 0,
+    "prerelease": false,
+    "author": "github-actions[bot]"
+  },
+  {
     "repo": "v37.2.0",
     "repo_slug": "aboutcode-org/scancode.io",
     "repo_url": "https://github.com/aboutcode-org/scancode.io",
@@ -99,19 +112,6 @@
     "published_at": "2026-05-01T16:39:54Z",
     "releases_page_url": "https://github.com/aboutcode-org/univers/releases",
     "compare_url": "https://github.com/aboutcode-org/univers/compare/v32.0.1...main",
-    "commits_since": 0,
-    "prerelease": false,
-    "author": "github-actions[bot]"
-  },
-  {
-    "repo": "v38.6.0",
-    "repo_slug": "aboutcode-org/vulnerablecode",
-    "repo_url": "https://github.com/aboutcode-org/vulnerablecode",
-    "tag": "v38.6.0",
-    "tag_url": "https://github.com/aboutcode-org/vulnerablecode/releases/tag/v38.6.0",
-    "published_at": "2026-04-30T18:36:27Z",
-    "releases_page_url": "https://github.com/aboutcode-org/vulnerablecode/releases",
-    "compare_url": "https://github.com/aboutcode-org/vulnerablecode/compare/v38.6.0...main",
     "commits_since": 0,
     "prerelease": false,
     "author": "github-actions[bot]"
