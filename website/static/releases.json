@@ -1,5 +1,18 @@
 [
   {
+    "repo": "v5.8.1",
+    "repo_slug": "aboutcode-org/dejacode",
+    "repo_url": "https://github.com/aboutcode-org/dejacode",
+    "tag": "v5.8.1",
+    "tag_url": "https://github.com/aboutcode-org/dejacode/releases/tag/v5.8.1",
+    "published_at": "2026-06-19T06:36:16Z",
+    "releases_page_url": "https://github.com/aboutcode-org/dejacode/releases",
+    "compare_url": "https://github.com/aboutcode-org/dejacode/compare/v5.8.1...main",
+    "commits_since": 0,
+    "prerelease": false,
+    "author": "github-actions[bot]"
+  },
+  {
     "repo": "v1.15.64",
     "repo_slug": "aboutcode-org/purlvalidator-go",
     "repo_url": "https://github.com/aboutcode-org/purlvalidator-go",
@@ -34,19 +47,6 @@
     "published_at": "2026-06-12T14:34:33Z",
     "releases_page_url": "https://github.com/aboutcode-org/scancode.io/releases",
     "compare_url": "https://github.com/aboutcode-org/scancode.io/compare/v37.2.0...main",
-    "commits_since": 0,
-    "prerelease": false,
-    "author": "github-actions[bot]"
-  },
-  {
-    "repo": "v5.8.0",
-    "repo_slug": "aboutcode-org/dejacode",
-    "repo_url": "https://github.com/aboutcode-org/dejacode",
-    "tag": "v5.8.0",
-    "tag_url": "https://github.com/aboutcode-org/dejacode/releases/tag/v5.8.0",
-    "published_at": "2026-06-08T15:10:04Z",
-    "releases_page_url": "https://github.com/aboutcode-org/dejacode/releases",
-    "compare_url": "https://github.com/aboutcode-org/dejacode/compare/v5.8.0...main",
     "commits_since": 0,
     "prerelease": false,
     "author": "github-actions[bot]"
