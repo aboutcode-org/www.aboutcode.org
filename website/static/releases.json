@@ -13,6 +13,19 @@
     "author": "github-actions[bot]"
   },
   {
+    "repo": "v1.0.0",
+    "repo_slug": "aboutcode-org/www.aboutcode.org",
+    "repo_url": "https://github.com/aboutcode-org/www.aboutcode.org",
+    "tag": "v1.0.0",
+    "tag_url": "https://github.com/aboutcode-org/www.aboutcode.org/releases/tag/v1.0.0",
+    "published_at": "2026-06-23T19:36:34Z",
+    "releases_page_url": "https://github.com/aboutcode-org/www.aboutcode.org/releases",
+    "compare_url": "https://github.com/aboutcode-org/www.aboutcode.org/compare/v1.0.0...main",
+    "commits_since": 0,
+    "prerelease": false,
+    "author": "johnmhoran"
+  },
+  {
     "repo": "v5.8.1",
     "repo_slug": "aboutcode-org/dejacode",
     "repo_url": "https://github.com/aboutcode-org/dejacode",
@@ -414,18 +427,5 @@
     "commits_since": 0,
     "prerelease": false,
     "author": "JonoYang"
-  },
-  {
-    "repo": "",
-    "repo_slug": "aboutcode-org/www.aboutcode.org",
-    "repo_url": "https://github.com/aboutcode-org/www.aboutcode.org",
-    "tag": "",
-    "tag_url": "",
-    "published_at": "",
-    "releases_page_url": "https://github.com/aboutcode-org/www.aboutcode.org/releases",
-    "compare_url": "https://github.com/aboutcode-org/www.aboutcode.org/compare/...main",
-    "commits_since": 0,
-    "prerelease": null,
-    "author": ""
   }
 ]
