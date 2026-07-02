@@ -13,6 +13,19 @@
     "author": "github-actions[bot]"
   },
   {
+    "repo": "v40.0.0",
+    "repo_slug": "aboutcode-org/vulnerablecode",
+    "repo_url": "https://github.com/aboutcode-org/vulnerablecode",
+    "tag": "v40.0.0",
+    "tag_url": "https://github.com/aboutcode-org/vulnerablecode/releases/tag/v40.0.0",
+    "published_at": "2026-07-01T12:43:27Z",
+    "releases_page_url": "https://github.com/aboutcode-org/vulnerablecode/releases",
+    "compare_url": "https://github.com/aboutcode-org/vulnerablecode/compare/v40.0.0...main",
+    "commits_since": 0,
+    "prerelease": false,
+    "author": "github-actions[bot]"
+  },
+  {
     "repo": "v1.0.0",
     "repo_slug": "aboutcode-org/www.aboutcode.org",
     "repo_url": "https://github.com/aboutcode-org/www.aboutcode.org",
@@ -34,19 +47,6 @@
     "published_at": "2026-06-19T06:36:16Z",
     "releases_page_url": "https://github.com/aboutcode-org/dejacode/releases",
     "compare_url": "https://github.com/aboutcode-org/dejacode/compare/v5.8.1...main",
-    "commits_since": 0,
-    "prerelease": false,
-    "author": "github-actions[bot]"
-  },
-  {
-    "repo": "v39.0.0",
-    "repo_slug": "aboutcode-org/vulnerablecode",
-    "repo_url": "https://github.com/aboutcode-org/vulnerablecode",
-    "tag": "v39.0.0",
-    "tag_url": "https://github.com/aboutcode-org/vulnerablecode/releases/tag/v39.0.0",
-    "published_at": "2026-06-17T16:53:35Z",
-    "releases_page_url": "https://github.com/aboutcode-org/vulnerablecode/releases",
-    "compare_url": "https://github.com/aboutcode-org/vulnerablecode/compare/v39.0.0...main",
     "commits_since": 0,
     "prerelease": false,
     "author": "github-actions[bot]"
