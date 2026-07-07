@@ -8,9 +8,8 @@ hide_table_of_contents: false
 
 # VulnerableCode API Deprecation and V3 Introduction
 
-The AboutCode team has deprecated the V1 and V2 API of VulnerableCode (https://public.vulnerablecode.io) with the latest release of v40.0.0 https://github.com/aboutcode-org/vulnerablecode/releases/tag/v40.0.0 and https://github.com/aboutcode-org/vulnerablecode/releases/tag/vcio-v1 this is the tag with the last data
-dump of V1 and V2 API format.
+The AboutCode team has released v40.0.0 https://github.com/aboutcode-org/vulnerablecode/releases/tag/v40.0.0 with the the V3 VulnerableCode API which replaces "vulnerabilities" with "advisories". Prior to this release we reported vulnerabilities for each PURL (Package-URL) where a vulnerability combined multiple advisories. With the new advisory model each advisory is reported individually which provides more granular data and makes it easier for you to prioritize data sources that you trust more.
 
-You can refer to https://public.vulnerablecode.io/api/docs/ and https://vulnerablecode.readthedocs.io/en/latest/api_v3_usage.html to understand the latest V3 API usage.
+With this release the VulnerableCode V1 and V2 APIs have been deprecated along with the corresponding vulnerability-based data. You can download the V1/V2 vulnerability data from: https://github.com/aboutcode-org/vulnerablecode/releases/tag/vcio-v1. This is a final data archive for the old data structure.
 
-You can refer to announcement of deprecation blog to understand why V3 format is a more helpful format moving forward. [Blog](../vcio-migration-announcement-aboutcode/2026-01-21-vcio-migration-announcement-aboutcode.md) 
+Refer to https://public.vulnerablecode.io/api/docs/ and https://vulnerablecode.readthedocs.io/en/latest/api_v3_usage.html to understand the latest V3 API usage.
