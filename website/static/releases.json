@@ -13,6 +13,19 @@
     "author": "github-actions[bot]"
   },
   {
+    "repo": "v38.0.0",
+    "repo_slug": "aboutcode-org/scancode.io",
+    "repo_url": "https://github.com/aboutcode-org/scancode.io",
+    "tag": "v38.0.0",
+    "tag_url": "https://github.com/aboutcode-org/scancode.io/releases/tag/v38.0.0",
+    "published_at": "2026-07-10T13:24:22Z",
+    "releases_page_url": "https://github.com/aboutcode-org/scancode.io/releases",
+    "compare_url": "https://github.com/aboutcode-org/scancode.io/compare/v38.0.0...main",
+    "commits_since": 0,
+    "prerelease": false,
+    "author": "github-actions[bot]"
+  },
+  {
     "repo": "v40.0.1",
     "repo_slug": "aboutcode-org/vulnerablecode",
     "repo_url": "https://github.com/aboutcode-org/vulnerablecode",
@@ -47,19 +60,6 @@
     "published_at": "2026-06-19T06:36:16Z",
     "releases_page_url": "https://github.com/aboutcode-org/dejacode/releases",
     "compare_url": "https://github.com/aboutcode-org/dejacode/compare/v5.8.1...main",
-    "commits_since": 0,
-    "prerelease": false,
-    "author": "github-actions[bot]"
-  },
-  {
-    "repo": "v37.2.0",
-    "repo_slug": "aboutcode-org/scancode.io",
-    "repo_url": "https://github.com/aboutcode-org/scancode.io",
-    "tag": "v37.2.0",
-    "tag_url": "https://github.com/aboutcode-org/scancode.io/releases/tag/v37.2.0",
-    "published_at": "2026-06-12T14:34:33Z",
-    "releases_page_url": "https://github.com/aboutcode-org/scancode.io/releases",
-    "compare_url": "https://github.com/aboutcode-org/scancode.io/compare/v37.2.0...main",
     "commits_since": 0,
     "prerelease": false,
     "author": "github-actions[bot]"
