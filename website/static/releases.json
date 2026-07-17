@@ -13,6 +13,19 @@
     "author": "github-actions[bot]"
   },
   {
+    "repo": "v0.7.2",
+    "repo_slug": "aboutcode-org/source-inspector",
+    "repo_url": "https://github.com/aboutcode-org/source-inspector",
+    "tag": "v0.7.2",
+    "tag_url": "https://github.com/aboutcode-org/source-inspector/releases/tag/v0.7.2",
+    "published_at": "2026-07-16T11:45:45Z",
+    "releases_page_url": "https://github.com/aboutcode-org/source-inspector/releases",
+    "compare_url": "https://github.com/aboutcode-org/source-inspector/compare/v0.7.2...main",
+    "commits_since": 0,
+    "prerelease": false,
+    "author": "github-actions[bot]"
+  },
+  {
     "repo": "v38.0.0",
     "repo_slug": "aboutcode-org/scancode.io",
     "repo_url": "https://github.com/aboutcode-org/scancode.io",
@@ -151,19 +164,6 @@
     "published_at": "2026-03-18T13:03:02Z",
     "releases_page_url": "https://github.com/aboutcode-org/fetchcode/releases",
     "compare_url": "https://github.com/aboutcode-org/fetchcode/compare/v0.8.2...main",
-    "commits_since": 0,
-    "prerelease": false,
-    "author": "github-actions[bot]"
-  },
-  {
-    "repo": "v0.7.1",
-    "repo_slug": "aboutcode-org/source-inspector",
-    "repo_url": "https://github.com/aboutcode-org/source-inspector",
-    "tag": "v0.7.1",
-    "tag_url": "https://github.com/aboutcode-org/source-inspector/releases/tag/v0.7.1",
-    "published_at": "2026-01-21T16:04:06Z",
-    "releases_page_url": "https://github.com/aboutcode-org/source-inspector/releases",
-    "compare_url": "https://github.com/aboutcode-org/source-inspector/compare/v0.7.1...main",
     "commits_since": 0,
     "prerelease": false,
     "author": "github-actions[bot]"
