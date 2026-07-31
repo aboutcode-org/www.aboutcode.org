@@ -1,13 +1,13 @@
 [
   {
-    "repo": "v1.15.105",
+    "repo": "v1.15.106",
     "repo_slug": "aboutcode-org/purlvalidator-go",
     "repo_url": "https://github.com/aboutcode-org/purlvalidator-go",
-    "tag": "v1.15.105",
-    "tag_url": "https://github.com/aboutcode-org/purlvalidator-go/releases/tag/v1.15.105",
-    "published_at": "2026-07-30T01:49:45Z",
+    "tag": "v1.15.106",
+    "tag_url": "https://github.com/aboutcode-org/purlvalidator-go/releases/tag/v1.15.106",
+    "published_at": "2026-07-31T01:57:30Z",
     "releases_page_url": "https://github.com/aboutcode-org/purlvalidator-go/releases",
-    "compare_url": "https://github.com/aboutcode-org/purlvalidator-go/compare/v1.15.105...main",
+    "compare_url": "https://github.com/aboutcode-org/purlvalidator-go/compare/v1.15.106...main",
     "commits_since": 0,
     "prerelease": false,
     "author": "github-actions[bot]"
