@@ -1,5 +1,18 @@
 [
   {
+    "repo": "v0.2.1",
+    "repo_slug": "aboutcode-org/binary-inspector",
+    "repo_url": "https://github.com/aboutcode-org/binary-inspector",
+    "tag": "v0.2.1",
+    "tag_url": "https://github.com/aboutcode-org/binary-inspector/releases/tag/v0.2.1",
+    "published_at": "2026-08-07T14:30:06Z",
+    "releases_page_url": "https://github.com/aboutcode-org/binary-inspector/releases",
+    "compare_url": "https://github.com/aboutcode-org/binary-inspector/compare/v0.2.1...main",
+    "commits_since": 0,
+    "prerelease": false,
+    "author": "github-actions[bot]"
+  },
+  {
     "repo": "v1.15.113",
     "repo_slug": "aboutcode-org/purlvalidator-go",
     "repo_url": "https://github.com/aboutcode-org/purlvalidator-go",
@@ -190,19 +203,6 @@
     "published_at": "2026-01-14T16:29:54Z",
     "releases_page_url": "https://github.com/aboutcode-org/commoncode/releases",
     "compare_url": "https://github.com/aboutcode-org/commoncode/compare/v32.4.2...main",
-    "commits_since": 0,
-    "prerelease": false,
-    "author": "github-actions[bot]"
-  },
-  {
-    "repo": "v0.2.0",
-    "repo_slug": "aboutcode-org/binary-inspector",
-    "repo_url": "https://github.com/aboutcode-org/binary-inspector",
-    "tag": "v0.2.0",
-    "tag_url": "https://github.com/aboutcode-org/binary-inspector/releases/tag/v0.2.0",
-    "published_at": "2025-12-29T10:51:31Z",
-    "releases_page_url": "https://github.com/aboutcode-org/binary-inspector/releases",
-    "compare_url": "https://github.com/aboutcode-org/binary-inspector/compare/v0.2.0...main",
     "commits_since": 0,
     "prerelease": false,
     "author": "github-actions[bot]"
