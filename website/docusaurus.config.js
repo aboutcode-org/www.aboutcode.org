@@ -169,6 +169,7 @@ const config = {
                         label: 'About',
                         position: 'left',
                         items: [
+                            {to: '/docs/about/', label: 'About'},
                             { to: '/docs/about/contribute', label: 'Contribute' },
                             { to: '/docs/about/events', label: 'Events' },
                             { to: '/docs/about/meetings', label: 'Meetings' },
