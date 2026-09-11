@@ -1,4 +1,3 @@
-import React from 'react';
 import Layout from '@theme/Layout';
 import EcosystemGrid from '@site/src/components/EcosystemGrid';
 import styles from '@site/src/components/HomepageContent/styles.module.css';
