@@ -14,6 +14,12 @@ const sidebars = {
     ],
 
     about: [
+      {
+        type:'doc',
+        id: 'about/about',
+        label: 'About',
+      },
+    
         'about/contribute',
         'about/events',
         'about/meetings',
