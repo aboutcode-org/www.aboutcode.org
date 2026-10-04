@@ -1,7 +1,7 @@
 ---
 slug: npm-health-state-of-the-art
 title: State of the art of project health metrics for npm packages
-authors: [dicortazar,canadiaz,adaaaam]
+authors: [dicortazar,canasdiaz,adaaaam]
 tags: [npm,health]
 hide_table_of_contents: false
 ---
