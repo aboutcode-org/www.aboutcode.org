@@ -38,15 +38,25 @@ dual license:
   permalink: /dual-license
   description: Posts about software released choices of licenses.
 
-java:
-  label: java
-  permalink: /java
-  description: Posts about Java(tm) software.
-
 genai:
   label: GenAI
   permalink: /genai
   description: Posts about generative AI.
+  
+health:
+  label: health
+  permalink: /health
+  description: Posts about project health.
+  
+healthycode:
+  label: HealthyCode
+  permalink: /healthycode
+  description: Posts about HealthyCode.
+  
+java:
+  label: java
+  permalink: /java
+  description: Posts about Java(tm) software.
 
 license clarity scoring:
   label: license clarity scoring
@@ -62,11 +72,16 @@ license detection:
   label: license detection
   permalink: /license-detection
   description: Posts about license detection.
-
+  
+npm:
+  label: npm
+  permalink: /npm
+  description: Posts about npm package manager.
+  
 purl:
   label: PURL
   permalink: /purl
-  description: Posts about Package URL (PURL), the standard identifier for software packages.
+  description: Posts about Package-URL (PURL), the standard identifier for software packages.
 
 SCA automation:
   label: SCA automation
