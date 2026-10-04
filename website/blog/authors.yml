@@ -47,3 +47,33 @@ tg1999:
   socials:
     linkedin: tushar-goel-53b09411a
     github: https://github.com/TG1999
+
+adaaaam:
+  name: Adam Herzog
+  title: Community
+  url: https://www.linkedin.com/in/herzogadam
+  image_url: https://avatars.sched.co/6/7e/22920061/avatar.jpg
+  page: true
+  socials:
+    linkedin: herzogadam
+    github: https://github.com/adaaaam
+
+dicortazar:
+  name: Daniel Izquierdo Cortázar
+  title: Software Engineer
+  url: https://www.linkedin.com/in/dicortazar/
+  image_url: https://avatars.sched.co/f/e9/25720219/avatar.jpg
+  page: true
+  socials:
+    linkedin: dicortazar
+    github: https://github.com/dicortazar
+
+canasdiaz:
+  name: Luis Cañas Diaz
+  title: Software Engineer
+  url: https://www.linkedin.com/in/canasdiaz
+  image_url: https://avatars.githubusercontent.com/u/326719
+  page: true
+  socials:
+    linkedin: canasdiaz
+    github: https://github.com/canasdiaz
