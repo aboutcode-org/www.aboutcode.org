@@ -2,21 +2,21 @@
 Stay up to date with the latest news from the AboutCode community.
 
 ### ISO starts work on Package-URL (PURL) specification
-**Date**: October 7, 2026
-**Details**: ISO has assigned Draft International Standard number [27056](https://www.iso.org/standard/95170.html) to the Package-URL (PURL) specification ECMA-427. Creating an ISO standard for PURL is proceeding under the [ISO/IEC JTC 1](https://jtc1info.org/) Joint
+-  **Date**: October 7, 2026
+-  **Details**: ISO has assigned Draft International Standard number [27056](https://www.iso.org/standard/95170.html) to the Package-URL (PURL) specification ECMA-427. Creating an ISO standard for PURL is proceeding under the [ISO/IEC JTC 1](https://jtc1info.org/) Joint
 Technical Committee.
 
 ### ECMA-xxx-VERS 1st Edition approved by Ecma TC54
-**Date**: October 6, 2026
-**Details**: Ecma [Technical Commmittee TC54](https://tc54.org/) approved
+-  **Date**: October 6, 2026
+-  **Details**: Ecma [Technical Commmittee TC54](https://tc54.org/) approved
 the 1st Edition of the new VERS standard [ECMA-xxx-VERS 1st Edition](https://ecma-tc54.github.io/ECMA-xxx-VERS/).
 This new edition is pending approval by the Ecma General Assembly in December.
 The ECMA standard number (ECMA-xxx) for VERS will be assigned after the GA
 approval.
 
 ### ECMA-427 2nd Edition approved by Ecma TC54
-**Date**: October 6, 2026
-**Details**: Ecma [Technical Commmittee TC54](https://tc54.org/) approved
+-  **Date**: October 6, 2026
+-  **Details**: Ecma [Technical Commmittee TC54](https://tc54.org/) approved
 the PURL standard [ECMA-427 2nd Edition](https://ecma-tc54.github.io/ECMA-427/).
 This new edition is pending approval by the Ecma General Assembly in December.
 
