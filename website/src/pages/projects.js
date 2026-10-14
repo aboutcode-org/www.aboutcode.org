@@ -1,4 +1,3 @@
-import React from 'react';
 import Layout from '@theme/Layout';
 import ProjectOverview from '@site/src/components/HomepageContent/ProjectOverview.md';
 import ProjectGrid from '@site/src/components/ProjectGrid';
