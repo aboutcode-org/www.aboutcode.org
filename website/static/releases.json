@@ -1,13 +1,13 @@
 [
   {
-    "repo": "v6.0.0",
+    "repo": "v6.0.1",
     "repo_slug": "aboutcode-org/dejacode",
     "repo_url": "https://github.com/aboutcode-org/dejacode",
-    "tag": "v6.0.0",
-    "tag_url": "https://github.com/aboutcode-org/dejacode/releases/tag/v6.0.0",
-    "published_at": "2026-10-16T11:53:03Z",
+    "tag": "v6.0.1",
+    "tag_url": "https://github.com/aboutcode-org/dejacode/releases/tag/v6.0.1",
+    "published_at": "2026-10-21T13:38:57Z",
     "releases_page_url": "https://github.com/aboutcode-org/dejacode/releases",
-    "compare_url": "https://github.com/aboutcode-org/dejacode/compare/v6.0.0...main",
+    "compare_url": "https://github.com/aboutcode-org/dejacode/compare/v6.0.1...main",
     "commits_since": 0,
     "prerelease": false,
     "author": "github-actions[bot]"
