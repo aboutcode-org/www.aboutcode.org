@@ -1,13 +1,65 @@
 [
   {
-    "repo": "v1.15.115",
+    "repo": "v1.15.187",
     "repo_slug": "aboutcode-org/purlvalidator-go",
     "repo_url": "https://github.com/aboutcode-org/purlvalidator-go",
-    "tag": "v1.15.115",
-    "tag_url": "https://github.com/aboutcode-org/purlvalidator-go/releases/tag/v1.15.115",
-    "published_at": "2026-08-09T01:36:29Z",
+    "tag": "v1.15.187",
+    "tag_url": "https://github.com/aboutcode-org/purlvalidator-go/releases/tag/v1.15.187",
+    "published_at": "2026-11-07T01:29:13Z",
     "releases_page_url": "https://github.com/aboutcode-org/purlvalidator-go/releases",
-    "compare_url": "https://github.com/aboutcode-org/purlvalidator-go/compare/v1.15.115...main",
+    "compare_url": "https://github.com/aboutcode-org/purlvalidator-go/compare/v1.15.187...main",
+    "commits_since": 0,
+    "prerelease": false,
+    "author": "github-actions[bot]"
+  },
+  {
+    "repo": "v38.2.0",
+    "repo_slug": "aboutcode-org/scancode.io",
+    "repo_url": "https://github.com/aboutcode-org/scancode.io",
+    "tag": "v38.2.0",
+    "tag_url": "https://github.com/aboutcode-org/scancode.io/releases/tag/v38.2.0",
+    "published_at": "2026-10-22T04:06:36Z",
+    "releases_page_url": "https://github.com/aboutcode-org/scancode.io/releases",
+    "compare_url": "https://github.com/aboutcode-org/scancode.io/compare/v38.2.0...main",
+    "commits_since": 0,
+    "prerelease": false,
+    "author": "github-actions[bot]"
+  },
+  {
+    "repo": "v6.0.1",
+    "repo_slug": "aboutcode-org/dejacode",
+    "repo_url": "https://github.com/aboutcode-org/dejacode",
+    "tag": "v6.0.1",
+    "tag_url": "https://github.com/aboutcode-org/dejacode/releases/tag/v6.0.1",
+    "published_at": "2026-10-21T13:38:57Z",
+    "releases_page_url": "https://github.com/aboutcode-org/dejacode/releases",
+    "compare_url": "https://github.com/aboutcode-org/dejacode/compare/v6.0.1...main",
+    "commits_since": 0,
+    "prerelease": false,
+    "author": "github-actions[bot]"
+  },
+  {
+    "repo": "v40.2.0",
+    "repo_slug": "aboutcode-org/vulnerablecode",
+    "repo_url": "https://github.com/aboutcode-org/vulnerablecode",
+    "tag": "v40.2.0",
+    "tag_url": "https://github.com/aboutcode-org/vulnerablecode/releases/tag/v40.2.0",
+    "published_at": "2026-10-06T16:40:17Z",
+    "releases_page_url": "https://github.com/aboutcode-org/vulnerablecode/releases",
+    "compare_url": "https://github.com/aboutcode-org/vulnerablecode/compare/v40.2.0...main",
+    "commits_since": 0,
+    "prerelease": false,
+    "author": "github-actions[bot]"
+  },
+  {
+    "repo": "v0.8.5",
+    "repo_slug": "aboutcode-org/fetchcode",
+    "repo_url": "https://github.com/aboutcode-org/fetchcode",
+    "tag": "v0.8.5",
+    "tag_url": "https://github.com/aboutcode-org/fetchcode/releases/tag/v0.8.5",
+    "published_at": "2026-09-23T10:59:04Z",
+    "releases_page_url": "https://github.com/aboutcode-org/fetchcode/releases",
+    "compare_url": "https://github.com/aboutcode-org/fetchcode/compare/v0.8.5...main",
     "commits_since": 0,
     "prerelease": false,
     "author": "github-actions[bot]"
@@ -52,32 +104,6 @@
     "author": "github-actions[bot]"
   },
   {
-    "repo": "v38.0.0",
-    "repo_slug": "aboutcode-org/scancode.io",
-    "repo_url": "https://github.com/aboutcode-org/scancode.io",
-    "tag": "v38.0.0",
-    "tag_url": "https://github.com/aboutcode-org/scancode.io/releases/tag/v38.0.0",
-    "published_at": "2026-07-10T13:24:22Z",
-    "releases_page_url": "https://github.com/aboutcode-org/scancode.io/releases",
-    "compare_url": "https://github.com/aboutcode-org/scancode.io/compare/v38.0.0...main",
-    "commits_since": 0,
-    "prerelease": false,
-    "author": "github-actions[bot]"
-  },
-  {
-    "repo": "v40.0.1",
-    "repo_slug": "aboutcode-org/vulnerablecode",
-    "repo_url": "https://github.com/aboutcode-org/vulnerablecode",
-    "tag": "v40.0.1",
-    "tag_url": "https://github.com/aboutcode-org/vulnerablecode/releases/tag/v40.0.1",
-    "published_at": "2026-07-07T20:24:28Z",
-    "releases_page_url": "https://github.com/aboutcode-org/vulnerablecode/releases",
-    "compare_url": "https://github.com/aboutcode-org/vulnerablecode/compare/v40.0.1...main",
-    "commits_since": 0,
-    "prerelease": false,
-    "author": "github-actions[bot]"
-  },
-  {
     "repo": "v1.0.0",
     "repo_slug": "aboutcode-org/www.aboutcode.org",
     "repo_url": "https://github.com/aboutcode-org/www.aboutcode.org",
@@ -89,19 +115,6 @@
     "commits_since": 0,
     "prerelease": false,
     "author": "johnmhoran"
-  },
-  {
-    "repo": "v5.8.1",
-    "repo_slug": "aboutcode-org/dejacode",
-    "repo_url": "https://github.com/aboutcode-org/dejacode",
-    "tag": "v5.8.1",
-    "tag_url": "https://github.com/aboutcode-org/dejacode/releases/tag/v5.8.1",
-    "published_at": "2026-06-19T06:36:16Z",
-    "releases_page_url": "https://github.com/aboutcode-org/dejacode/releases",
-    "compare_url": "https://github.com/aboutcode-org/dejacode/compare/v5.8.1...main",
-    "commits_since": 0,
-    "prerelease": false,
-    "author": "github-actions[bot]"
   },
   {
     "repo": "v7.1.0",
@@ -177,19 +190,6 @@
     "published_at": "2026-03-24T10:25:41Z",
     "releases_page_url": "https://github.com/aboutcode-org/typecode/releases",
     "compare_url": "https://github.com/aboutcode-org/typecode/compare/v30.2.0...main",
-    "commits_since": 0,
-    "prerelease": false,
-    "author": "github-actions[bot]"
-  },
-  {
-    "repo": "v0.8.2",
-    "repo_slug": "aboutcode-org/fetchcode",
-    "repo_url": "https://github.com/aboutcode-org/fetchcode",
-    "tag": "v0.8.2",
-    "tag_url": "https://github.com/aboutcode-org/fetchcode/releases/tag/v0.8.2",
-    "published_at": "2026-03-18T13:03:02Z",
-    "releases_page_url": "https://github.com/aboutcode-org/fetchcode/releases",
-    "compare_url": "https://github.com/aboutcode-org/fetchcode/compare/v0.8.2...main",
     "commits_since": 0,
     "prerelease": false,
     "author": "github-actions[bot]"
