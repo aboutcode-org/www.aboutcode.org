@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import HomeIntro from './HomeIntro.mdx';
