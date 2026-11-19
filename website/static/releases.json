@@ -13,14 +13,14 @@
     "author": "github-actions[bot]"
   },
   {
-    "repo": "v38.3.0",
+    "repo": "v38.3.1",
     "repo_slug": "aboutcode-org/scancode.io",
     "repo_url": "https://github.com/aboutcode-org/scancode.io",
-    "tag": "v38.3.0",
-    "tag_url": "https://github.com/aboutcode-org/scancode.io/releases/tag/v38.3.0",
-    "published_at": "2026-11-18T05:51:54Z",
+    "tag": "v38.3.1",
+    "tag_url": "https://github.com/aboutcode-org/scancode.io/releases/tag/v38.3.1",
+    "published_at": "2026-11-18T16:31:40Z",
     "releases_page_url": "https://github.com/aboutcode-org/scancode.io/releases",
-    "compare_url": "https://github.com/aboutcode-org/scancode.io/compare/v38.3.0...main",
+    "compare_url": "https://github.com/aboutcode-org/scancode.io/compare/v38.3.1...main",
     "commits_since": 0,
     "prerelease": false,
     "author": "github-actions[bot]"
