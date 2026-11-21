@@ -8,12 +8,6 @@ Join our community meetings to discuss AboutCode projects, ask questions, and co
 *   **Topic**: General updates, GSoC, and Q&A.
 *   **Where**: https://meet.jit.si/AboutCode
 
-## Weekly VulnerableCode Meeting
-
-*   **When**: Tuesdays at 15:00 UTC
-*   **Topic**: Discussion of the [VulnerableCode project](https://github.com/aboutcode-org/vulnerablecode)
-*   **Where**: https://meet.jit.si/AboutCode
-
 ## Bi-weekly PURL Community Meeting
 *   **When**: Wednesdays at 16:00 UTC - See the date for the next meeting at the [Ecma TC54 Package-URL](https://tc54.org/purl/) site.
 *   **Topic**: Discussion of the [PURL](https://github.com/package-url/purl-spec)
