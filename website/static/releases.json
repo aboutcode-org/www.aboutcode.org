@@ -13,6 +13,19 @@
     "author": "github-actions[bot]"
   },
   {
+    "repo": "v0.15.3",
+    "repo_slug": "aboutcode-org/python-inspector",
+    "repo_url": "https://github.com/aboutcode-org/python-inspector",
+    "tag": "v0.15.3",
+    "tag_url": "https://github.com/aboutcode-org/python-inspector/releases/tag/v0.15.3",
+    "published_at": "2026-11-25T15:40:01Z",
+    "releases_page_url": "https://github.com/aboutcode-org/python-inspector/releases",
+    "compare_url": "https://github.com/aboutcode-org/python-inspector/compare/v0.15.3...main",
+    "commits_since": 0,
+    "prerelease": false,
+    "author": "github-actions[bot]"
+  },
+  {
     "repo": "v38.3.2",
     "repo_slug": "aboutcode-org/scancode.io",
     "repo_url": "https://github.com/aboutcode-org/scancode.io",
@@ -138,19 +151,6 @@
     "published_at": "2026-05-20T14:59:22Z",
     "releases_page_url": "https://github.com/aboutcode-org/extractcode/releases",
     "compare_url": "https://github.com/aboutcode-org/extractcode/compare/v31.1.0...main",
-    "commits_since": 0,
-    "prerelease": false,
-    "author": "github-actions[bot]"
-  },
-  {
-    "repo": "v0.15.2",
-    "repo_slug": "aboutcode-org/python-inspector",
-    "repo_url": "https://github.com/aboutcode-org/python-inspector",
-    "tag": "v0.15.2",
-    "tag_url": "https://github.com/aboutcode-org/python-inspector/releases/tag/v0.15.2",
-    "published_at": "2026-05-18T08:34:47Z",
-    "releases_page_url": "https://github.com/aboutcode-org/python-inspector/releases",
-    "compare_url": "https://github.com/aboutcode-org/python-inspector/compare/v0.15.2...main",
     "commits_since": 0,
     "prerelease": false,
     "author": "github-actions[bot]"
